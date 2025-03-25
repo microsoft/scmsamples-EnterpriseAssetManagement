@@ -1,7 +1,7 @@
 $ErrorActionPreference = "Stop"
 
 $solutionPath = "$PSScriptRoot\..\Solution"
-$solutionExportPath = "$SolutionPath\Solution\Export"
+$solutionExportPath = "$SolutionPath\Export"
 [xml]$solutionXml = Get-Content "$solutionExportPath\Other\Solution.xml"
 
 $canvasAppComponent = $solutionXml.ImportExportXml.SolutionManifest.RootComponents.RootComponent | Where-Object { $_.type -eq '300' }
