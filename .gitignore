@@ -27,8 +27,8 @@ Thumbs.db
 .env.*.local
 
 # Build output
-Solution/Export/CanvasApps/*.msapp
 bin/*
+*.msapp
 
 # Dependency directories
 bower_components/
