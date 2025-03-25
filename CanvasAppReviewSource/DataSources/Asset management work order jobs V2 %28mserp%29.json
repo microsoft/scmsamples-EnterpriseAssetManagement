@@ -1,0 +1,85 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkorderlinev2entities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkorderlinev2entity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management work order jobs V2 (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_addresslatitude": "Latitude",
+      "mserp_addresslongitude": "Longitude",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenanceworkorderlinev2entityid": "Asset management work order jobs V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceAssetBillOfMaterialV2Entity_MaintenanceWorkOrderLineV2": "Asset management asset Bill of materials V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineAttachmentEntity_MaintenanceWorkOrderLine": "Asset maintenance work order line attachment entity (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderUserReferenceEntity_WorkOrderLineV2": "Asset management worker work orders and jobs (mserp)",
+      "mserp_FK_JobType_id": "Asset management maintenance job types",
+      "mserp_FK_MaintenanceAsset_id": "Assets entity view V3 (mserp_FK_MaintenanceAsset_id)",
+      "mserp_FK_MaintenanceAssetFunctionalLocation_id": "Asset management functional locations",
+      "mserp_FK_ReplacementMaintenanceAsset_id": "Assets entity view V3 (mserp_FK_ReplacementMaintenanceAsset_id)",
+      "mserp_FK_ScheduledWorker_id": "Asset management maintenance workers",
+      "mserp_FK_WorkOrderTable_id": "Asset management work orders V2",
+      "mserp_forecasthourqty": "Maintenance forecast hours",
+      "mserp_jobschedulelinktype": "Link",
+      "mserp_jobtradeid": "Trade",
+      "mserp_jobtypeid": "Maintenance job type",
+      "mserp_jobvariantid": "Maintenance job type variant",
+      "mserp_linenumber": "Line number",
+      "mserp_maintenanceassetfunctionallocationid": "Functional location",
+      "mserp_maintenanceassetid": "Asset",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_replacementmaintenanceassetid": "Replacement asset",
+      "mserp_replacementmaintenanceassetinstallationfunctionallocationid": "Installation functional location",
+      "mserp_scheduledenddatetime": "Scheduled end",
+      "mserp_scheduledstartdatetime": "Scheduled start",
+      "mserp_scheduledworkerpersonnelnumber": "Maintenance job scheduled to",
+      "mserp_scheduleworkorderjob": "Schedule work order job",
+      "mserp_workorderid": "Work order",
+      "mserp_workorderjobdescription": "Description",
+      "mserp_workorderjobinternalnote": "Internal note",
+      "mserp_workorderjobmaintenanceworkerremarks": "Maintenance workers' remarks"
+    },
+    "PreferredName": "Asset management work order jobs V2 (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management work order jobs V2 (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceworkorderlinev2entity_views",
+    "RelatedEntityName": "Asset management work order jobs V2 (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1c07b685-df27-fce6-5e3c-63691b64e7b0": "Asset management work order jobs V2 (mserp) Associated View",
+      "d5283f17-3f9c-17bb-a2dc-2119af5740ee": "Asset management work order jobs V2 (mserp) Lookup View",
+      "e04e3e42-67e6-4691-9ea2-82690d1dbc6a": "All Asset management work order jobs V2 (mserp)",
+      "e9cb1b1d-b0e8-fcb2-124c-38e314300dda": "Asset management work order jobs V2 (mserp) Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Link (mserp)",
+    "Name": "mserp_schedjoblink",
+    "OptionSetInfoNameMapping": {
+      "200000000": "None",
+      "200000001": "StartStart",
+      "200000002": "EndEnd",
+      "200000003": "EndStart",
+      "200000004": "StartEnd"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_jobschedulelinktype",
+        "OptionSetReferenceEntityName": "Asset management work order jobs V2 (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_jobschedulelinktype",
+    "RelatedEntityName": "Asset management work order jobs V2 (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

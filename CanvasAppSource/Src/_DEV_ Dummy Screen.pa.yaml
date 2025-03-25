@@ -1,0 +1,24 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  (DEV) Dummy Screen:
+    Children:
+      - lblDummyScreenDetails:
+          Control: Label@2.5.1
+          Properties:
+            Height: =Parent.Height - Self.Y
+            Text: |-
+              =//pal-disable PAL004
+              "Navigate to this screen if the screen you plan to navigate to does not yet exist.
+
+              This screen should never be shown to users."
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.Width
+            Y: =cmpDummyHeader.Height

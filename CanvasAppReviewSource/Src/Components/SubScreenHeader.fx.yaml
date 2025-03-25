@@ -1,0 +1,70 @@
+SubScreenHeader As CanvasComponent:
+    BackButtonAccessibleLabel: ="Go back"
+    Fill: =RGBA(7, 66, 171, 1)
+    Height: =54
+    Subtitle: =Blank()
+    Title: ="<Header title>"
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    conTitlesSSH As groupContainer.horizontalAutoLayoutContainer:
+        ContentLanguage: =Parent.Width
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =icoBackButtonSSH.Width + icoBackButtonSSH.X
+        PaddingRight: =Self.PaddingLeft
+        Width: =Parent.Width
+        ZIndex: =2
+
+        lblTitleSSH As label:
+            Align: =If(SubScreenHeader.Subtitle = Blank(), Align.Center, Align.Right)
+            Color: =RGBA(255, 255, 255, If(SubScreenHeader.Subtitle = Blank(), 1, 0.6))
+            Fill: =RGBA(7, 66, 171, 1)
+            FillPortions: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Role: =TextRole.Heading1
+            Size: =24 * 0.75
+            Text: =SubScreenHeader.Title
+            Width: =Parent.Width - 6
+            Wrap: =false
+            X: =3
+            ZIndex: =1
+
+        lblSubTitleSSH As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(7, 66, 171, 1)
+            FillPortions: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Role: =TextRole.Heading2
+            Size: =24 * 0.75
+            Text: =SubScreenHeader.Subtitle
+            Visible: =SubScreenHeader.Subtitle <> Blank()
+            Width: =Parent.Width
+            Wrap: =false
+            ZIndex: =2
+
+    icoBackButtonSSH As icon.ChevronLeft:
+        AccessibleLabel: =Parent.BackButtonAccessibleLabel
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =Color.Black
+        Height: =Parent.Height - (Self.FocusedBorderThickness * 2)
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.None)
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        TabIndex: =0
+        Width: =56
+        X: =Self.FocusedBorderThickness
+        Y: =Self.FocusedBorderThickness
+        ZIndex: =3
+

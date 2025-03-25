@@ -1,0 +1,62 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkordertablev2entities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkordertablev2entity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management work orders V2 (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_active": "Active",
+      "mserp_actualend": "Actual end",
+      "mserp_actualstart": "Actual start",
+      "mserp_costtype": "Cost type",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_description": "Description",
+      "mserp_entassetmaintenanceworkordertablev2entityid": "Asset management work orders V2 (mserp)",
+      "mserp_expectedend": "Expected end",
+      "mserp_expectedstart": "Expected start",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineV2Entity_WorkOrderTable": "Asset management work order jobs V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderUserReferenceEntity_WorkOrderHeaderV2": "Asset management worker work orders and jobs (mserp)",
+      "mserp_FK_ResponsibleWorker_id": "Asset management maintenance workers (mserp_FK_ResponsibleWorker_id)",
+      "mserp_FK_ScheduledWorker_id": "Asset management maintenance workers (mserp_FK_ScheduledWorker_id)",
+      "mserp_FK_ServiceLevel_id": "Asset management work order service levels",
+      "mserp_FK_WorkOrderType_id": "Asset management work order types",
+      "mserp_isworkorderscheduledforsingleworker": "One maintenance worker",
+      "mserp_nextworkorderlifecyclestateid": "Next lifecycle state",
+      "mserp_orderbillingcustomeraccountnumber": "Customer account",
+      "mserp_orderprojectcontractid": "Project contract ID",
+      "mserp_parentworkorderid": "Parent work order",
+      "mserp_responsibleworkerpersonnelnumber": "Responsible",
+      "mserp_scheduledend": "Scheduled end",
+      "mserp_scheduledstart": "Scheduled start",
+      "mserp_scheduledworkerpersonnelnumber": "All maintenance jobs scheduled to",
+      "mserp_servicelevel": "Service level",
+      "mserp_workergroupid": "Maintenance worker group",
+      "mserp_workorderid": "Work order",
+      "mserp_workorderlifecyclestateid": "Lifecycle state",
+      "mserp_workordermaintenanceassetcriticalityname": "Criticality name",
+      "mserp_workordermaintenanceassetcriticalityvalue": "Criticality",
+      "mserp_workordertypeid": "Work order type",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Asset management work orders V2 (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management work orders V2 (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceworkordertablev2entity_views",
+    "RelatedEntityName": "Asset management work orders V2 (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "223a1195-b977-e2e9-b436-49a7423cd78b": "Asset management work orders V2 (mserp) Advanced Find View",
+      "a3efd4f1-bd9c-a24a-e64f-80b00cb76e17": "Asset management work orders V2 (mserp) Associated View",
+      "dd7cc9e4-de12-9cd7-14d8-b840045e57ed": "All Asset management work orders V2 (mserp)",
+      "fccd6e0d-8f92-f38f-bc36-6850ce53f7f5": "Asset management work orders V2 (mserp) Lookup View"
+    }
+  }
+]

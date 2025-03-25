@@ -1,0 +1,49 @@
+SearchBar As CanvasComponent:
+    AccessibleLabel: =""
+    DefaultSearchText: =Blank()
+    Fill: =RGBA(7, 66, 171, 1)
+    Height: =62
+    OnReset: =Reset(txtSearchInput)
+    SearchHintText: ="Search ..."
+    SearchText: =txtSearchInput.Text
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    txtSearchInput As text:
+        AccessibleLabel: =Parent.AccessibleLabel
+        BorderThickness: =0
+        Clear: =true
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =Parent.DefaultSearchText
+        DelayOutput: =true
+        Fill: =RGBA(0, 0, 0, 0.4)
+        Font: =Font.'Segoe UI'
+        Height: =36
+        HintText: =SearchBar.SearchHintText
+        HoverColor: =Self.Color
+        HoverFill: =Self.Fill
+        PaddingBottom: =0
+        PaddingLeft: =34
+        PaddingRight: =15
+        PaddingTop: =0
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Size: =12.75
+        Width: =Parent.Width - (16 * 2)
+        X: =16
+        Y: =(Parent.Height / 2) - (Self.Height / 2)
+        ZIndex: =3
+
+    icoSearchMagnifying As icon.Search:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =Self.Width
+        Icon: =Icon.Search
+        Width: =16
+        X: =txtSearchInput.X + 9
+        Y: =txtSearchInput.Y + (txtSearchInput.Height / 2) - (Self.Height / 2)
+        ZIndex: =4
+

@@ -1,0 +1,36 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenancechecklistvariableentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenancechecklistvariableentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management maintenance checklist variable (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_checklistvariableid": "Variable",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenancechecklistvariableentityid": "Asset management maintenance checklist variable (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_WorkOrderJobChecklistVariable": "Asset management work order job maintenance checklist (mserp)",
+      "mserp_name": "Name",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Asset management maintenance checklist variable (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management maintenance checklist variable (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenancechecklistvariableentity_views",
+    "RelatedEntityName": "Asset management maintenance checklist variable (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "20fa6d5e-d95e-7721-66d5-1ee7a17cedb3": "Asset management maintenance checklist variable (mserp) Lookup View",
+      "27ed6719-a949-1346-9b37-7a40a55f7f34": "Asset management maintenance checklist variable (mserp) Associated View",
+      "4e9e13ee-6a56-3b7a-8ddd-0a0c46ba7348": "All Asset management maintenance checklist variable (mserp)",
+      "80bd24d5-d7ec-16d4-fa06-f40a5044f8d6": "Asset management maintenance checklist variable (mserp) Advanced Find View"
+    }
+  }
+]

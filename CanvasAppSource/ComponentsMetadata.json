@@ -1,0 +1,74 @@
+{
+  "Components": [
+    {
+      "Name": "PersonaScreenHeader",
+      "TemplateName": "737c5f2d157a40fb94dac275d7168e76",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "SubScreenHeader",
+      "TemplateName": "f31c4274513d4d79a81731e998df1fab",
+      "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "AppAboutOverlay",
+      "TemplateName": "f4ae1227410745e3a675ab966b35c449",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "EditableTextWithHeader",
+      "TemplateName": "ba2c7f10e5ed46d38e29466a9e149585",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "SearchBar",
+      "TemplateName": "3c47dd31a18f42e4babb2eafc3dbca80",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "TextInputWithLabel",
+      "TemplateName": "71cf6e62219d44c6991e7ecf056215a7",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "FullScreenTextInput",
+      "TemplateName": "0cfd8d62e08d40b1a064e62b4f70af3c",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "BottomSheetChoiceSelector",
+      "TemplateName": "59636f2f97a14ed280f6ffcf6cedaa52",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "SearchBarWithInput",
+      "TemplateName": "eb57bda0689e410e8f642f14d439936d",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "FullScreenBottomRightButtonList",
+      "TemplateName": "74784d9d4b2a4e61b6d10a317345d60a",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    }
+  ]
+}

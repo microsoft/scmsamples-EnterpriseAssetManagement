@@ -1,0 +1,189 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Item Consumption Edit Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      OnHidden: |-
+        =Reset(txtAdjustedQuantity);
+        Reset(cmpTrackingBatchNumber);
+        Reset(cmpTrackingSerialNumber);
+      OnVisible: |+
+        =UpdateContext(
+            {
+                varNewQuantity: Blank(),
+                varSelectedSiteId: ItemConsumption.Site,
+                varSelectedWarehouseId: ItemConsumption.Warehouse,
+                varSelectedLocationId: ItemConsumption.Location,
+                // TODO: once the following bug is fixed, we can fetch the NoYes directly on the relation:
+                // https://msazure.visualstudio.com/OneAgile/_workitems/edit/16878631
+                varTrackingDimension: LookUp(
+                    'Tracking dimension groups (mserp)',
+                    Name = Product.'Tracking dimension group'
+                ),
+                varShowSiteChangePrompt: false,
+                varShowWarehouseChangePrompt: false,
+                varShowLocationChangePrompt: false
+            }
+        );
+
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+    Children:
+      - conScrollableWOJICES:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Parent.Height - cmpHeaderWOJICES.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            Width: =Parent.Width
+            Y: =cmpHeaderWOJICES.Height
+          Children:
+            - conInformationWOJICES:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  FillPortions: =0
+                  Height: |-
+                    =Max(
+                        Parent.Height - Self.Y - conActionsWOJICES.Height,
+                        With(
+                            {
+                                controlHeights: [
+                                    conItemDetails.Height,
+                                    conInventoryDimensions.Height,
+                                    conTrackingDimensions.Height
+                                ]
+                            },
+                            Sum(
+                                controlHeights,
+                                Value
+                            ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                        )
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutMinHeight: |-
+                    =With(
+                            {
+                                controlHeights: [
+                                    conItemDetails.Height,
+                                    conInventoryDimensions.Height,
+                                    conTrackingDimensions.Height
+                                ]
+                            },
+                            Sum(
+                                controlHeights,
+                                Value
+                            ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                        )
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =14
+                  Width: =Parent.Width
+                  X: =
+                  Y: =49
+            - conActionsWOJICES:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.End
+                  FillPortions: =0
+                  Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conAdjustItemConsumptionQuantity.Height,
+                                btnConfirmItemConsumptionQuantity.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =16
+                  LayoutMinHeight: =324
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =4
+                  Width: =Parent.Width
+                  X: =
+                  Y: =420
+                Children:
+                  - btnConfirmItemConsumptionQuantity:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =gblAppStyles.Button.BorderColor
+                        BorderStyle: =gblAppStyles.Button.BorderStyle
+                        BorderThickness: =gblAppStyles.Button.BorderThickness
+                        Color: =gblAppStyles.Button.FontColor
+                        DisabledColor: =gblAppStyles.Button.DisabledColor
+                        DisabledFill: =gblAppStyles.Button.DisabledFill
+                        DisplayMode: |-
+                          =If(
+                              IsBlank(cmpInventorySiteEditable.TextValue)
+                              Or IsBlank(cmpInventoryWarehouseEditable.TextValue),
+                              DisplayMode.Disabled,
+                              DisplayMode.Edit
+                          )
+                        Fill: =gblAppStyles.Button.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Button.Font
+                        FontWeight: =gblAppStyles.Button.FontWeight
+                        HoverColor: =gblAppStyles.Button.HoverColor
+                        HoverFill: =gblAppStyles.Button.HoverFill
+                        OnSelect: "=With(\r\n    {locAdjustedQuantity: Value(txtAdjustedQuantity.Text)},\r\n    If(\r\n        ItemConsumption.Quantity <> locAdjustedQuantity\r\n        Or ItemConsumption.Site <> varSelectedSiteId\r\n        Or ItemConsumption.Warehouse <> varSelectedWarehouseId\r\n        Or ItemConsumption.Location <> varSelectedLocationId\r\n        Or ItemConsumption.'Batch number' <> cmpTrackingBatchNumber.Text\r\n        Or ItemConsumption.'Serial number' <> cmpTrackingSerialNumber.Text,\r\n        IfError(\r\n            // try:\r\n            If(\r\n                IsNewConsumptionLine,\r\n                Patch(\r\n                    'Asset management work order job product consumption lines (mserp)',\r\n                    Defaults('Asset management work order job product consumption lines (mserp)'),\r\n                    ItemConsumption,\r\n                    {\r\n                        Quantity: locAdjustedQuantity,\r\n                        Site: varSelectedSiteId,\r\n                        Warehouse: varSelectedWarehouseId,\r\n                        Location: varSelectedLocationId,\r\n                        'Batch number': cmpTrackingBatchNumber.Text,\r\n                        'Serial number': cmpTrackingSerialNumber.Text\r\n                    }\r\n                ),\r\n                Patch(\r\n                    'Asset management work order job product consumption lines (mserp)',\r\n                    ItemConsumption,\r\n                    {\r\n                        Quantity: locAdjustedQuantity,\r\n                        Site: varSelectedSiteId,\r\n                        Warehouse: varSelectedWarehouseId,\r\n                        Location: varSelectedLocationId,\r\n                        'Batch number': cmpTrackingBatchNumber.Text,\r\n                        'Serial number': cmpTrackingSerialNumber.Text\r\n                    }\r\n                )\r\n            ),\r\n            // catch:\r\n            With(\r\n                {\r\n                    locFnOError: Coalesce(\r\n                        Match(\r\n                            FirstError.Details.HttpResponse,\r\n                            \"\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n                        ).message,\r\n                        T.Error_ItemConsumptionUpdateGenericFailureLabel\r\n                    )\r\n                },\r\n                Notify(locFnOError, NotificationType.Error);\r\n                Trace(locFnOError, TraceSeverity.Error, FirstError)\r\n            ),\r\n            // on success:\r\n            Back()\r\n        )\r\n    );\r\n    \r\n)"
+                        PressedColor: =gblAppStyles.Button.PressedColor
+                        PressedFill: =gblAppStyles.Button.PressedFill
+                        RadiusBottomLeft: =Self.RadiusTopLeft
+                        RadiusBottomRight: =Self.RadiusTopLeft
+                        RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                        RadiusTopRight: =Self.RadiusTopLeft
+                        Size: =gblAppStyles.Button.FontSize
+                        Text: =T.ConfirmButtonLabel
+                        Width: =Parent.Width - Parent.PaddingLeft - Parent.PaddingRight - 16
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =Parent.Height - Self.Height - 16
+      - icoRemoveItemConsumption:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =T.RemoveItemIconAccessibleLabel
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =gblAppStyles.Button.Fill
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Height: =cmpHeaderWOJICES.Height
+            Icon: =Icon.Trash
+            OnSelect: |-
+              =Remove('Asset management work order job product consumption lines (mserp)', ItemConsumption);
+              Back()
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =24
+            PaddingTop: =16
+            TabIndex: =0
+            Width: =Self.Height + Self.PaddingRight / 2
+            X: =Parent.Width - Self.Width

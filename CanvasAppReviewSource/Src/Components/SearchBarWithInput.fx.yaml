@@ -1,0 +1,53 @@
+SearchBarWithInput As CanvasComponent:
+    AccessibleLabel: =""
+    backgroundColor: =RGBA(7, 66, 171, 1)
+    Fill: =Self.backgroundColor
+    Height: =62
+    OnReset: =Reset(txtSearchWithInputInputText)
+    searchFillColor: =RGBA(0, 0, 0, 0.4)
+    SearchHintText: ="Search ..."
+    SearchText: =txtSearchWithInputInputText.Text
+    textFont: =Font.'Segoe UI'
+    TextInput: =""
+    textSize: =13
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    txtSearchWithInputInputText As text:
+        AccessibleLabel: =SearchBarWithInput.AccessibleLabel
+        BorderThickness: =0
+        Clear: =true
+        Color: =RGBA(255, 255, 255, 1)
+        Default: =SearchBarWithInput.TextInput
+        DelayOutput: =true
+        Fill: =SearchBarWithInput.searchFillColor
+        Font: =SearchBarWithInput.textFont
+        Height: =36
+        HintText: =SearchBarWithInput.SearchHintText
+        HoverColor: =Self.Color
+        HoverFill: =Self.Fill
+        PaddingBottom: =0
+        PaddingLeft: =34
+        PaddingRight: =15
+        PaddingTop: =0
+        RadiusBottomLeft: =10
+        RadiusBottomRight: =10
+        RadiusTopLeft: =10
+        RadiusTopRight: =10
+        Size: =SearchBarWithInput.textSize
+        Width: =Parent.Width - (16 * 2)
+        X: =16
+        Y: =(Parent.Height / 2) - (Self.Height / 2)
+        ZIndex: =3
+
+    icoSearchInput As icon.Search:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =Self.Width
+        Icon: =Icon.Search
+        Width: =16
+        X: =txtSearchWithInputInputText.X + 9
+        Y: =txtSearchWithInputInputText.Y + (txtSearchWithInputInputText.Height / 2) - (Self.Height / 2)
+        ZIndex: =4
+

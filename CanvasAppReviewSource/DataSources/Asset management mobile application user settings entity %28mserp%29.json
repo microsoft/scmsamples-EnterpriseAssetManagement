@@ -1,0 +1,35 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenancemobileappusersettingsentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenancemobileappusersettingsentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management mobile application user settings entity (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_entassetmaintenancemobileappusersettingsentityid": "Asset management mobile application user settings entity (mserp)",
+      "mserp_hasmaintenancerequesterrole": "HasMaintenanceRequesterRole",
+      "mserp_hasmaintenanceworkerrole": "HasMaintenanceWorkerRole",
+      "mserp_workerpersonnelnumber": "Personnel number",
+      "mserp_workeruserid": "WorkerUserId",
+      "mserp_workeruserobjectid": "GUID"
+    },
+    "PreferredName": "Asset management mobile application user settings entity (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management mobile application user settings entity (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenancemobileappusersettingsentity_views",
+    "RelatedEntityName": "Asset management mobile application user settings entity (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0104113f-d32d-1f6d-f6e1-006ad8342b4e": "Asset management mobile application user settings entity (mserp) Advanced Find View",
+      "44ba8457-326f-5b0f-0ffa-849a7f8dac0b": "Asset management mobile application user settings entity (mserp) Associated View",
+      "4e0b3bc6-c809-ad82-17d8-cc0a3f407ed9": "All Asset management mobile application user settings entity (mserp)",
+      "af216427-2894-0cd9-2c61-1db06b0bbc68": "Asset management mobile application user settings entity (mserp) Lookup View"
+    }
+  }
+]

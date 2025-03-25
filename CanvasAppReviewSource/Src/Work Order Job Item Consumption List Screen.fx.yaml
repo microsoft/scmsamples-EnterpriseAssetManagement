@@ -1,0 +1,338 @@
+"'Work Order Job Item Consumption List Screen' As screen":
+    Fill: =gblAppColors.Background
+    OnVisible: |-
+        =UpdateContext({ varShowAddItemsDialog: false });
+        
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+
+    galItemsConsumedOnJob As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: =T.ItemsConsumedGalleryAccessibleLabel
+        DelayItemLoading: =true
+        Height: =Parent.Height - Self.Y - btnAddItemConsumptionLine.Height - (Parent.Height - btnAddItemConsumptionLine.Y - btnAddItemConsumptionLine.Height + 16)
+        Items: |-
+            =Filter(
+                'Asset management work order job product consumption lines (mserp)',
+                'Company Code' = gblAppCache.UserActiveWorker.'Company Code',
+                'Work order' = WorkOrderJob.'Work order',
+                'Line number (mserp_workorderjobnumber)' = WorkOrderJob.'Line number',
+                Posted = 'NoYes (mserp)'.No
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =Navigate(
+                'Work Order Job Item Consumption Edit Screen',
+                ScreenTransition.Cover,
+                {
+                    ItemConsumption: ThisItem,
+                    Product: LookUp(
+                        'Asset management released products (mserp)',
+                        'Company Code' = gblAppCache.UserActiveWorker.'Company Code'
+                        And 'Product number' = ThisItem.'Item number'
+                    ),
+                    IsNewConsumptionLine: false,
+                    IsLocationDimensionEnabled: LookUp(
+                        'Asset management released products storage dimension defaults (mserp)',
+                        'Company Code' = gblAppCache.UserActiveWorker.'Company Code'
+                        And 'Item number' = ThisItem.'Item number'
+                    ).Active = 'NoYes (mserp)'.Yes
+                }
+            )
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =96
+        Visible: |-
+            =Not (IsEmpty(galItemsConsumedOnJob.AllItems)) And With(
+                {locFirstItemConsumption: First(galItemsConsumedOnJob.AllItems)},
+                locFirstItemConsumption.mserp_dataareaid = WorkOrderJob.mserp_dataareaid
+                And locFirstItemConsumption.mserp_workorderjobnumber = WorkOrderJob.mserp_linenumber
+                And locFirstItemConsumption.mserp_workorderid = WorkOrderJob.mserp_workorderid
+            )
+        Width: =Parent.Width
+        Y: =54
+        ZIndex: =1
+
+        shpBottomLineWOJICS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        conConsumedItemsHorizontal As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Parent.TemplateHeight
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+
+            conConsumedItemDetails As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =50
+                LayoutMinWidth: =200
+                LayoutMode: =LayoutMode.Auto
+                Width: =200
+                ZIndex: =1
+
+                lblItemNumber As label:
+                    AutoHeight: =true
+                    Color: =gblAppColors.Accent
+                    Font: =gblAppStyles.CommonFont
+                    FontWeight: =FontWeight.Semibold
+                    Height: =50
+                    OnSelect: =Select(galItemsConsumedOnJob)
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    Size: =gblAppStyles.FontSize_Medium
+                    Text: =ThisItem.mserp_productnumber
+                    Width: =50
+                    ZIndex: =1
+
+                lblItemName As label:
+                    AutoHeight: =true
+                    Color: =gblAppColors.AccentInfo
+                    Font: =gblAppStyles.CommonFont
+                    FontWeight: =FontWeight.Semibold
+                    Height: =50
+                    OnSelect: =Select(galItemsConsumedOnJob)
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    Size: =gblAppStyles.FontSize_Medium
+                    Text: |-
+                        =// delegation should be OK here based on assumption that the item consumption list won't be very long
+                        LookUp('Asset management released products (mserp)', mserp_itemnumber = ThisItem.mserp_productnumber).mserp_productname
+                    Width: =50
+                    ZIndex: =3
+
+            lblItemQuantity As label:
+                Align: =Align.Right
+                AlignInContainer: =AlignInContainer.Center
+                AutoHeight: =true
+                Color: =gblAppColors.Accent
+                Font: =gblAppStyles.CommonFont
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                OnSelect: =Select(galItemsConsumedOnJob)
+                PaddingLeft: =16
+                PaddingRight: =16
+                Size: =gblAppStyles.FontSize_Medium
+                Text: |-
+                    =Substitute(
+                        Substitute(
+                            "{Quantity} {Unit}",
+                            "{Quantity}",
+                            ThisItem.mserp_quantity
+                        ),
+                        "{Unit}",
+                        ThisItem.mserp_productconsumptionunitid
+                    )
+                Width: =120
+                ZIndex: =2
+
+        shpItemsConsumedOnJobClickSurface As rectangle:
+            Fill: =RGBA(0,0,0,0)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Height: =conConsumedItemsHorizontal.Height
+            OnSelect: =Select(Parent)
+            TabIndex: =0
+            Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
+            X: =gblAppStyles.FocusBorderThickness
+            ZIndex: =5
+
+    lblNoItemsConsumedPlaceholder As label:
+        Align: =Align.Center
+        Color: =gblAppColors.Tag
+        Font: =gblAppStyles.CommonFont
+        FontWeight: =FontWeight.Semibold
+        Height: =galItemsConsumedOnJob.Height
+        Size: =gblAppStyles.FontSize_XLarge
+        TabIndex: =0
+        Text: =T.AddItemsByClickingLabel
+        VerticalAlign: =VerticalAlign.Bottom
+        Visible: =Not galItemsConsumedOnJob.Visible
+        Width: =galItemsConsumedOnJob.Width
+        X: =galItemsConsumedOnJob.X
+        Y: =cmpHeaderWOJICS.Height + 1
+        ZIndex: =2
+
+    btnAddItemConsumptionLine As button:
+        Color: =gblAppStyles.Button.FontColor
+        Fill: =gblAppStyles.Button.Fill
+        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+        Font: =gblAppStyles.CommonFont
+        FontWeight: =gblAppStyles.Button.FontWeight
+        Height: =52
+        OnSelect: |-
+            =UpdateContext({ varShowAddItemsDialog: true })
+        Size: =gblAppStyles.Button.FontSize
+        Text: =T.AddItemsLabel
+        Width: =Min(300,Parent.Width -16*2)
+        X: =Parent.Width / 2 - Self.Width / 2
+        Y: =Parent.Height - (Self.Height + 16)
+        ZIndex: =3
+
+    cmpHeaderWOJICS As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: =T.ItemsConsumedLabel
+        Width: =Parent.Width
+        ZIndex: =4
+
+    conNewItemConsumptionOverlay As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(0, 0, 0, 0.4)
+        Height: =Parent.Height
+        Visible: =varShowAddItemsDialog
+        Width: =Parent.Width
+        ZIndex: =5
+
+        btnNewItemConsumptionButtonsBackground As button:
+            AutoDisableOnSelect: =false
+            BorderThickness: =0
+            Color: =Color.White
+            DisabledColor: =Color.White
+            DisabledFill: =Color.White
+            Fill: =Color.White
+            FocusedBorderThickness: =0
+            Height: =Parent.Height - btnNewItemConsumptionFromSearch.Y + conNewItemConsumptionButtons.PaddingTop
+            HoverColor: =Color.White
+            HoverFill: =Color.White
+            PressedColor: =Color.White
+            PressedFill: =Color.White
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =16
+            RadiusTopRight: =16
+            Text: =""
+            Width: =Parent.Width
+            Y: =App.Height - Self.Height
+            ZIndex: =1
+
+        conNewItemConsumptionButtons As groupContainer.verticalAutoLayoutContainer:
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Parent.Width
+            ZIndex: =2
+
+            btnNewItemConsumptionFromSearch As button:
+                BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                Color: =gblAppStyles.ButtonSecondary.FontColor
+                DisabledFill: =gblAppStyles.ButtonSecondary.DisabledFill
+                Fill: =gblAppStyles.ButtonSecondary.Fill
+                FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                Font: =gblAppStyles.ButtonSecondary.Font
+                FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                Height: =gblAppStyles.ButtonSecondary.Height
+                HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                OnSelect: |
+                    =Navigate(
+                        'Item Consumption Product Search Screen',
+                        ScreenTransition.Cover,
+                        {WorkOrderJob: WorkOrderJob}
+                    );
+                    UpdateContext({varShowAddItemsDialog: false});
+                PaddingBottom: =Self.PaddingTop
+                PaddingLeft: =Self.PaddingTop
+                PaddingRight: =Self.PaddingTop
+                PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                RadiusBottomLeft: =Self.RadiusTopLeft
+                RadiusBottomRight: =Self.RadiusTopLeft
+                RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                RadiusTopRight: =Self.RadiusTopLeft
+                Size: =gblAppStyles.ButtonSecondary.FontSize
+                Text: =T.SearchLabel
+                Width: =gblAppStyles.ButtonSecondary.Width
+                X: =40
+                Y: =40
+                ZIndex: =3
+
+            conNewItemConsumptionFromScan As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                FillPortions: =0
+                Height: =gblAppStyles.Button.Height +  2*gblAppStyles.FocusBorderThickness
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =gblAppStyles.Button.Width + 2*gblAppStyles.FocusBorderThickness
+                ZIndex: =4
+
+                bcsNewItemConsumptionFromScan As barcodeScanner:
+                    BorderStyle: =gblAppStyles.Button.BorderStyle
+                    BorderThickness: =gblAppStyles.Button.BorderThickness
+                    Color: =gblAppStyles.Button.FontColor
+                    DisabledColor: =gblAppStyles.Button.DisabledColor
+                    DisabledFill: =gblAppStyles.Button.DisabledFill
+                    Fill: =gblAppStyles.Button.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.Button.Font
+                    FontWeight: =gblAppStyles.Button.FontWeight
+                    Height: =Parent.Height -  2*gblAppStyles.FocusBorderThickness
+                    HoverColor: =gblAppStyles.Button.HoverColor
+                    HoverFill: =gblAppStyles.Button.HoverFill
+                    OnScan: |
+                        =Navigate(
+                            'Item Consumption Product Search Screen',
+                            ScreenTransition.Cover,
+                            {
+                                WorkOrderJob: WorkOrderJob,
+                                SearchText: Self.Value
+                            }
+                        );
+                        UpdateContext({varShowAddItemsDialog: false});
+                    PaddingBottom: =Self.PaddingTop
+                    PaddingLeft: =Self.PaddingTop + imgScanIconItemConsumption.Width
+                    PaddingRight: =Self.PaddingTop
+                    PaddingTop: =gblAppStyles.Button.Padding.Top
+                    PressedColor: =gblAppStyles.Button.PressedColor
+                    PressedFill: =gblAppStyles.Button.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.Button.FontSize
+                    Text: =T.ScanLabel
+                    Width: =Parent.Width - 2*gblAppStyles.FocusBorderThickness
+                    X: =gblAppStyles.FocusBorderThickness
+                    Y: = gblAppStyles.FocusBorderThickness
+                    ZIndex: =1
+
+                imgScanIconItemConsumption As image:
+                    Height: =24
+                    Image: =qr
+                    Width: =24
+                    X: =110
+                    Y: =Parent.Height / 2 - Self.Height / 2
+                    ZIndex: =2
+
+        shpPromptDarkAreaExitWOJICLS As rectangle:
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - btnNewItemConsumptionButtonsBackground.Height
+            OnSelect: |-
+                =UpdateContext({ varShowAddItemsDialog: false });
+            Width: =Parent.Width
+            ZIndex: =3
+

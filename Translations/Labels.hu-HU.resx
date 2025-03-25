@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>Vissza</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>Beosztások</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>Munkarendelések</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ Kérés</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>Karbantartás kérése</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>Keresés</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>Eszközök</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>Munkavégzési helyszínek</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>Keresés eszköztípus vagy eszközazonosító alapján</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>Keresés helynév vagy helyazonosító alapján</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>Dolgozói megjegyzés</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>Belső megjegyzés</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Mellékletek</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>Saját felhasznált idő</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>Felhasznált cikkek</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>Eszköz</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>Ütemezett kezdés</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>Tervezett befejezés</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>Munkarendelés</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>Munkarendelés állapotának módosítása</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>Ugrás a munkarendeléshez</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>Kapcsolódó feladatok</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>Az eszköz feladatainak megtekintése</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>Az hely feladatainak megtekintése</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>Megjegyzések</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>Elköltött idő módosítása</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>Cikkek hozzáadása az alábbi gombra kattintva</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>Cikkek hozzáadása</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>Másik cikkforrás keresése vagy kiválasztása</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>Munkarendelés típusa</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>Szolgáltatásszint</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>Várható kezdés</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>Várható befejezés</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>Tényleges kezdés</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>Tényleges befejezés</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>Ellenőrzőlista ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>Nincs ellenőrzőlista</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>Cikk mennyiségének módosítása</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>Eszköz DBJ cikklista</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Eszközök listája</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>Elérhető galériák listája</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>Ellenőrzőlista-elem megjegyzései</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>Ellenőrzőlista mértékének ellenértéke</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>Ellenőrzőlista változója</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Az eltöltött órák kiigazítása</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>Felhasznált cikkek listája</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Felhasználásra szánt cikkek</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Munkavégzési helyszínek listája</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Eltöltött percek beállítása</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>Fénykép hozzáadása</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Aktuális mellékletek listája</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>Adja meg a karbantartási kérés leírását</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>Adja meg a karbantartási kérésre vonatkozó megjegyzéseket</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>Karbantartási kérés típusának kiválasztása</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Karbantartás szolgáltatásszintjének kiválasztása</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>Cikk eltávolítása</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>Szöveg megadása a kereséshez</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>Nyelv kiválasztása</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Pótcikkek listája</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelések szűrése</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelések listája</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelési feladatok listája</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelések rendezése</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelések keresése</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>Termékszám</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Termék neve</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>Hely</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>Raktár</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>Köteg száma</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>Sorozatszám</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>Mennyiség módosítása</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>Mennyiség csökkentése</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>Mennyiség növelése</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>A cikkfelhasználást nem lehet frissíteni</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>Megerősítés</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>Telephely szerkesztése</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>Raktár szerkesztése</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>Óra</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>Óra</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>Perc</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>Perc</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>A(z) „{AttachmentTypeName}” típusú mellékletek még nem támogatottak</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>Névjegy</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Verzió: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>Nyelv (a módosításhoz újra kell indítani az alkalmazást):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>Szolgáltatási feltételek</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>Érvénytelenít</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>Mentés</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>Előfordulhat, hogy felhasználó nem jogosult karbantartási kérések létrehozására vagy munkarendelések karbantartására, vagy a hálózati kapcsolat a Dynamics szolgáltatással meghiúsult. Forduljon a rendszergazdához.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>Újra</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>A felhasználói beállítások beolvasása nem sikerült</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>A karbantartási dolgozó megjegyzéseinek megjelenítése nem sikerült a(z) {UserPersonnelNumber} személyzeti számra vonatkozóan</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>Nincs hozzárendelve aktív eszközkezelési dolgozókhoz. Nem fogja tudni karbantartani a munkarendeléseket.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>Szűrés</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>Ma</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>Ez a hét</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>Teljes idő</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>Rendezési szempont</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>Munkarendelés azonosítója</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>Munkarendelési szolgáltatás szintje</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>Ütemezett kezdési dátum</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>Keresés ...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>Beosztások: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Lezárás</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>{WorkOrderId} munkarendelés #{JobLineNumber} feladata</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>Jogi személy módosítása</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>Sor száma</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>Beosztás</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>Dolgozói megjegyzés szerkesztése</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>Belső megjegyzés szerkesztése</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>Megtekintés</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>Mellékletek megtekintése</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>Beállítás</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>Munkarendelés állapota</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>Kötelező</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>Érték: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>Érték: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>Cikk hozzáadása</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>Cikkek</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>Eszköz DBJ</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>Pótalkatrészek</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Nem sikerült frissíteni az eltöltött órákat</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>Utasítás</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>Saját megjegyzések</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>Eredmény: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>Min.: {MeasurementMinimum} – Max.: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>Bejelölés</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>Jelölés törlése</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>Nem lehet beolvasni az alapértelmezett kéréstípust</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>Szolgáltatásszint beállítása hiányzik</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>Az alapértelmezett szolgáltatásszint beolvasása nem sikerült</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Küldés</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>Nem lehet mellékleteket létrehozni, mert hiányzik a dokumentumtípus konfigurációja</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>Kérések ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>Kérések</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>Munkarendelések</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>Munkarendelések ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>Megjegyzések</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>Karbantartási kérés típusa</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>Fényképek hozzáadása</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>Ismertesse a szükséges teendőket</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>A karbantartási kérés sikeresen létrejött: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>Kész</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>Jogi személyek között</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>Csak koppintson a profilképre az elérhető jogi személyek megjelenítéséhez.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>Váltás több jogi személy között</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>Első lépések</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>Hatékony munkarendelések</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>Tekintse meg a dokumentációt a világos kommunikációért és a karbantartási előzményekért.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>Teljes hozzáférés az eszközökhöz</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>Tovább</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>Gyorskérések</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>Olvassa be egy eszköz vagy hely QR-kódját, és készítsen fényképet vagy videót a problémáról.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>Kérés indítása kevesebb, mint egy perc alatt</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>Elérhető állapotok betöltése...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>Helyek betöltése...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>Raktárak betöltése...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Beállítások</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>Kijelölve</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Az eltöltött órák növelése</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Az eltöltött percek növelése</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Az eltöltött órák csökkentése</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Az eltöltött percek csökkentése</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>{WorkOrderId} munkarendelés</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>{WorkOrderId} munkarendelés, {JobLineNumber}. sor</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} Kijelölve</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>A munkarendelés sikeresen létre lett hozva: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>Új munkarendelés létrehozása</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>Új munkarendelés létrehozása vagy karbantartás kérése</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>Nem sikerült az alapértelmezett munkarendelési típus lekérése</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>Jegyzetek</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>Fényképek hozzáadása</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>Ismertesse a szükséges teendőket</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>Leírás</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>Fénykép hozzáadása</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Aktuális mellékletek listája</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelés leírásának megadása</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelésen feladatra vonatkozó jegyzeteinek megadása</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelési típus kiválasztása</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelési szolgáltatásszint kiválasztása</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>Feladattípus</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>Feladattípus változata</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelési feladattípus kiválasztása</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>Munkarendelési feladattípus változatának kiválasztása</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>Munkarendelés ütemezése (be)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>Váltson, hogy azonnal a létrehozásra ütemezze a munkarendelést</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>Kapcsolja ki, hogy elkerülje a munkarendelés ütemezését a létrehozás időpontjára</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>Munkarendelés ütemezése (ki)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>Új munkarendelés</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} melléklet</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} óra</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} óra {WholeMinutes} perc</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} cikk</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>Új munkarendelés az eszközhöz</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>Rendelkezésre álló helyek betöltése...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>Hely szerkesztése</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>Hely</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>A fénykép túl nagy a csatoláshoz</value>
+  </data>
+</root>

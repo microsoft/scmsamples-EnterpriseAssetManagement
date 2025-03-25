@@ -1,0 +1,72 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkorderlineattachmententities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkorderlineattachmententity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset maintenance work order line attachment entity (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_accessrestriction": "Restriction",
+      "mserp_attacheddatetime": "AttachedDateTime",
+      "mserp_attachinguserid": "AttachingUserId",
+      "mserp_attachment": "Bitmap",
+      "mserp_attachmentdescription": "Description",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_documentattachmenttypecode": "Type",
+      "mserp_documentattachmenttypelegalentityid": "DocumentAttachmentTypeLegalEntityId",
+      "mserp_entassetmaintenanceworkorderlineattachmententityid": "Asset maintenance work order line attachment entity (mserp)",
+      "mserp_filelocation": "File location",
+      "mserp_filetype": "File type",
+      "mserp_FK_DocumentAttachmentType_id": "Document types",
+      "mserp_FK_MaintenanceWorkOrderLine_id": "Asset management work order jobs V2",
+      "mserp_linenumber": "Line number",
+      "mserp_notes": "Note",
+      "mserp_originalfilename": "Original file name",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_workorderid": "Work order"
+    },
+    "PreferredName": "Asset maintenance work order line attachment entity (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset maintenance work order line attachment entity (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceworkorderlineattachmententity_views",
+    "RelatedEntityName": "Asset maintenance work order line attachment entity (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "28099831-7cd1-2c1f-c2f7-d3499645449e": "Asset maintenance work order line attachment entity (mserp) Lookup View",
+      "750d470e-1329-c40c-22c1-c9b566c70dce": "Asset maintenance work order line attachment entity (mserp) Associated View",
+      "88e0db88-11f2-dfba-4fc7-724c43fee67e": "All Asset maintenance work order line attachment entity (mserp)",
+      "ea80b95b-4def-1a4b-118f-fd99a67546ed": "Asset maintenance work order line attachment entity (mserp) Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Restriction (mserp)",
+    "Name": "mserp_docurestriction",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Internal",
+      "200000001": "External"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_accessrestriction",
+        "OptionSetReferenceEntityName": "Asset maintenance work order line attachment entity (mserp)"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "mserp_accessrestriction",
+        "OptionSetReferenceEntityName": "Asset management maintenance request document attachments entity (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_accessrestriction",
+    "RelatedEntityName": "Asset maintenance work order line attachment entity (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

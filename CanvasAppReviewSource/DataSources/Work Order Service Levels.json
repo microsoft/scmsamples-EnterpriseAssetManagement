@@ -1,0 +1,46 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkorderservicelevelentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkorderservicelevelentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Work Order Service Levels",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenanceworkorderservicelevelentityid": "Asset management work order service levels (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestEntity_ServiceLevel": "Asset management maintenance requests (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestV2Entity_ServiceLevel": "Asset management maintenance requests V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderTableV2Entity_ServiceLevel": "Asset management work orders V2 (mserp)",
+      "mserp_formattedservicelevelname": "Name (mserp_formattedservicelevelname)",
+      "mserp_name": "Name (mserp_name)",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_servicelevel": "Service level",
+      "mserp_workorderexpectedendday": "End day",
+      "mserp_workorderexpectedendtime": "End time",
+      "mserp_workorderexpectedsetendtime": "Set end time",
+      "mserp_workorderexpectedsetstarttime": "Set start time",
+      "mserp_workorderexpectedstartday": "Start day",
+      "mserp_workorderexpectedstarttime": "Start time",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Work Order Service Levels",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Work Order Service Levels (Views)",
+    "Name": "_mserp_entassetmaintenanceworkorderservicelevelentity_views",
+    "RelatedEntityName": "Work Order Service Levels",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "295d3f20-7bb9-f9fa-a350-82d4afe81573": "Asset management work order service levels (mserp) Associated View",
+      "bc0a9872-959d-1d00-8b26-822df5a9c8d9": "All Asset management work order service levels (mserp)",
+      "c9856d2e-25b7-aa89-9721-68348aad1afa": "Asset management work order service levels (mserp) Lookup View",
+      "eca94e26-5022-eeef-61cb-9dc32964578f": "Asset management work order service levels (mserp) Advanced Find View"
+    }
+  }
+]

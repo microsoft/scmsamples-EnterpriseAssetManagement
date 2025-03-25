@@ -1,0 +1,227 @@
+BottomSheetChoiceSelector As CanvasComponent:
+    OnSelect(SelectedChoice As Record):
+        SelectedChoice:
+            Default: |-
+                ={key: "x", label: "Sample label"}
+        ThisProperty:
+            Default: =true
+    AvailableChoices: |-
+        =Table(
+            {
+                key: "x",
+                label: "Option 1 (x)"
+            },
+            {
+                key: "z",
+                label: "Some selected choice (z) (can be Blank())"
+            },
+            {
+                key: "y",
+                label: "Another option (y)"
+            }
+        )
+    ChoiceAccessibleName: ="{OptionLabel} Selected"
+    ComponentInstanceName: =""
+    CurrentlySelectedChoice: ="Some selected choice (z) (can be Blank())"
+    Fill: =RGBA(0, 0, 0, 0.15)
+    FocusBorderColor: =RGBA(0, 0, 0, 1)
+    FocusBorderThickness: =2
+    Height: =App.Height
+    Loading: =false
+    LoadingChoicesText: ="Loading choices"
+    OnCancel: =true
+    ReturnFocus: =""
+    SelectedChoiceTooltip: =""
+    Title: =Blank()
+    UseStaticOrdering: =false
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    btnCancelBackgroundBSCS As rectangle:
+        BorderColor: =RGBA(7, 66, 171, 1)
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height
+        OnSelect: =Parent.OnCancel()
+        Width: =App.Width
+        ZIndex: =1
+
+    lblLoadingChoicesBSCS As label:
+        Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        Height: =galAvailableChoicesBSCS.TemplateHeight
+        Italic: =true
+        PaddingLeft: =16
+        PaddingRight: =16
+        Size: =11.25
+        Text: =Parent.LoadingChoicesText
+        Visible: =Parent.Loading
+        Width: =Parent.Width
+        Y: =Parent.Height - Self.Height
+        ZIndex: =4
+
+    galAvailableChoicesBSCS As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Min(CountRows(Self.AllItems) * Self.TemplateHeight, Parent.Height - Parent.Height*0.2)
+        ItemAccessibleLabel: |-
+            =If(
+                BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label],
+            
+                Substitute(
+                        BottomSheetChoiceSelector.ChoiceAccessibleName,
+                        "{OptionLabel}",
+                        ThisItem.label
+                ),
+                
+                ThisItem.label
+            )
+        Items: |-
+            =Table(
+                
+                Filter(
+                    Parent.AvailableChoices,
+                    key <> Parent.CurrentlySelectedChoice
+                    And label <> Parent.CurrentlySelectedChoice
+                ),
+                {key: Parent.CurrentlySelectedChoice, label: Parent.CurrentlySelectedChoice}
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =If(
+                BottomSheetChoiceSelector.CurrentlySelectedChoice in [
+                    ThisItem.key,
+                    ThisItem.label
+                ],
+                BottomSheetChoiceSelector.OnCancel(),
+                BottomSheetChoiceSelector.OnSelect(ThisItem)
+            )
+        Selectable: =false
+        TemplatePadding: =0
+        TemplateSize: =73
+        Width: =Parent.Width
+        Y: =Parent.Height - Self.Height
+        ZIndex: =5
+
+        icoChoiceCurrentlySelectedBSCS As icon.CheckBadge:
+            Color: =RGBA(7, 66, 171, 1)
+            Height: =lblChoiceTextBSCS.Height
+            Icon: =Icon.CheckBadge
+            OnSelect: =Select(lblChoiceTextBSCS)
+            PaddingBottom: =24
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =24
+            Visible: =BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label]
+            Width: =Self.Height
+            X: =Parent.Width - Self.Width
+            ZIndex: =1
+
+        lblChoiceTextBSCS As label:
+            FocusedBorderColor: =BottomSheetChoiceSelector.FocusBorderColor
+            FocusedBorderThickness: =BottomSheetChoiceSelector.FocusBorderThickness
+            Font: =Font.'Segoe UI'
+            FontWeight: =If(BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label], FontWeight.Normal, FontWeight.Semibold)
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =11.25
+            TabIndex: =0
+            Text: =ThisItem.label
+            Tooltip: |-
+                =If(
+                    BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label],
+                
+                    Substitute(
+                            BottomSheetChoiceSelector.ChoiceAccessibleName,
+                            "{OptionLabel}",
+                            ThisItem.label
+                    ),
+                    
+                    ""
+                )
+            Width: =Parent.TemplateWidth
+            ZIndex: =2
+
+        shpBottomLineBSCS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =3
+
+    btnTopBorderWithNotchBSCS As button:
+        BorderThickness: =0
+        DisabledFill: =Color.White
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =Color.White
+        Height: =14
+        HoverFill: =Color.White
+        PressedFill: =Color.White
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =14
+        RadiusTopRight: =14
+        Text: =""
+        Visible: =IsBlank(Parent.Title)
+        Width: =Parent.Width
+        X: =galAvailableChoicesBSCS.X
+        Y: =If(lblLoadingChoicesBSCS.Visible, lblLoadingChoicesBSCS.Y, galAvailableChoicesBSCS.Y) - Self.Height + 1
+        ZIndex: =6
+
+    btnTopBorderWithTitleBSCS As button:
+        BorderThickness: =0
+        DisabledColor: =RGBA(0, 0, 0, 1)
+        DisabledFill: =Color.White
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =Color.White
+        Font: =Font.'Segoe UI'
+        Height: =42
+        HoverFill: =Color.White
+        PressedFill: =Color.White
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =14
+        RadiusTopRight: =14
+        Size: =12.75
+        Text: =Parent.Title
+        Visible: =Not IsBlank(Parent.Title)
+        Width: =Parent.Width
+        X: =galAvailableChoicesBSCS.X
+        Y: =If(lblLoadingChoicesBSCS.Visible, lblLoadingChoicesBSCS.Y, galAvailableChoicesBSCS.Y) - Self.Height + 1
+        ZIndex: =7
+
+    shpBottomSheetTopPinBSCS As button:
+        AutoDisableOnSelect: =false
+        BorderThickness: =0
+        DisabledFill: =RGBA(145, 145, 145, 1)
+        DisplayMode: =DisplayMode.Disabled
+        Fill: =RGBA(145, 145, 145, 1)
+        Height: =5
+        RadiusBottomLeft: =3
+        RadiusBottomRight: =3
+        RadiusTopLeft: =3
+        RadiusTopRight: =3
+        Text: =""
+        Visible: =btnTopBorderWithNotchBSCS.Visible
+        Width: =37
+        X: =Parent.Width / 2 - Self.Width / 2
+        Y: =btnTopBorderWithNotchBSCS.Y + btnTopBorderWithNotchBSCS.Height / 2 - Self.Height / 2
+        ZIndex: =8
+
+    cmpFocusTrapBSCS As A11yFocusTrap:
+        Activate: =BottomSheetChoiceSelector.Visible
+        ActivationDelay: =1000
+        ContainerName: =BottomSheetChoiceSelector.ComponentInstanceName
+        DisplayMode: =DisplayMode.Edit
+        Height: =1
+        ReturnFocus: =BottomSheetChoiceSelector.ReturnFocus
+        Width: =1
+        X: =0
+        Y: =0
+        ZIndex: =9
+

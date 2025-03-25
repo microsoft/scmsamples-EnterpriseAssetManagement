@@ -1,0 +1,4881 @@
+{
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.4.json",
+  "runs": [
+    {
+      "columnKind": "utf16CodeUnits",
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "results": [
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.btnCreateWOSubmit.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.btnCreateWOSubmit.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 15,
+                  "charOffset": 4245,
+                  "snippet": {
+                    "text": ".'Company Code'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.btnCreateWOSubmit"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "locCreatedWorkOrder.'Company Code'"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.btnCreateWOSubmit.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.btnCreateWOSubmit.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 4224,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.btnCreateWOSubmit"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 28,
+                  "charOffset": 772,
+                  "snippet": {
+                    "text": "IsBlankOrError('Asset type')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlankOrError"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 769,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateMR_Hidden"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 28,
+                  "charOffset": 787,
+                  "snippet": {
+                    "text": "IsBlankOrError('Asset type')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlankOrError"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 784,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.btnCreateWO_Hidden"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 37,
+                  "charOffset": 830,
+                  "snippet": {
+                    "text": "IsBlankOrError('Functional location')"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "IsBlankOrError"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 827,
+                  "snippet": {
+                    "text": "||"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.galleryTemplate4_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "PersonaScreenHeader",
+                "type": "PersonaScreenHeader.shpPersonaClickableBackdropPSH"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "PersonaScreenHeader",
+                "type": "PersonaScreenHeader.shpPersonaClickableBackdropPSH"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "PersonaScreenHeader.shpPersonaClickableBackdropPSH.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "PersonaScreenHeader",
+                "type": "PersonaScreenHeader.shpPersonaClickableBackdropPSH"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.lblLoadingChoicesBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.btnCancelBackgroundBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.galAvailableChoicesBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.galAvailableChoicesBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "BottomSheetChoiceSelector",
+                "type": "BottomSheetChoiceSelector.galAvailableChoicesBSCS.icoChoiceCurrentlySelectedBSCS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SearchBarWithInput.icoSearchInput.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SearchBarWithInput.icoSearchInput.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "SearchBarWithInput",
+                "type": "SearchBarWithInput.icoSearchInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "SearchBarWithInput.icoSearchInput.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "SearchBarWithInput.icoSearchInput.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "SearchBarWithInput",
+                "type": "SearchBarWithInput.icoSearchInput"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.btnCancelBackgroundFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.lblButtonTextFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "FullScreenBottomRightButtonList",
+                "type": "FullScreenBottomRightButtonList.galButtonsFSBRBL.conButtonFSBRBL.conButtonIconWrapperFSBRBL.conButtonIconFSBRBL.icoButtonIconFSBRBL"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRCreateWorkOrderIdWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'.galMRCreateWorkOrdersList.conMRCreateWorkOrdersDetails.lblMRWorkOrdersDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingWorkOrdersWOCFS.icoExistingWorkOrdersWOCFS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWOSubHeader.conExistingMaintenanceRequestsWOCFS.icoExistingMaintenanceRequestsWOCFS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments.imgRemoveAttachmentWOCFS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments.imgRemoveAttachmentWOCFS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Create Form Screen",
+                "type": "'Work Order Create Form Screen'.conVerticalCreateWorkOrder.conCreateWorkOrderForm.galNewWorkOrderAttachments.imgRemoveAttachmentWOCFS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.recOnboardingMR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.lblOnboardingMRTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingMR.imgOnboardingMR"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingWO.lblOnboardingWOTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingWO.imgOnboardingWO"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingLE.lblOnboardingLETitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Onboarding Screen",
+                "type": "'Onboarding Screen'.conVerticalOnboardingLE.imgOnboardingLE"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Maintenance Requests List Screen",
+                "type": "'Maintenance Requests List Screen'.galRequestsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Requests List Screen",
+                "type": "'Maintenance Requests List Screen'.galRequestsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Maintenance Requests List Screen",
+                "type": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Requests List Screen",
+                "type": "'Maintenance Requests List Screen'.galRequestsList.conVerticalRequestsListCard.lblRequestsListCardHeader"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineAsset"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.conWorkOrderLineDetails.lblWorkOrderLineDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.shpLineClickSurfaceWODS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.shpLineClickSurfaceWODS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.shpLineClickSurfaceWODS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Details Screen",
+                "type": "'Work Order Details Screen'.galWorkOrderLines.lblWorkOrderLineNumber"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.imgJobAttachmentFullScreenImage.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.imgJobAttachmentFullScreenImage.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.imgJobAttachmentFullScreenImage"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments.conJobAttachmentsHorizontal.conJobAttachmentDetails.lblJobAttachmentType"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.shpClickSurfaceWOJAS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Attachments Screen'.galJobAttachments.shpClickSurfaceWOJAS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Attachments Screen",
+                "type": "'Work Order Job Attachments Screen'.galJobAttachments.shpClickSurfaceWOJAS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.galWorkOrderJobChecklist"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.galWorkOrderJobChecklist"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.shpChecklistLineClickSurfaceWOJDS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.shpChecklistLineClickSurfaceWOJDS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.shpChecklistLineClickSurfaceWOJDS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.galWorkOrderJobChecklist.lblHeaderText"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Details Screen",
+                "type": "'Work Order Job Details Screen'.conInformationWOJDS.conWorkOrderJobAdjustables.conWorkOrderJobAdjustablesVertical.shpBottomLineAdjustables_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conIncrementHours.icoAddHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conHoursSpentColumn.conDecrementHours.icoDecrementHours"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conIncrementMinutes.icoAddMinutes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Hour Consumption Screen",
+                "type": "'Work Order Job Hour Consumption Screen'.conScrollableActionsWOJHCS.conActionsWOJHCS.conAdjustHoursSpent.conAdjustTimeSpentHorizontal.conMinutesSpentColumn.conDecrementMinutes.icoDecrementMinutes"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.btnNewItemConsumptionButtonsBackground.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.btnNewItemConsumptionButtonsBackground.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.btnNewItemConsumptionButtonsBackground"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.conNewItemConsumptionOverlay.shpPromptDarkAreaExitWOJICLS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemNumber"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.conConsumedItemDetails.lblItemName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.conConsumedItemsHorizontal.lblItemQuantity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.shpItemsConsumedOnJobClickSurface.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.shpItemsConsumedOnJobClickSurface.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.galItemsConsumedOnJob.shpItemsConsumedOnJobClickSurface"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.lblNoItemsConsumedPlaceholder.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Order Job Item Consumption List Screen'.lblNoItemsConsumedPlaceholder.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Order Job Item Consumption List Screen",
+                "type": "'Work Order Job Item Consumption List Screen'.lblNoItemsConsumedPlaceholder"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conShowCreationSelectorDropShadow.lblShowCreationSelectorPlus"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conHeaderWOS.conHeaderActionsWOS.lblCurrentLegalEntity.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conHeaderWOS.conHeaderActionsWOS.lblCurrentLegalEntity.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conHeaderWOS.conHeaderActionsWOS.lblCurrentLegalEntity"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.btnCreateNewItemButtonsBackgroundWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.btnCreateNewItemButtonsBackgroundWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conCreateNewItemOverlayWOS.btnCreateNewItemButtonsBackgroundWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conCreateNewItemOverlayWOS.conCreateNewItemButtonsWOS.conNewItemFromScanWOS.imgScanIconWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.conCreateNewItemOverlayWOS.shpPromptDarkAreaExitWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderIdJobsWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderLineAssetWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrderJobsWOS.conWorkOrderLineDetailsShadow.conWorkOrderLineDetailsWOS.lblWorkOrderJobDescriptionWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrdersWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrderIdWOS"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'.galWorkOrdersWOS.conWorkOrdersDetails.lblWorkOrdersDescription"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galSparePartItemsForConsumption.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galSparePartItemsForConsumption.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Item Consumption Product Search Screen",
+                "type": "'Item Consumption Product Search Screen'.galSparePartItemsForConsumption"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galAssetBOMItemsForConsumption.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galAssetBOMItemsForConsumption.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Item Consumption Product Search Screen",
+                "type": "'Item Consumption Product Search Screen'.galAssetBOMItemsForConsumption"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galItemsForConsumption.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.galItemsForConsumption.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Item Consumption Product Search Screen",
+                "type": "'Item Consumption Product Search Screen'.galItemsForConsumption"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.btnHiddenItemSelectionBehavior.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Item Consumption Product Search Screen'.btnHiddenItemSelectionBehavior.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Item Consumption Product Search Screen",
+                "type": "'Item Consumption Product Search Screen'.btnHiddenItemSelectionBehavior"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Legal Entity Selection Screen'.galAvailableLegalEntities.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Legal Entity Selection Screen'.galAvailableLegalEntities.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Legal Entity Selection Screen",
+                "type": "'Legal Entity Selection Screen'.galAvailableLegalEntities"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.conVerticalCreateMR.conVerticalImage.imgCreateRequest"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.conHeaderSearchMR.imgStartScanButton"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.recSelectableAssets.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.recSelectableAssets.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galAssets.recSelectableAssets"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.recSelectableLocations.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.recSelectableLocations.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.galLocations.recSelectableLocations"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Create Order Or Request Search Screen",
+                "type": "'Create Order Or Request Search Screen'.ConVerticalSearchMR.lblSearchMRGeneric"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Creation Success Screen",
+                "type": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Creation Success Screen",
+                "type": "'Creation Success Screen'.conCreateMRSuccess.imgCreateMRSuccess"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRWorkOrders.icoCreateMRWorkOrders"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRSubHeader.conCreateMRRequests.icoCreateMRRequests"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments.imgRemoveImage.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments.imgRemoveImage.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Maintenance Request Create Submit Screen",
+                "type": "'Maintenance Request Create Submit Screen'.conVerticalCreateRequest.conCreateMRForm.galMRCreateAttachments.imgRemoveImage"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.gblTest"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.gblTest",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "gblTest",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.gblTestUpdateContext"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.gblTestUpdateContext",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "gblTestUpdateContext",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.locLocation"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Maintenance Request Work Order List Screen'.locLocation",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "locLocation",
+                "module": "Maintenance Request Work Order List Screen",
+                "type": "'Maintenance Request Work Order List Screen'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Work Orders Screen'"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Work Orders Screen'",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "module": "Work Orders Screen",
+                "type": "'Work Orders Screen'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-ScreenHasManyControls",
+          "ruleIndex": 6
+        }
+      ],
+      "tool": {
+        "driver": {
+          "fullName": "PowerApps app checker",
+          "name": "PowerApps app checker",
+          "rules": [
+            {
+              "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The highlighted part of this formula might not work correctly with column \"{0}\" on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-SuggestRemoteExecutionHint",
+              "messageStrings": {
+                "issue": {
+                  "text": "Delegation warning. The \"{0}\" part of this formula might not work correctly on large data sets."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "If your data set exceeds the 500 record limit but contains less than 2,000 records, try resetting the limit.",
+                  "Try simplifying the formula.",
+                  "Try moving your data to a different data source."
+                ],
+                "level": "Medium",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "acc-AccessibleLabelNeeded",
+              "messageStrings": {
+                "issue": {
+                  "text": "Missing accessible label"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Edit the accessible label property to describe the item."
+                ],
+                "level": "Medium",
+                "primaryCategory": "accessibility",
+                "whyFix": "If there's no accessible text, people who can’t see the screen won't understand what’s in images and controls."
+              }
+            },
+            {
+              "id": "acc-FocusBorderShouldBeVisible",
+              "messageStrings": {
+                "issue": {
+                  "text": "Focus isn't showing"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Change the FocusedBorderThickness property to be more than 0."
+                ],
+                "level": "Medium",
+                "primaryCategory": "accessibility",
+                "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
+              }
+            },
+            {
+              "id": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+              "messageStrings": {
+                "issue": {
+                  "text": "Missing tab stop"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Set TabIndex to 0 or greater to ensure that interactive elements have a tab stop."
+                ],
+                "level": "Medium",
+                "primaryCategory": "accessibility",
+                "whyFix": "People who use the keyboard with your app will not be able to access this element without a tab stop."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
+              }
+            },
+            {
+              "id": "app-ScreenHasManyControls",
+              "messageStrings": {
+                "issue": {
+                  "text": "Too many controls on a screen"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Reduce the number of controls on the screen.",
+                  "Break the app into more screens to reduce the per-screen complexity.",
+                  "Use components to unify grouped controls that are identical across screens, reducing duplication.",
+                  "Use galleries to represent a series of repeated similar controls.",
+                  "Break the app into multiple apps so that each app is small and performant."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Work Orders Screen\" is 382, which exceeds the maximum threshold recommended (300)."
+              }
+            }
+          ],
+          "version": "1.343"
+        }
+      }
+    }
+  ],
+  "version": "2.1.0"
+}

@@ -1,0 +1,73 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Legal Entity Selection Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      OnVisible: =Set(gblPreviousScreen, Self)
+    Children:
+      - galAvailableLegalEntities:
+          Control: Gallery@2.15.0
+          Variant: Vertical
+          Properties:
+            AccessibleLabel: =T.AvailableEntitiesGalleryAccessibleLabel
+            DelayItemLoading: =false
+            Height: =Parent.Height - Self.Y
+            Items: =gblAppCache.UserAssignedWorkers
+            LoadingSpinner: =LoadingSpinner.Controls
+            OnSelect: |-
+              =If(ThisItem.'Company Code' <> gblAppCache.UserActiveWorker.'Company Code',
+                  Set(gblAppCache, Patch(gblAppCache, { UserActiveWorker: ThisItem }));
+
+                  // store the cache
+                  ClearCollect(colAppStartupCache, gblAppCache);
+                  IfError(
+                      // try:
+                      SaveData(colAppStartupCache, "AppStartupCache"),
+                      // on error:
+                      Trace("Failed persisting legal entity choice to cache", ErrorSeverity.Warning, FirstError); false, // this always occurs in PApp Studio
+                      // else:
+                      true
+                  );
+              );
+
+              Back();
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =73
+            Width: =Parent.Width
+            Y: =cmpHeaderLESS.Height
+          Children:
+            - shpBottomLineLESS:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =RGBA(209, 209, 209, 1)
+                  FocusedBorderColor: =
+                  FocusedBorderThickness: =
+                  Height: =1
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - 1
+            - lblLegalEntityIDLESS:
+                Control: Label@2.5.1
+                Properties:
+                  Color: =gblAppColors.Accent
+                  FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                  FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                  Font: =gblAppStyles.CommonFont
+                  FontWeight: =FontWeight.Semibold
+                  Height: =Parent.TemplateHeight
+                  OnSelect: =Select(galAvailableLegalEntities)
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Size: =gblAppStyles.FontSize_Medium
+                  TabIndex: =0
+                  Text: =Upper(ThisItem.mserp_dataareaid)
+                  Width: =Parent.TemplateWidth

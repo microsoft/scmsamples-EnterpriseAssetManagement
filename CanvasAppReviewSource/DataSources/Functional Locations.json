@@ -1,0 +1,50 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenancefunctionallocationentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenancefunctionallocationentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Functional Locations",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_defaultdimensiondisplayvalue": "Default dimension display value",
+      "mserp_entassetmaintenancefunctionallocationentityid": "Asset management functional locations (mserp)",
+      "mserp_FK_EntAssetMaintenanceAssetServiceLevelEntity_FunctionalLocation": "Asset management maintenance service levels (mserp)",
+      "mserp_FK_EntAssetMaintenanceAssetServiceLevelV2Entity_FunctionalLocation": "Asset management maintenance service levels V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceAssetV3Entity_FunctionalLocation": "Assets entity view V3 (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestEntity_FunctionalLocation": "Asset management maintenance requests (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestV2Entity_FunctionalLocation": "Asset management maintenance requests V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineV2Entity_MaintenanceAssetFunctionalLocation": "Asset management work order jobs V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderUserReferenceEntity_FunctionalLocation": "Asset management worker work orders and jobs (mserp)",
+      "mserp_FK_Warehouse_id": "Warehouses",
+      "mserp_functionallocationid": "Functional location (mserp_functionallocationid)",
+      "mserp_functionallocationlifecyclestateid": "Lifecycle state",
+      "mserp_functionallocationtypeid": "Functional location type",
+      "mserp_inventorylocationid": "Warehouse",
+      "mserp_inventorysiteid": "Site",
+      "mserp_logisticslocationid": "Location ID",
+      "mserp_name": "Name",
+      "mserp_notes": "Note",
+      "mserp_parentfunctionallocationid": "Functional location (mserp_parentfunctionallocationid)"
+    },
+    "PreferredName": "Functional Locations",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Functional Locations (Views)",
+    "Name": "_mserp_entassetmaintenancefunctionallocationentity_views",
+    "RelatedEntityName": "Functional Locations",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0bab2f8b-13aa-ee06-e832-da1725f3c36f": "Asset management functional locations (mserp) Lookup View",
+      "50fe2501-9374-e12e-43ae-2c53fef3b5e8": "Asset management functional locations (mserp) Advanced Find View",
+      "a74f2ac3-cfbd-19db-c33f-f52aa1037af3": "Asset management functional locations (mserp) Associated View",
+      "c66f4d63-54b4-6966-7bda-20e5d714f2f4": "All Asset management functional locations (mserp)"
+    }
+  }
+]

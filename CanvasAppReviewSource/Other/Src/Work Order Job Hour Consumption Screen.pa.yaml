@@ -1,0 +1,86 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Hour Consumption Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      OnHidden: =false
+      OnVisible: |+
+        =UpdateContext({varNewTimeSpent: Blank()});
+
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+    Children:
+      - conScrollableActionsWOJHCS:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Min(490, Parent.Height - cmpHeaderWOJHCS.Height)
+            LayoutDirection: =LayoutDirection.Vertical
+            Width: =Parent.Width
+            Y: =Min(Parent.Height - cmpHeaderWOJHCS.Height, Parent.Height - conScrollableActionsWOJHCS.Height)
+          Children:
+            - conActionsWOJHCS:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conAdjustHoursSpent.Height,
+                                btnConfirmTimeSpent.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =16
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =14
+                  Width: =Parent.Width
+                  X: =
+                  Y: =Parent.Height - Self.Height
+                Children:
+                  - btnConfirmTimeSpent:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =gblAppStyles.Button.BorderColor
+                        BorderStyle: =gblAppStyles.Button.BorderStyle
+                        BorderThickness: =gblAppStyles.Button.BorderThickness
+                        Color: =gblAppStyles.Button.FontColor
+                        Fill: =gblAppStyles.Button.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Button.Font
+                        FontWeight: =gblAppStyles.Button.FontWeight
+                        OnSelect: "=With(\r\n    {locAdjustedTimeSpent: Value(txtTimeSpentHours.Text) + (Value(txtTimeSpentMinutes.Text) / 60)},\r\n    If(\r\n        CurrentTimeSpent <> locAdjustedTimeSpent,\r\n        IfError(\r\n            // try:\r\n            Patch(\r\n                // insert a new journal line for each adjustment to time spent\r\n                // which increments with a delta of the previous- and new time spent\r\n                'Asset management work order job hour consumption lines (mserp)',\r\n                Defaults('Asset management work order job hour consumption lines (mserp)'),\r\n                {\r\n                    'Company Code': gblAppCache.UserActiveWorker.'Company Code',\r\n                    'Personnel number': gblAppCache.UserActiveWorker.'Personnel number',\r\n                    'Work order': WorkOrderJob.'Work order',\r\n                    'Line number (mserp_workorderjobnumber)': WorkOrderJob.'Line number',\r\n                    Hours: locAdjustedTimeSpent - CurrentTimeSpent\r\n                }\r\n            ),\r\n            // catch:\r\n            Notify(\r\n                Coalesce(\r\n                    Match(\r\n                        FirstError.Details.HttpResponse,\r\n                        \"\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n                    ).message,\r\n                    T.Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel\r\n                ),\r\n                NotificationType.Error\r\n            ),\r\n            // on success:\r\n            Back()\r\n        )\r\n    );\r\n    \r\n)"
+                        PressedColor: =gblAppStyles.Button.PressedColor
+                        PressedFill: =gblAppStyles.Button.PressedFill
+                        RadiusBottomLeft: =Self.RadiusTopLeft
+                        RadiusBottomRight: =Self.RadiusTopLeft
+                        RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                        RadiusTopRight: =Self.RadiusTopLeft
+                        Size: =gblAppStyles.Button.FontSize
+                        Text: =T.ConfirmButtonLabel
+                        Width: =200
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =Parent.Height - Self.Height - 16

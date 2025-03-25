@@ -1,0 +1,40 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetreleasedproductstoragedimensiondefaultsentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetreleasedproductstoragedimensiondefaultsentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management released products storage dimension defaults (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetreleasedproductstoragedimensiondefaultsentityid": "Asset management released products storage dimension defaults (mserp)",
+      "mserp_isadvancedwarehouseenabled": "Use warehouse management processes",
+      "mserp_iswarehouselocationdimensionactive": "Active",
+      "mserp_itemnumber": "Item number",
+      "mserp_productdefaultsiteid": "Site",
+      "mserp_productdefaultwarehouseid": "Warehouse",
+      "mserp_productdefaultwarehouselocationid": "Location",
+      "mserp_searchname": "Search name",
+      "mserp_storagedimensiongroupname": "Storage dimension group"
+    },
+    "PreferredName": "Asset management released products storage dimension defaults (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management released products storage dimension defaults (mserp) (Views)",
+    "Name": "_mserp_entassetreleasedproductstoragedimensiondefaultsentity_views",
+    "RelatedEntityName": "Asset management released products storage dimension defaults (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "65d365d1-aee0-cc5b-4002-4fa85c8aeadb": "All Asset management released products storage dimension defaults (mserp)",
+      "9f9854ca-d908-d710-7a04-6e938a63145d": "Asset management released products storage dimension defaults (mserp) Associated View",
+      "ba4d5fa5-a633-dd7d-62f3-5672ebc675b3": "Asset management released products storage dimension defaults (mserp) Advanced Find View",
+      "f8d13024-8c4b-2a85-7adb-bef4c73e6ae2": "Asset management released products storage dimension defaults (mserp) Lookup View"
+    }
+  }
+]

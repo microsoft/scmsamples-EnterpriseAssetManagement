@@ -1,0 +1,19 @@
+"'(DEV) Dummy Screen' As screen":
+
+    lblDummyScreenDetails As label:
+        Height: =Parent.Height - Self.Y
+        Text: |-
+            =//pal-disable PAL004
+            "Navigate to this screen if the screen you plan to navigate to does not yet exist.
+            
+            This screen should never be shown to users."
+        VerticalAlign: =VerticalAlign.Top
+        Width: =Parent.Width
+        Y: =cmpDummyHeader.Height
+        ZIndex: =1
+
+    cmpDummyHeader As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: ="Dummy Screen"
+        ZIndex: =2
+

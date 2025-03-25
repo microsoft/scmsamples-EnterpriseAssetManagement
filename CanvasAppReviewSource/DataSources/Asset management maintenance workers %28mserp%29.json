@@ -1,0 +1,40 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkerentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkerentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management maintenance workers (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenanceworkerentityid": "Asset management maintenance workers (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestEntity_ResponsibleWorker": "Asset management maintenance requests (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestV2Entity_ResponsibleWorker": "Asset management maintenance requests V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_MaintenanceAssetWorker": "Asset management work order job maintenance checklist (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineV2Entity_ScheduledWorker": "Asset management work order jobs V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderTableV2Entity_ResponsibleWorker": "Asset management work orders V2 (mserp) (mserp_FK_EntAssetMaintenanceWorkOrderTableV2Entity_ResponsibleWorker)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderTableV2Entity_ScheduledWorker": "Asset management work orders V2 (mserp) (mserp_FK_EntAssetMaintenanceWorkOrderTableV2Entity_ScheduledWorker)",
+      "mserp_workeractive": "Active",
+      "mserp_workerpersonnelnumber": "Personnel number"
+    },
+    "PreferredName": "Asset management maintenance workers (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management maintenance workers (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceworkerentity_views",
+    "RelatedEntityName": "Asset management maintenance workers (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "3f1951c8-f468-c32d-5fcd-bbb06e8b7576": "Asset management maintenance workers (mserp) Advanced Find View",
+      "5dd7d3a6-8ed4-d9d5-81bb-88978053be20": "All Asset management maintenance workers (mserp)",
+      "6f2bc19d-b2c8-7344-76d9-a98ba1b57ef1": "Asset management maintenance workers (mserp) Lookup View",
+      "f5f9e3ba-16f3-ab80-97e9-665284d1ee1e": "Asset management maintenance workers (mserp) Associated View"
+    }
+  }
+]

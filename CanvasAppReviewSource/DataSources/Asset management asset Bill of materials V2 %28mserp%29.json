@@ -1,0 +1,61 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceassetbillofmaterialv2entities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceassetbillofmaterialv2entity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management asset Bill of materials V2 (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_billofmaterialquantity": "Quantity",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenanceassetbillofmaterialv2entityid": "Asset management asset Bill of materials V2 (mserp)",
+      "mserp_FK_InventoryBatch_id": "Item batches",
+      "mserp_FK_InventorySerial_id": "Item serial numbers",
+      "mserp_FK_InventorySite_id": "Sites V2",
+      "mserp_FK_InventoryWarehouseLocation_id": "Warehouse locations",
+      "mserp_FK_MaintenanceAsset_id": "Assets entity view V3",
+      "mserp_FK_MaintenanceWorkOrderLineV2_id": "Asset management work order jobs V2",
+      "mserp_FK_Product_id": "Asset management released products",
+      "mserp_FK_Warehouse_id": "Warehouses",
+      "mserp_inventoryitembatchnumber": "Batch number",
+      "mserp_inventoryitemserialnumber": "Serial number",
+      "mserp_itemnumber": "Item number",
+      "mserp_linenumber": "Line number (mserp_linenumber)",
+      "mserp_linenumberreplacedby": "Replaced by",
+      "mserp_maintenanceassetid": "Asset",
+      "mserp_maintenanceworkorderid": "Work order",
+      "mserp_maintenanceworkorderjoblinenumber": "Line number (mserp_maintenanceworkorderjoblinenumber)",
+      "mserp_operationalsiteid": "Site",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_productcolorid": "Color",
+      "mserp_productconfigurationid": "Configuration",
+      "mserp_productsizeid": "Size",
+      "mserp_productstyleid": "Style",
+      "mserp_productversionid": "Version",
+      "mserp_validfrom": "Effective",
+      "mserp_validto": "Expiration",
+      "mserp_warehouseid": "Warehouse",
+      "mserp_warehouselocationid": "Location",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Asset management asset Bill of materials V2 (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management asset Bill of materials V2 (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceassetbillofmaterialv2entity_views",
+    "RelatedEntityName": "Asset management asset Bill of materials V2 (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1f860c81-b0c8-19f1-33df-e5eb75794fde": "All Asset management asset Bill of materials V2 (mserp)",
+      "357e42fa-8156-ba3e-76ee-21e08d8bc696": "Asset management asset Bill of materials V2 (mserp) Lookup View",
+      "96a46c27-cf47-3b6d-69a0-c89fcdaf01d3": "Asset management asset Bill of materials V2 (mserp) Advanced Find View",
+      "bd3f0a3a-aaa9-3eae-cc0e-7e59c830c09d": "Asset management asset Bill of materials V2 (mserp) Associated View"
+    }
+  }
+]

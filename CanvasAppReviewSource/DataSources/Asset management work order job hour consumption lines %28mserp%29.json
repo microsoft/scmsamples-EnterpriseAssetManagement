@@ -1,0 +1,45 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceworkorderlinehourconsumptionentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceworkorderlinehourconsumptionentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management work order job hour consumption lines (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_categoryid": "Category",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_description": "Description",
+      "mserp_entassetmaintenanceworkorderlinehourconsumptionentityid": "Asset management work order job hour consumption lines (mserp)",
+      "mserp_hourconsumptionlinenumber": "Line number (mserp_hourconsumptionlinenumber)",
+      "mserp_hourconsumptionnumber": "Journal",
+      "mserp_islineposted": "Posted",
+      "mserp_linepropertyid": "Line property",
+      "mserp_personnelnumber": "Personnel number",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_resourceconsumedhours": "Hours",
+      "mserp_voucher": "Voucher",
+      "mserp_voucherdate": "Voucher date",
+      "mserp_workorderid": "Work order",
+      "mserp_workorderjobnumber": "Line number (mserp_workorderjobnumber)"
+    },
+    "PreferredName": "Asset management work order job hour consumption lines (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management work order job hour consumption lines (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceworkorderlinehourconsumptionentity_views",
+    "RelatedEntityName": "Asset management work order job hour consumption lines (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "264585a0-1014-76ca-bcff-ce607776aae1": "All Asset management work order job hour consumption lines (mserp)",
+      "31167442-c159-8af5-8b3f-c8bbce4b4101": "Asset management work order job hour consumption lines (mserp) Advanced Find View",
+      "97c920ec-5e8b-a8c3-6bd5-adc119de3d17": "Asset management work order job hour consumption lines (mserp) Associated View",
+      "e4c4a2f4-b6c2-f493-f58a-bd3a44f7fe3a": "Asset management work order job hour consumption lines (mserp) Lookup View"
+    }
+  }
+]

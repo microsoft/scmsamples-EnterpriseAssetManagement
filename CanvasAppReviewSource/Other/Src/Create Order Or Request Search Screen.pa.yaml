@@ -1,0 +1,653 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Create Order Or Request Search Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      OnVisible: |-
+        =UpdateContext({ varShowAboutDialog: false });
+
+        If(Not gblAppCache.IsUserMaintenanceWorker,
+            UpdateContext({locScreenMode:C.Creation.SearchWithScan});
+        );
+
+        Reset(cmpSearchBarMRCreate);
+        Reset(btnBarcodeScanner);
+
+        Set(gblPreviousScreen, Self)
+    Children:
+      - conVerticalCreateMR:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            Visible: =!(locScreenMode = C.Creation.SearchWithText)
+            Width: =Parent.Width
+          Children:
+            - conVerticalImage:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutMinWidth: =200
+                  PaddingTop: =Min(64,conVerticalImage.Height - imgCreateRequest.Height -10)
+                  Width: =Parent.Width
+                Children:
+                  - imgCreateRequest:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =120
+                        Image: ='eam-icon-192px'
+                        Width: =120
+                        X: =633
+                        Y: =240
+            - conVerticalButton:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  FillPortions: =2
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =If((conVerticalButton.Height > conVerticalButton.LayoutMinHeight), LayoutDirection.Vertical, LayoutDirection.Horizontal )
+                  LayoutGap: =20
+                  LayoutJustifyContent: =LayoutJustifyContent.End
+                  LayoutMinHeight: =140
+                  LayoutMinWidth: =200
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingBottom: =16
+                  Width: =Parent.Width
+                Children:
+                  - SearchContainer:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(25, 0, 0, 1)
+                        FillPortions: =0
+                        Height: =btnSearch.Height +10
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        PaddingBottom: =2
+                        PaddingLeft: =
+                        PaddingRight: =2
+                        PaddingTop: =16
+                        Width: =Min(304,Parent.Width)
+                      Children:
+                        - btnSearch:
+                            Control: Classic/Button@2.2.0
+                            Properties:
+                              BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                              BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                              Color: =gblAppStyles.ButtonSecondary.FontColor
+                              Fill: =gblAppStyles.ButtonSecondary.Fill
+                              FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                              FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                              Font: =gblAppStyles.ButtonSecondary.Font
+                              FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                              Height: =76
+                              OnSelect: |
+                                =UpdateContext(
+                                    {
+                                        locFilterOption: C.Creation.SearchAssets,
+                                        locScreenMode: C.Creation.SearchWithText,
+                                        locSearchBarInputText: "",
+                                        locCreationType: C.Creation.CreateMaintenanceRequest
+                                    }
+                                )
+                              PaddingBottom: =gblAppStyles.ButtonSecondary.Padding.Bottom
+                              PaddingLeft: =36
+                              PaddingRight: =gblAppStyles.ButtonSecondary.Padding.Right
+                              PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                              RadiusBottomLeft: =Self.RadiusTopLeft
+                              RadiusBottomRight: =Self.RadiusTopLeft
+                              RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                              RadiusTopRight: =Self.RadiusTopLeft
+                              Size: =gblAppStyles.ButtonSecondary.FontSize
+                              Text: =T.SearchLabel
+                              Width: =290
+                              X: =7
+                              Y: =3
+                        - searchicon_1:
+                            Control: Image@2.2.3
+                            Properties:
+                              Height: =24
+                              HoverFill: =ColorFade(Self.Fill, 10%)
+                              Image: =search
+                              Width: =24
+                              X: =110
+                              Y: =29
+                  - ScanContainer:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(25, 0, 0, 1)
+                        FillPortions: =0
+                        Height: =btnSearch.Height +10
+                        LayoutMinHeight: =0
+                        LayoutMinWidth: =0
+                        PaddingBottom: =2
+                        PaddingRight: =2
+                        PaddingTop: =16
+                        Width: =Min(304,Parent.Width)
+                      Children:
+                        - btnBarcodeScanner:
+                            Control: BarcodeScanner@2.5.0
+                            Properties:
+                              Color: =gblAppStyles.Button.FontColor
+                              Fill: =gblAppStyles.Button.Fill
+                              FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                              FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                              Font: =gblAppStyles.CommonFont
+                              FontWeight: =gblAppStyles.Button.FontWeight
+                              Height: =76
+                              OnScan: |+
+                                =UpdateContext(
+                                    {
+                                        locScreenMode:C.Creation.SearchWithText,
+                                        locFilterOption: C.Creation.SearchAssets,
+                                        locSearchBarInputText: btnBarcodeScanner.Value,
+                                        locCreationType: C.Creation.CreateMaintenanceRequest
+                                    }
+                                );
+                              PaddingLeft: =23
+                              PaddingRight: =4
+                              PaddingTop: =4
+                              Size: =gblAppStyles.Button.FontSize
+                              Text: =T.ScanLabel
+                              Width: =290
+                              X: =7
+                              Y: =4
+                        - searchicon_2:
+                            Control: Image@2.2.3
+                            Properties:
+                              Height: =24
+                              Image: =qr
+                              Width: =24
+                              X: =110
+                              Y: =30
+      - ConVerticalSearchMR:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            Visible: =locScreenMode=C.Creation.SearchWithText
+            Width: =Parent.Width
+          Children:
+            - conHeaderSearchMR:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Fill: =gblAppStyles.Header.Fill
+                  FillPortions: =0
+                  Height: =gblAppStyles.Header.Height
+                Children:
+                  - lblTitleSearchMR:
+                      Control: Label@2.5.1
+                      Properties:
+                        Align: =Align.Center
+                        Color: =RGBA(255, 255, 255, 1)
+                        Fill: =gblAppStyles.Header.Fill
+                        Font: =gblAppStyles.CommonFont
+                        FontWeight: =gblAppStyles.Header.FontWeight
+                        Height: =Parent.Height
+                        Size: =gblAppStyles.Header.FontSize
+                        Text: =If(locCreationType = C.Creation.CreateWorkOrder, T.CreateNewWorkOrderAccessibleLabel, T.RequestMaintenanceLabel)
+                        Width: =Parent.Width - imgStartScanButton.Width - Self.X
+                        Wrap: =false
+                        X: =icoBackButton.X + icoBackButton.Width
+                  - bcsScanFillSearchField:
+                      Control: BarcodeScanner@2.5.0
+                      Properties:
+                        BorderStyle: =gblAppStyles.Button.BorderStyle
+                        BorderThickness: =gblAppStyles.Button.BorderThickness
+                        Color: =Color.Transparent
+                        DisabledColor: =gblAppStyles.Button.DisabledColor
+                        DisabledFill: =gblAppStyles.Button.DisabledFill
+                        Fill: =gblAppStyles.Button.Fill
+                        Font: =gblAppStyles.Button.Font
+                        FontWeight: =gblAppStyles.Button.FontWeight
+                        Height: =imgStartScanButton.Height
+                        HoverColor: =gblAppStyles.Button.HoverColor
+                        HoverFill: =gblAppStyles.Button.HoverFill
+                        OnScan: |
+                          =UpdateContext({locSearchBarInputText: bcsScanFillSearchField.Value});
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =0
+                        PressedColor: =gblAppStyles.Button.PressedColor
+                        PressedFill: =gblAppStyles.Button.PressedFill
+                        RadiusBottomLeft: =Self.RadiusTopLeft
+                        RadiusBottomRight: =Self.RadiusTopLeft
+                        RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                        RadiusTopRight: =Self.RadiusTopLeft
+                        Size: =gblAppStyles.Button.FontSize
+                        Text: =T.ScanLabel
+                        Width: =imgStartScanButton.Width
+                        X: =imgStartScanButton.X
+                        Y: =imgStartScanButton.Y
+                  - imgStartScanButton:
+                      Control: Image@2.2.3
+                      Properties:
+                        Height: =icoBackButton.Height
+                        Image: =qr
+                        OnSelect: =Select(bcsScanFillSearchField)
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        Width: =icoBackButton.Width
+                        X: =Parent.Width - Self.Width
+                        Y: =icoBackButton.Y
+                  - icoBackButton:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        AccessibleLabel: =T.BackButtonAccessibleLabel
+                        Color: =Color.White
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Height: =54
+                        Icon: =Icon.ChevronLeft
+                        OnSelect: |-
+                          =If(gblAppCache.IsUserMaintenanceWorker,
+                              // then:
+                              Back(),
+                              // else:
+                              UpdateContext({locScreenMode:C.Creation.SearchWithScan});
+                          );
+                          Reset(cmpSearchBarMRCreate);
+                          Reset(btnBarcodeScanner);
+                        PaddingBottom: =16
+                        PaddingLeft: =16
+                        PaddingRight: =16
+                        PaddingTop: =16
+                        TabIndex: =0
+                        Width: =56
+                        X: =2
+                        Y: =2
+            - conSearchMRPills:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =gblAppColors.Primary
+                  FillPortions: =0
+                  Height: =62
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =10
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Visible: =locCreationType = C.Creation.CreateMaintenanceRequest
+                Children:
+                  - btnAssets:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderThickness: =0
+                        Color: =If(locFilterOption = C.Creation.SearchAssets,gblAppStyles.Pills.PressedColor,gblAppStyles.Pills.FontColor)
+                        Fill: =If(locFilterOption = C.Creation.SearchAssets,gblAppStyles.Pills.PressedFill,gblAppStyles.Pills.Fill)
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Pills.Font
+                        FontWeight: =gblAppStyles.Pills.FontWeight
+                        Height: =gblAppStyles.Pills.Height
+                        OnSelect: =UpdateContext({locFilterOption:C.Creation.SearchAssets})
+                        PressedColor: =Self.Color
+                        PressedFill: =Self.Fill
+                        RadiusBottomLeft: =1000
+                        RadiusBottomRight: =1000
+                        RadiusTopLeft: =1000
+                        RadiusTopRight: =1000
+                        Size: =gblAppStyles.Pills.FontSize
+                        Text: =T.AssetsLabel
+                        Width: =74
+                  - btnLocations:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderThickness: =0
+                        Color: =If(locFilterOption = C.Creation.SearchFunctionalLocations,gblAppStyles.Pills.PressedColor,gblAppStyles.Pills.FontColor)
+                        Fill: =If(locFilterOption = C.Creation.SearchFunctionalLocations,gblAppStyles.Pills.PressedFill,gblAppStyles.Pills.Fill)
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Pills.Font
+                        FontWeight: =gblAppStyles.Pills.FontWeight
+                        Height: =gblAppStyles.Pills.Height
+                        OnSelect: =UpdateContext({locFilterOption:C.Creation.SearchFunctionalLocations})
+                        PressedBorderColor: =
+                        PressedColor: =Self.Color
+                        PressedFill: =Self.Fill
+                        RadiusBottomLeft: =1000
+                        RadiusBottomRight: =1000
+                        RadiusTopLeft: =1000
+                        RadiusTopRight: =1000
+                        Size: =gblAppStyles.Pills.FontSize
+                        Text: =T.FunctionalLocationsLabel
+                        Width: =164
+            - galAssets:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  AccessibleLabel: =T.AssetsGalleryAccessibleLabel
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  DelayItemLoading: =false
+                  Items: |-
+                    =If(
+                        Self.Visible,
+                        Search(Assets,cmpSearchBarMRCreate.SearchText,mserp_maintenanceassettypeid,mserp_maintenanceassetid),
+                        Blank()
+                    )
+                  LoadingSpinner: =LoadingSpinner.None
+                  OnSelect: |-
+                    =Switch(
+                        locCreationType,
+                        C.Creation.CreateMaintenanceRequest,
+                        Select(btnCreateMR_Hidden),
+                        C.Creation.CreateWorkOrder,
+                        Select(btnCreateWO_Hidden)
+                    )
+                  ShowScrollbar: =false
+                  TemplateSize: =100
+                  Visible: =!false And locFilterOption = C.Creation.SearchAssets And Not IsBlank(cmpSearchBarMRCreate.SearchText)
+                  Width: =Parent.Width
+                Children:
+                  - recAssetDivider:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        BorderStyle: =BorderStyle.None
+                        Fill: =gblAppColors.Divider
+                        Height: =1
+                        Width: =1356
+                        Y: =Parent.TemplateHeight - Self.Height
+                  - conAssetTemplate:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.TemplateHeight
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        PaddingBottom: =5
+                        PaddingTop: =5
+                        Width: =Parent.TemplateWidth
+                      Children:
+                        - conAssetDetails:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutMinHeight: =30
+                              PaddingLeft: =16
+                              PaddingRight: =10
+                            Children:
+                              - icoAssetDetails:
+                                  Control: Classic/Icon@2.5.0
+                                  Properties:
+                                    Color: =gblAppColors.AccentPositive
+                                    Fill: =gblAppColors.Background
+                                    Height: =gblAppStyles.Icons.Height
+                                    Icon: =Icon.Manufacture
+                                    Width: =gblAppStyles.Icons.Width
+                              - lblAssetDetails:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppStyles.Label.FontColor
+                                    FillPortions: =1
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    LayoutMinWidth: =50
+                                    Size: =gblAppStyles.Label.FontSize
+                                    Text: =ThisItem.mserp_maintenanceassettypeid
+                                    Wrap: =false
+                              - lblAssetListLE:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Right
+                                    Color: =gblAppStyles.Label.FontColor
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =70
+                                    Size: =gblAppStyles.Label.FontSize
+                                    Text: =Upper(ThisItem.mserp_dataareaid)
+                                    Width: =80
+                                    Wrap: =false
+                        - conAssetTypeDetails:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              FillPortions: =0
+                              Height: =60
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              LayoutMinHeight: =30
+                              LayoutMinWidth: =200
+                              PaddingBottom: =10
+                              PaddingLeft: =16
+                              PaddingRight: =10
+                              Width: =Parent.Width
+                            Children:
+                              - lblAssetType:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppColors.Accent
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =30
+                                    LayoutMinWidth: =100
+                                    PaddingLeft: =0
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =ThisItem.mserp_name
+                                    Width: =Parent.Width - Self.X
+                                    Wrap: =false
+                              - lblAssetId:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppStyles.Label.FontColor
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =30
+                                    LayoutMinWidth: =100
+                                    PaddingLeft: =0
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =ThisItem.mserp_maintenanceassetid
+                                    Width: =Parent.Width - Self.X
+                                    Wrap: =false
+                  - btnCreateMR_Hidden:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        Height: =20
+                        OnSelect: "=IfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultRequestType: \r\n            LookUp('Asset management parameters (mserp)', 'Company Code' = ThisItem.'Company Code', 'Maintenance request type')\r\n        }\r\n    ),\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultRequestType, NotificationType.Error);\r\n    Trace(\"Could not retrieve default request type\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultServiceLevel: \r\n            First\r\n            (\r\n                SortByColumns( \r\n                    Filter(\r\n                        'Asset management maintenance service levels V2 (mserp)',              \r\n                        'Asset type' = ThisItem.'Asset type' || IsBlankOrError('Asset type'),\r\n                        'Functional location' = ThisItem.'Functional location' || IsBlankOrError('Functional location'),\r\n                        Asset = ThisItem.'Asset (mserp_maintenanceassetid)' || IsBlankOrError(Asset),\r\n                        'Manufacturer (mserp_productid)' = ThisItem.Manufacturer || IsBlankOrError('Manufacturer (mserp_modelproductid)'),\r\n                        Model = ThisItem.Model || IsBlankOrError(Model),\r\n                        IsBlankOrError('Work order type'),\r\n                        'Company Code' = ThisItem.'Company Code'\r\n                    ),\r\n                    \"mserp_functionallocationid\", SortOrder.Descending,\r\n                    \"mserp_maintenanceassetid\", SortOrder.Descending,\r\n                    \"mserp_productid\", SortOrder.Descending,\r\n                    \"mserp_workordertypeid\", SortOrder.Descending,\r\n                    \"mserp_modelid\", SortOrder.Descending,\r\n                    \"mserp_maintenanceassettypeid\", SortOrder.Descending\r\n                )\r\n            ).Name\r\n        }\r\n    );\r\n    \r\n    //If there is no setup for service level an error should be thrown but creation of MR should be allowed.\r\n    If(\r\n        IsBlankOrError(locDefaultServiceLevel),\r\n        Notify(T.Error_MaintenanceRequestDefaultServiceLevelSetupMissing);\r\n        Trace(\"Missing service level setup\", TraceSeverity.Error, {DefaultServiceLevel:locDefaultServiceLevel});\r\n    ),\r\n\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultServiceLevel, NotificationType.Error);\r\n    Trace(\"Failed getting default service level\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\n\r\nReset(cmpSearchBarMRCreate);\r\nNavigate(\r\n    'Maintenance Request Create Submit Screen',\r\n    ScreenTransition.None,\r\n    {\r\n        locAsset:ThisItem, \r\n        locCreateMode:C.Creation.CreateFromAsset,\r\n        locDefaultRequestType: locDefaultRequestType,\r\n        locDefaultServiceLevel: locDefaultServiceLevel\r\n    }\r\n);"
+                        Size: =8
+                        Text: ="Create MR"
+                        Visible: =false
+                        Width: =80
+                        X: =Parent.TemplateWidth - Self.Width
+                        Y: =30
+                  - btnCreateWO_Hidden:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        Height: =20
+                        OnSelect: "=IfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultWorkOrderType: LookUp('Asset management parameters (mserp)', 'Company Code' = ThisItem.'Company Code', 'Work order type (mserp_defaultworkordertypeid)')\r\n        }\r\n    ),\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultWorkOrderType, NotificationType.Error);\r\n    Trace(\"Could not retrieve default work order type\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultServiceLevel: \r\n            First\r\n            (\r\n                SortByColumns( \r\n                    Filter(\r\n                        'Asset management maintenance service levels V2 (mserp)',              \r\n                        'Asset type' = ThisItem.'Asset type' || IsBlankOrError('Asset type'),\r\n                        'Functional location' = ThisItem.'Functional location' || IsBlankOrError('Functional location'),\r\n                        Asset = ThisItem.'Asset (mserp_maintenanceassetid)' || IsBlankOrError(Asset),\r\n                        'Manufacturer (mserp_productid)' = ThisItem.Manufacturer || IsBlankOrError('Manufacturer (mserp_modelproductid)'),\r\n                        Model = ThisItem.Model || IsBlankOrError(Model),\r\n                        IsBlankOrError('Work order type'),\r\n                        'Company Code' = ThisItem.'Company Code'\r\n                    ),\r\n                    \"mserp_functionallocationid\", SortOrder.Descending,\r\n                    \"mserp_maintenanceassetid\", SortOrder.Descending,\r\n                    \"mserp_productid\", SortOrder.Descending,\r\n                    \"mserp_workordertypeid\", SortOrder.Descending,\r\n                    \"mserp_modelid\", SortOrder.Descending,\r\n                    \"mserp_maintenanceassettypeid\", SortOrder.Descending\r\n                )\r\n            ).Name\r\n        }\r\n    );\r\n    \r\n    //If there is no setup for service level an error should be thrown but creation of MR should be allowed.\r\n    If(\r\n        IsBlankOrError(locDefaultServiceLevel),\r\n        Notify(T.Error_MaintenanceRequestDefaultServiceLevelSetupMissing);\r\n        Trace(\"Missing service level setup\", TraceSeverity.Error, {DefaultServiceLevel:locDefaultServiceLevel});\r\n    ),\r\n\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultServiceLevel, NotificationType.Error);\r\n    Trace(\"Failed getting default service level\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\n\r\nReset(cmpSearchBarMRCreate);\r\nNavigate(\r\n    'Work Order Create Form Screen',\r\n    ScreenTransition.None,\r\n    {\r\n        locAsset: ThisItem,\r\n        locCreateMode: C.Creation.CreateFromAsset,\r\n        locDefaultWorkOrderType: locDefaultWorkOrderType,\r\n        locDefaultServiceLevel: locDefaultServiceLevel\r\n    }\r\n);"
+                        Size: =8
+                        Text: ="Create WO"
+                        Visible: =false
+                        Width: =80
+                        X: =Parent.TemplateWidth - Self.Width
+                        Y: =60
+                  - recSelectableAssets:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        Fill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Height: =conAssetTemplate.Height
+                        OnSelect: =Select(Parent)
+                        PressedFill: =RGBA(209, 209, 209, 0.4)
+                        TabIndex: =0
+                        Width: =conAssetTemplate.Width
+            - galLocations:
+                Control: Gallery@2.15.0
+                Variant: Vertical
+                Properties:
+                  AccessibleLabel: =T.LocationsGalleryAccessibleLabel
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  DelayItemLoading: =false
+                  Height: =
+                  Items: |+
+                    =If(
+                        Self.Visible,
+                        Search('Functional Locations',cmpSearchBarMRCreate.SearchText,mserp_functionallocationid,mserp_name),
+                        Blank()
+                    )
+                  LoadingSpinner: =LoadingSpinner.None
+                  OnSelect: "=IfError(\r\n    //try    \r\n    UpdateContext(\r\n        {\r\n            locDefaultRequestType: \r\n            LookUp('Asset management parameters (mserp)','Company Code' = ThisItem.'Company Code', 'Maintenance request type')\r\n            \r\n        }\r\n    ),\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultRequestType, NotificationType.Error);\r\n    Trace(\"Could not retrieve default request type\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultServiceLevel: \r\n            First\r\n            (\r\n                SortByColumns( \r\n                    Filter(\r\n                            'Asset management maintenance service levels V2 (mserp)',\r\n                            'Functional location' = ThisItem.'Functional location (mserp_functionallocationid)' || IsBlankOrError('Functional location'),           \r\n                            IsBlankOrError('Asset type'),\r\n                            IsBlankOrError(Asset),\r\n                            IsBlankOrError('Manufacturer (mserp_productid)'),\r\n                            IsBlankOrError(Model),\r\n                            IsBlankOrError('Work order type'),\r\n                            'Company Code' = ThisItem.'Company Code'\r\n                    ),\r\n                    \"mserp_functionallocationid\" ,SortOrder.Descending\r\n                )\r\n            ).Name\r\n        }\r\n    );\r\n\r\n    If(\r\n        IsBlankOrError(locDefaultServiceLevel),\r\n        Notify(T.Error_MaintenanceRequestDefaultServiceLevelSetupMissing);\r\n        Trace(\"Missing service level setup\", TraceSeverity.Error, {DefaultServiceLevel:locDefaultServiceLevel});\r\n    ),\r\n\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultServiceLevel, NotificationType.Error);\r\n    Trace(\"Failed getting default service level\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nReset(cmpSearchBarMRCreate);\r\nNavigate(\r\n    'Maintenance Request Create Submit Screen',\r\n    ScreenTransition.None,\r\n    {\r\n        locLocation:ThisItem, \r\n        locCreateMode:C.Creation.CreateFromLocation,\r\n        locDefaultRequestType: locDefaultRequestType,\r\n        locDefaultServiceLevel: locDefaultServiceLevel\r\n    }\r\n);"
+                  ShowScrollbar: =false
+                  TemplateSize: =100
+                  Visible: =!false And locFilterOption = C.Creation.SearchFunctionalLocations And Not IsBlank(cmpSearchBarMRCreate.SearchText)
+                  Width: =Parent.Width
+                Children:
+                  - conLocationsTemplate:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.TemplateHeight
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        Width: =Parent.TemplateWidth
+                      Children:
+                        - recLocationsDivider:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderStyle: =BorderStyle.None
+                              Fill: =gblAppColors.Divider
+                              Height: =1
+                              Width: =Parent.Width
+                        - conLocationsDetails:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutMinHeight: =30
+                              PaddingLeft: =16
+                              PaddingRight: =10
+                              PaddingTop: =10
+                            Children:
+                              - icoLocationsDetails:
+                                  Control: Classic/Icon@2.5.0
+                                  Properties:
+                                    Color: =RGBA(162, 126, 111, 1)
+                                    Height: =gblAppStyles.Icons.Height
+                                    Icon: =Icon.Waypoint
+                                    Width: =gblAppStyles.Icons.Width
+                              - lblLocationsDetails:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppStyles.Label.FontColor
+                                    FillPortions: =1
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Size: =gblAppStyles.Label.FontSize
+                                    Text: =ThisItem.mserp_functionallocationtypeid
+                                    Width: =180
+                                    Wrap: =false
+                              - lblLocationListLE:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Right
+                                    Color: =gblAppStyles.Label.FontColor
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =Parent.Height
+                                    LayoutMinWidth: =50
+                                    Size: =gblAppStyles.Label.FontSize
+                                    Text: =Upper(ThisItem.mserp_dataareaid)
+                                    Width: =80
+                                    Wrap: =false
+                        - conLocationsTypeDetails:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              FillPortions: =0
+                              Height: =60
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              LayoutMinHeight: =30
+                              PaddingBottom: =10
+                              PaddingLeft: =16
+                              PaddingRight: =10
+                              Width: =Parent.Width
+                            Children:
+                              - lblLocationType:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppColors.Accent
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =30
+                                    LayoutMinWidth: =100
+                                    LineHeight: =22
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =ThisItem.mserp_name
+                                    Width: =Parent.Width -Self.X
+                                    Wrap: =false
+                              - lblLocationId:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Color: =gblAppStyles.Label.FontColor
+                                    Font: =gblAppStyles.Label.Font
+                                    FontWeight: =gblAppStyles.Label.FontWeight
+                                    Height: =30
+                                    LayoutMinWidth: =50
+                                    LineHeight: =22
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =ThisItem.mserp_functionallocationid
+                                    Width: =Parent.Width -Self.X
+                                    Wrap: =false
+                  - recSelectableLocations:
+                      Control: Rectangle@2.3.0
+                      Properties:
+                        Fill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Height: =conLocationsTemplate.Height
+                        OnSelect: =Select(Parent)
+                        PressedFill: =RGBA(209, 209, 209, 0.4)
+                        TabIndex: =0
+                        Width: =conLocationsTemplate.Width
+            - lblSearchMRGeneric:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  AlignInContainer: =AlignInContainer.Center
+                  FillPortions: =1
+                  Font: =gblAppStyles.CommonFont
+                  FontWeight: =FontWeight.Semibold
+                  PaddingBottom: =100
+                  Size: =gblAppStyles.FontSize_Medium
+                  Text: |-
+                    =If(
+                        locFilterOption = C.Creation.SearchAssets,
+                        T.SearchByAssetLabel,
+                        locFilterOption = C.Creation.SearchFunctionalLocations,
+                        T.SearchByLocationLabel
+                    )
+                  Visible: =!(galAssets.Visible Or galLocations.Visible)
+                  Width: =Parent.Width
+                  Y: =

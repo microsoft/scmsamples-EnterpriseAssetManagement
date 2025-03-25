@@ -1,0 +1,1578 @@
+"'Work Order Job Details Screen' As screen":
+    Fill: =gblAppColors.Background
+    OnHidden: |-
+        =UpdateContext(
+            {
+                varAttachmentCount: Blank(),
+                varConsumedHoursSum: Blank(),
+                varConsumedItemsCount: Blank()
+            }
+        )
+    OnVisible: |
+        =UpdateContext(
+            {
+                varPage: If(
+                    gblPreviousScreen = 'Work Order Job Checklist Item Screen',
+                    C.WorkOrderJobDetailsScreen.ChecklistSubPage,
+                    C.WorkOrderJobDetailsScreen.DetailsSubPage
+                ),
+                varRemarksPromptOpen: false,
+                varInternalNotePromptOpen: false,
+                varShowStateChangePrompt: false
+            }
+        );
+        With(
+            {
+                locJobKey: Concatenate(
+                    Job.'Company Code',
+                    Job.'Work order',
+                    Job.'Line number'
+                )
+            },
+            If(
+                locJobKey <> varPreviousJobKey,
+                Set(
+                    gblWorkOrderLifecycleState,
+                    Job.'Asset management work orders V2'.'Lifecycle state'
+                );
+                UpdateContext(
+                    {
+                        varPreviousJobKey: locJobKey,
+                        varUpdatedWorkerRemarks: Blank(),
+                        varUpdatedInternalNote: Blank()
+                    }
+                );
+            );
+            
+        );
+        Concurrent(
+            UpdateContext(
+                {
+                    varAttachmentCount: With(
+                        {
+                            locAttachments: Filter(
+                                'Asset maintenance work order line attachment entity (mserp)',
+                                'Company Code' = Job.'Company Code',
+                                'Work order' = Job.'Work order',
+                                'Line number' = Job.'Line number'
+                            )
+                        },
+                        // this nested in-memory counting is needed to avoid an error from VE plugin missing aggregation functionality
+                        CountRows(locAttachments)
+                    )
+                }
+            ),
+            UpdateContext(
+                {
+                    varConsumedHoursSum: With(
+                        {
+                            locHourLines: ShowColumns(
+                                Filter(
+                                    'Asset management work order job hour consumption lines (mserp)',
+                                    'Company Code' = Job.'Company Code',
+                                    'Work order' = Job.'Work order',
+                                    'Line number (mserp_workorderjobnumber)' = Job.'Line number',
+                                    'Personnel number' = gblAppCache.UserActiveWorker.'Personnel number',
+                                    Posted = 'NoYes (mserp)'.No
+                                ),
+                                Hours
+                            )
+                        },
+                        // this nested in-memory summation is needed to avoid an error from VE plugin missing aggregation functionality
+                        Coalesce(
+                            Sum(
+                                locHourLines,
+                                mserp_resourceconsumedhours
+                            ),
+                            0
+                        )
+                    )
+                }
+            ),
+            UpdateContext(
+                {
+                    varConsumedItemsCount: With(
+                        {
+                            locConsumedItems: Filter(
+                                'Asset management work order job product consumption lines (mserp)',
+                                'Company Code' = Job.'Company Code',
+                                'Work order' = Job.'Work order',
+                                'Line number (mserp_workorderjobnumber)' = Job.'Line number',
+                                Posted = 'NoYes (mserp)'.No
+                            )
+                        },
+                        // this nested in-memory counting is needed to avoid an error from VE plugin missing aggregation functionality
+                        CountRows(locConsumedItems)
+                    )
+                }
+            )
+        );
+        
+        // this is a necessary synchronization as the above Concurrent scope
+        // has a race condition which can result in stale reads
+        UpdateContext(
+            {
+                varAttachmentCount: varAttachmentCount,
+                varConsumedHoursSum: varConsumedHoursSum,
+                varConsumedItemsCount: varConsumedItemsCount
+            }
+        );
+        
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+
+    galWorkOrderJobChecklist As gallery.variableTemplateHeightGallery:
+        '#CopilotOverlayLabel': ="Filtered"
+        Height: =Parent.Height - Self.Y
+        Items: |-
+            =SortByColumns(
+                Filter(
+                    'Asset management work order job maintenance checklist (mserp)',
+                    'Company Code' = Job.'Company Code',
+                    'Work order' = Job.'Work order',
+                    'Work order job number' = Job.'Line number'
+                ),
+                "mserp_externallinenum"
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =If(
+                ThisItem.Type <> 'Type (mserp)'.Header,
+                Navigate(
+                    'Work Order Job Checklist Item Screen',
+                    Transition.None,
+                    {ChecklistItem: ThisItem}
+                )
+            )
+        ShowScrollbar: =false
+        TemplateSize: =170
+        Visible: =varPage = C.WorkOrderJobDetailsScreen.ChecklistSubPage
+        Width: =Parent.Width
+        Y: =conWorkOrderLineNavigation.Y + conWorkOrderLineNavigation.Height
+        ZIndex: =1
+
+        htmLineCardBackgroundWOJDS As htmlViewer:
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
+            Height: =conChecklistLineDetails.Height
+            HtmlText: |-
+                =With({ locCardBackgroundColor: If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, "F3F2F1", "FFFFFF") }, $"<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#{locCardBackgroundColor};box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>")
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+            Width: =Parent.TemplateWidth
+            ZIndex: =1
+
+        conChecklistLineDetails As groupContainer.verticalAutoLayoutContainer:
+            Height: |-
+                =With(
+                    {
+                        controlHeights: [
+                            If(lblChecklistItemMandatory.Visible, lblChecklistItemMandatory.Height),
+                            lblChecklistItemName.Height,
+                            lblChecklistItemType.Height,
+                            If(lblChecklistItemValue.Visible, lblChecklistItemValue.Height)
+                        ]
+                    },
+                    Sum(
+                        controlHeights,
+                        Value
+                    ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(Filter(controlHeights, Value <> Blank()))
+                )
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =24
+            Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+            Width: =Parent.TemplateWidth - 50
+            ZIndex: =2
+
+            lblChecklistItemMandatory As label:
+                AutoHeight: =true
+                Color: =RGBA(209, 52, 56, 1)
+                Font: =Font.'Segoe UI'
+                Size: =gblAppStyles.FontSize_Small
+                Text: =T.ChecklistItemMandatoryLabel
+                Visible: =ThisItem.Mandatory = 'NoYes (mserp)'.Yes
+                ZIndex: =2
+
+            lblChecklistItemName As label:
+                AlignInContainer: =AlignInContainer.Stretch
+                AutoHeight: =true
+                Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(0, 0, 0, 1))
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Size: =gblAppStyles.FontSize_Large
+                Text: =ThisItem.mserp_name
+                ZIndex: =3
+
+            lblChecklistItemType As label:
+                AutoHeight: =true
+                Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(57, 57, 57, 1))
+                Font: =Font.'Segoe UI'
+                Size: =gblAppStyles.FontSize_Medium
+                Text: =ThisItem.mserp_type
+                ZIndex: =4
+
+            lblChecklistItemValue As label:
+                AutoHeight: =true
+                Color: =gblAppColors.AccentInfo
+                Font: =gblAppStyles.CommonFont
+                Height: =31
+                Size: =gblAppStyles.FontSize_Medium
+                Text: |-
+                    =Switch(
+                        ThisItem.mserp_type,
+                        'Type (mserp)'.Measurement,
+                        Substitute(
+                            Substitute(
+                                T.ChecklistItemMeasurementValueLabel,
+                                "{MeasureValue}",
+                                Text(ThisItem.mserp_measurevalue)
+                            ),
+                            "{MeasureUnitId}",
+                            ThisItem.mserp_measureunitid
+                        ),
+                        'Type (mserp)'.Variable,
+                        Substitute(T.ChecklistItemVariableValueLabel, "{VariableValue}", ThisItem.mserp_variablevalueid)
+                    )
+                Visible: =ThisItem.mserp_checked = 'NoYes (mserp)'.Yes And (ThisItem.mserp_type = 'Type (mserp)'.Measurement Or ThisItem.mserp_type = 'Type (mserp)'.Variable)
+                Wrap: =false
+                ZIndex: =5
+
+        lblChecklistLineNumber As label:
+            Align: =Align.Right
+            Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(42, 172, 148, 1), RGBA(92, 92, 92, 1))
+            Font: =Font.'Segoe UI'
+            Height: =18
+            OnSelect: =Select(Parent)
+            Size: =gblAppStyles.FontSize_Small
+            Text: |-
+                =//pal-disable PAL004
+                $"{{{ThisItem.mserp_externallinenum}}}"
+            Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+            Width: =60
+            X: =conChecklistLineDetails.Width - (Self.Width - 30)
+            Y: =25
+            ZIndex: =3
+
+        shpChecklistLineClickSurfaceWOJDS As rectangle:
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Height: =conChecklistLineDetails.Height
+            OnSelect: |-
+                =// Containers do not support OnSelect override
+                // and catches user clicks, we need this surface to negate that problem.
+                Select(Parent)
+            TabIndex: =0
+            Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+            Width: =Parent.TemplateWidth
+            ZIndex: =4
+
+        lblHeaderText As label:
+            AutoHeight: =true
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            PaddingBottom: =10
+            PaddingTop: =10
+            Size: =gblAppStyles.FontSize_Large
+            Text: =ThisItem.Name
+            Visible: =ThisItem.Type = 'Type (mserp)'.Header
+            Width: =Parent.TemplateWidth
+            ZIndex: =5
+
+    conInformationWOJDS As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height - Self.Y
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: |-
+            =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+            9
+        PaddingRight: =9
+        Visible: =varPage = C.WorkOrderJobDetailsScreen.DetailsSubPage
+        Width: =Parent.Width
+        X: =
+        Y: =conWorkOrderLineNavigation.Y + conWorkOrderLineNavigation.Height
+        ZIndex: =3
+
+        conWorkOrderJobDetails As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =conWorkOrderJobHeader.Height
+            LayoutMinHeight: =124
+            LayoutMinWidth: =250
+            Width: =1366
+            ZIndex: =1
+
+            htmCardBackgroundHeaderWOJDS As htmlViewer:
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                Height: =conWorkOrderJobDetails.Height
+                HtmlText: |-
+                    ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Visible: =conInformationWOJDS.Visible
+                Width: =Parent.Width
+                ZIndex: =1
+
+            conWorkOrderJobHeader As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                lblJobDescription.Height,
+                                cmpWorkersRemark.Height,
+                                cmpWorkersInternalNote.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =24
+                Width: =Parent.Width
+                ZIndex: =3
+
+                lblJobDescription As label:
+                    AutoHeight: =true
+                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    Size: =gblAppStyles.FontSize_Large
+                    Text: =Job.Description
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    X: =16
+                    Y: =16
+                    ZIndex: =1
+
+                cmpWorkersRemark As EditableTextWithHeader:
+                    EditButtonAccessibleLabel: =T.EditWorkersRemarkButtonAccessibleLabel
+                    HeaderFontSize: =gblAppStyles.FontSize_Small
+                    HeaderText: =T.WorkersRemarkLabel
+                    Height: =Self.AutoHeightValue + 2*gblAppStyles.FocusBorderThickness
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    OnSelectEdit: |-
+                        =UpdateContext({varRemarksPromptOpen: true})
+                    TextFontSize: =gblAppStyles.FontSize_Medium
+                    TextValue: =Coalesce(varUpdatedWorkerRemarks, Job.mserp_workorderjobmaintenanceworkerremarks)
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    ZIndex: =2
+
+                cmpWorkersInternalNote As EditableTextWithHeader:
+                    EditButtonAccessibleLabel: =T.EditInternalNoteButtonAccessibleLabel
+                    HeaderFontSize: =gblAppStyles.FontSize_Small
+                    HeaderText: =T.InternalNoteLabel
+                    Height: =Self.AutoHeightValue + 2*gblAppStyles.FocusBorderThickness
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    OnSelectEdit: |-
+                        =UpdateContext({varInternalNotePromptOpen:true})
+                    TextFontSize: =gblAppStyles.FontSize_Medium
+                    TextValue: =Coalesce(varUpdatedInternalNote, Job.mserp_workorderjobinternalnote)
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    ZIndex: =5
+
+        conWorkOrderJobAdjustables As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =conWorkOrderJobAdjustablesVertical.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =1366
+            ZIndex: =2
+
+            htmCardBackgroundTagsWOJDS As htmlViewer:
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                Height: =conWorkOrderJobAdjustablesVertical.Height
+                HtmlText: |-
+                    ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                Visible: =conInformationWOJDS.Visible
+                Width: =Parent.Width
+                ZIndex: =1
+
+            conWorkOrderJobAdjustablesVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conJobAttachments.Height,
+                                shpBottomLineAdjustables_1.Height,
+                                conJobHoursConsumedWrapper.Height,
+                                shpBottomLineAdjustables_2.Height,
+                                conJobItemsConsumedWrapper.Height,
+                                shpBottomLineAdjustables_3.Height,
+                                conJobAsset.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =12
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =24
+                Width: =Parent.Width
+                ZIndex: =3
+
+                conJobAttachmentsWrapper As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =conJobAttachments.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =gblAppStyles.FocusBorderThickness
+                    PaddingTop: =gblAppStyles.FocusBorderThickness
+                    ZIndex: =1
+
+                    conJobAttachments As groupContainer:
+                        AlignInContainer: =AlignInContainer.Center
+                        Height: =cmpJobAttachments.Height
+                        LayoutMinHeight: =49
+                        LayoutMinWidth: =150
+                        Width: =Parent.Width - Parent.PaddingLeft * 2
+                        Y: =24
+                        ZIndex: =1
+
+                        icoJobAttachments As icon.DockCheckProperties:
+                            Color: =RGBA(50, 128, 171, 1)
+                            FocusedBorderThickness: =0
+                            Height: =20
+                            Icon: =Icon.PaperClip
+                            Width: =20
+                            X: =8
+                            Y: =Parent.Height / 2 - Self.Height / 2
+                            ZIndex: =2
+
+                        cmpJobAttachments As EditableTextWithHeader:
+                            AllowEditing: =false
+                            EditButtonAccessibleLabel: =Blank()
+                            HeaderFontSize: =gblAppStyles.FontSize_Small
+                            HeaderText: =T.AttachmentsLabel
+                            Height: =Self.AutoHeightValue
+                            TextFontSize: =gblAppStyles.FontSize_Large
+                            TextValue: =If(varAttachmentCount <> Blank(), Substitute(T.NumberOfAttachmentsLabel, "{AttachmentsCount}", varAttachmentCount))
+                            Width: =Parent.Width - Self.X
+                            X: =icoJobHoursConsumed.X + icoJobHoursConsumed.Width + 10
+                            ZIndex: =3
+
+                    btnViewJobAttachments As button:
+                        Align: =Align.Right
+                        Color: =gblAppStyles.ButtonLink.FontColor
+                        DisabledBorderColor: =Self.BorderColor
+                        DisabledFill: =Self.Fill
+                        DisplayMode: =If(varAttachmentCount = 0, DisplayMode.Disabled, DisplayMode.Edit)
+                        Fill: =gblAppStyles.ButtonLink.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.ButtonLink.Font
+                        HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
+                        HoverFill: =Self.Fill
+                        OnSelect: |-
+                            =Navigate('Work Order Job Attachments Screen', ScreenTransition.Cover, { Job: Job })
+                        PressedColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -40%)
+                        PressedFill: =Self.Fill
+                        Size: =gblAppStyles.FontSize_Medium
+                        Text: =T.ViewButtonLabel
+                        Tooltip: =T.ViewAttachmentsButtonAccessibleLabel
+                        Width: =80
+                        ZIndex: =3
+
+                shpBottomLineAdjustables_1 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =RGBA(209, 209, 209, 1)
+                    Height: =1
+                    LayoutMinWidth: =5
+                    Width: =Parent.Width
+                    Y: =Parent.Height - 1
+                    ZIndex: =2
+
+                conJobHoursConsumedWrapper As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =conJobHoursConsumed.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =gblAppStyles.FocusBorderThickness
+                    PaddingTop: =gblAppStyles.FocusBorderThickness
+                    ZIndex: =3
+
+                    conJobHoursConsumed As groupContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =cmpJobHoursConsumed.Height
+                        LayoutMinHeight: =48
+                        LayoutMinWidth: =150
+                        PaddingRight: =2
+                        Width: =150
+                        Y: =24
+                        ZIndex: =1
+
+                        icoJobHoursConsumed As icon.DockCheckProperties:
+                            Color: =RGBA(50, 128, 171, 1)
+                            FocusedBorderThickness: =0
+                            Height: =20
+                            Icon: =Icon.Clock
+                            Width: =20
+                            X: =8
+                            Y: =Parent.Height / 2 - Self.Height / 2
+                            ZIndex: =3
+
+                        cmpJobHoursConsumed As EditableTextWithHeader:
+                            AllowEditing: =false
+                            EditButtonAccessibleLabel: =Blank()
+                            HeaderFontSize: =gblAppStyles.FontSize_Small
+                            HeaderText: =T.MyTimeSpentLabel
+                            Height: =Self.AutoHeightValue
+                            TextFontSize: =gblAppStyles.FontSize_Large
+                            TextValue: |-
+                                =If(
+                                    varConsumedHoursSum <> Blank(),
+                                    With(
+                                        {
+                                            locHoursPart: Trunc(varConsumedHoursSum),
+                                            locMinutesPart: Trunc((varConsumedHoursSum - Trunc(varConsumedHoursSum)) * 60)
+                                        },
+                                        Substitute(
+                                            Substitute(
+                                                If(
+                                                    locMinutesPart <> 0,
+                                                    T.TimeConsumedWithMinutesLabel,
+                                                    T.TimeConsumedWithoutMinutesLabel
+                                                ),
+                                                "{WholeHours}",
+                                                locHoursPart
+                                            ),
+                                            "{WholeMinutes}",
+                                            locMinutesPart
+                                        )
+                                    )
+                                )
+                            Width: =Parent.Width - Self.X
+                            X: =icoJobHoursConsumed.X + icoJobHoursConsumed.Width + 10
+                            ZIndex: =5
+
+                    btnAdjustHoursConsumed As button:
+                        Align: =Align.Right
+                        Color: =gblAppStyles.ButtonLink.FontColor
+                        DisabledFill: =Self.Fill
+                        Fill: =gblAppStyles.ButtonLink.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.ButtonLink.Font
+                        HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
+                        HoverFill: =Self.Fill
+                        OnSelect: |-
+                            =With(
+                                {
+                                    locHourLines: ShowColumns(
+                                        Filter(
+                                            'Asset management work order job hour consumption lines (mserp)',
+                                            'Company Code' = Job.'Company Code',
+                                            'Work order' = Job.'Work order',
+                                            'Line number (mserp_workorderjobnumber)' = Job.'Line number',
+                                            'Personnel number' = gblAppCache.UserActiveWorker.'Personnel number',
+                                            Posted = 'NoYes (mserp)'.No
+                                        ),
+                                        Hours
+                                    )
+                                },
+                                // this nested in-memory summation is needed to avoid an error from VE plugin missing aggregation functionality
+                                With(
+                                    {
+                                        locHoursSum: Sum(
+                                            locHourLines,
+                                            mserp_resourceconsumedhours
+                                        )
+                                    },
+                                    Navigate(
+                                        'Work Order Job Hour Consumption Screen',
+                                        ScreenTransition.Cover,
+                                        {
+                                            WorkOrderJob: Job,
+                                            CurrentTimeSpent: locHoursSum
+                                        }
+                                    )
+                                )
+                            )
+                        PressedColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -40%)
+                        PressedFill: =Self.Fill
+                        Size: =gblAppStyles.FontSize_Medium
+                        Text: =T.AdjustButtonLabel
+                        Tooltip: =T.AdjustTimeSpentLabel
+                        Width: =80
+                        ZIndex: =2
+
+                shpBottomLineAdjustables_2 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =RGBA(209, 209, 209, 1)
+                    Height: =1
+                    LayoutMinWidth: =5
+                    Width: =Parent.Width
+                    Y: =Parent.Height - 1
+                    ZIndex: =4
+
+                conJobItemsConsumedWrapper As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =conJobItemsConsumed.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =gblAppStyles.FocusBorderThickness
+                    PaddingRight: =gblAppStyles.FocusBorderThickness
+                    PaddingTop: =gblAppStyles.FocusBorderThickness
+                    ZIndex: =5
+
+                    conJobItemsConsumed As groupContainer:
+                        Height: =conJobAttachments.Height
+                        LayoutMinHeight: =cmpJobItemsConsumed.Height
+                        LayoutMinWidth: =150
+                        Width: =150
+                        Y: =24
+                        ZIndex: =1
+
+                        icoJobItemsConsumed As icon.DockCheckProperties:
+                            Color: =RGBA(50, 128, 171, 1)
+                            FocusedBorderThickness: =0
+                            Height: =20
+                            Icon: =Icon.Journal
+                            Width: =20
+                            X: =8
+                            Y: =Parent.Height / 2 - Self.Height / 2
+                            ZIndex: =3
+
+                        cmpJobItemsConsumed As EditableTextWithHeader:
+                            AllowEditing: =false
+                            EditButtonAccessibleLabel: =Blank()
+                            HeaderFontSize: =gblAppStyles.FontSize_Small
+                            HeaderText: =T.ItemsConsumedLabel
+                            Height: =Self.AutoHeightValue
+                            TextFontSize: =gblAppStyles.FontSize_Large
+                            TextValue: |-
+                                =If(
+                                    varConsumedItemsCount <> Blank(),
+                                    Substitute(
+                                        T.ItemsConsumedCountV2Label,
+                                        "{ConsumedItemsCount}",
+                                        varConsumedItemsCount
+                                    )
+                                )
+                            Width: =Parent.Width - Self.X
+                            X: =icoJobHoursConsumed.X + icoJobHoursConsumed.Width + 10
+                            ZIndex: =5
+
+                    btnAdjustItemsConsumed As button:
+                        Align: =Align.Right
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Color: =gblAppStyles.ButtonLink.FontColor
+                        DisabledFill: =Self.Fill
+                        Fill: =gblAppStyles.ButtonLink.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.ButtonLink.Font
+                        HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
+                        HoverFill: =Self.Fill
+                        OnSelect: |-
+                            =Navigate(
+                                'Work Order Job Item Consumption List Screen',
+                                ScreenTransition.Cover,
+                                {WorkOrderJob: Job}
+                            )
+                        PressedColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -40%)
+                        PressedFill: =Self.Fill
+                        Size: =gblAppStyles.FontSize_Medium
+                        Text: =T.AdjustButtonLabel
+                        Tooltip: =T.AdjustQuantityAccessibleLabel
+                        Width: =80
+                        ZIndex: =2
+
+                shpBottomLineAdjustables_3 As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    Fill: =RGBA(209, 209, 209, 1)
+                    Height: =1
+                    LayoutMinWidth: =5
+                    Width: =Parent.Width
+                    Y: =Parent.Height - 1
+                    ZIndex: =6
+
+                conJobAsset As groupContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =cmpJobAsset.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    Y: =24
+                    ZIndex: =7
+
+                    icoJobAsset As icon.DockCheckProperties:
+                        Color: =RGBA(50, 128, 171, 1)
+                        FocusedBorderThickness: =0
+                        Height: =20
+                        Icon: =Icon.Manufacture
+                        Width: =20
+                        X: =8
+                        Y: =Parent.Height / 2 - Self.Height / 2
+                        ZIndex: =3
+
+                    cmpJobAsset As EditableTextWithHeader:
+                        AllowEditing: =false
+                        EditButtonAccessibleLabel: =Blank()
+                        HeaderFontSize: =gblAppStyles.FontSize_Small
+                        HeaderText: =T.AssetLabel
+                        Height: =Self.AutoHeightValue
+                        TextFontSize: =gblAppStyles.FontSize_Large
+                        TextValue: =$"({Job.mserp_FK_MaintenanceAsset_id.mserp_maintenanceassetid}) {Job.mserp_FK_MaintenanceAsset_id.mserp_name}"
+                        Width: =Parent.Width - Self.X
+                        X: =icoJobHoursConsumed.X + icoJobHoursConsumed.Width + 10
+                        ZIndex: =5
+
+        conWorkOrderJobScheduling As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =conWorkOrderJobSchedulingVertical.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =250
+            Width: =1366
+            ZIndex: =3
+
+            htmCardBackgroundJobScheduling As htmlViewer:
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                Height: =conWorkOrderJobSchedulingVertical.Height
+                HtmlText: |-
+                    ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                Visible: =conInformationWOJDS.Visible
+                Width: =Parent.Width
+                ZIndex: =1
+
+            conWorkOrderJobSchedulingVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conJobSchedulingScheduled.Height,
+                                conJobSchedulingActual.Height
+                            ]
+                        },
+                        Sum(controlHeights, Value) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(Filter(controlHeights, Value <> Blank()))
+                    )
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =10
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =24
+                Width: =Parent.Width
+                ZIndex: =3
+
+                conJobSchedulingScheduled As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Max(conJobSchedulingScheduledStart.Height, conJobSchedulingScheduledEnd.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    conJobSchedulingScheduledStart As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =110
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =1
+
+                        lblJobSchedulingScheduledStartLabel As label:
+                            AutoHeight: =true
+                            Color: =RGBA(42,172,148, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Small
+                            Text: =T.ScheduledStartLabel
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =1
+
+                        lblJobSchedulingScheduledStartText As label:
+                            AutoHeight: =true
+                            Color: =RGBA(41, 40, 39, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Large
+                            Text: |-
+                                =If(
+                                    Job.mserp_scheduledstartdatetime = Blank(),
+                                    C.EmDash,
+                                    DateAdd(
+                                        Job.mserp_scheduledstartdatetime,
+                                        -TimeZoneOffset(Job.mserp_scheduledstartdatetime),
+                                        TimeUnit.Minutes
+                                    )
+                                )
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =2
+
+                    conJobSchedulingScheduledEnd As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =110
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =2
+
+                        lblJobSchedulingScheduledEndLabel As label:
+                            AutoHeight: =true
+                            Color: =RGBA(209, 52, 56, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Small
+                            Text: =T.ScheduledEndLabel
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =1
+
+                        lblJobSchedulingScheduledEndText As label:
+                            AutoHeight: =true
+                            Color: =RGBA(41, 40, 39, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Large
+                            Text: |-
+                                =If(
+                                    Job.mserp_scheduledenddatetime = Blank(),
+                                    C.EmDash,
+                                    DateAdd(
+                                        Job.mserp_scheduledenddatetime,
+                                        -TimeZoneOffset(Job.mserp_scheduledenddatetime),
+                                        TimeUnit.Minutes
+                                    )
+                                )
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =2
+
+                conJobSchedulingActual As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Max(conJobSchedulingActualStart.Height, conJobSchedulingActualEnd.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =4
+
+                    conJobSchedulingActualStart As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =110
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =1
+
+                        lblJobSchedulingActualStartLabel As label:
+                            AutoHeight: =true
+                            Color: =RGBA(42,172,148, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Small
+                            Text: =T.ActualStartLabel
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =1
+
+                        lblJobSchedulingActualStartText As label:
+                            AutoHeight: =true
+                            Color: =RGBA(41, 40, 39, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Large
+                            Text: |-
+                                =If(
+                                    Job.mserp_FK_WorkOrderTable_id.mserp_actualstart = Blank(),
+                                    C.EmDash,
+                                    DateAdd(
+                                        Job.mserp_FK_WorkOrderTable_id.mserp_actualstart,
+                                        -TimeZoneOffset(Job.mserp_FK_WorkOrderTable_id.mserp_actualstart),
+                                        TimeUnit.Minutes
+                                    )
+                                )
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =2
+
+                    conJobSchedulingActualEnd As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =110
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =2
+
+                        lblJobSchedulingActualEndLabel As label:
+                            AutoHeight: =true
+                            Color: =RGBA(209, 52, 56, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Small
+                            Text: =T.ActualEndLabel
+                            Width: =Parent.Width
+                            Y: =40
+                            ZIndex: =1
+
+                        lblJobSchedulingActualEndText As label:
+                            AutoHeight: =true
+                            Color: =RGBA(41, 40, 39, 1)
+                            Font: =Font.'Segoe UI'
+                            Height: =18
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =gblAppStyles.FontSize_Large
+                            Text: |-
+                                =If(
+                                    Job.mserp_FK_WorkOrderTable_id.mserp_actualend = Blank(),
+                                    C.EmDash,
+                                    DateAdd(
+                                        Job.mserp_FK_WorkOrderTable_id.mserp_actualend,
+                                        -TimeZoneOffset(Job.mserp_FK_WorkOrderTable_id.mserp_actualend),
+                                        TimeUnit.Minutes
+                                    )
+                                )
+                            Width: =Parent.Width
+                            Y: =20
+                            ZIndex: =2
+
+        conJobWorkOrderDetails As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =conJobWorkOrderDetailsVertical.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =250
+            Width: =1366
+            ZIndex: =4
+
+            htmCardBackgroundJWOS As htmlViewer:
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                Height: =conJobWorkOrderDetailsVertical.Height
+                HtmlText: |-
+                    ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                OnSelect: =
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                Visible: =conInformationWOJDS.Visible
+                Width: =Parent.Width
+                ZIndex: =1
+
+            conJobWorkOrderDetailsVertical As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                cmpJobWorkOrderId.Height,
+                                cmpJobWorkOrderState.Height,
+                                cmpJobWorkOrderDescription.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =16
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =24
+                Width: =Parent.Width
+                ZIndex: =3
+
+                cmpJobWorkOrderId As EditableTextWithHeader:
+                    AllowEditing: =false
+                    EditButtonAccessibleLabel: =Blank()
+                    HeaderFontSize: =gblAppStyles.FontSize_Small
+                    HeaderText: =T.WorkOrderLabel
+                    Height: =Self.AutoHeightValue
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =300
+                    TextFontSize: =gblAppStyles.FontSize_Medium
+                    TextValue: =Job.mserp_workorderid
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+
+                cmpJobWorkOrderState As EditableTextWithHeader:
+                    AllowEditing: =false
+                    EditButtonAccessibleLabel: =Blank()
+                    HeaderFontSize: =gblAppStyles.FontSize_Small
+                    HeaderText: =T.WorkOrderStateHeaderLabel
+                    Height: =Self.AutoHeightValue
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =300
+                    TextFontSize: =gblAppStyles.FontSize_Medium
+                    TextValue: =Coalesce(gblWorkOrderLifecycleState, Job.mserp_FK_WorkOrderTable_id.mserp_workorderlifecyclestateid)
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    ZIndex: =2
+
+                cmpJobWorkOrderDescription As EditableTextWithHeader:
+                    AllowEditing: =false
+                    EditButtonAccessibleLabel: =Blank()
+                    HeaderFontSize: =gblAppStyles.FontSize_Small
+                    HeaderText: =T.WODescriptionHeaderLabel
+                    Height: =Self.AutoHeightValue
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =300
+                    TextFontSize: =gblAppStyles.FontSize_Medium
+                    TextValue: =Job.'Asset management work orders V2'.Description
+                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                    ZIndex: =3
+
+        conWorkOrderActionsWrapper As groupContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =conWorkOrderActions.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =250
+            Width: =1366
+            ZIndex: =5
+
+            conWorkOrderActions As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                lblWorkOrderActionsHeader.Height,
+                                btnChangeWorkOrderStateFromJobs.Height,
+                                btnNewWorkOrderFromJob.Height,
+                                btnGoToWorkOrderFromJob.Height,
+                                lblWorkOrderLinksHeader.Height,
+                                btnGoToJobsOnAsset.Height,
+                                btnGoToJobsOnFunctionalLocation.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =8
+                PaddingRight: =16
+                PaddingTop: =16
+                Width: =Parent.Width
+                Y: =6
+                ZIndex: =4
+
+                lblWorkOrderActionsHeader As label:
+                    Font: =gblAppStyles.CommonFont
+                    Height: =16
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =gblAppStyles.FontSize_Medium
+                    Text: =T.WorkOrderLabel
+                    ZIndex: =1
+
+                btnChangeWorkOrderStateFromJobs As button:
+                    BorderColor: =gblAppStyles.Button.BorderColor
+                    BorderStyle: =gblAppStyles.Button.BorderStyle
+                    BorderThickness: =gblAppStyles.Button.BorderThickness
+                    Color: =gblAppStyles.Button.FontColor
+                    Fill: =gblAppStyles.Button.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.Button.Font
+                    FontWeight: =gblAppStyles.Button.FontWeight
+                    Height: =52
+                    OnSelect: |
+                        =UpdateContext(
+                            {
+                                varShowStateChangePrompt: true,
+                                varIsLoadingAvailableWorkOrderStates: true,
+                                varAvailableWorkOrderStates: Blank()
+                            }
+                        );
+                        UpdateContext(
+                            {
+                                varAvailableWorkOrderStates: RenameColumns(
+                                    SortByColumns(
+                                        Filter(
+                                            'Asset management work order lifecycle model sequence next (mserp)',
+                                            'Company Code' = Job.'Company Code',
+                                            'Lifecycle state (mserp_lifecyclestateid)' = Coalesce(
+                                                gblWorkOrderLifecycleState,
+                                                Job.'Asset management work orders V2'.'Lifecycle state'
+                                            ),
+                                            'Lifecycle model (mserp_lifecyclemodelid)' = gblWorkOrderLifecycleModel,
+                                            'Lifecycle state (mserp_nextlifecyclestateid)' <> Blank()
+                                        ),
+                                        "mserp_nextlifecyclestatelinenumber"
+                                    ),
+                                    'Lifecycle state (mserp_nextlifecyclestateid)',
+                                    label
+                                )
+                            }
+                        );
+                        UpdateContext({varIsLoadingAvailableWorkOrderStates: false});
+                    PressedColor: =gblAppStyles.Button.PressedColor
+                    PressedFill: =gblAppStyles.Button.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.Button.FontSize
+                    Text: =T.WorkOrderStateChangeLabel
+                    Width: =200
+                    X: =Parent.Width / 2 - Self.Width / 2
+                    Y: =Parent.Height - Self.Height - 16
+                    ZIndex: =2
+
+                btnNewWorkOrderFromJob As button:
+                    BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                    BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                    Color: =gblAppStyles.ButtonSecondary.FontColor
+                    DisabledFill: =gblAppStyles.ButtonSecondary.DisabledFill
+                    Fill: =gblAppStyles.ButtonSecondary.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.ButtonSecondary.Font
+                    FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                    Height: =52
+                    HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                    OnSelect: |-
+                        =Navigate(
+                            'Work Order Create Form Screen',
+                            ScreenTransition.None,
+                            {
+                                locAsset: LookUp(Assets, 'Company Code' = Job.'Company Code' And 'Asset (mserp_maintenanceassetid)' = Job.Asset),
+                                locCreateMode: C.Creation.CreateFromAsset,
+                                locDefaultWorkOrderType: LookUp('Asset management parameters (mserp)', 'Company Code' = Job.'Company Code', 'Work order type (mserp_defaultworkordertypeid)'),
+                                locDefaultServiceLevel: LookUp(
+                                    'Work Order Service Levels',
+                                    'Company Code' = Job.'Company Code'
+                                    And 'Service level' = Job.'Asset management work orders V2'.'Service level'
+                                ).'Name (mserp_formattedservicelevelname)'
+                            }
+                        );
+                    PaddingBottom: =Self.PaddingTop
+                    PaddingLeft: =Self.PaddingTop
+                    PaddingRight: =Self.PaddingTop
+                    PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                    PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                    PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.ButtonSecondary.FontSize
+                    Text: =T.NewWorkOrderForAssetButtonLabel
+                    Width: =gblAppStyles.ButtonSecondary.Width
+                    X: =40
+                    Y: =40
+                    ZIndex: =3
+
+                btnGoToWorkOrderFromJob As button:
+                    BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                    BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                    Color: =gblAppStyles.ButtonSecondary.FontColor
+                    DisabledFill: =gblAppStyles.ButtonSecondary.DisabledFill
+                    Fill: =gblAppStyles.ButtonSecondary.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.ButtonSecondary.Font
+                    FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                    Height: =52
+                    HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                    OnSelect: |-
+                        =Navigate(
+                            'Work Order Details Screen',
+                            ScreenTransition.Cover,
+                            {
+                                WorkOrder: LookUp('Asset management work orders V2 (mserp)',
+                                    'Company Code' = Job.'Company Code'
+                                    And 'Work order' = Job.'Work order'
+                                ),
+                                ShowInformation: true
+                            }
+                        )
+                    PaddingBottom: =Self.PaddingTop
+                    PaddingLeft: =Self.PaddingTop
+                    PaddingRight: =Self.PaddingTop
+                    PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                    PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                    PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.ButtonSecondary.FontSize
+                    Text: =T.GoToWorkOrderLabel
+                    Width: =gblAppStyles.ButtonSecondary.Width
+                    X: =40
+                    Y: =40
+                    ZIndex: =4
+
+                lblWorkOrderLinksHeader As label:
+                    Font: =gblAppStyles.CommonFont
+                    Height: =16
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =gblAppStyles.FontSize_Medium
+                    Text: =T.RelatedJobsLabel
+                    ZIndex: =5
+
+                btnGoToJobsOnAsset As button:
+                    BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                    BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                    Color: =gblAppStyles.ButtonSecondary.FontColor
+                    DisabledFill: =gblAppStyles.ButtonSecondary.DisabledFill
+                    Fill: =gblAppStyles.ButtonSecondary.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.ButtonSecondary.Font
+                    FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                    Height: =52
+                    HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                    OnSelect: |-
+                        =Set(gblShowWorkOrdersSearch, true);
+                        
+                        Navigate(
+                            'Work Orders Screen',
+                            ScreenTransition.Cover,
+                            {
+                                SearchTerm: Job.Asset
+                            }
+                        )
+                    PaddingBottom: =Self.PaddingTop
+                    PaddingLeft: =Self.PaddingTop
+                    PaddingRight: =Self.PaddingTop
+                    PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                    PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                    PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.ButtonSecondary.FontSize
+                    Text: =T.ViewAssetJobsLabel
+                    Width: =gblAppStyles.ButtonSecondary.Width
+                    X: =40
+                    Y: =40
+                    ZIndex: =6
+
+                btnGoToJobsOnFunctionalLocation As button:
+                    BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                    BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                    Color: =gblAppStyles.ButtonSecondary.FontColor
+                    DisabledFill: =gblAppStyles.ButtonSecondary.DisabledFill
+                    Fill: =gblAppStyles.ButtonSecondary.Fill
+                    FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                    FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                    Font: =gblAppStyles.ButtonSecondary.Font
+                    FontWeight: =gblAppStyles.ButtonSecondary.FontWeight
+                    Height: =52
+                    HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                    OnSelect: |-
+                        =Set(gblShowWorkOrdersSearch, true);
+                        
+                        Navigate(
+                            'Work Orders Screen',
+                            ScreenTransition.Cover,
+                            {
+                                SearchTerm: Job.'Functional location'
+                            }
+                        )
+                    PaddingBottom: =Self.PaddingTop
+                    PaddingLeft: =Self.PaddingTop
+                    PaddingRight: =Self.PaddingTop
+                    PaddingTop: =gblAppStyles.ButtonSecondary.Padding.Top
+                    PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                    PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                    RadiusBottomLeft: =Self.RadiusTopLeft
+                    RadiusBottomRight: =Self.RadiusTopLeft
+                    RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                    RadiusTopRight: =Self.RadiusTopLeft
+                    Size: =gblAppStyles.ButtonSecondary.FontSize
+                    Text: =T.ViewLocationJobsLabel
+                    Width: =gblAppStyles.ButtonSecondary.Width
+                    X: =40
+                    Y: =40
+                    ZIndex: =7
+
+    conWorkOrderLineNavigation As groupContainer:
+        Height: =60
+        Width: =Parent.Width
+        Y: =cmpHeaderWOJDS.Height
+        ZIndex: =4
+
+        shpNavigationBackdropWOJDS As rectangle:
+            Fill: =If(IsEmpty(galWorkOrderJobChecklist.AllItems), 'Work Order Job Details Screen'.Fill, RGBA(255, 255, 255, 1))
+            Height: =btnInformationPageWOJDS.Height
+            Width: =Parent.Width - Self.X - btnInformationPageWOJDS.RadiusBottomRight - 16
+            X: =btnInformationPageWOJDS.X + btnInformationPageWOJDS.RadiusBottomLeft
+            Y: =btnChecklistPage.Y
+            ZIndex: =1
+
+        btnChecklistPage As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varPage = C.WorkOrderJobDetailsScreen.ChecklistSubPage, Color.White, ColorValue("#0742AB"))
+            DisplayMode: |-
+                =If(
+                    IsEmpty(galWorkOrderJobChecklist.AllItems) Or With(
+                        {locFirstChecklistLine: First(galWorkOrderJobChecklist.AllItems)},
+                        locFirstChecklistLine.mserp_workorderlinenumber <> Job.mserp_linenumber
+                        Or locFirstChecklistLine.mserp_workorderid <> Job.mserp_workorderid
+                    ),
+                    DisplayMode.Disabled,
+                    DisplayMode.Edit
+                )
+            Fill: |-
+                =If(varPage = C.WorkOrderJobDetailsScreen.ChecklistSubPage, ColorValue("#0742AB"), Color.White)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            Height: =36
+            OnSelect: |-
+                =UpdateContext({ varPage: C.WorkOrderJobDetailsScreen.ChecklistSubPage })
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =gblAppStyles.FontSize_Medium
+            Text: |-
+                =If(
+                    Self.DisplayMode = DisplayMode.Disabled,
+                    T.NoChecklistLabel,
+                    With(
+                        {
+                            locCompletedChecklistItemsCount: CountRows(
+                                Filter(
+                                    galWorkOrderJobChecklist.AllItems,
+                                    mserp_checked = 'NoYes (mserp)'.Yes,
+                                    mserp_type <> 'Type (mserp)'.Header
+                                )
+                            ),
+                            locTotalChecklistItemsCount: CountRows(
+                                Filter(
+                                    galWorkOrderJobChecklist.AllItems,
+                                    mserp_type <> 'Type (mserp)'.Header
+                                )
+                            )
+                        },
+                        Substitute(
+                            Substitute(
+                                T.ChecklistLabel,
+                                "{CheckedItemsCount}",
+                                locCompletedChecklistItemsCount
+                            ),
+                            "{TotalItemsCount}",
+                            locTotalChecklistItemsCount
+                        )
+                    )
+                )
+            Width: =Parent.Width / 2 - 16
+            X: =btnInformationPageWOJDS.X + btnInformationPageWOJDS.Width
+            Y: =16
+            ZIndex: =2
+
+        btnInformationPageWOJDS As button:
+            BorderThickness: =0
+            Color: |-
+                =If(varPage = C.WorkOrderJobDetailsScreen.DetailsSubPage, Color.White, ColorValue("#0742AB"))
+            Fill: |-
+                =If(varPage = C.WorkOrderJobDetailsScreen.DetailsSubPage, ColorValue("#0742AB"), Color.White)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            Height: =36
+            OnSelect: |-
+                =UpdateContext({ varPage: C.WorkOrderJobDetailsScreen.DetailsSubPage })
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =gblAppStyles.FontSize_Medium
+            Text: =T.JobLabel
+            Width: =Parent.Width / 2 - 16
+            X: =16
+            Y: =btnChecklistPage.Y
+            ZIndex: =3
+
+    cmpHeaderWOJDS As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: =Job.'Assets entity view V3 (mserp_FK_MaintenanceAsset_id)'.Name
+        ZIndex: =5
+
+    cmpUpdateInternalNote As FullScreenTextInput:
+        CancelButtonText: =T.CancelButtonLabel
+        ComponentInstanceName: ="cmpUpdateInternalNote"
+        DefaultInputText: =Coalesce(varUpdatedInternalNote, Job.mserp_workorderjobinternalnote)
+        FocusBorderColor: =gblAppStyles.FocusBorderColor
+        FocusBorderThickness: =gblAppStyles.FocusBorderThickness
+        HeaderText: =T.InternalNoteLabel
+        InputHintText: =T.InternalNoteLabel
+        OnCancel: |-
+            =UpdateContext({varInternalNotePromptOpen:false})
+        OnSave: |
+            =UpdateContext(
+                {
+                    varUpdatedInternalNote: Patch(
+                        'Asset management work order jobs V2 (mserp)',
+                        Job,
+                        {'Internal note': InputText}
+                    ).'Internal note',
+                    varInternalNotePromptOpen: false
+                }
+            );
+        SaveButtonText: =T.SaveButtonLabel
+        Visible: =varInternalNotePromptOpen
+        ZIndex: =6
+
+    cmpUpdateWorkerRemarks As FullScreenTextInput:
+        CancelButtonText: =T.CancelButtonLabel
+        ComponentInstanceName: ="cmpUpdateWorkerRemarks"
+        DefaultInputText: =Coalesce(varUpdatedWorkerRemarks, Job.mserp_workorderjobmaintenanceworkerremarks)
+        FocusBorderColor: =gblAppStyles.FocusBorderColor
+        FocusBorderThickness: =gblAppStyles.FocusBorderThickness
+        HeaderText: =T.RemarksLabel
+        InputHintText: =T.WorkersRemarkLabel
+        OnCancel: |-
+            =UpdateContext({varRemarksPromptOpen:false})
+        OnSave: |
+            =UpdateContext(
+                {
+                    varUpdatedWorkerRemarks: Patch(
+                        'Asset management work order jobs V2 (mserp)',
+                        Job,
+                        {'Maintenance workers'' remarks': InputText}
+                    ).'Maintenance workers'' remarks',
+                    varRemarksPromptOpen: false
+                }
+            );
+        ReturnFocus: ="imgEditButton"
+        SaveButtonText: =T.SaveButtonLabel
+        Visible: =varRemarksPromptOpen
+        ZIndex: =7
+
+    cmpChangeWorkOrderStateV2WOJDS As BottomSheetChoiceSelector:
+        AvailableChoices: =varAvailableWorkOrderStates
+        ChoiceAccessibleName: =T.AvailableChoisesAccessibleLabel
+        ComponentInstanceName: ="cmpChangeWorkOrderStateV2WOJDS"
+        CurrentlySelectedChoice: =Coalesce(gblWorkOrderLifecycleState, Job.mserp_FK_WorkOrderTable_id.mserp_workorderlifecyclestateid)
+        FocusBorderColor: =gblAppStyles.FocusBorderColor
+        FocusBorderThickness: =gblAppStyles.FocusBorderThickness
+        Loading: =varIsLoadingAvailableWorkOrderStates
+        LoadingChoicesText: =T.WorkOrderAvailableStatesLoadingLabel
+        OnCancel: |-
+            =UpdateContext({varShowStateChangePrompt:false})
+        OnSelect: |
+            =Patch(
+                'Asset management work orders V2 (mserp)',
+                Job.'Asset management work orders V2',
+                {'Next lifecycle state': SelectedChoice.label}
+            );
+            
+            Set(gblWorkOrderLifecycleState, SelectedChoice.label);
+            
+            UpdateContext(
+                {
+                    varShowStateChangePrompt: false
+                }
+            );
+        ReturnFocus: ="btnChangeWorkOrderStateFromJobs"
+        Visible: =varShowStateChangePrompt
+        ZIndex: =9
+

@@ -1,0 +1,56 @@
+"'Creation Success Screen' As screen":
+    Fill: =gblAppColors.Background
+    OnVisible: =Set(gblPreviousScreen, Self)
+
+    conCreateMRSuccess As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height - cmpCreateMRSuccessHeader.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =20
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =40
+        Width: =Parent.Width
+        Y: =54
+        ZIndex: =1
+
+        lblCreateMRSuccessTitle As label:
+            Align: =Align.Center
+            Font: =gblAppStyles.HeadLine.Font
+            FontWeight: =FontWeight.Bold
+            Height: =80
+            Size: =gblAppStyles.FontSize_Large
+            Text: =If(locCreatedType = C.Creation.CreateWorkOrder, Substitute(T.WOCreateSuccessLabel, "{NewWorkOrderID}", locCreatedId), Substitute(T.MRCreateSuccessLabel, "{NewRequestID}", locCreatedId))
+            Width: =Parent.Width
+            ZIndex: =2
+
+        imgCreateMRSuccess As image:
+            Height: =150
+            Image: =CreateMRSuccess
+            Width: =150
+            X: =633
+            Y: =240
+            ZIndex: =3
+
+        btnCreateMRSuccess As button:
+            Color: =gblAppStyles.Button.FontColor
+            Fill: =gblAppStyles.Button.Fill
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            FontWeight: =gblAppStyles.Button.FontWeight
+            Height: =gblAppStyles.Button.Height
+            OnSelect: =Back(); Back(); If(gblAppCache.IsUserMaintenanceWorker, Back());
+            Size: =gblAppStyles.Button.FontSize
+            Text: =T.DoneButtonLabel
+            Width: =Min(300,Parent.Width -16*2)
+            ZIndex: =4
+
+    cmpCreateMRSuccessHeader As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: =locHeaderText
+        ZIndex: =2
+

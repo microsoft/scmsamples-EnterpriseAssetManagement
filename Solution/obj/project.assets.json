@@ -1,0 +1,747 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.7.2": {
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+        "type": "package",
+        "build": {
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props": {},
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        }
+      },
+      "focus-trap/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/focus-trap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/focus-trap.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win": {
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+        "type": "package",
+        "build": {
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props": {},
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        }
+      },
+      "focus-trap/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/focus-trap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/focus-trap.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-arm64": {
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+        "type": "package",
+        "build": {
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props": {},
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        }
+      },
+      "focus-trap/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/focus-trap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/focus-trap.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x64": {
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+        "type": "package",
+        "build": {
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props": {},
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        }
+      },
+      "focus-trap/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/focus-trap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/focus-trap.dll": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.7.2/win-x86": {
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+        "type": "package",
+        "build": {
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props": {},
+          "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
+      "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "build/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props": {},
+          "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets": {}
+        }
+      },
+      "focus-trap/1.0.0": {
+        "type": "project",
+        "framework": ".NETFramework,Version=v4.7.2",
+        "dependencies": {
+          "Microsoft.PowerApps.MSBuild.Pcf": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/focus-trap.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/focus-trap.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Dynamics.Solutions.Tools.Targets.SolutionPackager/2.0.57": {
+      "sha512": "350R6mMCM6l9yKjF49GEw7fA5s1jawnvDAoRNfg/5S+rU3mOGZLdWzklb7YUOMbH0KhyiNmv3S5zi0+SoGAArg==",
+      "type": "package",
+      "path": "dynamics.solutions.tools.targets.solutionpackager/2.0.57",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.props",
+        "build/Dynamics.Solutions.Tools.Targets.SolutionPackager.targets",
+        "build/scripts/MapFileUpdater.ps1",
+        "dynamics.solutions.tools.targets.solutionpackager.2.0.57.nupkg.sha512",
+        "dynamics.solutions.tools.targets.solutionpackager.nuspec",
+        "tools/ArtifactVersioning.Extension/ArtifactVersioning.Common.dll",
+        "tools/ArtifactVersioning.Extension/ArtifactVersioning.Common.pdb",
+        "tools/ArtifactVersioning.Extension/ArtifactVersioning.Extension.dll",
+        "tools/ArtifactVersioning.Extension/ArtifactVersioning.Extension.dll.config",
+        "tools/ArtifactVersioning.Extension/ArtifactVersioning.Extension.pdb",
+        "tools/ArtifactVersioning.Extension/Azure.Core.dll",
+        "tools/ArtifactVersioning.Extension/Azure.Identity.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Bcl.Cryptography.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Build.Framework.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Build.Utilities.Core.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Crm.Sdk.Proxy.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Caching.Abstractions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Caching.Memory.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Configuration.Binder.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Configuration.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.DependencyInjection.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Http.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Logging.Configuration.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Logging.Console.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Logging.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Options.ConfigurationExtensions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Options.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Extensions.Primitives.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.IO.Redist.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Identity.Client.Extensions.Msal.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Identity.Client.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.IdentityModel.Abstractions.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.NET.StringTools.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.PowerPlatform.Dataverse.Client.AzAuth.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.PowerPlatform.Dataverse.Client.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Rest.ClientRuntime.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Xrm.Sdk.dll",
+        "tools/ArtifactVersioning.Extension/Microsoft.Xrm.Tools.Sdk.CDSConnection.dll",
+        "tools/ArtifactVersioning.Extension/Newtonsoft.Json.dll",
+        "tools/ArtifactVersioning.Extension/System.Buffers.dll",
+        "tools/ArtifactVersioning.Extension/System.ClientModel.dll",
+        "tools/ArtifactVersioning.Extension/System.Collections.Immutable.dll",
+        "tools/ArtifactVersioning.Extension/System.ComponentModel.Annotations.dll",
+        "tools/ArtifactVersioning.Extension/System.Configuration.ConfigurationManager.dll",
+        "tools/ArtifactVersioning.Extension/System.Diagnostics.DiagnosticSource.dll",
+        "tools/ArtifactVersioning.Extension/System.Formats.Asn1.dll",
+        "tools/ArtifactVersioning.Extension/System.IO.FileSystem.AccessControl.dll",
+        "tools/ArtifactVersioning.Extension/System.Memory.Data.dll",
+        "tools/ArtifactVersioning.Extension/System.Memory.dll",
+        "tools/ArtifactVersioning.Extension/System.Numerics.Vectors.dll",
+        "tools/ArtifactVersioning.Extension/System.Runtime.CompilerServices.Unsafe.dll",
+        "tools/ArtifactVersioning.Extension/System.Security.AccessControl.dll",
+        "tools/ArtifactVersioning.Extension/System.Security.Cryptography.ProtectedData.dll",
+        "tools/ArtifactVersioning.Extension/System.Security.Cryptography.Xml.dll",
+        "tools/ArtifactVersioning.Extension/System.Security.Principal.Windows.dll",
+        "tools/ArtifactVersioning.Extension/System.ServiceModel.Http.dll",
+        "tools/ArtifactVersioning.Extension/System.ServiceModel.Primitives.dll",
+        "tools/ArtifactVersioning.Extension/System.Text.Encodings.Web.dll",
+        "tools/ArtifactVersioning.Extension/System.Text.Json.dll",
+        "tools/ArtifactVersioning.Extension/System.Threading.Tasks.Extensions.dll",
+        "tools/ArtifactVersioning.Extension/System.ValueTuple.dll",
+        "tools/Localization.targets",
+        "tools/ResxManager.Extension/Microsoft.Build.Framework.dll",
+        "tools/ResxManager.Extension/Microsoft.Build.Utilities.Core.dll",
+        "tools/ResxManager.Extension/Microsoft.VisualStudio.Setup.Configuration.Interop.dll",
+        "tools/ResxManager.Extension/ResxManager.Extension.dll",
+        "tools/ResxManager.Extension/ResxManager.Extension.pdb",
+        "tools/ResxManager.Extension/System.Collections.Immutable.dll",
+        "tools/SolutionAutoVersion.targets",
+        "tools/commands/setPipelineBuildNumber.ps1"
+      ]
+    },
+    "Microsoft.PowerApps.MSBuild.Pcf/1.39.1": {
+      "sha512": "k/lF89JdReoI+YDrL0CYUv0ybHys8I7ndbbKI1Sn1vth4L9tSvO9J6jGq/mSPxV8t3yheVRSpOqaWR6Zf2iFXA==",
+      "type": "package",
+      "path": "microsoft.powerapps.msbuild.pcf/1.39.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rdPartyNotice.txt",
+        "LICENSE.txt",
+        "build/Microsoft.PowerApps.MSBuild.Pcf.props",
+        "build/Microsoft.PowerApps.MSBuild.Pcf.targets",
+        "microsoft.powerapps.msbuild.pcf.1.39.1.nupkg.sha512",
+        "microsoft.powerapps.msbuild.pcf.nuspec",
+        "tasks/Microsoft.PowerApps.MSBuild.Pcf.tasks",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.dll",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.pdb",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.tasks",
+        "tasks/net472/Newtonsoft.Json.dll",
+        "tasks/net472/System.Drawing.Common.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Options.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Primitives.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Buffers.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Memory.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Numerics.Vectors.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Text.Encodings.Web.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Text.Json.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.ValueTuple.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Buffers.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Memory.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Numerics.Vectors.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Text.Json.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.ValueTuple.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.exe",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.exe.config",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.exe",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.exe.config",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.pdb",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.deps.json",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.dll",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.pdb",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.tasks",
+        "tasks/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "tasks/net6.0/Newtonsoft.Json.dll",
+        "tasks/net6.0/System.Drawing.Common.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Options.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Primitives.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/System.Text.Json.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/System.Text.Json.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.deps.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.dll.config",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.runtimeconfig.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.deps.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.dll.config",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.pdb",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.runtimeconfig.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll"
+      ]
+    },
+    "Microsoft.PowerApps.MSBuild.Solution/1.39.1": {
+      "sha512": "1RF9mV5q2jzvWkNCo/ZTAQQyJQpVD2lazwATguQHOa88eVu3n/92QJTlJJLLAFUK9L1SF5ZihqqJYSB+ulh6EQ==",
+      "type": "package",
+      "path": "microsoft.powerapps.msbuild.solution/1.39.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "3rdPartyNotice.txt",
+        "LICENSE.txt",
+        "build/Microsoft.PowerApps.MSBuild.Solution.props",
+        "build/Microsoft.PowerApps.MSBuild.Solution.targets",
+        "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.props",
+        "buildMultiTargeting/Microsoft.PowerApps.MSBuild.Solution.targets",
+        "microsoft.powerapps.msbuild.solution.1.39.1.nupkg.sha512",
+        "microsoft.powerapps.msbuild.solution.nuspec",
+        "tasks/Microsoft.PowerApps.MSBuild.Solution.tasks",
+        "tasks/net472/LibGit2Sharp.dll",
+        "tasks/net472/LibGit2Sharp.dll.config",
+        "tasks/net472/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/Microsoft.Deployment.Compression.Cab.dll",
+        "tasks/net472/Microsoft.Deployment.Compression.dll",
+        "tasks/net472/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net472/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net472/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net472/Microsoft.Extensions.Logging.dll",
+        "tasks/net472/Microsoft.Extensions.Options.dll",
+        "tasks/net472/Microsoft.Extensions.Primitives.dll",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.dll",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.pdb",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.tasks",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.dll",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.pdb",
+        "tasks/net472/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.tasks",
+        "tasks/net472/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/Newtonsoft.Json.dll",
+        "tasks/net472/SolutionPackagerLib.dll",
+        "tasks/net472/System.Buffers.dll",
+        "tasks/net472/System.Configuration.ConfigurationManager.dll",
+        "tasks/net472/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/System.Drawing.Common.dll",
+        "tasks/net472/System.IO.Packaging.dll",
+        "tasks/net472/System.Memory.dll",
+        "tasks/net472/System.Numerics.Vectors.dll",
+        "tasks/net472/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/System.Security.AccessControl.dll",
+        "tasks/net472/System.Security.Permissions.dll",
+        "tasks/net472/System.Security.Principal.Windows.dll",
+        "tasks/net472/System.Text.Encodings.Web.dll",
+        "tasks/net472/System.Text.Json.dll",
+        "tasks/net472/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/System.ValueTuple.dll",
+        "tasks/net472/bolt.system.dll",
+        "tasks/net472/bolt.system.pdb",
+        "tasks/net472/bolt.version.dll",
+        "tasks/net472/bolt.version.pdb",
+        "tasks/net472/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/bt-uploader/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net472/bt-uploader/System.Buffers.dll",
+        "tasks/net472/bt-uploader/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/bt-uploader/System.Memory.dll",
+        "tasks/net472/bt-uploader/System.Numerics.Vectors.dll",
+        "tasks/net472/bt-uploader/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net472/bt-uploader/System.Text.Json.dll",
+        "tasks/net472/bt-uploader/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/bt-uploader/System.ValueTuple.dll",
+        "tasks/net472/bt-uploader/pacTelemetryUpload.exe",
+        "tasks/net472/bt-uploader/pacTelemetryUpload.exe.config",
+        "tasks/net472/lib/linux-arm/libgit2-e632535.so",
+        "tasks/net472/lib/linux-arm64/libgit2-e632535.so",
+        "tasks/net472/lib/linux-musl-arm/libgit2-e632535.so",
+        "tasks/net472/lib/linux-musl-arm64/libgit2-e632535.so",
+        "tasks/net472/lib/linux-musl-x64/libgit2-e632535.so",
+        "tasks/net472/lib/linux-x64/libgit2-e632535.so",
+        "tasks/net472/lib/osx-arm64/libgit2-e632535.dylib",
+        "tasks/net472/lib/osx-x64/libgit2-e632535.dylib",
+        "tasks/net472/lib/win32/arm64/git2-e632535.dll",
+        "tasks/net472/lib/win32/x64/git2-e632535.dll",
+        "tasks/net472/lib/win32/x86/git2-e632535.dll",
+        "tasks/net472/loc/ar/strings.localized.json",
+        "tasks/net472/loc/bg/strings.localized.json",
+        "tasks/net472/loc/ca/strings.localized.json",
+        "tasks/net472/loc/cs/strings.localized.json",
+        "tasks/net472/loc/da/strings.localized.json",
+        "tasks/net472/loc/de/strings.localized.json",
+        "tasks/net472/loc/el/strings.localized.json",
+        "tasks/net472/loc/en/strings.localized.json",
+        "tasks/net472/loc/es/strings.localized.json",
+        "tasks/net472/loc/et/strings.localized.json",
+        "tasks/net472/loc/eu/strings.localized.json",
+        "tasks/net472/loc/fi/strings.localized.json",
+        "tasks/net472/loc/fr/strings.localized.json",
+        "tasks/net472/loc/gl/strings.localized.json",
+        "tasks/net472/loc/he/strings.localized.json",
+        "tasks/net472/loc/hi/strings.localized.json",
+        "tasks/net472/loc/hr/strings.localized.json",
+        "tasks/net472/loc/hu/strings.localized.json",
+        "tasks/net472/loc/id/strings.localized.json",
+        "tasks/net472/loc/it/strings.localized.json",
+        "tasks/net472/loc/ja/strings.localized.json",
+        "tasks/net472/loc/kk/strings.localized.json",
+        "tasks/net472/loc/ko/strings.localized.json",
+        "tasks/net472/loc/lt/strings.localized.json",
+        "tasks/net472/loc/lv/strings.localized.json",
+        "tasks/net472/loc/ms/strings.localized.json",
+        "tasks/net472/loc/nb/strings.localized.json",
+        "tasks/net472/loc/nl/strings.localized.json",
+        "tasks/net472/loc/pl/strings.localized.json",
+        "tasks/net472/loc/pt-br/strings.localized.json",
+        "tasks/net472/loc/pt/strings.localized.json",
+        "tasks/net472/loc/ro/strings.localized.json",
+        "tasks/net472/loc/ru/strings.localized.json",
+        "tasks/net472/loc/sk/strings.localized.json",
+        "tasks/net472/loc/sl/strings.localized.json",
+        "tasks/net472/loc/sr/strings.localized.json",
+        "tasks/net472/loc/sv/strings.localized.json",
+        "tasks/net472/loc/th/strings.localized.json",
+        "tasks/net472/loc/tr/strings.localized.json",
+        "tasks/net472/loc/uk/strings.localized.json",
+        "tasks/net472/loc/vi/strings.localized.json",
+        "tasks/net472/loc/zh-cn/strings.localized.json",
+        "tasks/net472/loc/zh-tw/strings.localized.json",
+        "tasks/net472/loc/zh/strings.localized.json",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Options.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.Extensions.Primitives.dll",
+        "tasks/net472/ppbtTelemetryRecorder/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Buffers.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Memory.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Numerics.Vectors.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Text.Encodings.Web.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Text.Json.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/System.ValueTuple.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.Bcl.AsyncInterfaces.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Buffers.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Diagnostics.DiagnosticSource.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Memory.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Numerics.Vectors.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Runtime.CompilerServices.Unsafe.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Text.Json.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.Threading.Tasks.Extensions.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/System.ValueTuple.dll",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.exe",
+        "tasks/net472/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.exe.config",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.exe",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.exe.config",
+        "tasks/net472/ppbtTelemetryRecorder/ppbtTelemetryRecorder.pdb",
+        "tasks/net6.0/LibGit2Sharp.dll",
+        "tasks/net6.0/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/Microsoft.Deployment.Compression.Cab.dll",
+        "tasks/net6.0/Microsoft.Deployment.Compression.dll",
+        "tasks/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net6.0/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net6.0/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net6.0/Microsoft.Extensions.Logging.dll",
+        "tasks/net6.0/Microsoft.Extensions.Options.dll",
+        "tasks/net6.0/Microsoft.Extensions.Primitives.dll",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.deps.json",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.dll",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.pdb",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Solution.Tasks.tasks",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.dll",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.pdb",
+        "tasks/net6.0/Microsoft.PowerPlatform.MSBuild.Telemetry.Tasks.tasks",
+        "tasks/net6.0/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "tasks/net6.0/Newtonsoft.Json.dll",
+        "tasks/net6.0/SolutionPackagerLib.dll",
+        "tasks/net6.0/System.ComponentModel.Composition.dll",
+        "tasks/net6.0/System.Configuration.ConfigurationManager.dll",
+        "tasks/net6.0/System.Drawing.Common.dll",
+        "tasks/net6.0/System.IO.Packaging.dll",
+        "tasks/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "tasks/net6.0/System.Security.Permissions.dll",
+        "tasks/net6.0/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/System.Text.Json.dll",
+        "tasks/net6.0/System.Windows.Extensions.dll",
+        "tasks/net6.0/bolt.system.dll",
+        "tasks/net6.0/bolt.system.pdb",
+        "tasks/net6.0/bolt.version.dll",
+        "tasks/net6.0/bolt.version.pdb",
+        "tasks/net6.0/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net6.0/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/bt-uploader/System.Text.Json.dll",
+        "tasks/net6.0/bt-uploader/pacTelemetryUpload.deps.json",
+        "tasks/net6.0/bt-uploader/pacTelemetryUpload.dll",
+        "tasks/net6.0/bt-uploader/pacTelemetryUpload.dll.config",
+        "tasks/net6.0/bt-uploader/pacTelemetryUpload.runtimeconfig.json",
+        "tasks/net6.0/loc/ar/strings.localized.json",
+        "tasks/net6.0/loc/bg/strings.localized.json",
+        "tasks/net6.0/loc/ca/strings.localized.json",
+        "tasks/net6.0/loc/cs/strings.localized.json",
+        "tasks/net6.0/loc/da/strings.localized.json",
+        "tasks/net6.0/loc/de/strings.localized.json",
+        "tasks/net6.0/loc/el/strings.localized.json",
+        "tasks/net6.0/loc/en/strings.localized.json",
+        "tasks/net6.0/loc/es/strings.localized.json",
+        "tasks/net6.0/loc/et/strings.localized.json",
+        "tasks/net6.0/loc/eu/strings.localized.json",
+        "tasks/net6.0/loc/fi/strings.localized.json",
+        "tasks/net6.0/loc/fr/strings.localized.json",
+        "tasks/net6.0/loc/gl/strings.localized.json",
+        "tasks/net6.0/loc/he/strings.localized.json",
+        "tasks/net6.0/loc/hi/strings.localized.json",
+        "tasks/net6.0/loc/hr/strings.localized.json",
+        "tasks/net6.0/loc/hu/strings.localized.json",
+        "tasks/net6.0/loc/id/strings.localized.json",
+        "tasks/net6.0/loc/it/strings.localized.json",
+        "tasks/net6.0/loc/ja/strings.localized.json",
+        "tasks/net6.0/loc/kk/strings.localized.json",
+        "tasks/net6.0/loc/ko/strings.localized.json",
+        "tasks/net6.0/loc/lt/strings.localized.json",
+        "tasks/net6.0/loc/lv/strings.localized.json",
+        "tasks/net6.0/loc/ms/strings.localized.json",
+        "tasks/net6.0/loc/nb/strings.localized.json",
+        "tasks/net6.0/loc/nl/strings.localized.json",
+        "tasks/net6.0/loc/pl/strings.localized.json",
+        "tasks/net6.0/loc/pt-br/strings.localized.json",
+        "tasks/net6.0/loc/pt/strings.localized.json",
+        "tasks/net6.0/loc/ro/strings.localized.json",
+        "tasks/net6.0/loc/ru/strings.localized.json",
+        "tasks/net6.0/loc/sk/strings.localized.json",
+        "tasks/net6.0/loc/sl/strings.localized.json",
+        "tasks/net6.0/loc/sr/strings.localized.json",
+        "tasks/net6.0/loc/sv/strings.localized.json",
+        "tasks/net6.0/loc/th/strings.localized.json",
+        "tasks/net6.0/loc/tr/strings.localized.json",
+        "tasks/net6.0/loc/uk/strings.localized.json",
+        "tasks/net6.0/loc/vi/strings.localized.json",
+        "tasks/net6.0/loc/zh-cn/strings.localized.json",
+        "tasks/net6.0/loc/zh-tw/strings.localized.json",
+        "tasks/net6.0/loc/zh/strings.localized.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.DependencyInjection.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.Abstractions.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Logging.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Options.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.Extensions.Primitives.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/System.Text.Json.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.ApplicationInsights.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/Microsoft.PowerPlatform.Tooling.BatchedTelemetry.xml",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/System.Text.Json.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.deps.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.dll.config",
+        "tasks/net6.0/ppbtTelemetryRecorder/bt-uploader/pacTelemetryUpload.runtimeconfig.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.deps.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.dll",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.dll.config",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.pdb",
+        "tasks/net6.0/ppbtTelemetryRecorder/ppbtTelemetryRecorder.runtimeconfig.json",
+        "tasks/net6.0/ppbtTelemetryRecorder/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll",
+        "tasks/net6.0/runtimes/linux-arm/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/linux-arm64/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/linux-musl-arm/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/linux-musl-arm64/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/linux-musl-x64/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/linux-x64/native/libgit2-e632535.so",
+        "tasks/net6.0/runtimes/osx-arm64/native/libgit2-e632535.dylib",
+        "tasks/net6.0/runtimes/osx-x64/native/libgit2-e632535.dylib",
+        "tasks/net6.0/runtimes/win-arm64/native/git2-e632535.dll",
+        "tasks/net6.0/runtimes/win-x64/native/git2-e632535.dll",
+        "tasks/net6.0/runtimes/win-x86/native/git2-e632535.dll",
+        "tasks/net6.0/runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "tasks/net6.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll",
+        "tasks/net6.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll"
+      ]
+    },
+    "focus-trap/1.0.0": {
+      "type": "project",
+      "path": "../../../PCFControls/focus-trap/focus-trap.pcfproj",
+      "msbuildProject": "../../../PCFControls/focus-trap/focus-trap.pcfproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.7.2": [
+      "Dynamics.Solutions.Tools.Targets.SolutionPackager >= 2.0.57",
+      "Microsoft.PowerApps.MSBuild.Solution >= 1.*",
+      "focus-trap >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ismailjad\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\solutions\\EnterpriseAssetManagementMobileV2\\Solution\\EnterpriseAssetManagementMobileSolutionV2.cdsproj",
+      "projectName": "EnterpriseAssetManagementMobileSolutionV2",
+      "projectPath": "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\solutions\\EnterpriseAssetManagementMobileV2\\Solution\\EnterpriseAssetManagementMobileSolutionV2.cdsproj",
+      "packagesPath": "C:\\Users\\ismailjad\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\solutions\\EnterpriseAssetManagementMobileV2\\Solution\\obj\\",
+      "projectStyle": "PackageReference",
+      "skipContentFileWrite": true,
+      "configFilePaths": [
+        "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\solutions\\EnterpriseAssetManagementMobileV2\\NuGet.Config",
+        "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\NuGet.Config",
+        "C:\\Users\\ismailjad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net472"
+      ],
+      "sources": {
+        "https://pkgs.dev.azure.com/dynamicscrm/OneCRM/_packaging/SupplyChainPlanning-Consumption/nuget/v3/index.json": {}
+      },
+      "frameworks": {
+        "net472": {
+          "projectReferences": {
+            "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\PCFControls\\focus-trap\\focus-trap.pcfproj": {
+              "projectPath": "C:\\Users\\ismailjad\\CRM.Client.EnterpriseAssetManagement.Mobile\\PCFControls\\focus-trap\\focus-trap.pcfproj"
+            }
+          }
+        }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      }
+    },
+    "frameworks": {
+      "net472": {
+        "dependencies": {
+          "Dynamics.Solutions.Tools.Targets.SolutionPackager": {
+            "target": "Package",
+            "version": "[2.0.57, )"
+          },
+          "Microsoft.PowerApps.MSBuild.Solution": {
+            "target": "Package",
+            "version": "[1.*, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win": {
+        "#import": []
+      },
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      },
+      "win-x86": {
+        "#import": []
+      }
+    }
+  }
+}

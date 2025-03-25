@@ -1,0 +1,207 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Details Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      OnHidden: |-
+        =UpdateContext(
+            {
+                varAttachmentCount: Blank(),
+                varConsumedHoursSum: Blank(),
+                varConsumedItemsCount: Blank()
+            }
+        )
+      OnVisible: "=UpdateContext(\r\n    {\r\n        varPage: If(\r\n            gblPreviousScreen = 'Work Order Job Checklist Item Screen',\r\n            C.WorkOrderJobDetailsScreen.ChecklistSubPage,\r\n            C.WorkOrderJobDetailsScreen.DetailsSubPage\r\n        ),\r\n        varRemarksPromptOpen: false,\r\n        varInternalNotePromptOpen: false,\r\n        varShowStateChangePrompt: false\r\n    }\r\n);\r\nWith(\r\n    {\r\n        locJobKey: Concatenate(\r\n            Job.'Company Code',\r\n            Job.'Work order',\r\n            Job.'Line number'\r\n        )\r\n    },\r\n    If(\r\n        locJobKey <> varPreviousJobKey,\r\n        Set(\r\n            gblWorkOrderLifecycleState,\r\n            Job.'Asset management work orders V2'.'Lifecycle state'\r\n        );\r\n        UpdateContext(\r\n            {\r\n                varPreviousJobKey: locJobKey,\r\n                varUpdatedWorkerRemarks: Blank(),\r\n                varUpdatedInternalNote: Blank()\r\n            }\r\n        );\r\n    );\r\n    \r\n);\r\nConcurrent(\r\n    UpdateContext(\r\n        {\r\n            varAttachmentCount: With(\r\n                {\r\n                    locAttachments: Filter(\r\n                        'Asset maintenance work order line attachment entity (mserp)',\r\n                        'Company Code' = Job.'Company Code',\r\n                        'Work order' = Job.'Work order',\r\n                        'Line number' = Job.'Line number'\r\n                    )\r\n                },\r\n                // this nested in-memory counting is needed to avoid an error from VE plugin missing aggregation functionality\r\n                CountRows(locAttachments)\r\n            )\r\n        }\r\n    ),\r\n    UpdateContext(\r\n        {\r\n            varConsumedHoursSum: With(\r\n                {\r\n                    locHourLines: ShowColumns(\r\n                        Filter(\r\n                            'Asset management work order job hour consumption lines (mserp)',\r\n                            'Company Code' = Job.'Company Code',\r\n                            'Work order' = Job.'Work order',\r\n                            'Line number (mserp_workorderjobnumber)' = Job.'Line number',\r\n                            'Personnel number' = gblAppCache.UserActiveWorker.'Personnel number',\r\n                            Posted = 'NoYes (mserp)'.No\r\n                        ),\r\n                        Hours\r\n                    )\r\n                },\r\n                // this nested in-memory summation is needed to avoid an error from VE plugin missing aggregation functionality\r\n                Coalesce(\r\n                    Sum(\r\n                        locHourLines,\r\n                        mserp_resourceconsumedhours\r\n                    ),\r\n                    0\r\n                )\r\n            )\r\n        }\r\n    ),\r\n    UpdateContext(\r\n        {\r\n            varConsumedItemsCount: With(\r\n                {\r\n                    locConsumedItems: Filter(\r\n                        'Asset management work order job product consumption lines (mserp)',\r\n                        'Company Code' = Job.'Company Code',\r\n                        'Work order' = Job.'Work order',\r\n                        'Line number (mserp_workorderjobnumber)' = Job.'Line number',\r\n                        Posted = 'NoYes (mserp)'.No\r\n                    )\r\n                },\r\n                // this nested in-memory counting is needed to avoid an error from VE plugin missing aggregation functionality\r\n                CountRows(locConsumedItems)\r\n            )\r\n        }\r\n    )\r\n);\r\n\r\n// this is a necessary synchronization as the above Concurrent scope\r\n// has a race condition which can result in stale reads\r\nUpdateContext(\r\n    {\r\n        varAttachmentCount: varAttachmentCount,\r\n        varConsumedHoursSum: varConsumedHoursSum,\r\n        varConsumedItemsCount: varConsumedItemsCount\r\n    }\r\n);\r\n\r\nSet(\r\n    gblPreviousScreen,\r\n    Self\r\n);\r\n"
+    Children:
+      - galWorkOrderJobChecklist:
+          Control: Gallery@2.15.0
+          Variant: VariableHeight
+          Properties:
+            DelayItemLoading: =false
+            Height: =Parent.Height - Self.Y
+            Items: |-
+              =SortByColumns(
+                  Filter(
+                      'Asset management work order job maintenance checklist (mserp)',
+                      'Company Code' = Job.'Company Code',
+                      'Work order' = Job.'Work order',
+                      'Work order job number' = Job.'Line number'
+                  ),
+                  "mserp_externallinenum"
+              )
+            LoadingSpinner: =LoadingSpinner.Controls
+            OnSelect: |-
+              =If(
+                  ThisItem.Type <> 'Type (mserp)'.Header,
+                  Navigate(
+                      'Work Order Job Checklist Item Screen',
+                      Transition.None,
+                      {ChecklistItem: ThisItem}
+                  )
+              )
+            ShowScrollbar: =false
+            TemplateSize: =170
+            Visible: =varPage = C.WorkOrderJobDetailsScreen.ChecklistSubPage
+            Width: =Parent.Width
+            Y: =conWorkOrderLineNavigation.Y + conWorkOrderLineNavigation.Height
+          Children:
+            - htmLineCardBackgroundWOJDS:
+                Control: HtmlViewer@2.1.0
+                Properties:
+                  DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                  Height: =conChecklistLineDetails.Height
+                  HtmlText: |-
+                    =With({ locCardBackgroundColor: If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, "F3F2F1", "FFFFFF") }, $"<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#{locCardBackgroundColor};box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>")
+                  OnSelect: =Select(Parent)
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+                  Width: =Parent.TemplateWidth
+            - conChecklistLineDetails:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                If(lblChecklistItemMandatory.Visible, lblChecklistItemMandatory.Height),
+                                lblChecklistItemName.Height,
+                                lblChecklistItemType.Height,
+                                If(lblChecklistItemValue.Visible, lblChecklistItemValue.Height)
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(Filter(controlHeights, Value <> Blank()))
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  PaddingBottom: =20
+                  PaddingLeft: =20
+                  PaddingRight: =20
+                  PaddingTop: =24
+                  Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+                  Width: =Parent.TemplateWidth - 50
+                Children:
+                  - lblChecklistItemMandatory:
+                      Control: Label@2.5.1
+                      Properties:
+                        AutoHeight: =true
+                        Color: =RGBA(209, 52, 56, 1)
+                        Font: =Font.'Segoe UI'
+                        Size: =gblAppStyles.FontSize_Small
+                        Text: =T.ChecklistItemMandatoryLabel
+                        Visible: =ThisItem.Mandatory = 'NoYes (mserp)'.Yes
+                  - lblChecklistItemName:
+                      Control: Label@2.5.1
+                      Properties:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(0, 0, 0, 1))
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Size: =gblAppStyles.FontSize_Large
+                        Text: =ThisItem.mserp_name
+                  - lblChecklistItemType:
+                      Control: Label@2.5.1
+                      Properties:
+                        AutoHeight: =true
+                        Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(57, 57, 57, 1))
+                        Font: =Font.'Segoe UI'
+                        Size: =gblAppStyles.FontSize_Medium
+                        Text: =ThisItem.mserp_type
+                  - lblChecklistItemValue:
+                      Control: Label@2.5.1
+                      Properties:
+                        AutoHeight: =true
+                        Color: =gblAppColors.AccentInfo
+                        Font: =gblAppStyles.CommonFont
+                        Height: =31
+                        Size: =gblAppStyles.FontSize_Medium
+                        Text: |-
+                          =Switch(
+                              ThisItem.mserp_type,
+                              'Type (mserp)'.Measurement,
+                              Substitute(
+                                  Substitute(
+                                      T.ChecklistItemMeasurementValueLabel,
+                                      "{MeasureValue}",
+                                      Text(ThisItem.mserp_measurevalue)
+                                  ),
+                                  "{MeasureUnitId}",
+                                  ThisItem.mserp_measureunitid
+                              ),
+                              'Type (mserp)'.Variable,
+                              Substitute(T.ChecklistItemVariableValueLabel, "{VariableValue}", ThisItem.mserp_variablevalueid)
+                          )
+                        Visible: =ThisItem.mserp_checked = 'NoYes (mserp)'.Yes And (ThisItem.mserp_type = 'Type (mserp)'.Measurement Or ThisItem.mserp_type = 'Type (mserp)'.Variable)
+                        Wrap: =false
+            - lblChecklistLineNumber:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Right
+                  Color: =If(ThisItem.mserp_checked = 'NoYes (mserp)'.Yes, RGBA(42, 172, 148, 1), RGBA(92, 92, 92, 1))
+                  Font: =Font.'Segoe UI'
+                  Height: =18
+                  OnSelect: =Select(Parent)
+                  Size: =gblAppStyles.FontSize_Small
+                  Text: |-
+                    =//pal-disable PAL004
+                    $"{{{ThisItem.mserp_externallinenum}}}"
+                  Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+                  Width: =60
+                  X: =conChecklistLineDetails.Width - (Self.Width - 30)
+                  Y: =25
+            - shpChecklistLineClickSurfaceWOJDS:
+                Control: Rectangle@2.3.0
+                Properties:
+                  Fill: =RGBA(0, 0, 0, 0)
+                  FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                  FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                  Height: =conChecklistLineDetails.Height
+                  OnSelect: |-
+                    =// Containers do not support OnSelect override
+                    // and catches user clicks, we need this surface to negate that problem.
+                    Select(Parent)
+                  TabIndex: =0
+                  Visible: =ThisItem.Type <> 'Type (mserp)'.Header
+                  Width: =Parent.TemplateWidth
+            - lblHeaderText:
+                Control: Label@2.5.1
+                Properties:
+                  AutoHeight: =true
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Semibold
+                  PaddingBottom: =10
+                  PaddingTop: =10
+                  Size: =gblAppStyles.FontSize_Large
+                  Text: =ThisItem.Name
+                  Visible: =ThisItem.Type = 'Type (mserp)'.Header
+                  Width: =Parent.TemplateWidth
+      - conInformationWOJDS:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Height: =Parent.Height - Self.Y
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: |-
+              =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+              9
+            PaddingRight: =9
+            Visible: =varPage = C.WorkOrderJobDetailsScreen.DetailsSubPage
+            Width: =Parent.Width
+            X: =
+            Y: =conWorkOrderLineNavigation.Y + conWorkOrderLineNavigation.Height

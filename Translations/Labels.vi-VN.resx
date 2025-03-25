@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>Quay lại</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>Công việc</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>Lệnh phân việc</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ Yêu cầu</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>Yêu cầu bảo trì</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>Quét</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>Tài sản</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>Các vị trí chức năng</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>Tìm kiếm theo loại tài sản hoặc ID tài sản</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>Tìm kiếm theo tên vị trí hoặc ID vị trí</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>Ghi chú của người lao động</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>Ghi chú nội bộ</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Tệp đính kèm</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>Thời gian tôi đã sử dụng</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>Mặt hàng được tiêu thụ</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>Tài sản</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>Ngày giờ bắt đầu theo lịch</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>Ngày giờ kết thúc theo lịch</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>Lệnh phân việc</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>Thay đổi trạng thái lệnh phân việc</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>Đi đến lệnh phân việc</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>Các công việc liên quan</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>Xem công việc cho tài sản này</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>Xem công việc cho vị trí này</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>Điều chỉnh thời gian đã sử dụng</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>Thêm mặt hàng bằng cách bấm vào nút bên dưới</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>Thêm mặt hàng</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>Tìm kiếm hoặc chọn nguồn mặt hàng khác</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>Loại lệnh phân việc</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>Cấp độ dịch vụ</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>Ngày bắt đầu dự kiến</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>Ngày kết thúc dự kiến</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>Ngày giờ bắt đầu thực tế</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>Ngày giờ kết thúc thực tế</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>Danh sách kiểm tra ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>Không có danh sách kiểm tra</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>Điều chỉnh số lượng mặt hàng</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>Danh sách mặt hàng Định mức nguyên vật liệu của tài sản</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách tài sản</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách các thư viện hiện có</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>Ghi chú của mặt hàng trong danh sách kiểm tra</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>Giá trị của bộ đếm đo lường danh sách kiểm tra</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>Biến danh sách kiểm tra</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Điều chỉnh số giờ đã sử dụng</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách mặt hàng được tiêu thụ</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Mặt hàng để tiêu thụ</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách vị trí chức năng</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Điều chỉnh số phút đã sử dụng</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>Thêm một ảnh</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Danh sách các tệp đính kèm hiện tại</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>Nhập mô tả yêu cầu bảo trì</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>Nhập ghi chú về yêu cầu bảo trì</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>Chọn loại yêu cầu bảo trì</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Chọn cấp độ dịch vụ bảo trì</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>Xóa mục</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>Nhập văn bản để tìm kiếm</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>Chọn ngôn ngữ</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách các mặt hàng phụ tùng</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>Lọc lệnh phân việc</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>Danh sách lệnh phân việc</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>Danh sách công việc trong lệnh sản xuất</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>Sắp xếp lệnh phân việc</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>Tìm kiếm lệnh phân việc</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>Số sản phẩm</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Tên sản phẩm</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>Cơ sở</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>Kho</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>Số lô</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>Số sê-ri</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>Điều chỉnh số lượng</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>Số lượng giảm</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>Số lượng tăng</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Không thể cập nhật mức tiêu thụ mặt hàng</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>Xác nhận</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>Chỉnh sửa cơ sở</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>Chỉnh sửa kho</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>Giờ</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>Phút</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>Phút</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>Các tệp đính kèm loại {AttachmentTypeName} chưa được hỗ trợ</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>Giới thiệu</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Phiên bản: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>Ngôn ngữ (thay đổi sẽ yêu cầu khởi động lại ứng dụng):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>Điều khoản dịch vụ</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>Người dùng của bạn có thể không được ủy quyền để tạo yêu cầu bảo trì hoặc duy trì lệnh phân việc, hoặc kết nối mạng đến Dynamics không thành công. Hãy liên hệ với quản trị viên hệ thống của bạn.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>Thử lại</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>Không tải được thiết đặt người dùng</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>Không tải được thông tin chi tiết về nhân viên bảo trì cho {UserPersonnelNumber}</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>Bạn không được chỉ định đến bất kỳ nhân viên quản lý tài sản đang hoạt động nào. Bạn sẽ không thể duy trì lệnh phân việc.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>Lọc</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>Hôm nay</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>Tuần này</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>Tất cả thời gian</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>Sắp xếp theo</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>ID lệnh phân việc</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>Cấp độ dịch vụ của lệnh phân việc</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>Ngày bắt đầu theo lịch</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>Tìm kiếm ...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>Công việc: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Đóng lại</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>Công việc số {JobLineNumber} cho lệnh phân việc {WorkOrderId}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>Thay đổi pháp nhân</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>Số dòng</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>Công việc</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>Chỉnh sửa ghi chú của người lao động</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>Chỉnh sửa ghi chú nội bộ</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>Xem</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>Xem tệp đính kèm</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>Điều chỉnh</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>Trạng thái lệnh phân việc</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>Bắt buộc</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>Giá trị: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>Giá trị: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>Thêm mặt hàng</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>Mặt hàng</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>Định mức nguyên vật liệu của tài sản</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>Phụ tùng thay thế</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Không thể cập nhật số giờ đã sử dụng</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>Chỉ thị</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>Ghi chú của bạn</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>Kết quả: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>Tối thiểu: {MeasurementMinimum} – Tối đa: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>Đánh dấu là đã kiểm tra</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>Đánh dấu là chưa kiểm tra</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>Không thể truy xuất loại yêu cầu mặc định</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>Thiếu thiết lập cấp độ dịch vụ</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>Không tải được cấp độ dịch vụ mặc định</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Gửi</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>Không thể tạo tệp đính kèm do thiếu cấu hình loại tài liệu</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>Yêu cầu ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>Yêu cầu</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>Lệnh phân việc</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>Lệnh phân việc ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>Loại yêu cầu bảo trì</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>Thêm ảnh</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>Cho chúng tôi biết điều cần được thực hiện</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>Đã tạo thành công yêu cầu bảo trì: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>Hoàn tất</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>Trên các pháp nhân</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>Chỉ cần nhấn vào ảnh hồ sơ để hiển thị các pháp nhân có sẵn.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>Hoán đổi giữa nhiều pháp nhân</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>Lệnh phân việc hiệu quả</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>Xem hướng dẫn sử dụng và giao tiếp rõ ràng, đồng thời có được lịch sử bảo trì.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>Có toàn quyền kiểm soát tài sản của bạn</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>Tiếp theo</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>Yêu cầu nhanh</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>Quét mã QR của tài sản hoặc vị trí và chụp ảnh hoặc quay video về sự cố.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>Tạo yêu cầu trong chưa đầy một phút</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>Đang tải các trạng thái có sẵn...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>Đang tải cơ sở...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>Đang tải kho...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Thiết đặt</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>Đã chọn</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Tăng số giờ đã sử dụng</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Tăng số phút đã sử dụng</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Giảm số giờ đã sử dụng</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Giảm số phút đã sử dụng</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Lệnh phân việc {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Lệnh phân việc {WorkOrderId}, dòng {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>Đã chọn {OptionLabel}</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>Đã tạo thành công lệnh phân việc: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>Tạo lệnh phân việc mới</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>Tạo lệnh phân việc mới hoặc yêu cầu bảo trì</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>Không thể tải loại lệnh phân việc mặc định</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>Ghi chú</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>Thêm các ảnh</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>Cho chúng tôi biết bạn cần làm gì</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>Mô tả</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>Thêm một ảnh</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Danh sách tệp đính kèm hiện tại</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>Nhập mô tả lệnh phân việc</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>Nhập ghi chú công việc cho lệnh phân việc</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>Chọn loại lệnh phân việc</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Chọn cấp độ dịch vụ của lệnh phân việc</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>Loại công việc</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>Biến thể của loại công việc</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>Chọn loại công việc cho lệnh phân việc</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>Chọn biến thể của loại công việc cho lệnh phân việc</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>Lên lịch lệnh phân việc (bật)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>Bật để lên lịch ngay cho lệnh phân việc khi tạo</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>Tắt để tránh lên lịch lệnh phân việc khi tạo</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>Lên lịch lệnh phân việc (tắt)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>Lệnh sản xuất mới</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} tệp đính kèm</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} giờ</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} giờ {WholeMinutes} phút</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} mặt hàng</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>Lệnh sản xuất mới cho tài sản</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>Đang tải vị trí có sẵn...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>Chỉnh sửa vị trí</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>Ảnh quá lớn nên không thể đính kèm</value>
+  </data>
+</root>

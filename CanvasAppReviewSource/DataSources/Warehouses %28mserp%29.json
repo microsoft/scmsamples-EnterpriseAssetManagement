@@ -1,0 +1,338 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_inventwarehouseentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_inventwarehouseentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Warehouses (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_activitytype_ru": "Activity category",
+      "mserp_areadvancedwarehousemanagementprocessesenabled": "Use warehouse management processes",
+      "mserp_areitemscoverageplannedmanually": "Manual",
+      "mserp_arelaborstandardsallowed": "Allow labor standards",
+      "mserp_arepickinglistsdeliverymodespecific": "Split by delivery mode",
+      "mserp_arepickinglistsshipmentspecificonly": "Split by ship alone",
+      "mserp_arewarehouselocationcheckdigitsunique": "Use unique check digits",
+      "mserp_autoupdateshipmentrule": "Auto update shipment",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_defaultcontainertypeid": "Default container type",
+      "mserp_externallylocatedwarehousecustomeraccountnumber": "Customer account",
+      "mserp_externallylocatedwarehousevendoraccountnumber": "Vendor account",
+      "mserp_externalwarehousedefaultlocationid": "Default location",
+      "mserp_externalwarehouseid": "External warehouse",
+      "mserp_externalwarehousemanagementsystemid": "External warehouse management system",
+      "mserp_FK_EcoResReleasedProductV2Entity_DefaultDirectDeliveryWarehouse": "Released products V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceAssetBillOfMaterialV2Entity_Warehouse": "Asset management asset Bill of materials V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceFunctionalLocationEntity_Warehouse": "Asset management functional locations (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineProductConsumptionEntity_Warehouse": "Asset management work order job product consumption lines (mserp)",
+      "mserp_FK_InventProductSpecificOrderSettingsV3Entity_InventoryWarehouse": "Product default order settings V3 (mserp) (mserp_FK_InventProductSpecificOrderSettingsV3Entity_InventoryWarehouse)",
+      "mserp_FK_InventProductSpecificOrderSettingsV3Entity_ProcurementWarehouse": "Product default order settings V3 (mserp) (mserp_FK_InventProductSpecificOrderSettingsV3Entity_ProcurementWarehouse)",
+      "mserp_FK_InventProductSpecificOrderSettingsV3Entity_SalesWarehouse": "Product default order settings V3 (mserp) (mserp_FK_InventProductSpecificOrderSettingsV3Entity_SalesWarehouse)",
+      "mserp_FK_WMSWarehouseLocationEntity_Warehouse": "Warehouse locations (mserp)",
+      "mserp_formattedprimaryaddress": "Address",
+      "mserp_goodsintransitwarehouseid": "Goods in transit warehouse",
+      "mserp_identificationgroup": "Identification group",
+      "mserp_inventlocationidgoodsinroute_ru": "Warehouse for items shipped",
+      "mserp_inventorycountingreasoncodepolicyname": "Inventory counting reason code policy name",
+      "mserp_inventorystatuschangereservationremovallevel": "Remove reservations and markings",
+      "mserp_inventprofileid_ru": "Inventory profile",
+      "mserp_inventprofiletype_ru": "Kind of activity",
+      "mserp_inventwarehouseentityid": "Warehouses (mserp)",
+      "mserp_isbillofladingprintingbeforeshipmentconfirmationenabled": "Print BOL before confirming shipment",
+      "mserp_isfallbackwarehouse": "Fallback warehouse",
+      "mserp_isfinancialnegativeretailstoreinventoryallowed": "Financial negative inventory",
+      "mserp_ispalletmovementduringcyclecountingallowed": "Allow license plate moves during cycle counting",
+      "mserp_isphysicalnegativeretailstoreinventoryallowed": "Physical negative inventory",
+      "mserp_isprimaryaddressassigned": "Address assigned",
+      "mserp_isrefilledfrommainwarehouse": "Refilling",
+      "mserp_isretailstorewarehouse": "Store",
+      "mserp_iswarehouseexternallymanaged": "Externally managed warehouse",
+      "mserp_languageusedfordomestichazardousmaterialsshippingdocuments": "Hazardous goods domestic report language",
+      "mserp_languageusedforexporthazardousmaterialsshippingdocuments": "Hazardous goods export report language",
+      "mserp_loadreleasereservationpolicyrule": "Insufficient quantity response",
+      "mserp_mainrefillingwarehouseid": "Main warehouse",
+      "mserp_masterplanningworkcalendardid": "Calendar",
+      "mserp_maximumbatchpickinglistquantity": "Pick lists per batch",
+      "mserp_maximumpickinglistlinequantity": "Maximum lines per picking list",
+      "mserp_numbersequencegroup_ru": "Number sequence group",
+      "mserp_operationalsiteid": "Site",
+      "mserp_primaryaddressbuildingcompliment": "Building complement",
+      "mserp_primaryaddresscity": "City",
+      "mserp_primaryaddresscityinkana": "City in Kana",
+      "mserp_primaryaddresscountryregionid": "Country/region",
+      "mserp_primaryaddresscountyid": "County",
+      "mserp_primaryaddressdescription": "Name or description",
+      "mserp_primaryaddressdistrictname": "District",
+      "mserp_primaryaddresslatitude": "Latitude",
+      "mserp_primaryaddresslocationroles": "Address role",
+      "mserp_primaryaddresslocationsalestaxgroupcode": "Sales tax",
+      "mserp_primaryaddresslongitude": "Longitude",
+      "mserp_primaryaddresspostbox": "Post box",
+      "mserp_primaryaddressstateid": "State",
+      "mserp_primaryaddressstreet": "Street",
+      "mserp_primaryaddressstreetinkana": "Street in Kana",
+      "mserp_primaryaddressstreetnumber": "Street number",
+      "mserp_primaryaddresstimezone": "Time zone",
+      "mserp_primaryaddresszipcode": "ZIP/postal code",
+      "mserp_quarantinewarehouseid": "Quarantine warehouse",
+      "mserp_rawmaterialpickinginventoryissuestatus": "Issue status after raw material picking",
+      "mserp_rbodefaultinventprofileid_ru": "Default inventory profile",
+      "mserp_reportasfinishedpostingmethod": "Posting method",
+      "mserp_retailstorequantityallocationreplenismentruleweight": "Weight",
+      "mserp_shouldwarehouselocationidincludeaisleid": "Include aisle",
+      "mserp_transitwarehouseid": "Transit warehouse",
+      "mserp_underdeliverywarehouseid": "Under delivery warehouse",
+      "mserp_vendaccountcustom_ru": "Customs code",
+      "mserp_warehouseid": "Warehouse",
+      "mserp_warehouselocationidbinidformat": "Format (mserp_warehouselocationidbinidformat)",
+      "mserp_warehouselocationidrackidformat": "Format (mserp_warehouselocationidrackidformat)",
+      "mserp_warehouselocationidshelfidformat": "Format (mserp_warehouselocationidshelfidformat)",
+      "mserp_warehousename": "Name",
+      "mserp_warehousereleasereservationrequirementrule": "Requirement for inventory reservation",
+      "mserp_warehousereleasereservationrequirementrulefailureoption": "Release rule failure option for auto release",
+      "mserp_warehousespecificdefaultinventorystatusid": "Default inventory status ID",
+      "mserp_warehousetype": "Type",
+      "mserp_warehouseworkprocessingpolicyname": "Work processing policy name",
+      "mserp_willautomaticloadreleasereserveinventory": "Reserve when orders are released by a batch job",
+      "mserp_willinventorystatuschangeremoveblocking": "Remove inventory blocking",
+      "mserp_willmanualloadreleasereserveinventory": "Reserve inventory at load posting",
+      "mserp_willorderreleasingconsolidateshipments": "Consolidate shipment at release to warehouse",
+      "mserp_willproductionbomsreservewarehouselevelonly": "Reserve only warehouse in production bill of material",
+      "mserp_willshippingcancellationdecrementloadquanity": "Decrement load line",
+      "mserp_willwarehouselocationidincludebinidbydefault": "Include bin",
+      "mserp_willwarehouselocationidincluderackidbydefault": "Include rack",
+      "mserp_willwarehouselocationidincludeshelfidbydefault": "Include shelf",
+      "mserp_wmslocationidgoodsinroute_ru": "Location for items shipped"
+    },
+    "PreferredName": "Warehouses (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Warehouses (mserp) (Views)",
+    "Name": "_mserp_inventwarehouseentity_views",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "0e1c1170-4f7d-2149-7534-3f7ed0458301": "Warehouses (mserp) Lookup View",
+      "b3d3d515-0db1-1ddb-738c-5ae111dd0310": "Warehouses (mserp) Associated View",
+      "df5015ec-94a0-ea53-d1f2-20572e91de05": "Warehouses (mserp) Advanced Find View",
+      "e33d1a88-0c9e-5b13-3ed9-0aed1410383f": "All Warehouses (mserp)"
+    }
+  },
+  {
+    "DisplayName": "Identification group (mserp)",
+    "Name": "mserp_inventcountinggroup_br",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Our stock at third-party establishment",
+      "200000001": "Own stock at establishment",
+      "200000002": "Third-party stock at our establishment"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_identificationgroup",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_identificationgroup",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Type (mserp)_2",
+    "Name": "mserp_inventlocationtype",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Default",
+      "200000001": "Quarantine",
+      "200000002": "Transit",
+      "200000003": "Goods shipped",
+      "200000004": "Goods in transit",
+      "200000005": "Under"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_warehousetype",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_warehousetype",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Kind of activity (mserp)",
+    "Name": "mserp_inventprofiletype_ru",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Unspecified",
+      "200000001": "Basic",
+      "200000002": "Commission agent",
+      "200000003": "Principal's agent",
+      "200000004": "Bailee"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_inventprofiletype_ru",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_inventprofiletype_ru",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Posting method (mserp)",
+    "Name": "mserp_prodrafpostingmethodinherit",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Inherit",
+      "200000001": "Immediate",
+      "200000002": "Deferred"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_reportasfinishedpostingmethod",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_reportasfinishedpostingmethod",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Remove reservations and markings (mserp)",
+    "Name": "mserp_whsallowmarkingreservationremoval",
+    "OptionSetInfoNameMapping": {
+      "200000000": "None",
+      "200000001": "Reservations",
+      "200000002": "Markings and reservations"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_inventorystatuschangereservationremovallevel",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_inventorystatuschangereservationremovallevel",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Auto update shipment (mserp)",
+    "Name": "mserp_whsautoupdateshipment",
+    "OptionSetInfoNameMapping": {
+      "200000000": "On quantity decrease",
+      "200000001": "Always"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_autoupdateshipmentrule",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_autoupdateshipmentrule",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Insufficient quantity response (mserp)",
+    "Name": "mserp_whsloadreleasereservationpolicy",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Generate an error",
+      "200000001": "Generate a warning"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_loadreleasereservationpolicyrule",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_loadreleasereservationpolicyrule",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Issue status after raw material picking (mserp)",
+    "Name": "mserp_whsrawmaterialpolicy",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Picked",
+      "200000001": "Reserved physical"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_rawmaterialpickinginventoryissuestatus",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_rawmaterialpickinginventoryissuestatus",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Release rule failure option for auto release (mserp)",
+    "Name": "mserp_whsreleaserulefailureoption",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Warning and skip line",
+      "200000001": "Error and skip order"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_warehousereleasereservationrequirementrulefailureoption",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_warehousereleasereservationrequirementrulefailureoption",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Requirement for inventory reservation (mserp)",
+    "Name": "mserp_whsreleasetowarehouserule",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Not applicable",
+      "200000001": "Allow partial reservation",
+      "200000002": "Require full reservation"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_warehousereleasereservationrequirementrule",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_warehousereleasereservationrequirementrule",
+    "RelatedEntityName": "Warehouses (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

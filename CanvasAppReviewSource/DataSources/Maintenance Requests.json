@@ -1,0 +1,77 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenancerequestv2entities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenancerequestv2entity",
+    "MaxGetRowsCount": 100,
+    "Name": "Maintenance Requests",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_actualend": "Actual end",
+      "mserp_actualstart": "Actual start",
+      "mserp_addresslatitude": "Latitude",
+      "mserp_addresslongitude": "Longitude",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_description": "Description",
+      "mserp_entassetmaintenancerequestv2entityid": "Asset management maintenance requests V2 (mserp)",
+      "mserp_FK_EntAssetMaintenanceRequestDocumentAttachmentEntity_Request": "Asset management maintenance request document attachments entity (mserp)",
+      "mserp_FK_FunctionalLocation_id": "Asset management functional locations",
+      "mserp_FK_JobType_id": "Asset management maintenance job types",
+      "mserp_FK_MaintenanceAsset_id": "Assets entity view V3",
+      "mserp_FK_RequestType_id": "Asset management maintenance request types",
+      "mserp_FK_ResponsibleWorker_id": "Asset management maintenance workers",
+      "mserp_FK_ServiceLevel_id": "Asset management work order service levels",
+      "mserp_functionallocationid": "Functional location",
+      "mserp_isrequestactive": "Active",
+      "mserp_jobtradeid": "Trade",
+      "mserp_jobtypeid": "Maintenance job type",
+      "mserp_jobvariantid": "Maintenance job type variant",
+      "mserp_maintenanceassetid": "Asset",
+      "mserp_maintenanceassetverified": "Asset verified",
+      "mserp_maintenanceassetverifiedbyworkerpersonnelnumber": "Verified by",
+      "mserp_nextrequestlifecyclestateid": "Next lifecycle state",
+      "mserp_notes": "Note",
+      "mserp_productionstopfrom": "Maintenance downtime",
+      "mserp_requestid": "Maintenance request",
+      "mserp_requestlifecyclestateid": "Lifecycle state",
+      "mserp_requesttypeid": "Maintenance request type",
+      "mserp_responsibleworkerpersonnelnumber": "Responsible",
+      "mserp_startedbyworkerpersonnelnumber": "Started by",
+      "mserp_workergroupid": "Responsible group",
+      "mserp_workorderid": "Work order",
+      "mserp_workorderpriority": "Service level",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Maintenance Requests",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Maintenance Requests (Views)1",
+    "Name": "_mserp_entassetmaintenancerequestentity_views",
+    "RelatedEntityName": "Maintenance Requests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "04e5735b-59a5-f396-4639-a6a88fe171c7": "All Asset management maintenance requests (mserp)",
+      "055b65e4-bad1-1c83-0d50-795e6ba3a969": "Asset management maintenance requests (mserp) Advanced Find View",
+      "327047ce-b265-c03e-0c2b-877a9934bce0": "Asset management maintenance requests (mserp) Lookup View",
+      "8b380de3-7e77-9252-8912-cf68c5918d94": "Asset management maintenance requests (mserp) Associated View"
+    }
+  },
+  {
+    "DisplayName": "Maintenance Requests (Views)",
+    "Name": "_mserp_entassetmaintenancerequestv2entity_views",
+    "RelatedEntityName": "Maintenance Requests",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6bef630d-fc08-778b-bf6c-95bb0480ce35": "Asset management maintenance requests V2 (mserp) Lookup View",
+      "9c95162a-2c61-4eac-af75-f645c90ae16c": "Asset management maintenance requests V2 (mserp) Advanced Find View",
+      "a8612875-1295-f2e5-9c0e-40432f9fa1d4": "All Asset management maintenance requests V2 (mserp)",
+      "c54beb44-9cbb-238c-acd1-b6af6d66e981": "Asset management maintenance requests V2 (mserp) Associated View"
+    }
+  }
+]

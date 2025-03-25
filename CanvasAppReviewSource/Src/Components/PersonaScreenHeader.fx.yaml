@@ -1,0 +1,73 @@
+PersonaScreenHeader As CanvasComponent:
+    BackButtonAccessibleLabel: ="Go back"
+    Fill: =Self.fillColor
+    fillColor: =RGBA(7, 66, 171, 1)
+    FocusBorderColor: =RGBA(0, 0, 0, 1)
+    FocusBorderThickness: =2
+    fontSize: =17.2
+    Height: =64
+    OnPersonaPictureSelect: =true
+    PersonaAccessibleLabel: =""
+    ShowBackButton: =false
+    Title: ="Text"
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblTitlePSH As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Bold
+        Height: =Parent.Height
+        Size: =PersonaScreenHeader.fontSize
+        Text: =PersonaScreenHeader.Title
+        Width: =Parent.Width - Self.X*2
+        X: =imgPersonaPSH.X + imgPersonaPSH.Width + 16
+        ZIndex: =1
+
+    shpPersonaClickableBackdropPSH As rectangle:
+        Fill: =RGBA(0, 0, 0, 0)
+        FocusedBorderThickness: =0
+        Height: =Parent.Height
+        OnSelect: =Select(imgPersonaPSH)
+        Visible: =Not Parent.ShowBackButton
+        Width: =imgPersonaPSH.Width + 16 * 2
+        ZIndex: =2
+
+    imgPersonaPSH As image:
+        AccessibleLabel: =Parent.PersonaAccessibleLabel
+        FocusedBorderColor: =PersonaScreenHeader.FocusBorderColor
+        FocusedBorderThickness: =PersonaScreenHeader.FocusBorderThickness
+        Height: =32
+        Image: =User().Image
+        OnSelect: =Parent.OnPersonaPictureSelect()
+        RadiusBottomLeft: =10000
+        RadiusBottomRight: =10000
+        RadiusTopLeft: =10000
+        RadiusTopRight: =10000
+        TabIndex: =0
+        Visible: =Not Parent.ShowBackButton
+        Width: =32
+        X: =16
+        Y: =(Parent.Height / 2) - (Self.Height / 2)
+        ZIndex: =3
+
+    icoBackButtonPSH As icon.ChevronLeft:
+        AccessibleLabel: =Parent.BackButtonAccessibleLabel
+        Color: =RGBA(255, 255, 255, 1)
+        FocusedBorderColor: =PersonaScreenHeader.FocusBorderColor
+        FocusedBorderThickness: =PersonaScreenHeader.FocusBorderThickness
+        Height: =Parent.Height
+        Icon: =Icon.ChevronLeft
+        OnSelect: =Back(ScreenTransition.None)
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        TabIndex: =0
+        Visible: =Parent.ShowBackButton
+        Width: =imgPersonaPSH.Width + 16 * 2
+        ZIndex: =4
+

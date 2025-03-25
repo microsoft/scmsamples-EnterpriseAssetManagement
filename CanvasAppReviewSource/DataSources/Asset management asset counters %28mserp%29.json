@@ -1,0 +1,546 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenanceassetcounterentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenanceassetcounterentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management asset counters (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_counteraggregate": "Total aggregate",
+      "mserp_counterid": "Counter",
+      "mserp_counterupdate": "Update",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenanceassetcounterentityid": "Asset management asset counters (mserp)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_CounterType": "Asset management work order job maintenance checklist (mserp) (mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_CounterType)",
+      "mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_MaintenanceAssetCounterType": "Asset management work order job maintenance checklist (mserp) (mserp_FK_EntAssetMaintenanceWorkOrderLineChecklistEntity_MaintenanceAssetCounterType)",
+      "mserp_inherit": "Inherit asset counter values",
+      "mserp_name": "Name",
+      "mserp_unitid": "Unit",
+      "mserp_valuedeviationinfotype": "Type",
+      "mserp_valuedeviationover": "Deviation over",
+      "mserp_valuedeviationunder": "Deviation under",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Asset management asset counters (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management asset counters (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenanceassetcounterentity_views",
+    "RelatedEntityName": "Asset management asset counters (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "084fb038-6fcf-3508-94f8-d58f75487508": "Asset management asset counters (mserp) Advanced Find View",
+      "0bc6e0e8-ccfc-7cbb-811e-c599dba2c032": "All Asset management asset counters (mserp)",
+      "7e2ad4b6-a410-835a-0ac0-48b2fd1fb801": "Asset management asset counters (mserp) Lookup View",
+      "d1190aac-a682-ac4b-f0f1-532802b4d504": "Asset management asset counters (mserp) Associated View"
+    }
+  },
+  {
+    "DisplayName": "Total aggregate (mserp)",
+    "Name": "mserp_entassetcounteraggregate",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Sum",
+      "200000001": "Average"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_counteraggregate",
+        "OptionSetReferenceEntityName": "Asset management asset counters (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_counteraggregate",
+    "RelatedEntityName": "Asset management asset counters (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Type (mserp)_1",
+    "Name": "mserp_entassetinfotype",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Information",
+      "200000001": "Warning",
+      "200000002": "Error"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_valuedeviationinfotype",
+        "OptionSetReferenceEntityName": "Asset management asset counters (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_valuedeviationinfotype",
+    "RelatedEntityName": "Asset management asset counters (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Update (mserp)",
+    "Name": "mserp_entassetobjectcounterupdate",
+    "OptionSetInfoNameMapping": {
+      "200000000": "Manual",
+      "200000001": "Production hours",
+      "200000002": "Production quantity"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_counterupdate",
+        "OptionSetReferenceEntityName": "Asset management asset counters (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_counterupdate",
+    "RelatedEntityName": "Asset management asset counters (mserp)",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "NoYes (mserp)",
+    "Name": "mserp_noyes",
+    "OptionSetInfoNameMapping": {
+      "200000000": "No",
+      "200000001": "Yes"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_inherit",
+        "OptionSetReferenceEntityName": "Asset management asset counters (mserp)"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "mserp_workeractive",
+        "OptionSetReferenceEntityName": "Asset management maintenance workers (mserp)"
+      },
+      "OptionSetReferenceItem10": {
+        "OptionSetReferenceColumnName": "mserp_mandatory",
+        "OptionSetReferenceEntityName": "Asset management work order job maintenance checklist (mserp)"
+      },
+      "OptionSetReferenceItem100": {
+        "OptionSetReferenceColumnName": "mserp_islocationactivitydatetimemaintained",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem101": {
+        "OptionSetReferenceColumnName": "mserp_islocationstatusmaintained",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem102": {
+        "OptionSetReferenceColumnName": "mserp_issortordercodemanual",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem103": {
+        "OptionSetReferenceColumnName": "mserp_iswarehouselocationidmanual",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem104": {
+        "OptionSetReferenceColumnName": "mserp_isadvancedwarehouseenabled",
+        "OptionSetReferenceEntityName": "Asset management released products storage dimension defaults (mserp)"
+      },
+      "OptionSetReferenceItem105": {
+        "OptionSetReferenceColumnName": "mserp_iswarehouselocationdimensionactive",
+        "OptionSetReferenceEntityName": "Asset management released products storage dimension defaults (mserp)"
+      },
+      "OptionSetReferenceItem11": {
+        "OptionSetReferenceColumnName": "mserp_notapplicable",
+        "OptionSetReferenceEntityName": "Asset management work order job maintenance checklist (mserp)"
+      },
+      "OptionSetReferenceItem12": {
+        "OptionSetReferenceColumnName": "mserp_islineposted",
+        "OptionSetReferenceEntityName": "Asset management work order job product consumption lines (mserp)"
+      },
+      "OptionSetReferenceItem13": {
+        "OptionSetReferenceColumnName": "mserp_scheduleworkorderjob",
+        "OptionSetReferenceEntityName": "Asset management work order jobs V2 (mserp)"
+      },
+      "OptionSetReferenceItem14": {
+        "OptionSetReferenceColumnName": "mserp_faultcausemandatory",
+        "OptionSetReferenceEntityName": "Asset management work order types (mserp)"
+      },
+      "OptionSetReferenceItem15": {
+        "OptionSetReferenceColumnName": "mserp_faultremedymandatory",
+        "OptionSetReferenceEntityName": "Asset management work order types (mserp)"
+      },
+      "OptionSetReferenceItem16": {
+        "OptionSetReferenceColumnName": "mserp_faultsymptommandatory",
+        "OptionSetReferenceEntityName": "Asset management work order types (mserp)"
+      },
+      "OptionSetReferenceItem17": {
+        "OptionSetReferenceColumnName": "mserp_productionstopmandatory",
+        "OptionSetReferenceEntityName": "Asset management work order types (mserp)"
+      },
+      "OptionSetReferenceItem18": {
+        "OptionSetReferenceColumnName": "mserp_scheduleoneworker",
+        "OptionSetReferenceEntityName": "Asset management work order types (mserp)"
+      },
+      "OptionSetReferenceItem19": {
+        "OptionSetReferenceColumnName": "mserp_active",
+        "OptionSetReferenceEntityName": "Asset management work orders V2 (mserp)"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "mserp_hasmaintenancerequesterrole",
+        "OptionSetReferenceEntityName": "Asset management mobile application user settings entity (mserp)"
+      },
+      "OptionSetReferenceItem20": {
+        "OptionSetReferenceColumnName": "mserp_isworkorderscheduledforsingleworker",
+        "OptionSetReferenceEntityName": "Asset management work orders V2 (mserp)"
+      },
+      "OptionSetReferenceItem21": {
+        "OptionSetReferenceColumnName": "mserp_workorderactive",
+        "OptionSetReferenceEntityName": "Asset management worker work orders and jobs (mserp)"
+      },
+      "OptionSetReferenceItem22": {
+        "OptionSetReferenceColumnName": "mserp_fileremovalconfirmation",
+        "OptionSetReferenceEntityName": "Document types (mserp)"
+      },
+      "OptionSetReferenceItem23": {
+        "OptionSetReferenceColumnName": "mserp_arebatchattributesinherited",
+        "OptionSetReferenceEntityName": "Item batches (mserp)"
+      },
+      "OptionSetReferenceItem24": {
+        "OptionSetReferenceColumnName": "mserp_areshelflifedatesinherited",
+        "OptionSetReferenceEntityName": "Item batches (mserp)"
+      },
+      "OptionSetReferenceItem25": {
+        "OptionSetReferenceColumnName": "mserp_isbatchconsolidated",
+        "OptionSetReferenceEntityName": "Item batches (mserp)"
+      },
+      "OptionSetReferenceItem26": {
+        "OptionSetReferenceColumnName": "mserp_isexpirationdatevendorexpirationdate",
+        "OptionSetReferenceEntityName": "Item batches (mserp)"
+      },
+      "OptionSetReferenceItem27": {
+        "OptionSetReferenceColumnName": "mserp_ismanufacturingdatevendorbatchdate",
+        "OptionSetReferenceEntityName": "Item batches (mserp)"
+      },
+      "OptionSetReferenceItem28": {
+        "OptionSetReferenceColumnName": "mserp_isrequestactive",
+        "OptionSetReferenceEntityName": "Maintenance Requests"
+      },
+      "OptionSetReferenceItem29": {
+        "OptionSetReferenceColumnName": "mserp_maintenanceassetverified",
+        "OptionSetReferenceEntityName": "Maintenance Requests"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "mserp_hasmaintenanceworkerrole",
+        "OptionSetReferenceEntityName": "Asset management mobile application user settings entity (mserp)"
+      },
+      "OptionSetReferenceItem30": {
+        "OptionSetReferenceColumnName": "mserp_isprimaryaddressassigned",
+        "OptionSetReferenceEntityName": "Sites V2 (mserp)"
+      },
+      "OptionSetReferenceItem31": {
+        "OptionSetReferenceColumnName": "mserp_isreceivingwarehouseoverrideallowed",
+        "OptionSetReferenceEntityName": "Sites V2 (mserp)"
+      },
+      "OptionSetReferenceItem32": {
+        "OptionSetReferenceColumnName": "mserp_willmasterplannedintrasitemovementsusetransferjournals",
+        "OptionSetReferenceEntityName": "Sites V2 (mserp)"
+      },
+      "OptionSetReferenceItem33": {
+        "OptionSetReferenceColumnName": "mserp_isbatchnumberactive",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem34": {
+        "OptionSetReferenceColumnName": "mserp_isblankissueallowedforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem35": {
+        "OptionSetReferenceColumnName": "mserp_isblankissueallowedforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem36": {
+        "OptionSetReferenceColumnName": "mserp_isblankreceiptallowedforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem37": {
+        "OptionSetReferenceColumnName": "mserp_isblankreceiptallowedforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem38": {
+        "OptionSetReferenceColumnName": "mserp_iscoverageplanenabledforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem39": {
+        "OptionSetReferenceColumnName": "mserp_iscoverageplanenabledforinventoryprofile",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem4": {
+        "OptionSetReferenceColumnName": "mserp_workordercopydescription",
+        "OptionSetReferenceEntityName": "Asset management parameters (mserp)"
+      },
+      "OptionSetReferenceItem40": {
+        "OptionSetReferenceColumnName": "mserp_iscoverageplanenabledforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem41": {
+        "OptionSetReferenceColumnName": "mserp_isfinancialinventoryenabledforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem42": {
+        "OptionSetReferenceColumnName": "mserp_isfinancialinventoryenabledforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem43": {
+        "OptionSetReferenceColumnName": "mserp_isgtdactive",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem44": {
+        "OptionSetReferenceColumnName": "mserp_isinventoryowneractive",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem45": {
+        "OptionSetReferenceColumnName": "mserp_isinventoryprofileactive",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem46": {
+        "OptionSetReferenceColumnName": "mserp_isphysicalinventoryenabledforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem47": {
+        "OptionSetReferenceColumnName": "mserp_isphysicalinventoryenabledforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem48": {
+        "OptionSetReferenceColumnName": "mserp_isprimarystockingenabledforbatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem49": {
+        "OptionSetReferenceColumnName": "mserp_isprimarystockingenabledforserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem5": {
+        "OptionSetReferenceColumnName": "mserp_workordercopyfault2request",
+        "OptionSetReferenceEntityName": "Asset management parameters (mserp)"
+      },
+      "OptionSetReferenceItem50": {
+        "OptionSetReferenceColumnName": "mserp_ispurchasepricebybatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem51": {
+        "OptionSetReferenceColumnName": "mserp_ispurchasepricebyserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem52": {
+        "OptionSetReferenceColumnName": "mserp_issalespricebybatchnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem53": {
+        "OptionSetReferenceColumnName": "mserp_issalespricebyserialnumber",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem54": {
+        "OptionSetReferenceColumnName": "mserp_isserialnumberactive",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem55": {
+        "OptionSetReferenceColumnName": "mserp_isserialnumbercontrolenabled",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem56": {
+        "OptionSetReferenceColumnName": "mserp_isserialnumberenabledforproductionconsumptionprocess",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem57": {
+        "OptionSetReferenceColumnName": "mserp_isserialnumberenabledforsalesprocess",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      },
+      "OptionSetReferenceItem58": {
+        "OptionSetReferenceColumnName": "mserp_areadvancedwarehousemanagementprocessesenabled",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem59": {
+        "OptionSetReferenceColumnName": "mserp_areitemscoverageplannedmanually",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem6": {
+        "OptionSetReferenceColumnName": "mserp_issparepartapprovedforuse",
+        "OptionSetReferenceEntityName": "Asset management spare part items V2 (mserp)"
+      },
+      "OptionSetReferenceItem60": {
+        "OptionSetReferenceColumnName": "mserp_arelaborstandardsallowed",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem61": {
+        "OptionSetReferenceColumnName": "mserp_arepickinglistsdeliverymodespecific",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem62": {
+        "OptionSetReferenceColumnName": "mserp_arepickinglistsshipmentspecificonly",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem63": {
+        "OptionSetReferenceColumnName": "mserp_arewarehouselocationcheckdigitsunique",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem64": {
+        "OptionSetReferenceColumnName": "mserp_isbillofladingprintingbeforeshipmentconfirmationenabled",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem65": {
+        "OptionSetReferenceColumnName": "mserp_isfallbackwarehouse",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem66": {
+        "OptionSetReferenceColumnName": "mserp_isfinancialnegativeretailstoreinventoryallowed",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem67": {
+        "OptionSetReferenceColumnName": "mserp_ispalletmovementduringcyclecountingallowed",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem68": {
+        "OptionSetReferenceColumnName": "mserp_isphysicalnegativeretailstoreinventoryallowed",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem69": {
+        "OptionSetReferenceColumnName": "mserp_isprimaryaddressassigned",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem7": {
+        "OptionSetReferenceColumnName": "mserp_islineposted",
+        "OptionSetReferenceEntityName": "Asset management work order job hour consumption lines (mserp)"
+      },
+      "OptionSetReferenceItem70": {
+        "OptionSetReferenceColumnName": "mserp_isrefilledfrommainwarehouse",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem71": {
+        "OptionSetReferenceColumnName": "mserp_isretailstorewarehouse",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem72": {
+        "OptionSetReferenceColumnName": "mserp_iswarehouseexternallymanaged",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem73": {
+        "OptionSetReferenceColumnName": "mserp_shouldwarehouselocationidincludeaisleid",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem74": {
+        "OptionSetReferenceColumnName": "mserp_willautomaticloadreleasereserveinventory",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem75": {
+        "OptionSetReferenceColumnName": "mserp_willinventorystatuschangeremoveblocking",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem76": {
+        "OptionSetReferenceColumnName": "mserp_willmanualloadreleasereserveinventory",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem77": {
+        "OptionSetReferenceColumnName": "mserp_willorderreleasingconsolidateshipments",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem78": {
+        "OptionSetReferenceColumnName": "mserp_willproductionbomsreservewarehouselevelonly",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem79": {
+        "OptionSetReferenceColumnName": "mserp_willshippingcancellationdecrementloadquanity",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem8": {
+        "OptionSetReferenceColumnName": "mserp_checked",
+        "OptionSetReferenceEntityName": "Asset management work order job maintenance checklist (mserp)"
+      },
+      "OptionSetReferenceItem80": {
+        "OptionSetReferenceColumnName": "mserp_willwarehouselocationidincludebinidbydefault",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem81": {
+        "OptionSetReferenceColumnName": "mserp_willwarehouselocationidincluderackidbydefault",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem82": {
+        "OptionSetReferenceColumnName": "mserp_willwarehouselocationidincludeshelfidbydefault",
+        "OptionSetReferenceEntityName": "Warehouses (mserp)"
+      },
+      "OptionSetReferenceItem83": {
+        "OptionSetReferenceColumnName": "mserp_workorderexpectedsetendtime",
+        "OptionSetReferenceEntityName": "Work Order Service Levels"
+      },
+      "OptionSetReferenceItem84": {
+        "OptionSetReferenceColumnName": "mserp_workorderexpectedsetstarttime",
+        "OptionSetReferenceEntityName": "Work Order Service Levels"
+      },
+      "OptionSetReferenceItem85": {
+        "OptionSetReferenceColumnName": "mserp_maintenancestoprequired",
+        "OptionSetReferenceEntityName": "Asset management maintenance job types (mserp)"
+      },
+      "OptionSetReferenceItem86": {
+        "OptionSetReferenceColumnName": "mserp_generatecheckdigits",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem87": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultcreditonlyreturnwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem88": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultfinalshipmentwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem89": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultissuewarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem9": {
+        "OptionSetReferenceColumnName": "mserp_checkedcounterreplaced",
+        "OptionSetReferenceEntityName": "Asset management work order job maintenance checklist (mserp)"
+      },
+      "OptionSetReferenceItem90": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultkanbanfinishedgoodswarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem91": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultproductionfinishedgoodswarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem92": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultproductioninputwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem93": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultqualitymaintenancewarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem94": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultreceiptwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem95": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultretailstorereturnwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem96": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultretailstorewarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem97": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultshipmentmaintenancewarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem98": {
+        "OptionSetReferenceColumnName": "mserp_isdefaultsortingwarehouselocation",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      },
+      "OptionSetReferenceItem99": {
+        "OptionSetReferenceColumnName": "mserp_isiteminlocationmaintained",
+        "OptionSetReferenceEntityName": "Warehouse locations (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_inherit",
+    "RelatedEntityName": "Asset management asset counters (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

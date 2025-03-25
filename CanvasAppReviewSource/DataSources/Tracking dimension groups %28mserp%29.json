@@ -1,0 +1,82 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_ecorestrackingdimensiongroupentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_ecorestrackingdimensiongroupentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Tracking dimension groups (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_ecorestrackingdimensiongroupentityid": "Tracking dimension groups (mserp)",
+      "mserp_FK_EcoResProductV2Entity_TrackingDimensionGroup": "Products V2 (mserp)",
+      "mserp_FK_EcoResReleasedProductV2Entity_TrackingDimensionGroup": "Released products V2 (mserp)",
+      "mserp_FK_EntAssetReleasedProductEntity_TrackingDimensionGroup": "Asset management released products (mserp)",
+      "mserp_groupdescription": "Description",
+      "mserp_groupname": "Name",
+      "mserp_isbatchnumberactive": "Is batch number active",
+      "mserp_isblankissueallowedforbatchnumber": "Allow no specification of batch number on physical update of product issues",
+      "mserp_isblankissueallowedforserialnumber": "Allow no specification of serial number on physical update of product issues",
+      "mserp_isblankreceiptallowedforbatchnumber": "Allow no specification of batch number on physical update of product receipts",
+      "mserp_isblankreceiptallowedforserialnumber": "Allow no specification of serial number on physical update of product receipts",
+      "mserp_iscoverageplanenabledforbatchnumber": "Include batch number when creating coverage plan",
+      "mserp_iscoverageplanenabledforinventoryprofile": "Include inventory profile when creating coverage plan",
+      "mserp_iscoverageplanenabledforserialnumber": "Include serial number when creating coverage plan",
+      "mserp_isfinancialinventoryenabledforbatchnumber": "Is financial inventory enabled for batch number",
+      "mserp_isfinancialinventoryenabledforserialnumber": "Is financial inventory enabled for serial number",
+      "mserp_isgtdactive": "Is GTD active",
+      "mserp_isinventoryowneractive": "Is inventory owner active",
+      "mserp_isinventoryprofileactive": "Is inventory profile active",
+      "mserp_isphysicalinventoryenabledforbatchnumber": "Is physical inventory enabled for batch number",
+      "mserp_isphysicalinventoryenabledforserialnumber": "Is physical inventory enabled for serial number",
+      "mserp_isprimarystockingenabledforbatchnumber": "Is primary stocking enabled for batch number",
+      "mserp_isprimarystockingenabledforserialnumber": "Is primary stocking enabled for serial number",
+      "mserp_ispurchasepricebybatchnumber": "Include batch number when searching for purchase prices",
+      "mserp_ispurchasepricebyserialnumber": "Include serial number when searching for purchase prices",
+      "mserp_issalespricebybatchnumber": "Include batch number when searching for sales prices",
+      "mserp_issalespricebyserialnumber": "Include serial number when searching for sales prices",
+      "mserp_isserialnumberactive": "Is serial number active",
+      "mserp_isserialnumbercontrolenabled": "Serial number control",
+      "mserp_isserialnumberenabledforproductionconsumptionprocess": "Register serials before consumption",
+      "mserp_isserialnumberenabledforsalesprocess": "Is serial number enabled for sales process",
+      "mserp_serialnumbercapturingoperation": "Capture serial number"
+    },
+    "PreferredName": "Tracking dimension groups (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Tracking dimension groups (mserp) (Views)",
+    "Name": "_mserp_ecorestrackingdimensiongroupentity_views",
+    "RelatedEntityName": "Tracking dimension groups (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "048c309c-9626-3ecd-a481-fd42d5372696": "Tracking dimension groups (mserp) Associated View",
+      "88ef9761-61cc-62b9-e05b-26abb7f1c86a": "All Tracking dimension groups (mserp)",
+      "b12f7da4-1d4b-36da-759b-6c43b00b094e": "Tracking dimension groups (mserp) Lookup View",
+      "f2d8429e-da6d-7016-4a9d-aaca63be2343": "Tracking dimension groups (mserp) Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Data capture (mserp)",
+    "Name": "mserp_whswhentocapture",
+    "OptionSetInfoNameMapping": {
+      "200000000": "None",
+      "200000001": "Picking",
+      "200000002": "Packing"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_serialnumbercapturingoperation",
+        "OptionSetReferenceEntityName": "Tracking dimension groups (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_serialnumbercapturingoperation",
+    "RelatedEntityName": "Tracking dimension groups (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

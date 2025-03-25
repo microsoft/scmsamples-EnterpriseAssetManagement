@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>Grįžti atgal</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>Darbai</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>Darbo užsakymai</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ Pateikti užklausą</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>Pateikti priežiūros užklausą</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Paieška</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>Nuskaityti</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>Turtas</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>Funkcinės vietos</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>Paieška pagal turto tipą arba turto identifikatorių</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>Paieška pagal vietos pavadinimą arba vietos identifikatorių</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>Darbuotojo pastaba</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>Vidinės pastabos</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Priedai</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>Mano praleistas laikas</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>Suvartoti elementai</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>Turtas</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>Suplanuota pradžia</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>Suplanuota pabaiga</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>Darbo užsakymas</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>Keisti darbo užsakymo būseną</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>Pereiti prie darbo užsakymo</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>Susiję darbai</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>Peržiūrėkite šio turto darbo vietas</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>Žiūrėti šios vietos darbo vietas</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>Pastabos</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>Sureguliuoti praleistą laiką</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>Pridėkite elementus spustelėdami toliau esantį mygtuką</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>Pridėti elementus</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>Ieškoti arba pasirinkti kitą elemento šaltinį</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>Darbo užsakymo tipas</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>Paslaugos lygis</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>Numatoma pradžia</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>Numatoma pabaiga</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>Faktinis pradžios laikas</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>Faktinis pabaigos laikas</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>Kontrolinis sąrašas ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>Nėra kontrolinio sąrašo</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>Pakoreguoti elementų kiekį</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>Turto KS elementų sąrašas</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Turto sąrašas</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>Galimų galerijų sąrašas</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>Kontrolinio sąrašo punkto pastabos</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>Kontrolinio sąrašo matavimo skaitiklio vertė</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>Kontrolinio sąrašo kintamasis</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Sureguliuokite praleistas valandas</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>Suvartojamų elementų sąrašas</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Vartojimo elementai</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Funkcinių vietų sąrašas</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Sureguliuokite praleistas minutes</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>Pridėti nuotrauką</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Dabartinių priedų sąrašas</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>Įveskite techninės priežiūros užklausos aprašymą</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>Įveskite techninės priežiūros užklausos pastabas</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkite techninės priežiūros užklausos tipą</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkite techninės priežiūros paslaugų lygį</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>Pašalinti elementą</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>Įveskite paieškos tekstą</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkti kalbą</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Atsarginių elementų sąrašas</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>Filtruoti darbo užsakymus</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>Darbo užsakymų sąrašas</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>Darbų užsakymo užduočių sąrašas</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>Rūšiuoti darbo užsakymus</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>Darbo užsakymų paieška</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>Produkto numeris</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Produkto pavadinimas</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>Vieta</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>Sandėlis</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>Paketo numeris</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>Serijos numeris</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>Koreguoti kiekį</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>Sumažintas kiekis</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>Padidintas kiekis</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Nepavyksta atnaujinti elemento suvartojimo</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>Patvirtinti</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>Redaguoti vietą</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>Redaguoti sandėlį</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>Valandos</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>Valanda</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>Minutės</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>Minutė</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}-tipo priedai dar nepalaikomi</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>Apie</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Versija: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>Kalba (norint pakeisti, reikia iš naujo paleisti programą):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>Paslaugos teikimo sąlygos</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>Atšaukti</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>Įrašyti</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>Gali būti, kad jūsų naudotojas neturi teisės kurti techninės priežiūros užklausų ar tvarkyti darbo užsakymų arba nepavyko užmegzti tinklo ryšio su Dynamics. Kreipkitės į sistemos administratorių.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>Bandyti dar kartą</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>Nepavyko gauti naudotojo nustatymų</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>Nepavyko gauti techninės priežiūros darbuotojo duomenų {UserPersonnelNumber}</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>Nesate priskirtas jokiems aktyviems turto valdymo darbuotojams. Negalėsite tvarkyti darbo užsakymų.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>Filtras</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>Šiandien</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>Ši savaitė</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>Visas laikas</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>Rūšiuoti pagal</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>Darbo užsakymo ID</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>Darbo užsakymo paslaugos lygis</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>Suplanuota pradžios data</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>Ieškoti...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>Darbai: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Uždaryti</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>Darbo užsakymo numeris{JobLineNumber}  {WorkOrderId}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>Keisti juridinį asmenį</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>Eilutės numeris</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>Darbas</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>Redaguoti darbuotojo pastabą</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>Redaguoti vidinę pastabą</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>Peržiūrėti</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>Peržiūrėti priedus</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>Koreguoti</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>Darbo užsakymo būsena</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>Privalomas</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>Vertė: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>Vertė: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>Pridėti elementą</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>Elementai</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>Turto KS</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>Atsarginės dalys</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Negalima atnaujinti praleistų valandų</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>Instrukcija</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>Jūsų pastabos</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>Rezultatas: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>Min.: {MeasurementMinimum} - Maks.: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>Pažymėti kaip patikrintą</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>Pažymėti kaip nepatikrintą</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>Nepavyko gauti numatytojo užklausos tipo</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>Trūkstamas paslaugų lygio nustatymas</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>Nepavyko gauti numatytojo paslaugos lygio</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Pateikti</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>Priedų nepavyko sukurti dėl trūkstamos dokumento tipo konfigūracijos</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>Užklausos ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>Užklausos</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>Darbo užsakymai</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>Darbo užsakymai ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>Pastabos</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>Priežiūros užklausos tipas</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>Pridėti nuotraukas</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>Pasakykite, ką reikia padaryti</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>Aprašymas</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>Techninės priežiūros užklausa sėkmingai sukurta: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>Atlikta</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>Tarp juridinių asmenų</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>Tiesiog bakstelėkite profilio nuotrauką, kad pamatytumėte savo turimus juridinius asmenis.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>Keitimas tarp kelių juridinių asmenų</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>Pradėti</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>Efektyvūs darbo užsakymai</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>Peržiūrėkite dokumentaciją ir turėkite aiškią komunikaciją bei techninės priežiūros istoriją.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>Visiškai kontroliuokite savo turtą</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>Toliau</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>Greitos užklausos</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>Nuskaitykite turto ar vietos QR kodą ir nufotografuokite arba nufilmuokite problemą.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>Užklausą pateikite greičiau nei per minutę</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>Įkeliamos galimos būsenos...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>Įkeliamos svetainė...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>Įkeliami sandėliai...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Parametrai</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>Pasirinkta</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Padidinti praleistų valandų skaičių</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Padidinti praleistų minučių skaičių</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Sumažinti praleistų valandų skaičių</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Sumažinti praleistų minučių skaičių</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Darbo užsakymas {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Darbo užsakymas {WorkOrderId}, eilutė {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} pasirinkta</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>Darbo užsakymas sėkmingai sukurtas: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>Kurti naują darbo užsakymą</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>Kurti naują darbo užsakymą arba prašyti priežiūros</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>Nepavyko gauti numatytojo darbo užsakymo tipo</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>Pastabos</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>Pridėti nuotraukas</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>Pasakykite, ką reikia padaryti</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>Aprašas</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>Pridėti nuotrauką</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Dabartinių priedų sąrašas</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>Įvesti darbo užsakymo aprašą</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>Įvesti darbo užsakymo užduoties pastabas</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkti darbo užsakymo tipą</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkti darbo užsakymo paslaugos lygį</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>Užduoties tipas</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>Užduoties tipo variantas</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkti darbo užsakymo užduoties tipą</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>Pasirinkti darbo užsakymo užduoties tipo variantą</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>Darbo užsakymo planavimas (įjungta)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>Įjunkite, kad būtų akimirksniu suplanuotas darbo užsakymas kuriant</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>Išjunkite, kad nebūtų suplanuotas darbo užsakymas kuriant</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>Darbo užsakymo planavimas (išjungta)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>Naujas darbo užsakymas</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} priedas (-ai)</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} val.</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} val. {WholeMinutes} min.</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} prekė (-ės)</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>Naujas darbo užsakymas dėl turto</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>Įkeliamos galimos vietos...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>Redaguoti vietą</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>Vieta</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>Nuotrauka per didelė, kad būtų galima pridėti</value>
+  </data>
+</root>

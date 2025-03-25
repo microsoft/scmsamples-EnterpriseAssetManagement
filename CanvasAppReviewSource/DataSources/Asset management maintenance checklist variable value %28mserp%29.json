@@ -1,0 +1,63 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "mserp_entassetmaintenancechecklistvariablevalueentities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "mserp_entassetmaintenancechecklistvariablevalueentity",
+    "MaxGetRowsCount": 100,
+    "Name": "Asset management maintenance checklist variable value (mserp)",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "mserp_checklistvariableid": "Variable",
+      "mserp_checkstatus": "Result",
+      "mserp_dataareaid": "Company Code",
+      "mserp_dataAreaId_id": "Company",
+      "mserp_entassetmaintenancechecklistvariablevalueentityid": "Asset management maintenance checklist variable value (mserp)",
+      "mserp_linenumber": "Line number",
+      "mserp_primaryfield": "Primary Field",
+      "mserp_value": "Value",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Asset management maintenance checklist variable value (mserp)",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Asset management maintenance checklist variable value (mserp) (Views)",
+    "Name": "_mserp_entassetmaintenancechecklistvariablevalueentity_views",
+    "RelatedEntityName": "Asset management maintenance checklist variable value (mserp)",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "671f4130-e91c-bc2c-a705-35b90517d734": "Asset management maintenance checklist variable value (mserp) Associated View",
+      "b81ba431-4f7e-d250-b44a-1d692afc16d9": "Asset management maintenance checklist variable value (mserp) Lookup View",
+      "bfbe1ed4-7652-619f-dbfe-c8fec91f3daf": "Asset management maintenance checklist variable value (mserp) Advanced Find View",
+      "cf863f66-cfb1-c7a1-6014-0c11afd3c418": "All Asset management maintenance checklist variable value (mserp)"
+    }
+  },
+  {
+    "DisplayName": "Result (mserp)",
+    "Name": "mserp_entassetchecklistlinestatus",
+    "OptionSetInfoNameMapping": {
+      "200000000": "None",
+      "200000001": "Fail",
+      "200000002": "Pass"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mserp_checkstatus",
+        "OptionSetReferenceEntityName": "Asset management maintenance checklist variable value (mserp)"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "mserp_linestatus",
+        "OptionSetReferenceEntityName": "Asset management work order job maintenance checklist (mserp)"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mserp_checkstatus",
+    "RelatedEntityName": "Asset management maintenance checklist variable value (mserp)",
+    "Type": "OptionSetInfo"
+  }
+]

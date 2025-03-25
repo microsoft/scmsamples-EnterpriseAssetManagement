@@ -1,0 +1,424 @@
+"'Item Consumption Product Search Screen' As screen":
+    Fill: =gblAppColors.Background
+    OnHidden: |-
+        =UpdateContext({ SearchText: Blank() });
+    OnVisible: |-
+        =If(gblPreviousScreen = 'Work Order Job Item Consumption List Screen', Reset(cmpSearchBarICPSS));
+        
+        UpdateContext({ varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchAllItems });
+        
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+
+    galSparePartItemsForConsumption As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: =T.SpareItemsGalleryAccessibleLabel
+        DelayItemLoading: =true
+        Height: =Parent.Height - Self.Y
+        Items: |-
+            =If(
+                varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchSpareParts,
+                With(
+                    {
+                        locAssetSpareItems: Filter(
+                            'Asset management spare part items V2 (mserp)',
+                            mserp_dataareaid = WorkOrderJob.mserp_dataareaid,
+                            mserp_maintenanceassettypeid = WorkOrderJob.mserp_FK_MaintenanceAsset_id.mserp_maintenanceassettypeid
+                        )
+                    },
+                    If(
+                        IsBlank(cmpSearchBarICPSS.SearchText),
+                        locAssetSpareItems,
+                        Search(
+                            locAssetSpareItems,
+                            cmpSearchBarICPSS.SearchText,
+                            mserp_productnumber
+                        )
+                    )
+                ),
+                Blank()
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =UpdateContext({ varSelectedProductNumber: ThisItem.'Item number' });
+            Select(btnHiddenItemSelectionBehavior)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =73
+        Visible: |-
+            =varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchSpareParts
+            And (Not IsEmpty(Self.AllItems))
+            And With(
+                {locSparePart: First(Self.AllItems)},
+                locSparePart.mserp_dataareaid = WorkOrderJob.mserp_dataareaid
+                And locSparePart.mserp_maintenanceassettypeid = WorkOrderJob.mserp_FK_MaintenanceAsset_id.mserp_maintenanceassettypeid
+            )
+        Width: =Parent.Width
+        Y: =conProductSourcePills.Height + conProductSourcePills.Y
+        ZIndex: =1
+
+        shpSparePartBottomLineICPSS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        lblSparePartItemNumber As label:
+            Color: =gblAppColors.Accent
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =gblAppStyles.FontSize_Medium
+            TabIndex: =0
+            Text: =ThisItem.mserp_productnumber
+            Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
+            X: =gblAppStyles.FocusBorderThickness
+            ZIndex: =3
+
+    galAssetBOMItemsForConsumption As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: =T.AssetBomItemsAccessibleLabel
+        DelayItemLoading: =true
+        Height: =Parent.Height - Self.Y
+        Items: |-
+            =If(
+                varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAssetBOM,
+                With(
+                    {
+                        locAssetBomItems: Filter(
+                            'Asset management asset Bill of materials V2 (mserp)',
+                            mserp_dataareaid = WorkOrderJob.mserp_dataareaid,
+                            mserp_maintenanceassetid = WorkOrderJob.mserp_maintenanceassetid
+                        )
+                    },
+                    If(
+                        IsBlank(cmpSearchBarICPSS.SearchText),
+                        locAssetBomItems,
+                        Search(
+                            locAssetBomItems,
+                            cmpSearchBarICPSS.SearchText,
+                            mserp_itemnumber
+                        )
+                    )
+                ),
+                Blank()
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =UpdateContext({ varSelectedProductNumber: ThisItem.'Item number' });
+            Select(btnHiddenItemSelectionBehavior)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =73
+        Visible: |-
+            =varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAssetBOM
+            And (Not IsEmpty(Self.AllItems))
+            And With(
+                {locBOMItem: First(Self.AllItems)},
+                locBOMItem.mserp_dataareaid = WorkOrderJob.mserp_dataareaid
+                And locBOMItem.mserp_maintenanceassetid = WorkOrderJob.mserp_maintenanceassetid
+            )
+        Width: =Parent.Width
+        Y: =conProductSourcePills.Height + conProductSourcePills.Y
+        ZIndex: =2
+
+        shpAssetBOMBottomLineICPSS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        lblAssetBOMItemNumber As label:
+            Color: =gblAppColors.Accent
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =gblAppStyles.FontSize_Medium
+            TabIndex: =0
+            Text: =ThisItem.mserp_itemnumber
+            Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
+            X: =gblAppStyles.FocusBorderThickness
+            ZIndex: =3
+
+    lblItemsForConsumptionPlaceholder As label:
+        Align: =Align.Center
+        Color: =gblAppColors.Tag
+        Font: =gblAppStyles.CommonFont
+        FontWeight: =FontWeight.Semibold
+        Height: =galItemsForConsumption.Height
+        Size: =gblAppStyles.FontSize_XLarge
+        Text: =T.SelectAnotherItemLabel
+        Visible: =varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems And Not galItemsForConsumption.Visible
+        Width: =galItemsForConsumption.Width
+        X: =galItemsForConsumption.X
+        Y: =galItemsForConsumption.Y
+        ZIndex: =3
+
+    galItemsForConsumption As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: =T.ItemsForConsumptionAccessibleLabel
+        DelayItemLoading: =true
+        Height: =Parent.Height - Self.Y
+        Items: |-
+            =If(
+                varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems
+                    And Not IsBlank(cmpSearchBarICPSS.SearchText), // force search to load any items
+                Search(
+                    Filter(
+                        'Asset management released products (mserp)',
+                        mserp_dataareaid = gblAppCache.UserActiveWorker.mserp_dataareaid
+                        And mserp_productsubtype = "Product"
+                    ),
+                    cmpSearchBarICPSS.SearchText,
+                    mserp_productnumber,
+                    mserp_productsearchname,
+                    mserp_searchname
+                ),
+                Blank()
+            )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =UpdateContext({ varSelectedProductNumber: ThisItem.'Item number' });
+            Select(btnHiddenItemSelectionBehavior)
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =73
+        Visible: |-
+            =varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems
+            And Not IsEmpty(Self.AllItems)
+        Width: =Parent.Width
+        Y: =conProductSourcePills.Height + conProductSourcePills.Y
+        ZIndex: =4
+
+        shpBottomLineICPSS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        lblConsumptionItemNumber As label:
+            Color: =gblAppColors.Accent
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(Parent)
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =gblAppStyles.FontSize_Medium
+            TabIndex: =0
+            Text: |-
+                =//pal-disable PAL004
+                $"[{ThisItem.mserp_productnumber}] {ThisItem.mserp_productname}"
+            Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
+            X: =gblAppStyles.FocusBorderThickness
+            ZIndex: =3
+
+    conProductSourcePills As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(7, 66, 171, 1)
+        Height: =62
+        LayoutGap: =8
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        Width: =App.Width
+        Y: =cmpSearchBarICPSS.Y + cmpSearchBarICPSS.Height
+        ZIndex: =5
+
+        btnAllReleasedProductsPill As button:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderThickness: =0
+            Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems, gblAppColors.Accent, Color.White)
+            Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.Button.Font
+            FontWeight: =FontWeight.Normal
+            LayoutMinHeight: =28
+            OnSelect: |-
+                =UpdateContext({ varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchAllItems })
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =gblAppStyles.FontSize_Medium
+            Text: =T.ItemConsumptionTypeReleasedProductsLabel
+            Tooltip: |-
+                =If(
+                    varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems,
+                    T.SelectedLabel,
+                    ""
+                )
+            Width: =100
+            ZIndex: =1
+
+        btnAssetBOMPill As button:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderThickness: =0
+            Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAssetBOM, gblAppColors.Accent, Color.White)
+            Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.Button.Font
+            FontWeight: =FontWeight.Normal
+            LayoutMinHeight: =28
+            OnSelect: |
+                =UpdateContext({varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchAssetBOM});
+                ClearCollect(
+                    colAvailableItemsForConsumption,
+                    Filter(
+                        'Asset management asset Bill of materials V2 (mserp)',
+                        'Company Code' = gblAppCache.UserActiveWorker.'Company Code'
+                        And Asset = WorkOrderJob.Asset
+                    )
+                );
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =gblAppStyles.FontSize_Medium
+            Text: =T.ItemConsumptionTypeAssetBOMLabel
+            Width: =120
+            ZIndex: =2
+
+        btnSparePartsPill As button:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderThickness: =0
+            Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchSpareParts, gblAppColors.Accent, Color.White)
+            Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.Button.Font
+            FontWeight: =FontWeight.Normal
+            LayoutMinHeight: =28
+            OnSelect: |-
+                =UpdateContext({ varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchSpareParts })
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Size: =gblAppStyles.FontSize_Medium
+            Text: =T.ItemConsumptionTypeSparePartsLabel
+            Width: =120
+            ZIndex: =3
+
+    cmpSearchBarICPSS As SearchBar:
+        AccessibleLabel: =T.SearchAccessibleLabel
+        DefaultSearchText: =SearchText
+        SearchHintText: =T.SearchHintLabel
+        Visible: =true
+        Width: =Parent.Width
+        Y: =cmpHeaderICPSS.Height
+        ZIndex: =6
+
+    cmpHeaderICPSS As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: =T.AddItemLabel
+        Width: =Parent.Width
+        ZIndex: =7
+
+    btnHiddenItemSelectionBehavior As button:
+        OnSelect: |
+            =With(
+                {
+                    locAsset: LookUp(
+                        Assets,
+                        'Company Code' = gblAppCache.UserActiveWorker.'Company Code'
+                        And 'Asset (mserp_maintenanceassetid)' = WorkOrderJob.Asset
+                    )
+                },
+                With(
+                    {
+                        locDefaultFLSiteId: locAsset.'Asset management functional locations'.Site,
+                        locDefaultFLWarehouseId: locAsset.'Asset management functional locations'.Warehouse,
+                        locDefaultStorageDimensions: If(
+                            IsBlank(locAsset.'Asset management functional locations'.Site) Or IsBlank(locAsset.'Asset management functional locations'.Warehouse),
+                            LookUp(
+                                'Asset management released products storage dimension defaults (mserp)',
+                                'Company Code' = gblAppCache.UserActiveWorker.'Company Code'
+                                And 'Item number' = varSelectedProductNumber
+                            )
+                        )
+                    },
+                    Back();
+                    Navigate(
+                        'Work Order Job Item Consumption Edit Screen',
+                        ScreenTransition.Cover,
+                        {
+                            ItemConsumption: Patch(
+                                Defaults('Asset management work order job product consumption lines (mserp)'),
+                                {
+                                    mserp_dataareaid: WorkOrderJob.'Company Code',
+                                    mserp_workorderid: WorkOrderJob.'Work order',
+                                    mserp_workorderjobnumber: WorkOrderJob.'Line number',
+                                    mserp_productnumber: varSelectedProductNumber,
+                                    mserp_storagesiteid: Coalesce(
+                                        locDefaultFLSiteId,
+                                        locDefaultStorageDimensions.Site
+                                    ),
+                                    mserp_storagewarehouseid: Coalesce(
+                                        locDefaultFLWarehouseId,
+                                        locDefaultStorageDimensions.Warehouse
+                                    ),
+                                    mserp_storagewarehouselocationid: If(
+                                        locDefaultStorageDimensions.Active = 'NoYes (mserp)'.Yes,
+                                        locDefaultStorageDimensions.Location,
+                                        Blank()
+                                    )
+                                }
+                            ),
+                            Product: First(
+                                // need ShowColumns to ensure mserp_trackingdimensiongroupname is included,
+                                // otherwise ECS thinks it should be left out
+                                ShowColumns(
+                                    Filter(
+                                        'Asset management released products (mserp)',
+                                        'Company Code' = gblAppCache.UserActiveWorker.'Company Code',
+                                        'Product number' = varSelectedProductNumber
+                                    ),
+                                    'Company Code',
+                                    'Product number',
+                                    'Product name',
+                                    'Tracking dimension group'
+                                )
+                            ),
+                            IsNewConsumptionLine: true,
+                            IsLocationDimensionEnabled: locDefaultStorageDimensions.Active = 'NoYes (mserp)'.Yes
+                        }
+                    );
+                );
+                
+            );
+        TabIndex: =-1
+        Text: =Blank()
+        Visible: =false
+        X: =App.Width - Self.Width
+        Y: =723
+        ZIndex: =8
+

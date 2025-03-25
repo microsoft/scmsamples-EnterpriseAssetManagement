@@ -1,0 +1,66 @@
+"'Legal Entity Selection Screen' As screen":
+    Fill: =gblAppColors.Background
+    OnVisible: =Set(gblPreviousScreen, Self)
+
+    galAvailableLegalEntities As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
+        AccessibleLabel: =T.AvailableEntitiesGalleryAccessibleLabel
+        Height: =Parent.Height - Self.Y
+        Items: =gblAppCache.UserAssignedWorkers
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Controls
+        OnSelect: |-
+            =If(ThisItem.'Company Code' <> gblAppCache.UserActiveWorker.'Company Code',
+                Set(gblAppCache, Patch(gblAppCache, { UserActiveWorker: ThisItem }));
+            
+                // store the cache
+                ClearCollect(colAppStartupCache, gblAppCache);
+                IfError(
+                    // try:
+                    SaveData(colAppStartupCache, "AppStartupCache"),
+                    // on error:
+                    Trace("Failed persisting legal entity choice to cache", ErrorSeverity.Warning, FirstError); false, // this always occurs in PApp Studio
+                    // else:
+                    true
+                );
+            );
+            
+            Back();
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =73
+        Width: =Parent.Width
+        Y: =cmpHeaderLESS.Height
+        ZIndex: =1
+
+        shpBottomLineLESS As rectangle:
+            Fill: =RGBA(209, 209, 209, 1)
+            FocusedBorderColor: =
+            FocusedBorderThickness: =
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =1
+
+        lblLegalEntityIDLESS As label:
+            Color: =gblAppColors.Accent
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Font: =gblAppStyles.CommonFont
+            FontWeight: =FontWeight.Semibold
+            Height: =Parent.TemplateHeight
+            OnSelect: =Select(galAvailableLegalEntities)
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =gblAppStyles.FontSize_Medium
+            TabIndex: =0
+            Text: =Upper(ThisItem.mserp_dataareaid)
+            Width: =Parent.TemplateWidth
+            ZIndex: =2
+
+    cmpHeaderLESS As SubScreenHeader:
+        BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+        Title: =T.ChangeLegalEntityHeaderLabel
+        ZIndex: =2
+

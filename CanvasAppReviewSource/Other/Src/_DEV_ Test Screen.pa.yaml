@@ -1,0 +1,87 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  (DEV) Test Screen:
+    Children:
+      - btnErrorHandlingTests:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Height: =62
+            OnSelect: |-
+              =With({ x: 10, y: 5 }, IfError(x, Notify("failed!"), Set(gblTest, { z: y })))
+            Text: ="Test With() error handling"
+            Width: =235
+            Y: =518
+      - btnErrorHandlingTests_1:
+          Control: Classic/Button@2.2.0
+          Properties:
+            Height: =64
+            OnSelect: |-
+              =UpdateContext({ x: 10/*Error("x")*/, y: 5 }); IfError(x, Notify("failed!"), Set(gblTestUpdateContext, { z: y }))
+            Text: ="Test UpdCtx() error handling"
+            Width: =235
+            Y: =580
+      - btnTestClearAppCache:
+          Control: Classic/Button@2.2.0
+          Properties:
+            OnSelect: |-
+              =Navigate('Loading Screen', Transition.None, { varRefreshCacheOverride: true })
+            Text: ="Clear app cache"
+            Width: =209
+            X: =1157
+      - lblLanguageTest_DEV:
+          Control: Label@2.5.1
+          Properties:
+            Height: =51
+            Text: |-
+              =//pal-disable PAL004
+              $"Language(): {Language()}"
+            Width: =222
+            X: =13
+            Y: =12
+      - lblWorkOrdersCountTest_DEV:
+          Control: Label@2.5.1
+          Properties:
+            Height: =51
+            Text: |-
+              =//pal-disable PAL004
+              CountRows(
+                  GroupBy(
+                      Filter(
+                          'Asset management worker work orders and jobs (mserp)',
+                          'Company Code' = "USMF",
+                          Asset = "AK-101",
+                          Active = 'NoYes (mserp)'.Yes
+                      ),
+                      //Group By 
+                      mserp_workorderid,
+                      WorkOrderJobs
+                  )
+              )
+            Width: =222
+            X: =13
+            Y: =63
+      - lblWorkOrdersCountTest_DEV_1:
+          Control: Label@2.5.1
+          Properties:
+            Height: =51
+            Text: |-
+              =//pal-disable PAL004
+              CountRows(
+                  Filter(
+                      'Asset management work order jobs V2 (mserp)',
+                      mserp_dataareaid = "USMF",
+                      mserp_maintenanceassetid = "AK-101",
+                      mserp_FK_WorkOrderTable_id.mserp_active = 'NoYes (mserp)'.Yes
+                  )
+              )
+            Width: =222
+            X: =15
+            Y: =105
