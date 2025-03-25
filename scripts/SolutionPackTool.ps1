@@ -1,9 +1,9 @@
 $SolutionName = "AssetManagementMobileSolution"
-$SolutionPath = "$PSScriptRoot\..\Solution"
-$SolutionExportPath = "$SolutionPath\Export"
-$UnamanagedSolutionPath = "$SolutionPath\release\$SolutionName.zip"
+$SolutionPath = "../Solution"
+$SolutionExportPath = "$SolutionPath/Export"
+$UnamanagedSolutionPath = "../bin/$SolutionName.zip"
 $ManagedSolutionName = "$SolutionName" + "_managed"
-$ManagedSolutionPath = "$SolutionPath\release\$ManagedSolutionName.zip"
+$ManagedSolutionPath = "../bin/$ManagedSolutionName.zip"
 
 pac solution pack -z $UnamanagedSolutionPath -f $SolutionExportPath -p Unmanaged -loc
 & pac solution pack -z $ManagedSolutionPath -f $SolutionExportPath -p Managed -loc
