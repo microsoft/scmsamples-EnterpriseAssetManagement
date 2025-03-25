@@ -1,6 +1,7 @@
 $ErrorActionPreference = "Stop"
 
-$solutionPath = "$PSScriptRoot\..\Solution"
+$rootDirectory = "$PSScriptRoot\.."
+$solutionPath = "$rootDirectory\Solution"
 $solutionExportPath = "$SolutionPath\Export"
 [xml]$solutionXml = Get-Content "$solutionExportPath\Other\Solution.xml"
 
@@ -18,7 +19,7 @@ $tempAppExportLocation = [System.IO.Path]::GetTempFileName() + '.zip'
 #$appSourceDirectory = Join-Path $rootDirectory "\AppSource"
 #.\packages\Microsoft.PowerApps.CLI.1.39.3\tools\pac.exe canvas pack --sources $appSourceDirectory --msapp $appExportLocation
 
-$appSourceDirectory = Join-Path $SolutionPath "CanvasAppSource\*"
+$appSourceDirectory = Join-Path $rootDirectory "CanvasAppSource\*"
 Compress-Archive -Path $appSourceDirectory -DestinationPath $tempAppExportLocation -Force
 
 Remove-Item $appExportLocation -Force -ErrorAction SilentlyContinue
