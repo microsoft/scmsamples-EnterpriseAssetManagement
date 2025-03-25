@@ -1,7 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.powerapps.msbuild.solution\1.39.1\build\Microsoft.PowerApps.MSBuild.Solution.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.powerapps.msbuild.solution\1.39.1\build\Microsoft.PowerApps.MSBuild.Solution.targets')" />
-    <Import Project="$(NuGetPackageRoot)dynamics.solutions.tools.targets.solutionpackager\2.0.57\build\Dynamics.Solutions.Tools.Targets.SolutionPackager.targets" Condition="Exists('$(NuGetPackageRoot)dynamics.solutions.tools.targets.solutionpackager\2.0.57\build\Dynamics.Solutions.Tools.Targets.SolutionPackager.targets')" />
-  </ImportGroup>
-</Project>
