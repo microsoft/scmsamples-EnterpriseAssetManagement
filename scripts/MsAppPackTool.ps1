@@ -14,7 +14,6 @@ $msAppRelativePath = "CanvasApps\$($msAppName)_DocumentUri.msapp"
 $appExportLocation = Join-Path $solutionExportPath $msAppRelativePath
 $tempAppExportLocation = [System.IO.Path]::GetTempFileName() + '.zip'
 
-
 $appSourceDirectory = Join-Path $rootDirectory "CanvasAppSource\*"
 Compress-Archive -Path $appSourceDirectory -DestinationPath $tempAppExportLocation -Force
 
