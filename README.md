@@ -51,7 +51,7 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 ```powershell
 .\scripts\SolutionPackTool.ps1
 ``` 
-- AssetManagementMobileSolution_managed.zip and AssetManagementMobileSolution.zip are now in /Solution/release
+- AssetManagementMobileSolution_managed.zip and AssetManagementMobileSolution.zip are now in /bin
 ---
 
 ## Installing the Mobile App in Dataverse

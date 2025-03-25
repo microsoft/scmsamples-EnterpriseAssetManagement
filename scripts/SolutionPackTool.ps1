@@ -1,4 +1,4 @@
-$SolutionName = "AssetManagementMobileSolution"
+$SolutionName = "msdyn_AssetManagementMobileSolution"
 $SolutionPath = "../Solution"
 $SolutionExportPath = "$SolutionPath/Export"
 $UnamanagedSolutionPath = "../bin/$SolutionName.zip"
@@ -7,3 +7,5 @@ $ManagedSolutionPath = "../bin/$ManagedSolutionName.zip"
 
 pac solution pack -z $UnamanagedSolutionPath -f $SolutionExportPath -p Unmanaged -loc
 & pac solution pack -z $ManagedSolutionPath -f $SolutionExportPath -p Managed -loc
+
+Write-Output "Sucessfully packed solutions in bin/$ManagedSolutionName and bin/$SolutionName.zip"
