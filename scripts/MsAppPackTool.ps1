@@ -25,3 +25,6 @@ Compress-Archive -Path $appSourceDirectory -DestinationPath $tempAppExportLocati
 Remove-Item $appExportLocation -Force -ErrorAction SilentlyContinue
 
 Copy-Item $tempAppExportLocation $appExportLocation -Force
+
+$relativeMsAppPathFromRoot = "Solution\Export\$msAppRelativePath"
+Write-Output "Sucessfully packed canvas msapp in $relativeMsAppPathFromRoot"

@@ -42,7 +42,7 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 ```powershell
 .\scripts\MsAppPackTool.ps1
 ```
-- **msdyn_assetmanagementv2_bbd03.msapp**  is generated in **/Solution/Export/CanvasApps** from the source code in /CanvasAppSource
+- This generates **msdyn_assetmanagementv2_bbd03.msapp** under **/Solution/Export/CanvasApps**, which is compiled based on the source code at /CanvasAppSource
 
 ---
 
