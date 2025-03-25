@@ -4,14 +4,10 @@ param(
     [string] $MsAppPath
 )
 
-$RepoRoot = "$PSScriptRoot\..\*"
-$reviewSourcePath = "$RepoRoot\CanvasAppReviewSource"
+$RepoRoot = "$PSScriptRoot\.."
 $sourcePath = "$RepoRoot\CanvasAppSource"
 
-Remove-Item -Recurse $reviewSourcePath
-Remove-Item -Recurse $sourcePath
-
-& pac.exe canvas unpack --msapp $MsAppPath --sources $reviewSourcePath
+Remove-Item -Recurse $sourcePath -Force -ErrorAction SilentlyContinue
 
 if ($MsAppPath -like '*.msapp') {
     $msAppAsZipTempPath = [System.IO.Path]::GetTempPath() + (Split-Path $MsAppPath -Leaf) + ".zip"

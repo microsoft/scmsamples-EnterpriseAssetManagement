@@ -75,7 +75,7 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 ```powershell
 \scripts\MsAppUnpackTool.ps1 <msapp_file_path>
 ```
-- Your changes are now reflected in /CanvasAppSource and /CanvasAppReviewSource
+- Your changes are now reflected in /CanvasAppSource
 - You can now Generate a new app binary, followed by a new solution, using the steps above.
 ---
 
