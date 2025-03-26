@@ -42,7 +42,7 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 ## Generate a new Canvas App binary
 - Run the script 
 ```powershell
-.\scripts\MsAppPackTool.ps1
+.\scripts\MsAppPackTool\MsAppPackTool.ps1
 ```
 - This generates **msdyn_assetmanagementv2_bbd03_DocumentUri.msapp** under **/Solution/Export/CanvasApps**, which is compiled based on the source code at /CanvasAppSource
 
@@ -51,7 +51,7 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 ## Generate a new Solution
 - Run the script 
 ```powershell
-.\scripts\SolutionPackTool.ps1
+.\scripts\SolutionPackTool\SolutionPackTool.ps1
 ``` 
 - msdyn_AssetManagementMobileSolution_managed.zip and msdyn_AssetManagementMobileSolution.zip are now in /bin
 ---
@@ -75,7 +75,7 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 - Download a copy of an app
 - Unpack the downloaded **.msapp** into this repository by running the script
 ```powershell
-.\scripts\MsAppUnpackTool.ps1 <msapp_file_path>
+.\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <msapp_file_path>
 ```
 - Your changes are now reflected in /CanvasAppSource
 - You can now Generate a new app binary, followed by a new solution, using the steps above.
@@ -97,7 +97,7 @@ Once a new label is added or l11n team has translated new labels, they should be
 
 1. Run the script:
    ```powershell
-   .\build\scripts\LocalizerTool.ps1 -CopyToClipboard
+   .\scripts\LocalizerTool\LocalizerTool.ps1 -CopyToClipboard
    ```
    * You will now have the translations in your clipboard.
 2. Edit the Canvas app in Power Apps studio.
