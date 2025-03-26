@@ -35,10 +35,10 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 # Build, install, and development processes
 ## Prerequisites
 ### Pac CLI
--Install [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
+- Install [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
    (For VM users) 
--If you don't have permissions to install the Power Apps CLI Standalone SDK, you can use [Power Apps CLI via its VS Code Extension](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli?WT.mc_id=BA-MVP-5004107#using-power-platform-vs-code-extension)
--[Power Platform Tool](https://dev.azure.com/dynamicscrm/_apis/resources/Containers/17976494/ArtifactsRelease?itemPath=ArtifactsRelease%2FRelease%2FCdsVSToolKit%2F2019%2FCRMDeveloperTools%2FRelease%2FPowerPlatformTools.vsix) for Visual Studio.
+- If you don't have permissions to install the Power Apps CLI Standalone SDK, you can use [Power Apps CLI via its VS Code Extension](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli?WT.mc_id=BA-MVP-5004107#using-power-platform-vs-code-extension)
+- [Power Platform Tool](https://dev.azure.com/dynamicscrm/_apis/resources/Containers/17976494/ArtifactsRelease?itemPath=ArtifactsRelease%2FRelease%2FCdsVSToolKit%2F2019%2FCRMDeveloperTools%2FRelease%2FPowerPlatformTools.vsix) for Visual Studio.
 ## Generate a new Canvas App binary
 - Run the script 
 ```powershell
