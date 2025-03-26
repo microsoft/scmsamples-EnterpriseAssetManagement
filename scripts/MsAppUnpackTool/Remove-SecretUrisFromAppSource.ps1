@@ -1,15 +1,13 @@
 $ErrorActionPreference = "Stop"
 
 Write-Host "Removing PCF bundle shared access signature from ReviewSource and CanvasAppSource"
-$path = "$PSScriptRoot\..\CanvasAppSource"
+$path = "$PSScriptRoot\..\..\CanvasAppSource"
 $srcFiles = "$path\*.json"
 
-if (!(Test-Path "$PSScriptRoot\..\CanvasAppSource")) {
+if (!(Test-Path $path)) {
     Write-Host "CanvasAppSource folder not found. Skipping."
     exit
 }
-
-
 
 Get-ChildItem -Recurse -Path $srcFiles `
 | Where-Object {

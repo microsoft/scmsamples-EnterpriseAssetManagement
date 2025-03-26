@@ -1,21 +1,25 @@
+. "$PSScriptRoot/../utils/FileUtils.ps1"
+. "$PSScriptRoot/../utils/PowerAppsUtils.ps1"
+
 $SolutionName = "msdyn_AssetManagementMobileSolution"
 $ManagedSolutionName = "$SolutionName" + "_managed.zip"
-$SolutionExportPath = "$PSScriptRoot/../Solution/Export"
-$binPath = "$PSScriptRoot/../bin"
+$SolutionExportPath = "$PSScriptRoot/../../Solution/Export"
+$binPath = "$PSScriptRoot/../../bin"
 $UnamanagedSolutionPath = "$binPath/$SolutionName.zip"
 $ManagedSolutionPath = "$binPath/$ManagedSolutionName"
 
-Remove-Item -Recurse $binPath -Force -ErrorAction SilentlyContinue
+Remove-Directory -directoryPath $binPath
 
-pac solution pack -z $UnamanagedSolutionPath -f $SolutionExportPath -p Unmanaged -loc
-& pac solution pack -z $ManagedSolutionPath -f $SolutionExportPath -p Managed -loc
+Pack-Solution -solutionPath $UnamanagedSolutionPath -exportPath $SolutionExportPath -solutionType Unmanaged
+Pack-Solution -solutionPath $ManagedSolutionPath -exportPath $SolutionExportPath -solutionType Managed
 
 $unmanagedSolutionExists = Test-Path $UnamanagedSolutionPath
 $managedSolutionExists = Test-Path $ManagedSolutionPath
+
 if ($unmanagedSolutionExists -And $managedSolutionExists) {
-    Write-Output "Sucessfully packed solutions in bin/$ManagedSolutionName and bin/$SolutionName.zip"
+    Write-Output "Successfully packed solutions in bin/$ManagedSolutionName and bin/$SolutionName.zip"
 } else {
-    Write-Output "Failed to pack solutions in bin/$ManagedSolutionName and bin/$SolutionName.zip"
+    Write-Error "Failed to package solutions"
     if (-not $unmanagedSolutionExists) {
         Write-Output "Unmanaged solution not found at $UnamanagedSolutionPath"
     }
