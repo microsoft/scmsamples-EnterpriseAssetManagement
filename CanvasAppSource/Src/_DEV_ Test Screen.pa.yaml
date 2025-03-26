@@ -9,36 +9,73 @@
 # ************************************************************************************************
 Screens:
   (DEV) Test Screen:
+    Properties:
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
     Children:
       - btnErrorHandlingTests:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
             Height: =62
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: |-
               =With({ x: 10, y: 5 }, IfError(x, Notify("failed!"), Set(gblTest, { z: y })))
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             Text: ="Test With() error handling"
             Width: =235
             Y: =518
       - btnErrorHandlingTests_1:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
             Height: =64
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: |-
               =UpdateContext({ x: 10/*Error("x")*/, y: 5 }); IfError(x, Notify("failed!"), Set(gblTestUpdateContext, { z: y }))
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             Text: ="Test UpdCtx() error handling"
             Width: =235
             Y: =580
       - btnTestClearAppCache:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: |-
               =Navigate('Loading Screen', Transition.None, { varRefreshCacheOverride: true })
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             Text: ="Clear app cache"
             Width: =209
             X: =1157
       - lblLanguageTest_DEV:
           Control: Label@2.5.1
           Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
             Height: =51
             Text: |-
               =//pal-disable PAL004
@@ -49,6 +86,8 @@ Screens:
       - lblWorkOrdersCountTest_DEV:
           Control: Label@2.5.1
           Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
             Height: =51
             Text: |-
               =//pal-disable PAL004
@@ -71,6 +110,8 @@ Screens:
       - lblWorkOrdersCountTest_DEV_1:
           Control: Label@2.5.1
           Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Font: =Font.'Open Sans'
             Height: =51
             Text: |-
               =//pal-disable PAL004

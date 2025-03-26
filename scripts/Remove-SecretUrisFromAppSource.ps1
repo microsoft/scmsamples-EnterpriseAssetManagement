@@ -1,27 +1,17 @@
 $ErrorActionPreference = "Stop"
 
 Write-Host "Removing PCF bundle shared access signature from ReviewSource and CanvasAppSource"
-$paths = @(
-    "$PSScriptRoot\..\CanvasAppSource\*.json",
-)
-
-if (!(Test-Path "$PSScriptRoot\..\CanvasAppReviewSource")) {
-    Write-Host "CanvasAppReviewSource folder not found. Skipping."
-    $paths = $paths | Where-Object { $_ -notlike "*CanvasAppReviewSource*" }
-}
+$path = "$PSScriptRoot\..\CanvasAppSource"
+$srcFiles = "$path\*.json"
 
 if (!(Test-Path "$PSScriptRoot\..\CanvasAppSource")) {
     Write-Host "CanvasAppSource folder not found. Skipping."
-    $paths = $paths | Where-Object { $_ -notlike "*CanvasAppSource*" }
-}
-if ($paths.Count -eq 0) {
-    Write-Host "No source folders found. Skipping."
     exit
 }
 
 
 
-Get-ChildItem -Recurse -Path $paths `
+Get-ChildItem -Recurse -Path $srcFiles `
 | Where-Object {
     # entropy folder is ignored by Git, so no reason to peer
     $_.FullName -notlike '*Entropy*'

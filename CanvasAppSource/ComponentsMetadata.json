@@ -1,20 +1,6 @@
 {
   "Components": [
     {
-      "Name": "PersonaScreenHeader",
-      "TemplateName": "737c5f2d157a40fb94dac275d7168e76",
-      "Description": "",
-      "AllowCustomization": true,
-      "AllowAccessToGlobals": false
-    },
-    {
-      "Name": "SubScreenHeader",
-      "TemplateName": "f31c4274513d4d79a81731e998df1fab",
-      "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
-      "AllowCustomization": true,
-      "AllowAccessToGlobals": false
-    },
-    {
       "Name": "AppAboutOverlay",
       "TemplateName": "f4ae1227410745e3a675ab966b35c449",
       "Description": "",
@@ -50,6 +36,13 @@
       "AllowAccessToGlobals": false
     },
     {
+      "Name": "PersonaScreenHeader",
+      "TemplateName": "737c5f2d157a40fb94dac275d7168e76",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
       "Name": "BottomSheetChoiceSelector",
       "TemplateName": "59636f2f97a14ed280f6ffcf6cedaa52",
       "Description": "",
@@ -67,6 +60,13 @@
       "Name": "FullScreenBottomRightButtonList",
       "TemplateName": "74784d9d4b2a4e61b6d10a317345d60a",
       "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "SubScreenHeader",
+      "TemplateName": "f31c4274513d4d79a81731e998df1fab",
+      "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
       "AllowCustomization": true,
       "AllowAccessToGlobals": false
     }

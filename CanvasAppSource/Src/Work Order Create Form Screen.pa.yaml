@@ -11,16 +11,22 @@ Screens:
   Work Order Create Form Screen:
     Properties:
       Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       OnVisible: "=Clear(locWOAttachments);\nIfError(\n    //try\n    UpdateContext(\n        {\n            locWOCount: CountRows(\n                GroupBy(\n                    Filter(\n                        'Asset management work order jobs V2 (mserp)',\n                        'Company Code' = locAsset.'Company Code',\n                        Asset = locAsset.'Asset (mserp_maintenanceassetid)',\n                        'Asset management work orders V2'.Active = 'NoYes (mserp)'.Yes\n                    ),\n                    'Work order',\n                    WorkOrders\n                )\n            )\n        }\n    ),\n    //catch\n    UpdateContext({locWOCount: Blank()});\n    Notify(\n        Match(\n            FirstError.Details.HttpResponse,\n            \"\\\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\n        ).message,\n        NotificationType.Error\n    );\n    \n);\nIfError(\n    UpdateContext(\n        {\n            locMRCount: With(\n                {\n                    locMaintenanceRequestsToCount: Filter(\n                        'Maintenance Requests',\n                        Asset = locAsset.'Asset (mserp_maintenanceassetid)',\n                        'Company Code' = locAsset.'Company Code',\n                        Active = 'NoYes (mserp)'.Yes\n                    )\n                },\n                CountRows(locMaintenanceRequestsToCount)\n            )\n        }\n    ),\n    //catch\n    UpdateContext({locMRCount: Blank()});\n    Notify(\n        Match(\n            FirstError.Details.HttpResponse,\n            \"\\\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\n        ).message,\n        NotificationType.Error\n    );\n    \n);\n\nSet(gblPreviousScreen, Self)\n"
     Children:
       - conVerticalCreateWorkOrder:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
+            DropShadow: =DropShadow.None
             Height: =Parent.Height - btnCreateWOSubmit.Height -16
             LayoutDirection: =LayoutDirection.Vertical
             LayoutOverflowY: =LayoutOverflow.Scroll
             PaddingBottom: =10
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Width: =Parent.Width
           Children:
             - conCreateWOHeader:
@@ -28,14 +34,20 @@ Screens:
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
+                  DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =52
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
                   Width: =Parent.Width
                 Children:
                   - lblCreateWOHeader:
                       Control: Label@2.5.1
                       Properties:
                         Align: =Align.Center
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(255, 255, 255, 1)
                         Fill: =gblAppStyles.Header.Fill
                         Font: =gblAppStyles.CommonFont
@@ -46,7 +58,7 @@ Screens:
                         Size: =gblAppStyles.Header.FontSize
                         Text: |-
                           =//pal-disable PAL004
-                          locAsset.mserp_maintenanceassetid
+                          locAsset.'Asset (mserp_maintenanceassetid)'
                         Width: =Parent.Width
                         Wrap: =false
                         X: =
@@ -54,6 +66,7 @@ Screens:
                       Control: Classic/Icon@2.5.0
                       Properties:
                         AccessibleLabel: =T.BackButtonAccessibleLabel
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =Color.White
                         FocusedBorderColor: =gblAppStyles.FocusBorderColor
                         FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
@@ -81,6 +94,7 @@ Screens:
                 Variant: AutoLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
+                  DropShadow: =DropShadow.None
                   Fill: =gblAppStyles.Header.Fill
                   FillPortions: =0
                   Height: =If(Self.Width <= conCreateWOSubHeader.LayoutMinWidth ,gblAppStyles.Pills.Height * 2 + 20 ,62)
@@ -90,6 +104,10 @@ Screens:
                   LayoutMinWidth: =340
                   PaddingLeft: =16
                   PaddingRight: =16
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
                   Width: =Parent.Width
                 Children:
                   - conExistingWorkOrdersWOCFS:
@@ -97,16 +115,23 @@ Screens:
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =42
                         LayoutMinWidth: =100
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Width: =btnExistingWorkOrdersWOCFS.Width + 4
                       Children:
                         - btnExistingWorkOrdersWOCFS:
                             Control: Classic/Button@2.2.0
                             Properties:
+                              BorderColor: =ColorFade(Self.Fill, -15%)
                               BorderThickness: =0
                               Color: =gblAppStyles.Pills.FontColor
+                              DisabledBorderColor: =RGBA(166, 166, 166, 1)
                               DisabledColor: =gblAppStyles.Pills.DisabledColor
                               DisabledFill: =gblAppStyles.Pills.DisabledFill
                               DisplayMode: |-
@@ -121,6 +146,9 @@ Screens:
                               Font: =gblAppStyles.Pills.Font
                               FontWeight: =gblAppStyles.Pills.FontWeight
                               Height: =gblAppStyles.Pills.Height
+                              HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                              HoverColor: =RGBA(255, 255, 255, 1)
+                              HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                               OnSelect: |-
                                 =Navigate(
                                     'Maintenance Request Work Order List Screen',
@@ -156,6 +184,7 @@ Screens:
                         - icoExistingWorkOrdersWOCFS:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =gblAppColors.AccentInfo3
                               Fill: =RGBA(0,0,0,0)
                               Height: =17
@@ -171,16 +200,23 @@ Screens:
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =42
                         LayoutMinWidth: =100
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Width: =btnExistingMaintenanceRequestsWOCFS.Width + 4
                       Children:
                         - btnExistingMaintenanceRequestsWOCFS:
                             Control: Classic/Button@2.2.0
                             Properties:
+                              BorderColor: =ColorFade(Self.Fill, -15%)
                               BorderThickness: =0
                               Color: =gblAppStyles.Pills.FontColor
+                              DisabledBorderColor: =RGBA(166, 166, 166, 1)
                               DisabledColor: =gblAppStyles.Pills.DisabledColor
                               DisabledFill: =gblAppStyles.Pills.DisabledFill
                               DisplayMode: |-
@@ -195,6 +231,9 @@ Screens:
                               Font: =gblAppStyles.Pills.Font
                               FontWeight: =gblAppStyles.Pills.FontWeight
                               Height: =gblAppStyles.Pills.Height
+                              HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                              HoverColor: =RGBA(255, 255, 255, 1)
+                              HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                               OnSelect: |-
                                 =Navigate(
                                     'Maintenance Requests List Screen',
@@ -231,6 +270,7 @@ Screens:
                         - icoExistingMaintenanceRequestsWOCFS:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =ColorValue("#3280AB")
                               Fill: =RGBA(0,0,0,0)
                               Height: =17
@@ -246,6 +286,7 @@ Screens:
                 Variant: AutoLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
+                  DropShadow: =DropShadow.None
                   LayoutAlignItems: =LayoutAlignItems.Stretch
                   LayoutDirection: =LayoutDirection.Vertical
                   LayoutGap: =16
@@ -255,11 +296,16 @@ Screens:
                   PaddingLeft: =gblAppStyles.Padding.Left
                   PaddingRight: =gblAppStyles.Padding.Right
                   PaddingTop: =16
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
                   Width: =Parent.Width
                 Children:
                   - lblCreateWorkOrderIntro:
                       Control: Label@2.5.1
                       Properties:
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =gblAppColors.PrimaryText
                         Font: =gblAppStyles.CommonFont
                         Height: =25
@@ -268,22 +314,74 @@ Screens:
                         Size: =gblAppStyles.FontSize_Large
                         Text: =T.WOCreationInstructionLabel
                         Width: =Parent.Width
+                  - cmpNewWorkOrderDescription:
+                      Control: CanvasComponent
+                      ComponentName: TextInputWithLabel
+                      Properties:
+                        AccessibleLabel: =T.WODescriptionAccessibleLabel
+                        DefaultText: =Blank()
+                        Fill: =Self.backgroundColor
+                        Height: =54
+                        HorizontalPadding: =8
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =11
+                        MaxLength: =60
+                        Width: =Parent.Width - Parent.PaddingLeft*2
+                        Y: =16
+                        backgroundColor: =gblAppColors.Neutral
+                        dividerColor: =gblAppColors.AccentLink
+                        labelColor: =gblAppStyles.Label.FontColor
+                        labelFontSize: =gblAppStyles.Label.FontSize
+                        labelText: =T.WODescriptionHeaderLabel
+                        multiLine: =false
+                        textColor: =RGBA(0, 0, 0, 1)
+                        textFont: =gblAppStyles.Label.Font
+                        textFontSize: =gblAppStyles.FontSize_Large
+                  - cmpNewWorkOrderNotes:
+                      Control: CanvasComponent
+                      ComponentName: TextInputWithLabel
+                      Properties:
+                        AccessibleLabel: =T.WONotesAccessibleLabel
+                        DefaultText: =Blank()
+                        Fill: =Self.backgroundColor
+                        Height: =108
+                        HorizontalPadding: =8
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =10
+                        MaxLength: =Blank()
+                        Width: =Parent.Width - Parent.PaddingLeft*2
+                        Y: =16
+                        backgroundColor: =gblAppColors.Neutral
+                        dividerColor: =gblAppColors.AccentLink
+                        labelColor: =gblAppStyles.Label.FontColor
+                        labelFontSize: =gblAppStyles.Label.FontSize
+                        labelText: =T.WONotesHeaderLabel
+                        multiLine: =true
+                        textColor: =gblAppColors.PrimaryText
+                        textFont: =gblAppStyles.DefaultText.Font
+                        textFontSize: =gblAppStyles.FontSize_Large
                   - conNewWorkOrderServiceLevel:
                       Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
                         LayoutMinHeight: =60
                         PaddingBottom: =(conNewWorkOrderServiceLevel.Height - lblNewWorkOrderServiceLevel.Height - drpNewWorkOrderServiceLevel.Height)/2
                         PaddingTop: =(conNewWorkOrderServiceLevel.Height - lblNewWorkOrderServiceLevel.Height - drpNewWorkOrderServiceLevel.Height)/2
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Width: =Parent.Width - Parent.PaddingLeft*2
                       Children:
                         - shpNewWorkOrderServiceLevelBottomBorder:
                             Control: Rectangle@2.3.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =gblAppColors.AccentLink
                               Height: =2
                               Width: =Parent.Width
@@ -292,20 +390,25 @@ Screens:
                             Control: Classic/DropDown@2.3.1
                             Properties:
                               AccessibleLabel: =T.WOServiceLevelAccessibleLabel
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               BorderThickness: =0
                               ChevronBackground: =RGBA(255, 255, 255, 1)
                               ChevronFill: =gblAppColors.Accent
+                              ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              ChevronHoverFill: =RGBA(255, 255, 255, 1)
                               Color: =gblAppColors.Accent
                               Default: =locDefaultServiceLevel
                               FocusedBorderColor: =gblAppStyles.FocusBorderColor
                               FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                               Font: =gblAppStyles.CommonFont
                               Height: =32
-                              Items: =Filter('Work Order Service Levels', mserp_dataareaid = locAsset.mserp_dataareaid)
+                              HoverFill: =RGBA(186, 202, 226, 1)
+                              Items: =Filter('Work Order Service Levels', 'Company Code' = locAsset.'Company Code')
                               Items.Value: =mserp_formattedservicelevelname
                               PaddingLeft: =8
                               PressedColor: =Self.Color
                               PressedFill: =gblAppColors.Neutral
+                              SelectionColor: =RGBA(255, 255, 255, 1)
                               SelectionFill: =gblAppColors.Accent
                               Size: =gblAppStyles.FontSize_Large
                               Width: =Parent.Width-8
@@ -313,6 +416,7 @@ Screens:
                         - lblNewWorkOrderServiceLevel:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =gblAppStyles.Label.FontColor
                               Font: =gblAppStyles.Label.Font
                               Height: =27
@@ -325,17 +429,23 @@ Screens:
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
                         LayoutMinHeight: =60
                         PaddingLeft: =8
                         PaddingRight: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Width: =Parent.Width - Parent.PaddingLeft*2
                       Children:
                         - shpNewWorkOrderTypeBottomBorder:
                             Control: Rectangle@2.3.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =gblAppColors.AccentLink
                               Height: =2
                               Width: =Parent.Width
@@ -344,24 +454,29 @@ Screens:
                             Control: Classic/DropDown@2.3.1
                             Properties:
                               AccessibleLabel: =T.WOTypeAccessibleLabel
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               BorderThickness: =0
                               ChevronBackground: =RGBA(255, 255, 255, 1)
                               ChevronFill: =gblAppColors.Accent
+                              ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              ChevronHoverFill: =RGBA(255, 255, 255, 1)
                               Color: =gblAppColors.Accent
                               Default: =locDefaultWorkOrderType
                               FocusedBorderColor: =gblAppStyles.FocusBorderColor
                               FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                               Font: =gblAppStyles.CommonFont
                               Height: =31
+                              HoverFill: =RGBA(186, 202, 226, 1)
                               Items: |-
                                 =Filter(
                                     'Asset management work order types (mserp)',
-                                    mserp_dataareaid = locAsset.mserp_dataareaid
+                                    'Company Code' = locAsset.'Company Code'
                                 )
                               Items.Value: =mserp_workordertypeid
                               PaddingLeft: =8
                               PressedColor: =Self.Color
                               PressedFill: =gblAppColors.Neutral
+                              SelectionColor: =RGBA(255, 255, 255, 1)
                               SelectionFill: =gblAppColors.Accent
                               Size: =gblAppStyles.FontSize_Large
                               Width: =Parent.Width-8
@@ -369,6 +484,7 @@ Screens:
                         - lblNewWorkOrderType:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =gblAppStyles.Label.FontColor
                               Font: =gblAppStyles.Label.Font
                               Height: =27
@@ -381,6 +497,7 @@ Screens:
                       Group: grpAddAttachmentToNewWorkOrder
                       Properties:
                         ApplyEXIFOrientation: =false
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Height: =Self.Width
                         Image: =If(!IsBlank(btnAddAttachmentToNewWorkOrder.Media), btnAddAttachmentToNewWorkOrder.Media)
                         LayoutMinHeight: =50
@@ -393,50 +510,72 @@ Screens:
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
                         LayoutMinHeight: =60
                         PaddingLeft: =8
                         PaddingRight: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Width: =Parent.Width - Parent.PaddingLeft*2
                       Children:
                         - shpNewWorkOrderJobTypeBottomBorder:
                             Control: Rectangle@2.3.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =gblAppColors.AccentLink
                               Height: =2
                               Width: =Parent.Width
                               Y: =Parent.Height - Self.Height
                         - drpNewWorkOrderJobType:
-                            Control: Classic/DropDown@2.3.1
+                            Control: Classic/ComboBox@2.4.0
                             Properties:
                               AccessibleLabel: =T.WOJobTypeAccessibleLabel
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               BorderThickness: =0
                               ChevronBackground: =RGBA(255, 255, 255, 1)
                               ChevronFill: =gblAppColors.Accent
+                              ChevronHoverBackground: =gblAppColors.Accent
+                              ChevronHoverFill: =gblAppColors.Neutral
                               Color: =gblAppColors.Accent
-                              Default: =locDefaultWorkOrderType
+                              Default: |-
+                                ={mserp_name: locDefaultWorkOrderType}
+                              DefaultSelectedItems: |-
+                                ={mserp_name: locDefaultWorkOrderType}
+                              DisplayFields: =["mserp_name"]
+                              Fill: =gblAppColors.Neutral
                               FocusedBorderColor: =gblAppStyles.FocusBorderColor
                               FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                               Font: =gblAppStyles.CommonFont
-                              Height: =31
+                              HoverColor: =gblAppColors.Neutral
+                              HoverFill: =gblAppColors.Accent
+                              InputTextPlaceholder: =
                               Items: |-
                                 =Filter(
                                     'Asset management maintenance job types (mserp)',
-                                    mserp_dataareaid = locAsset.mserp_dataareaid
+                                    'Company Code' = locAsset.'Company Code'
                                 )
-                              Items.Value: =mserp_name
                               PaddingLeft: =8
-                              PressedColor: =Self.Color
-                              PressedFill: =gblAppColors.Neutral
-                              SelectionFill: =gblAppColors.Accent
+                              PressedBorderColor: =
+                              PressedColor: =gblAppColors.Neutral
+                              PressedFill: =gblAppColors.Accent
+                              SearchFields: =["mserp_jobtypeid"]
+                              SelectMultiple: =false
+                              SelectionColor: =gblAppColors.Accent
+                              SelectionFill: =gblAppColors.Neutral
+                              SelectionTagColor: =gblAppColors.Accent
+                              SelectionTagFill: =
                               Size: =gblAppStyles.FontSize_Large
-                              Width: =Parent.Width-8
+                              Width: =Parent.Width - 8
                               Y: =27
                         - lblNewWorkOrderJobType:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =gblAppStyles.Label.FontColor
                               Font: =gblAppStyles.Label.Font
                               Height: =27
@@ -449,18 +588,24 @@ Screens:
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
                         LayoutMinHeight: =60
                         PaddingLeft: =8
                         PaddingRight: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                         Visible: =Not IsBlank(drpNewWorkOrderJobTypeVariant.Selected)
                         Width: =Parent.Width - Parent.PaddingLeft*2
                       Children:
                         - shpNewWorkOrderJobTypeVariantBottomBorder:
                             Control: Rectangle@2.3.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =gblAppColors.AccentLink
                               Height: =2
                               Width: =Parent.Width
@@ -469,25 +614,30 @@ Screens:
                             Control: Classic/DropDown@2.3.1
                             Properties:
                               AccessibleLabel: =T.WOJobTypeVariantAccessibleLabel
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               BorderThickness: =0
                               ChevronBackground: =RGBA(255, 255, 255, 1)
                               ChevronFill: =gblAppColors.Accent
+                              ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              ChevronHoverFill: =RGBA(255, 255, 255, 1)
                               Color: =gblAppColors.Accent
                               Default: =locDefaultWorkOrderType
                               FocusedBorderColor: =gblAppStyles.FocusBorderColor
                               FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                               Font: =gblAppStyles.CommonFont
                               Height: =31
+                              HoverFill: =RGBA(186, 202, 226, 1)
                               Items: |-
                                 =Filter(
                                     'Asset management maintenance job type variants (mserp)',
-                                    mserp_dataareaid = locAsset.mserp_dataareaid,
-                                    mserp_jobtypeid = drpNewWorkOrderJobType.Selected.mserp_jobtypeid
+                                    'Company Code' = locAsset.'Company Code',
+                                    'Maintenance job type' = drpNewWorkOrderJobType.Selected.Name
                                 )
                               Items.Value: =mserp_jobvariantid
                               PaddingLeft: =8
                               PressedColor: =Self.Color
                               PressedFill: =gblAppColors.Neutral
+                              SelectionColor: =RGBA(255, 255, 255, 1)
                               SelectionFill: =gblAppColors.Accent
                               Size: =gblAppStyles.FontSize_Large
                               Width: =Parent.Width-8
@@ -495,6 +645,7 @@ Screens:
                         - lblNewWorkOrderJobTypeVariant:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =gblAppStyles.Label.FontColor
                               Font: =gblAppStyles.Label.Font
                               Height: =27
@@ -506,10 +657,12 @@ Screens:
                       Control: Classic/Toggle@2.1.0
                       Properties:
                         AccessibleLabel: =If(Self.Value, T.WOAutoScheduleOffAccessibleLabel, T.WOAutoScheduleOnAccessibleLabel)
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         FalseText: =T.WOAutoScheduleOff
                         Font: =gblAppStyles.CommonFont
                         Size: =gblAppStyles.FontSize_Large
                         TextPosition: =TextPosition.Left
+                        TrueFill: =RGBA(56, 96, 178, 1)
                         TrueText: =T.WOAutoScheduleOn
                   - galNewWorkOrderAttachments:
                       Control: Gallery@2.15.0
@@ -517,6 +670,7 @@ Screens:
                       Properties:
                         AccessibleLabel: =T.WOAttachmentsAccessibleLabel
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         DelayItemLoading: =false
                         Height: =260
                         Items: =locWOAttachments
@@ -530,6 +684,7 @@ Screens:
                             Control: Image@2.2.3
                             Properties:
                               ApplyEXIFOrientation: =false
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Height: =imgAttachmentWOCFS.Width
                               Image: =ThisItem.Value
                               ImagePosition: =ImagePosition.Stretch
@@ -540,6 +695,7 @@ Screens:
                             Control: Image@2.2.3
                             Properties:
                               AccessibleLabel: =T.RemoveItemIconAccessibleLabel
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Height: =1
                               Image: =removeImage
                               OnSelect: =Remove(locWOAttachments,ThisItem)
@@ -592,14 +748,19 @@ Screens:
       - btnCreateWOSubmit:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
             BorderThickness: =0
             Color: =gblAppStyles.Button.FontColor
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             Fill: =gblAppStyles.Button.Fill
             FocusedBorderColor: =gblAppStyles.FocusBorderColor
             FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
             Font: =gblAppStyles.CommonFont
             FontWeight: =gblAppStyles.Button.FontWeight
             Height: =gblAppStyles.Button.Height
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: |
               =// 1. Create work order
               // 2. Create work order job line on that work order
@@ -789,6 +950,9 @@ Screens:
                       )
                   )
               );
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             Size: =gblAppStyles.Button.FontSize
             Text: =T.SubmitButtonLabel
             Width: =Min(300,Parent.Width -16*2)

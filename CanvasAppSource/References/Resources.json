@@ -46,7 +46,7 @@
       "Path": "Assets\\Images\\0004.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00004.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00004.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "Edit",
@@ -58,7 +58,7 @@
       "Path": "Assets\\Images\\0005.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00005.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00005.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "MSLogo",
@@ -70,7 +70,7 @@
       "Path": "Assets\\Images\\0007.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00007.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00007.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "onboardingLE",
@@ -82,7 +82,7 @@
       "Path": "Assets\\Images\\0008.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00008.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00008.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "onboardingMR",
@@ -94,7 +94,7 @@
       "Path": "Assets\\Images\\0009.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00009.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00009.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "onboardingWO",
@@ -106,7 +106,7 @@
       "Path": "Assets\\Images\\0010.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00010.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00010.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "qr",
@@ -118,7 +118,7 @@
       "Path": "Assets\\Images\\0011.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00011.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00011.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "removeImage",
@@ -130,7 +130,7 @@
       "Path": "Assets\\Images\\0012.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00012.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00012.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "search",
@@ -142,7 +142,7 @@
       "Path": "Assets\\Images\\0014.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images00014.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images00014.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     },
     {
       "Name": "eam-icon-192px",
@@ -154,7 +154,7 @@
       "Path": "Assets\\Images\\994329a5-7732-47f7-9ec6-298a2489147d.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dststil201eus.blob.core.windows.net/b0745f44-a051-44e6-b08f-6f7275d5a3a9-1/resource/Assets0Images0994329a5-7732-47f7-9ec6-298a2489147d.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-12-18T12%3A57%3A25Z&ske=2024-12-19T13%3A12%3A25Z&sks=b&skv=2023-01-03"
+      "RootPath": "https://dststil201wus.blob.core.windows.net/1514c37b-39ad-4f55-a3e7-14fd6221e63d-1/resource/Assets0Images0994329a5-7732-47f7-9ec6-298a2489147d.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-03-26T13%3A53%3A55Z&ske=2025-03-27T14%3A08%3A55Z&sks=b&skv=2023-01-03"
     }
   ]
 }

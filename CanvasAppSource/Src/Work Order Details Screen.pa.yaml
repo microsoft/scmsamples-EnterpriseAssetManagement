@@ -11,6 +11,7 @@ Screens:
   Work Order Details Screen:
     Properties:
       Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       OnVisible: |+
         =Set(
             gblWorkOrderLifecycleState,
@@ -43,6 +44,7 @@ Screens:
           Control: Gallery@2.15.0
           Variant: VariableHeight
           Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
             DelayItemLoading: =false
             Height: =Parent.Height - Self.Y
             Items: |-
@@ -72,8 +74,8 @@ Screens:
             Visible: |-
               =varPage = C.WorkOrderDetailsScreen.JobsSubPage And With(
                   {locJob: First(Self.AllItems)},
-                  locJob.mserp_dataareaid = WorkOrder.mserp_dataareaid
-                  And locJob.mserp_workorderid = WorkOrder.mserp_workorderid
+                  locJob.'Company Code' = WorkOrder.'Company Code'
+                  And locJob.'Work order' = WorkOrder.'Work order'
               )
             Width: =Parent.Width
             Y: =conWorkOrderNavigation.Y + conWorkOrderNavigation.Height
@@ -82,6 +84,7 @@ Screens:
                 Control: HtmlViewer@2.1.0
                 Properties:
                   DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                  Font: =Font.'Open Sans'
                   Height: =conWorkOrderLineDetails.Height
                   HtmlText: |-
                     ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
@@ -94,6 +97,7 @@ Screens:
                 Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
+                  DropShadow: =DropShadow.None
                   Height: |-
                     =lblWorkOrderLineAsset.Height
                         + lblWorkOrderLineDescription.Height
@@ -111,6 +115,10 @@ Screens:
                   PaddingLeft: =20
                   PaddingRight: =20
                   PaddingTop: =24
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
                   Width: =Parent.TemplateWidth
                 Children:
                   - lblWorkOrderLineAsset:
@@ -118,6 +126,7 @@ Screens:
                       Properties:
                         AlignInContainer: =AlignInContainer.Start
                         AutoHeight: =true
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(41, 40, 39, 1)
                         Font: =gblAppStyles.HeadLine.Font
                         FontWeight: =FontWeight.Semibold
@@ -140,6 +149,7 @@ Screens:
                       Control: Label@2.5.1
                       Properties:
                         AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(41, 40, 39, 1)
                         Font: =gblAppStyles.HeadLine.Font
                         Height: =
@@ -151,7 +161,7 @@ Screens:
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =11
-                        Text: =ThisItem.mserp_workorderjobdescription
+                        Text: =ThisItem.Description
                         Width: =lblWorkOrderLineNumber.Width
                         Wrap: =false
                         X: =
@@ -161,15 +171,21 @@ Screens:
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =32
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Horizontal
                         LayoutGap: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                       Children:
                         - icoWorkOrderLineFunctionalLocation:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(162, 126, 111, 1)
                               FocusedBorderThickness: =0
                               Height: =13
@@ -180,6 +196,7 @@ Screens:
                         - lblWorkOrderLineFunctionalLocation:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(41, 40, 39, 1)
                               Font: =Font.'Segoe UI'
                               FontWeight: =FontWeight.Semibold
@@ -200,15 +217,21 @@ Screens:
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =32
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Horizontal
                         LayoutGap: =10
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
                       Children:
                         - icoWorkOrderLineJobType:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(162, 126, 111, 1)
                               FocusedBorderThickness: =0
                               Height: =13
@@ -219,6 +242,7 @@ Screens:
                         - lblWorkOrderLineJobType:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(41, 40, 39, 1)
                               Font: =Font.'Segoe UI'
                               FontWeight: =FontWeight.Semibold
@@ -228,7 +252,7 @@ Screens:
                               PaddingRight: =0
                               PaddingTop: =0
                               Size: =10.5
-                              Text: =ThisItem.mserp_jobtypeid
+                              Text: =ThisItem.'Maintenance job type'
                               Width: =Parent.Width - Self.X
                               X: =icoWorkOrderLineJobType.X + icoWorkOrderLineJobType.Width + 5
                               Y: =Parent.Height / 2 - Self.Height / 2
@@ -237,16 +261,22 @@ Screens:
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =32
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Horizontal
                         LayoutGap: =10
-                        Visible: =Not(IsBlank(ThisItem.mserp_jobvariantid))
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =Not(IsBlank(ThisItem.'Maintenance job type variant'))
                       Children:
                         - icoWorkOrderLineJobTypeVariant:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(135, 100, 184, 1)
                               FocusedBorderThickness: =0
                               Height: =13
@@ -257,6 +287,7 @@ Screens:
                         - lblWorkOrderLineJobTypeVariant:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(41, 40, 39, 1)
                               Font: =Font.'Segoe UI'
                               FontWeight: =FontWeight.Semibold
@@ -266,7 +297,7 @@ Screens:
                               PaddingRight: =0
                               PaddingTop: =0
                               Size: =10.5
-                              Text: =ThisItem.mserp_jobvariantid
+                              Text: =ThisItem.'Maintenance job type variant'
                               Width: =Parent.Width - Self.X
                               X: =icoWorkOrderLineJobTypeVariant.X + icoWorkOrderLineJobTypeVariant.Width + 5
                               Y: =Parent.Height / 2 - Self.Height / 2
@@ -275,16 +306,22 @@ Screens:
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =32
                         LayoutAlignItems: =LayoutAlignItems.Center
                         LayoutDirection: =LayoutDirection.Horizontal
                         LayoutGap: =10
-                        Visible: =Not(IsBlank(ThisItem.mserp_jobtradeid))
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =Not(IsBlank(ThisItem.Trade))
                       Children:
                         - icoWorkOrderLineTrade:
                             Control: Classic/Icon@2.5.0
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(135, 100, 184, 1)
                               FocusedBorderThickness: =0
                               Height: =13
@@ -295,6 +332,7 @@ Screens:
                         - lblWorkOrderLineTradeWODS:
                             Control: Label@2.5.1
                             Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
                               Color: =RGBA(41, 40, 39, 1)
                               Font: =Font.'Segoe UI'
                               FontWeight: =FontWeight.Semibold
@@ -304,7 +342,7 @@ Screens:
                               PaddingRight: =0
                               PaddingTop: =0
                               Size: =10.5
-                              Text: =ThisItem.mserp_jobtradeid
+                              Text: =ThisItem.Trade
                               Width: =Parent.Width - Self.X
                               X: =icoWorkOrderLineTrade.X + icoWorkOrderLineTrade.Width + 5
                               Y: =Parent.Height / 2 - Self.Height / 2
@@ -324,7 +362,7 @@ Screens:
                   Size: =9
                   Text: |-
                     =//pal-disable PAL004
-                    $"[{ThisItem.mserp_linenumber}]"
+                    $"[{ThisItem.'Line number'}]"
                   Tooltip: =T.LineNumberAccessibleLabel
                   VerticalAlign: =VerticalAlign.Top
                   Width: =30
@@ -333,6 +371,7 @@ Screens:
             - shpLineClickSurfaceWODS:
                 Control: Rectangle@2.3.0
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Fill: =RGBA(0, 0, 0, 0)
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
@@ -347,6 +386,7 @@ Screens:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
+            DropShadow: =DropShadow.None
             Height: =Parent.Height - Self.Y - btnChangeWorkOrderLifecycleState.Height - 16 * 2
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutDirection: =LayoutDirection.Vertical
@@ -355,19 +395,731 @@ Screens:
               =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
               9
             PaddingRight: =9
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Visible: =varPage = C.WorkOrderDetailsScreen.DetailsSubPage
             Width: =Parent.Width
             X: =
             Y: =conWorkOrderNavigation.Y + conWorkOrderNavigation.Height
+          Children:
+            - conWorkOrderHeaderDetails:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: =conWorkOrderHeaderDetailsVertical.Height
+                  LayoutMinHeight: =124
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =1366
+                Children:
+                  - htmCardBackgroundHeaderWODS:
+                      Control: HtmlViewer@2.1.0
+                      Properties:
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =conWorkOrderHeaderDetails.Height
+                        HtmlText: |-
+                          ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Visible: =conInformationWODS.Visible
+                        Width: =Parent.Width
+                  - conWorkOrderHeaderDetailsVertical:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: |-
+                          =lblWorkOrderState.Height
+                              + lblWorkOrderID.Height
+                              + lblWorkOrderDescription.Height
+                              + Self.PaddingTop + Self.PaddingBottom
+                              + Self.LayoutGap * 3
+                        LayoutDirection: =LayoutDirection.Vertical
+                        PaddingBottom: =20
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        PaddingTop: =24
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =Parent.Width
+                      Children:
+                        - lblWorkOrderState:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =RGBA(15,108,189, 1)
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Semibold
+                              Size: =gblAppStyles.FontSize_Small
+                              Text: =Coalesce(gblWorkOrderLifecycleState, WorkOrder.'Lifecycle state')
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+                        - lblWorkOrderID:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Semibold
+                              Size: =gblAppStyles.FontSize_Large
+                              Text: =WorkOrder.'Work order'
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+                        - lblWorkOrderDescription:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Font: =Font.'Segoe UI'
+                              Height: =70
+                              Size: =gblAppStyles.FontSize_Medium
+                              Text: =WorkOrder.Description
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+            - conWorkOrderHeaderTags:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: =150
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =1366
+                Children:
+                  - htmCardBackgroundTagsWODS:
+                      Control: HtmlViewer@2.1.0
+                      Properties:
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =conWorkOrderHeaderTags.Height
+                        HtmlText: |-
+                          ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        Visible: =conInformationWODS.Visible
+                        Width: =Parent.Width
+                  - conWorkOrderHeaderTagsVertical:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        PaddingBottom: =20
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        PaddingTop: =24
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =Parent.Width
+                      Children:
+                        - conWorkOrderTypeWODS:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =48
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width - Parent.PaddingLeft * 2
+                              Y: =24
+                            Children:
+                              - lblTextWOT_WODS:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(57, 57, 57, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =28
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =WorkOrder.'Work order type'
+                                    Width: =Parent.Width - Self.X
+                                    X: =icoIconWOT_WODS.X + icoIconWOT_WODS.Width + 10
+                                    Y: =20
+                              - icoIconWOT_WODS:
+                                  Control: Classic/Icon@2.5.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(135, 100, 184, 1)
+                                    FocusedBorderThickness: =0
+                                    Height: =20
+                                    Icon: =Icon.Tag
+                                    Width: =20
+                                    X: =8
+                                    Y: =Parent.Height / 2 - Self.Height / 2
+                              - lblWorkOrderTypeFieldDescription:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(92,92,92, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =28
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =gblAppStyles.FontSize_Small
+                                    Text: =T.WorkOrderTypeLabel
+                                    Width: =Parent.Width - Self.X
+                                    X: =icoIconWOT_WODS.X + icoIconWOT_WODS.Width + 10
+                        - conWorkOrderServiceLevelWODS:
+                            Control: GroupContainer@1.3.0
+                            Variant: ManualLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =conWorkOrderTypeWODS.Height
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width - Parent.PaddingLeft * 2
+                              Y: =24
+                            Children:
+                              - lblTextWOSL_WODS:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(57, 57, 57, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =28
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =gblAppStyles.FontSize_Large
+                                    Text: =WorkOrder.'Asset management work order service levels'.'Name (mserp_formattedservicelevelname)'
+                                    Width: =Parent.Width - Self.X
+                                    X: =icoIconWOSL_WODS.X + icoIconWOSL_WODS.Width + 10
+                                    Y: =20
+                              - icoIconWOSL_WODS:
+                                  Control: Classic/Icon@2.5.0
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(175, 31, 117, 1)
+                                    FocusedBorderThickness: =0
+                                    Height: =20
+                                    Icon: =Icon.Flag
+                                    Width: =20
+                                    X: =8
+                                    Y: =Parent.Height / 2 - Self.Height / 2
+                              - lblWorkOrderServiceLevelFieldDescription:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(92,92,92, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Height: =28
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Size: =gblAppStyles.FontSize_Small
+                                    Text: =T.ServiceLevelLabel
+                                    Width: =Parent.Width - Self.X
+                                    X: =icoIconWOT_WODS.X + icoIconWOT_WODS.Width + 10
+            - conWorkOrderHeaderScheduling:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: =270
+                  LayoutMinHeight: =200
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =1366
+                Children:
+                  - htmCardBackgroundSchedulingWODS:
+                      Control: HtmlViewer@2.1.0
+                      Properties:
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =conWorkOrderHeaderScheduling.Height
+                        HtmlText: |-
+                          ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        Visible: =conInformationWODS.Visible
+                        Width: =Parent.Width
+                  - conWorkOrderHeaderSchedulingVertical:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        PaddingBottom: =20
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        PaddingTop: =14
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =Parent.Width
+                      Children:
+                        - conSchedulingExpectedWODS:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =72
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                            Children:
+                              - conSchedulingExpectedStart:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingExpectedStartLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(42,172,148, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ExpectedStartLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingExpectedStartText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Expected start' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Expected start',
+                                                    -TimeZoneOffset(WorkOrder.'Expected start'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
+                              - conSchedulingExpectedEnd:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingExpectedEndLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(209, 52, 56, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ExpectedEndLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingExpectedEndText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Expected end' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Expected end',
+                                                    -TimeZoneOffset(WorkOrder.'Expected end'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
+                        - shpSchedulingDivider_1:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(209, 209, 209, 1)
+                              Height: =1
+                        - conSchedulingScheduledWODS:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =72
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                            Children:
+                              - conSchedulingScheduledStart:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingScheduledStartLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(42,172,148, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ScheduledStartLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingScheduledStartText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Scheduled start' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Scheduled start',
+                                                    -TimeZoneOffset(WorkOrder.'Scheduled start'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
+                              - conSchedulingScheduledEnd:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingScheduledEndLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(209, 52, 56, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ScheduledEndLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingScheduledEndText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Scheduled end' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Scheduled end',
+                                                    -TimeZoneOffset(WorkOrder.'Scheduled end'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
+                        - shpSchedulingDivider_2:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Fill: =RGBA(209, 209, 209, 1)
+                              Height: =1
+                        - conSchedulingActualWODS:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              AlignInContainer: =AlignInContainer.SetByContainer
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =72
+                              LayoutAlignItems: =LayoutAlignItems.Center
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                            Children:
+                              - conSchedulingActualStart:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingActualStartLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(42,172,148, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ActualStartLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingActualStartText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Actual start' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Actual start',
+                                                    -TimeZoneOffset(WorkOrder.'Actual start'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
+                              - conSchedulingActualEnd:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    DropShadow: =DropShadow.None
+                                    Height: =40
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinWidth: =110
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    Y: =40
+                                  Children:
+                                    - lblSchedulingActualEndLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(209, 52, 56, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Small
+                                          Text: =T.ActualEndLabel
+                                          Width: =Parent.Width
+                                          Y: =40
+                                    - lblSchedulingActualEndText:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Font: =Font.'Segoe UI'
+                                          Height: =18
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Large
+                                          Text: |-
+                                            =If(
+                                                WorkOrder.'Actual end' = Blank(),
+                                                C.EmDash,
+                                                DateAdd(
+                                                    WorkOrder.'Actual end',
+                                                    -TimeZoneOffset(WorkOrder.'Actual end'),
+                                                    TimeUnit.Minutes
+                                                )
+                                            )
+                                          Width: =Parent.Width
+                                          Wrap: =false
+                                          Y: =20
       - btnChangeWorkOrderLifecycleState:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
             BorderThickness: =0
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
             Fill: =RGBA(7, 66, 171, 1)
             FocusedBorderColor: =gblAppStyles.FocusBorderColor
             FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
             Font: =gblAppStyles.Button.Font
             Height: =52
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: |
               =UpdateContext(
                   {
@@ -398,6 +1150,9 @@ Screens:
                   }
               );
               UpdateContext({varIsLoadingAvailableWorkOrderStates: false});
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             RadiusBottomLeft: =12
             RadiusBottomRight: =12
             RadiusTopLeft: =12
@@ -408,3 +1163,128 @@ Screens:
             Width: =Parent.Width - (16 * 2)
             X: =16
             Y: =Parent.Height - Self.Height - 16
+      - conWorkOrderNavigation:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =60
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            Y: =cmpHeaderWODS.Height
+          Children:
+            - shpNavigationBackdropWOS:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =btnInformationPage.Height
+                  Width: =Parent.Width - Self.X - btnInformationPage.RadiusBottomRight - 16
+                  X: =btnInformationPage.X + btnInformationPage.RadiusBottomLeft
+                  Y: =btnJobsPage.Y
+            - btnJobsPage:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =If(varPage = C.WorkOrderDetailsScreen.JobsSubPage, Color.White, ColorValue("#0742AB"))
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =If(varPage = C.WorkOrderDetailsScreen.JobsSubPage, ColorValue("#0742AB"), Color.White)
+                  FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                  FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                  Font: =Font.'Segoe UI'
+                  Height: =36
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: |-
+                    =UpdateContext({varPage: C.WorkOrderDetailsScreen.JobsSubPage})
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =20
+                  RadiusBottomRight: =20
+                  RadiusTopLeft: =20
+                  RadiusTopRight: =20
+                  Size: =11
+                  Text: =T.JobsLabel
+                  Width: =Parent.Width / 2 - 16
+                  X: =btnInformationPage.X + btnInformationPage.Width
+                  Y: =12
+            - btnInformationPage:
+                Control: Classic/Button@2.2.0
+                Properties:
+                  BorderColor: =ColorFade(Self.Fill, -15%)
+                  BorderThickness: =0
+                  Color: =If(varPage = C.WorkOrderDetailsScreen.DetailsSubPage, Color.White, ColorValue("#0742AB"))
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                  Fill: =If(varPage = C.WorkOrderDetailsScreen.DetailsSubPage, ColorValue("#0742AB"), Color.White)
+                  FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                  FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                  Font: =Font.'Segoe UI'
+                  Height: =36
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  OnSelect: |-
+                    =UpdateContext({ varPage: C.WorkOrderDetailsScreen.DetailsSubPage })
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
+                  RadiusBottomLeft: =20
+                  RadiusBottomRight: =20
+                  RadiusTopLeft: =20
+                  RadiusTopRight: =20
+                  Size: =11
+                  Text: =T.WorkOrderLabel
+                  Width: =Parent.Width / 2 - 16
+                  X: =16
+                  Y: =btnJobsPage.Y
+      - cmpHeaderWODS:
+          Control: CanvasComponent
+          ComponentName: SubScreenHeader
+          Properties:
+            BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =54
+            Subtitle: =Blank()
+            Title: =WorkOrder.'Work order'
+            Width: =App.Width
+      - cmpChangeWorkOrderStateV2WODS:
+          Control: CanvasComponent
+          ComponentName: BottomSheetChoiceSelector
+          Properties:
+            AvailableChoices: =varAvailableWorkOrderStates
+            ChoiceAccessibleName: =T.AvailableChoisesAccessibleLabel
+            ComponentInstanceName: ="cmpChangeWorkOrderStateV2WODS"
+            CurrentlySelectedChoice: =Coalesce(gblWorkOrderLifecycleState, WorkOrder.'Lifecycle state')
+            Fill: =RGBA(0, 0, 0, 0.15)
+            FocusBorderColor: =gblAppStyles.FocusBorderColor
+            FocusBorderThickness: =gblAppStyles.FocusBorderThickness
+            Height: =App.Height
+            Loading: =varIsLoadingAvailableWorkOrderStates
+            LoadingChoicesText: =T.WorkOrderAvailableStatesLoadingLabel
+            OnCancel: =UpdateContext({varShowStateChangePrompt:false})
+            OnSelect: |+
+              =Patch(
+                  'Asset management work orders V2 (mserp)',
+                  WorkOrder,
+                  {'Next lifecycle state': SelectedChoice.label}
+              );
+
+              Set(gblWorkOrderLifecycleState, SelectedChoice.label);
+
+              UpdateContext(
+                  {
+                      varShowStateChangePrompt: false
+                  }
+              );
+            ReturnFocus: ="btnChangeWorkOrderLifecycleState"
+            SelectedChoiceTooltip: =T.SelectedLabel
+            Title: =Blank()
+            UseStaticOrdering: =false
+            Visible: =varShowStateChangePrompt
+            Width: =App.Width

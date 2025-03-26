@@ -11,6 +11,7 @@ Screens:
   Item Consumption Product Search Screen:
     Properties:
       Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
       OnHidden: |-
         =UpdateContext({ SearchText: Blank() });
       OnVisible: |-
@@ -29,6 +30,7 @@ Screens:
           Variant: Vertical
           Properties:
             AccessibleLabel: =T.SpareItemsGalleryAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
             Height: =Parent.Height - Self.Y
             Items: |-
               =If(
@@ -37,8 +39,8 @@ Screens:
                       {
                           locAssetSpareItems: Filter(
                               'Asset management spare part items V2 (mserp)',
-                              mserp_dataareaid = WorkOrderJob.mserp_dataareaid,
-                              mserp_maintenanceassettypeid = WorkOrderJob.mserp_FK_MaintenanceAsset_id.mserp_maintenanceassettypeid
+                              'Company Code' = WorkOrderJob.'Company Code',
+                              'Asset type' = WorkOrderJob.'Assets entity view V3 (mserp_FK_MaintenanceAsset_id)'.'Asset type'
                           )
                       },
                       If(
@@ -47,7 +49,7 @@ Screens:
                           Search(
                               locAssetSpareItems,
                               cmpSearchBarICPSS.SearchText,
-                              mserp_productnumber
+                              'Item number'
                           )
                       )
                   ),
@@ -65,8 +67,8 @@ Screens:
               And (Not IsEmpty(Self.AllItems))
               And With(
                   {locSparePart: First(Self.AllItems)},
-                  locSparePart.mserp_dataareaid = WorkOrderJob.mserp_dataareaid
-                  And locSparePart.mserp_maintenanceassettypeid = WorkOrderJob.mserp_FK_MaintenanceAsset_id.mserp_maintenanceassettypeid
+                  locSparePart.'Company Code' = WorkOrderJob.'Company Code'
+                  And locSparePart.'Asset type' = WorkOrderJob.'Assets entity view V3 (mserp_FK_MaintenanceAsset_id)'.'Asset type'
               )
             Width: =Parent.Width
             Y: =conProductSourcePills.Height + conProductSourcePills.Y
@@ -74,6 +76,7 @@ Screens:
             - shpSparePartBottomLineICPSS:
                 Control: Rectangle@2.3.0
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Fill: =RGBA(209, 209, 209, 1)
                   Height: =1
                   OnSelect: =Select(Parent)
@@ -82,6 +85,7 @@ Screens:
             - lblSparePartItemNumber:
                 Control: Label@2.5.1
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Color: =gblAppColors.Accent
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
@@ -93,7 +97,7 @@ Screens:
                   PaddingRight: =16
                   Size: =gblAppStyles.FontSize_Medium
                   TabIndex: =0
-                  Text: =ThisItem.mserp_productnumber
+                  Text: =ThisItem.'Item number'
                   Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
                   X: =gblAppStyles.FocusBorderThickness
       - galAssetBOMItemsForConsumption:
@@ -101,6 +105,7 @@ Screens:
           Variant: Vertical
           Properties:
             AccessibleLabel: =T.AssetBomItemsAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
             Height: =Parent.Height - Self.Y
             Items: |-
               =If(
@@ -109,8 +114,8 @@ Screens:
                       {
                           locAssetBomItems: Filter(
                               'Asset management asset Bill of materials V2 (mserp)',
-                              mserp_dataareaid = WorkOrderJob.mserp_dataareaid,
-                              mserp_maintenanceassetid = WorkOrderJob.mserp_maintenanceassetid
+                              'Company Code' = WorkOrderJob.'Company Code',
+                              Asset = WorkOrderJob.Asset
                           )
                       },
                       If(
@@ -119,7 +124,7 @@ Screens:
                           Search(
                               locAssetBomItems,
                               cmpSearchBarICPSS.SearchText,
-                              mserp_itemnumber
+                              'Item number'
                           )
                       )
                   ),
@@ -137,8 +142,8 @@ Screens:
               And (Not IsEmpty(Self.AllItems))
               And With(
                   {locBOMItem: First(Self.AllItems)},
-                  locBOMItem.mserp_dataareaid = WorkOrderJob.mserp_dataareaid
-                  And locBOMItem.mserp_maintenanceassetid = WorkOrderJob.mserp_maintenanceassetid
+                  locBOMItem.'Company Code' = WorkOrderJob.'Company Code'
+                  And locBOMItem.Asset = WorkOrderJob.Asset
               )
             Width: =Parent.Width
             Y: =conProductSourcePills.Height + conProductSourcePills.Y
@@ -146,6 +151,7 @@ Screens:
             - shpAssetBOMBottomLineICPSS:
                 Control: Rectangle@2.3.0
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Fill: =RGBA(209, 209, 209, 1)
                   Height: =1
                   OnSelect: =Select(Parent)
@@ -154,6 +160,7 @@ Screens:
             - lblAssetBOMItemNumber:
                 Control: Label@2.5.1
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Color: =gblAppColors.Accent
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
@@ -165,13 +172,14 @@ Screens:
                   PaddingRight: =16
                   Size: =gblAppStyles.FontSize_Medium
                   TabIndex: =0
-                  Text: =ThisItem.mserp_itemnumber
+                  Text: =ThisItem.'Item number'
                   Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
                   X: =gblAppStyles.FocusBorderThickness
       - lblItemsForConsumptionPlaceholder:
           Control: Label@2.5.1
           Properties:
             Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
             Color: =gblAppColors.Tag
             Font: =gblAppStyles.CommonFont
             FontWeight: =FontWeight.Semibold
@@ -187,6 +195,7 @@ Screens:
           Variant: Vertical
           Properties:
             AccessibleLabel: =T.ItemsForConsumptionAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
             Height: =Parent.Height - Self.Y
             Items: |-
               =If(
@@ -221,6 +230,7 @@ Screens:
             - shpBottomLineICPSS:
                 Control: Rectangle@2.3.0
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Fill: =RGBA(209, 209, 209, 1)
                   Height: =1
                   OnSelect: =Select(Parent)
@@ -229,6 +239,7 @@ Screens:
             - lblConsumptionItemNumber:
                 Control: Label@2.5.1
                 Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
                   Color: =gblAppColors.Accent
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
@@ -242,13 +253,14 @@ Screens:
                   TabIndex: =0
                   Text: |-
                     =//pal-disable PAL004
-                    $"[{ThisItem.mserp_productnumber}] {ThisItem.mserp_productname}"
+                    $"[{ThisItem.mserp_productnumber}] {ThisItem.mserp_productname} {ThisItem.'Search name (mserp_productsearchname)'}"
                   Width: =Parent.TemplateWidth -2*gblAppStyles.FocusBorderThickness
                   X: =gblAppStyles.FocusBorderThickness
       - conProductSourcePills:
           Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
+            DropShadow: =DropShadow.None
             Fill: =RGBA(7, 66, 171, 1)
             Height: =62
             LayoutDirection: =LayoutDirection.Horizontal
@@ -258,6 +270,10 @@ Screens:
             PaddingLeft: =16
             PaddingRight: =16
             PaddingTop: =16
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
             Width: =App.Width
             Y: =cmpSearchBarICPSS.Y + cmpSearchBarICPSS.Height
           Children:
@@ -265,16 +281,24 @@ Screens:
                 Control: Classic/Button@2.2.0
                 Properties:
                   AlignInContainer: =AlignInContainer.Stretch
+                  BorderColor: =ColorFade(Self.Fill, -15%)
                   BorderThickness: =0
                   Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAllItems, gblAppColors.Accent, Color.White)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
                   Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                   Font: =gblAppStyles.Button.Font
                   FontWeight: =FontWeight.Normal
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                   LayoutMinHeight: =28
                   OnSelect: |-
                     =UpdateContext({ varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchAllItems })
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
                   RadiusBottomLeft: =20
                   RadiusBottomRight: =20
                   RadiusTopLeft: =20
@@ -292,13 +316,18 @@ Screens:
                 Control: Classic/Button@2.2.0
                 Properties:
                   AlignInContainer: =AlignInContainer.Stretch
+                  BorderColor: =ColorFade(Self.Fill, -15%)
                   BorderThickness: =0
                   Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchAssetBOM, gblAppColors.Accent, Color.White)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
                   Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                   Font: =gblAppStyles.Button.Font
                   FontWeight: =FontWeight.Normal
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                   LayoutMinHeight: =28
                   OnSelect: |+
                     =UpdateContext({varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchAssetBOM});
@@ -310,6 +339,9 @@ Screens:
                             And Asset = WorkOrderJob.Asset
                         )
                     );
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
                   RadiusBottomLeft: =20
                   RadiusBottomRight: =20
                   RadiusTopLeft: =20
@@ -321,16 +353,24 @@ Screens:
                 Control: Classic/Button@2.2.0
                 Properties:
                   AlignInContainer: =AlignInContainer.Stretch
+                  BorderColor: =ColorFade(Self.Fill, -15%)
                   BorderThickness: =0
                   Color: =If(varSelectedItemsSource = C.ItemConsumptionProductSearchScreen.SearchSpareParts, gblAppColors.Accent, Color.White)
+                  DisabledBorderColor: =RGBA(166, 166, 166, 1)
                   Fill: =If(Self.Color = gblAppColors.Accent, Color.White, gblAppColors.Accent)
                   FocusedBorderColor: =gblAppStyles.FocusBorderColor
                   FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                   Font: =gblAppStyles.Button.Font
                   FontWeight: =FontWeight.Normal
+                  HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                  HoverColor: =RGBA(255, 255, 255, 1)
+                  HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
                   LayoutMinHeight: =28
                   OnSelect: |-
                     =UpdateContext({ varSelectedItemsSource: C.ItemConsumptionProductSearchScreen.SearchSpareParts })
+                  PressedBorderColor: =Self.Fill
+                  PressedColor: =Self.Fill
+                  PressedFill: =Self.Color
                   RadiusBottomLeft: =20
                   RadiusBottomRight: =20
                   RadiusTopLeft: =20
@@ -338,10 +378,42 @@ Screens:
                   Size: =gblAppStyles.FontSize_Medium
                   Text: =T.ItemConsumptionTypeSparePartsLabel
                   Width: =120
+      - cmpSearchBarICPSS:
+          Control: CanvasComponent
+          ComponentName: SearchBar
+          Properties:
+            AccessibleLabel: =T.SearchAccessibleLabel
+            DefaultSearchText: =SearchText
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =62
+            SearchHintText: =T.SearchHintLabel
+            Width: =Parent.Width
+            Y: =cmpHeaderICPSS.Height
+      - cmpHeaderICPSS:
+          Control: CanvasComponent
+          ComponentName: SubScreenHeader
+          Properties:
+            BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =54
+            Subtitle: =Blank()
+            Title: =T.AddItemLabel
+            Width: =Parent.Width
       - btnHiddenItemSelectionBehavior:
           Control: Classic/Button@2.2.0
           Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(56, 96, 178, 1)
+            Font: =Font.'Open Sans'
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
             OnSelect: "=With(\r\n    {\r\n        locAsset: LookUp(\r\n            Assets,\r\n            'Company Code' = gblAppCache.UserActiveWorker.'Company Code'\r\n            And 'Asset (mserp_maintenanceassetid)' = WorkOrderJob.Asset\r\n        )\r\n    },\r\n    With(\r\n        {\r\n            locDefaultFLSiteId: locAsset.'Asset management functional locations'.Site,\r\n            locDefaultFLWarehouseId: locAsset.'Asset management functional locations'.Warehouse,\r\n            locDefaultStorageDimensions: If(\r\n                IsBlank(locAsset.'Asset management functional locations'.Site) Or IsBlank(locAsset.'Asset management functional locations'.Warehouse),\r\n                LookUp(\r\n                    'Asset management released products storage dimension defaults (mserp)',\r\n                    'Company Code' = gblAppCache.UserActiveWorker.'Company Code'\r\n                    And 'Item number' = varSelectedProductNumber\r\n                )\r\n            )\r\n        },\r\n        Back();\r\n        Navigate(\r\n            'Work Order Job Item Consumption Edit Screen',\r\n            ScreenTransition.Cover,\r\n            {\r\n                ItemConsumption: Patch(\r\n                    Defaults('Asset management work order job product consumption lines (mserp)'),\r\n                    {\r\n                        mserp_dataareaid: WorkOrderJob.'Company Code',\r\n                        mserp_workorderid: WorkOrderJob.'Work order',\r\n                        mserp_workorderjobnumber: WorkOrderJob.'Line number',\r\n                        mserp_productnumber: varSelectedProductNumber,\r\n                        mserp_storagesiteid: Coalesce(\r\n                            locDefaultFLSiteId,\r\n                            locDefaultStorageDimensions.Site\r\n                        ),\r\n                        mserp_storagewarehouseid: Coalesce(\r\n                            locDefaultFLWarehouseId,\r\n                            locDefaultStorageDimensions.Warehouse\r\n                        ),\r\n                        mserp_storagewarehouselocationid: If(\r\n                            locDefaultStorageDimensions.Active = 'NoYes (mserp)'.Yes,\r\n                            locDefaultStorageDimensions.Location,\r\n                            Blank()\r\n                        )\r\n                    }\r\n                ),\r\n                Product: First(\r\n                    // need ShowColumns to ensure mserp_trackingdimensiongroupname is included,\r\n                    // otherwise ECS thinks it should be left out\r\n                    ShowColumns(\r\n                        Filter(\r\n                            'Asset management released products (mserp)',\r\n                            'Company Code' = gblAppCache.UserActiveWorker.'Company Code',\r\n                            'Product number' = varSelectedProductNumber\r\n                        ),\r\n                        'Company Code',\r\n                        'Product number',\r\n                        'Product name',\r\n                        'Tracking dimension group'\r\n                    )\r\n                ),\r\n                IsNewConsumptionLine: true,\r\n                IsLocationDimensionEnabled: locDefaultStorageDimensions.Active = 'NoYes (mserp)'.Yes\r\n            }\r\n        );\r\n    );\r\n    \r\n);\r\n"
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
             TabIndex: =-1
             Text: =Blank()
             Visible: =false
