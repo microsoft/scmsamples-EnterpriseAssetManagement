@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>חזור אחורה</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>משימות</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>הזמנות עבודה</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ בקשה</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>בקש תחזוקה</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>חיפוש</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>סרוק</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>נכסים</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>מיקומים פונקציונליים</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>חפש לפי סוג נכס או מזהה נכס</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>חפש לפי שם מיקום או מזהה מיקום</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>הערת עובד</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>הערה פנימית</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>קבצים מצורפים</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>הזמן שהשקעתי</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>פריטים שנצרכו</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>נכס</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>התחלה מתוזמנת</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>סיום מתוזמן</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>הזמנת עבודה</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>שינוי מצב הזמנת עבודה</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>עבור להזמנת עבודה</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>משימות קשורות</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>ראה משימות עבור נכס זה</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>ראה משימות עבור מיקום זה</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>הערות</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>התאם את הזמן שהושקע</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>הוסף פריטים בלחיצה על הלחצן למטה</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>הוסף פריטים</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>חפש או בחר מקור פריט אחר</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>סוג הזמנת עבודה</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>רמת שירות</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>מועד התחלה צפוי</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>סיום צפוי</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>התחלה בפועל</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>סיום בפועל</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>רשימת משימות לביצוע ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>אין רשימת משימות לביצוע</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>התאמת כמות פריטים</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>רשימת פריטי BOM של נכסים</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת נכסים</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת גלריות זמינות</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>הערות של פריט ברשימת משימות לביצוע</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>ערך מונה המדידה של רשימת משימות לביצוע</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>משתנה של רשימת משימות לביצוע</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>התאמת שעות שהושקעו</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת פריטים שנצרכו</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>פריטים לצריכה</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת מיקומים פונקציונליים</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>התאם את הדקות שהושקעו</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>הוספת תמונה</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>רשימת קבצים מצורפים נוכחיים</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>הזן תיאור בקשת תחזוקה</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>הזן הערות בקשת תחזוקה</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>בחר סוג בקשת תחזוקה</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>בחר רמת שירות תחזוקה</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>הסר פריט</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>הזן טקסט חיפוש</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>בחר שפה</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת פריטים חלופיים</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>סינון הזמנות עבודה</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>רשימת הזמנות עבודה</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>רשימת משימות של הזמנות עבודה</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>מיון הזמנות עבודה</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>חפש הזמנות עבודה</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>מספר מוצר</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>שם מוצר</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>אתר</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>מחסן</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>מספר אצווה</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>מספר סידורי</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>התאם כמות</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>הפחתת כמות</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>הגדלת כמות</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>לא ניתן לעדכן את צריכת הפריטים</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>אישור</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>עריכת אתר</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>עריכת מחסן</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>שעות</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>‏‏שעה</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>דקות</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>‏‏דקה</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>מסמכים מסוג '{AttachmentTypeName}' עדיין אינם נתמכים</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>אודות</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>גירסה: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>שפה (השינוי דורש הפעלה מחדש של האפליקציה):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>תנאי השירות</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>ביטול</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>שמירה</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>ייתכן שהמשתמש שלך לא מורשה ליצור בקשות תחזוקה או לתחזק הזמנות עבודה, או שהחיבור לרשת של Dynamics נכשל. פנה למנהל המערכת שלך.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>נסה שוב</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>קבלת הגדרות משתמש נכשלה</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>קבלת פרטי עובד תחזוקה של {UserPersonnelNumber} נכשלה</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>אינך מוקצה לעובדי ניהול של נכסים פעילים. לא תוכל לשמור על הזמנות עבודה.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>סנן</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>היום</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>השבוע</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>כל הזמן</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>מיין לפי</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>מזהה הזמנת עבודה</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>רמת שירות להזמנת העבודה</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>תאריך התחלה מתוזמן</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>חיפוש ...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>משימות: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>סגירה</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>משימה #{JobLineNumber} עבור הזמנת עבודה {WorkOrderId}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>שינוי ישות משפטית</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>מספר שורה</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>משימה</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>עריכת הערת עובד</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>עריכת הערה פנימית</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>הצג</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>הצג קבצים מצורפים</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>התאמה</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>מצב הזמנת עבודה</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>הכרחי</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>ערך: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>ערך: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>הוסף פריט</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>פריטים</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>BOM של נכס</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>חלקי חילוף</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>לא ניתן לעדכן שעות שהושקעו</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>הוראה</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>ההערות שלך</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>תוצאה {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>מינימום: {MeasurementMinimum} - מקסימום: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>הוסף סימון</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>הסר סימון</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>לא ניתן היה לאחזר את סוג בקשת ברירת המחדל</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>חסרה הגדרת רמת שירות</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>קבלת רמת שירות ברירת מחדל נכשלה</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>שליחה</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>לא ניתן ליצור קבצים מצורפים עקב תצורת סוג מסמך חסרה</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>בקשות ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>בקשות</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>הזמנות עבודה</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>הזמנות עבודה ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>הערות</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>סוג בקשת תחזוקה</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>הוספת תמונות</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>ספר לנו מה צריך לעשות</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>תיאור</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>בקשת תחזוקה נוצרה בהצלחה: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>סיום</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>בין ישויות משפטיות</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>רק צריך להקיש על תמונת הפרופיל כדי להציג את הישויות המשפטיות הזמינות שלך.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>החלפה בין מספר ישויות משפטיות</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>לתחילת העבודה</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>הזמנות עבודה יעילות</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>צפה בתיעוד וקבל תקשורת ברורה והיסטוריית תחזוקה.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>שליטה מלאה בנכסים שלך</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>הבא</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>בקשות מהירות</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>סרוק את קוד ה- QR של נכס או מיקום וצלם תמונה או סרטון של הבעיה.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>הגש בקשה תוך פחות מדקה</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>טוען מצבים זמינים...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>טוען אתרים...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>טוען מחסנים...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>הגדרות</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>נבחר</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>הגדלת שעות שהושקעו</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>הגדלת הדקות שהושקעו</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>הפחתת שעות שהושקעו</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>הפחתת הדקות שהושקעו</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>הזמנת עבודה {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>הזמנת עבודה {WorkOrderId}, שורה {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} נבחר</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>הזמנת העבודה נוצרה בהצלחה. {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>צור הזמנת עבודה חדשה</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>צור הזמנת עבודה חדשה או בקש תחזוקה</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>נכשלה קבלה של ברירת המחדל של סוג הזמנת עבודה</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>הערות</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>הוספת תמונות</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>ספר לנו מה צריך לעשות</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>תיאור</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>הוספת תמונה</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>רשימת קבצים מצורפים נוכחיים</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>הזן תיאור של הזמנת העבודה</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>הזן הערות למשימה של הזמנת עבודה</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>בחר סוג של הזמנת עבודה</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>בחר רמת שירות להזמנת העבודה</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>סוג משימה</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>משתנה של סוג משימה</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>בחר סוג עבודה בהזמנת עבודה</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>בחר משתנה של סוג משימה בהזמנת עבודה</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>תזמון הזמנת עבודה (פועל)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>שנה כדי לתזמן מיד הזמנת העבודה בעת היצירה</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>כבה כדי להימנע מתזמון הזמנת העבודה בעת היצירה</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>תזמון הזמנת עבודה (כבוי)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>הזמנת עבודה חדשה</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} קבצים מצורפים</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} שעות</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} שעות {WholeMinutes} דקות</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} פריטים</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>הזמנת עבודה חדשה לנכס</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>טוען מיקומים זמינים...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>ערוך מיקום</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>מיקום</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>התמונה גדולה מדי, אי אפשר לצרף אותה</value>
+  </data>
+</root>

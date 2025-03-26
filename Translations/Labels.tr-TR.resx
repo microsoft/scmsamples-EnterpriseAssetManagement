@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>Geri git</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>İşler</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>İş emirleri</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ Talep</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>Bakım talep et</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Ara</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>Tara</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>Kıymetler</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>İşlem yapılacak yerleşimler</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>Kıymet türüne veya kıymet koduna göre arayın</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>Yerleşim adına veya yerleşim koduna göre arayın</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>Çalışan açıklaması</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>Dahili not</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Ekler</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>Harcanan zamanım</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>Tüketilen maddeler</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>Kıymet</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>Planlanan başlangıç</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>Planlanan bitiş</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>İş emri</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>İş emri durumunu değiştir</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>İş emrine git</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>İlgili işler</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>Bu kıymetle ilgili işleri gör</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>Bu yerleşimle ilgili işleri gör</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>Açıklamalar</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>Harcanan zamanı ayarla</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>Aşağıdaki düğmeye tıklayarak madde ekleyin</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>Madde ekle</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>Başka bir madde kaynağı arayın veya seçin</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>İş emri türü</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>Hizmet düzeyi</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>Beklenen başlangıç</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>Beklenen bitiş</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>Fiili başlangıç</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>Fiili bitiş</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>Yapılacaklar listesi ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>Yapılacaklar listesi yok</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>Madde miktarını ayarla</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>Varlık ürün reçetesi madde listesi</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Kıymet listesi</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>Kullanılabilir galerilerin listesi</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>Yapılacaklar listesi madde açıklamaları</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>Yapılacaklar listesi ölçüm sayacı değeri</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>Yapılacaklar listesi değişkeni</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Harcanan saat sayısını düzelt</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>Tüketilen madde listesi</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Tüketilecek maddeler</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>İşlem yapılacak yerleşimlerin listesi</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Harcanan dakikaları düzelt</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>Fotoğraf ekleyin</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Geçerli eklerin listesi</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>Bakım talebi açıklaması girin</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>Bakım talebi notları girin</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>Bakım talebi türü seçin</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Bakım hizmeti düzeyi seçin</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>Maddeyi kaldır</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>Arama metni girin</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>Dil seçin</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Yedek parça listesi</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>İş emirlerini filtrele</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>İş emirlerinin listesi</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>İş emri işleri listesi</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>İş emirlerini sırala</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>İş emirlerini ara</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>Ürün numarası</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Ürün adı</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>Tesis</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>Ambar</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>Toplu iş numarası</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>Seri numarası</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>Miktarı ayarla</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>Miktarı azalt</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>Miktarı artır</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Madde tüketimi güncelleştirilemiyor</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>Onayla</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>Tesisi düzenle</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>Ambarı düzenle</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>Saat</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>Dakika</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>Dakika</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>{AttachmentTypeName} türündeki ekler henüz desteklenmemektedir</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>Hakkında</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Sürüm: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>Dil (değişiklik uygulamanın yeniden başlatılmasını gerektirir):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>Hizmet koşulları</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>İptal</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>Kaydet</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>Kullanıcınızın bakım talebi oluşturma veya iş emirlerini yönetme yetkisi olmayabilir ve Dynamics'e ağ bağlantısı başarısız olmuş olabilir. Sistem yöneticinize başvurun.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>Yeniden dene</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>Kullanıcı ayarları alınamadı</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>{UserPersonnelNumber} için bakım görevlisi ayrıntıları alınamadı</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>Herhangi bir etkin kıymet yönetimi çalışanına atanmadınız. İş emirlerini yönetemezsiniz.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>Filtrele</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>Bugün</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>Bu hafta</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>Tüm zamanlar</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>Sıralama ölçütü</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>İş emri kodu</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>İş emri hizmet düzeyi</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>Planlanan başlangıç tarihi</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>Ara ...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>İşler: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Kapat</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>{WorkOrderId} iş emri için iş #{JobLineNumber}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>Tüzel kişiliği değiştir</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>Satır numarası</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>İş</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>Çalışan açıklamasını düzenle</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>Dahili notu düzenle</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>Görüntüle</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>Ekleri görüntüle</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>Ayarla</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>İş emri durumu</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>Zorunlu</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>Değer: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>Değer: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>Madde ekle</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>Maddeler</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>Varlık ürün reçetesi</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>Yedek parçalar</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Harcanan saat sayısı güncelleştirilemiyor</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>Yönerge</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>Notlarınız</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>Sonuç: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>Min: {MeasurementMinimum} - Maks: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>Kontrol edildi olarak işaretle</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>Kontrol edilmedi olarak işaretle</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>Varsayılan talep türü alınamadı</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>Hizmet düzeyi kurulumu eksik</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>Varsayılan hizmet düzeyi alınamadı</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>Eksik belge türü yapılandırması nedeniyle ekler oluşturulamadı</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>Talepler ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>Talepler</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>İş emirleri</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>İş emirleri ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>Notlar</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>Bakım talebi türü</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>Fotoğraf ekle</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>Yapılması gerekenleri bize söyleyin</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>Bakım talebi başarıyla oluşturuldu: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>Bitti</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>Tüzel kişilikler genelinde</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>Kullanılabilir tüzel kişiliklerinizi görüntülemek için profil resminize dokunun.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>Birden çok tüzel kişilik arasında geçiş yapın</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>Kullanmaya başlayın</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>Verimli iş emirleri</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>Belgeleri görüntüleyin ve bakım için net bir iletişim ve geçmiş edinin.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>Kıymetleriniz üzerinde tam denetime sahip olun</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>İleri</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>Hızlı talepler</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>Bir kıymet veya yerleşimin QR kodunu tarayın veya sorunun fotoğrafını ya da videosunu çekin.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>Bir dakikadan kısa sürede talepte bulunun</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>Kullanılabilir durumlar yükleniyor...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>Tesisler yükleniyor...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>Ambarlar yükleniyor...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Ayarlar</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>Seçildi</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Harcanan saati artır</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Harcanan dakikayı artır</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Harcanan saati azalt</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Harcanan dakikayı azalt</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>{WorkOrderId} iş emri</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>{WorkOrderId} iş emri, {JobLineNumber}. satır</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} Seçildi</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>İş emri başarıyla oluşturuldu: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>Yeni iş emri oluştur</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>Yeni iş emri oluştur veya bakım talep et</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>Varsayılan iş emri türü alınamadı</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>Notlar</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>Birden fazla fotoğraf ekleyin</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>Yapılması gerekenleri bize söyleyin</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>Açıklama</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>Bir fotoğraf ekleyin</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Geçerli eklerin listesi</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>İş emri açıklamasını girin</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>İş emri iş notlarını girin</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>İş emri türünü seçin</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>İş emri hizmet düzeyini seçin</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>İş türü</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>İş türü çeşidi</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>İş emri iş türünü seçin</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>İş emri iş türü çeşidini seçin</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>İş emri planla (açık)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>İş emrini oluşturma sırasında hemen planlamak istiyorsanız açın</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>İş emrini oluşturma sırasında planlama yapmak istemiyorsanız kapatın</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>İş emri planla (kapalı)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>Yeni iş emri</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} ek</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} saat</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} saat {WholeMinutes} dakika</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} ürün</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>Varlık için yeni iş emri</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>Mevcut yerleşimler yükleniyor...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>Yerleşimi düzenle</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>Yerleşim</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>Fotoğraf, eklenemeyecek kadar büyük</value>
+  </data>
+</root>

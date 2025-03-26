@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>Gå tillbaka</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>Jobb</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>Arbetsorder</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ Begäran</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>Begär underhåll</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>Skanna</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>Tillgångar</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>Funktionsplatser</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>Sök efter tillgångstyp eller tillgångs-ID</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>Sök efter platsnamn eller plats-ID</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>Arbetarens kommentar</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>Intern anteckning</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>Bilagor</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>Min spenderade tid</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>Förbrukade artiklar</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>Tillgång</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>Tidsplanerad start</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>Tidsplanerat slut</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>Arbetsorder</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>Ändra arbetsorderns tillstånd</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>Gå till arbetsorder</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>Relaterade jobb</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>Se jobb för den här tillgången</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>Se jobb för den här platsen</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>Kommentarer</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>Justera tidsåtgången</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>Lägg till artiklar genom att klicka på knappen nedan</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>Lägg till artiklar</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>Sök eller välj en annan artikelkälla</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>Typ av arbetsorder</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>Tjänstenivå</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>Förväntad start</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>Förväntat slut</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>Faktisk start</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>Faktiskt slut</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>Checklista ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>Ingen checklista</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>Justera artikelkvantitet</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>Artikellista för tillgångsstruktur</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista över tillgångar</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista över tillgängliga gallerier</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>Checklistepunkter – anmärkningar</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>Räknarvärde för checklistemått</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>Checklistevariabel</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Justera spenderade timmar</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista med förbrukade artiklar</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Artiklar för förbrukning</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista med funktionsplatser</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>Justera spenderade minuter</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>Lägg till ett foto</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Lista över aktuella bilagor</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>Ange beskrivning av underhållsbegäran</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>Gör anteckningar om underhållsbegäran</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>Välj typ av underhållsbegäran</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Välj tjänstenivå för underhåll</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>Ta bort objekt</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>Ange text att söka efter</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>Välj språk</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista över reservdelar</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>Filter för arbetsorder</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>Lista över arbetsorder</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>Lista över arbetsorderjobb</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>Sortera arbetsorder</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>Sök efter arbetsorder</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>Produktnummer</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>Produktnamn</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>Webbplats</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>Lagerställe</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>Batchnummer</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>Serienummer</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>Justera kvantitet</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>Minska kvantitet</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>Öka kvantitet</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Det går inte att uppdatera artikelförbrukning</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>Bekräfta</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>Redigera webbplats</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>Redigera lagerställe</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>Timmar</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>Timme</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>Minuter</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>Minut</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>Bifogade dokument av typen {AttachmentTypeName} stöds inte ännu</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>Om</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>Version: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>Språk (ändringen kräver omstart av appen):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>Tjänstvillkor</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>Avbryt</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>Spara</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>Användaren kanske inte har behörighet att skapa underhållsbegäranden eller underhålla arbetsorder, eller också har nätverksanslutningen till Dynamics slutat fungera. Kontakta systemadministratören.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>Försök igen</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>Det gick inte att hämta användarinställningar</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>Det gick inte att hämta information om underhållsarbetare för {UserPersonnelNumber}</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>Du har inte tilldelats några aktiva arbetare för tillgångshantering. Du kan inte underhålla arbetsorder.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>Filter</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>I dag</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>Den här veckan</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>Hela tiden</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>Sortera efter</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>Arbetsorder-ID</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>Servicenivå för arbetsorder</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>Schemalagt startdatum</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>Sök …</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>Jobb: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>Stäng</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>Jobbnummer{JobLineNumber} för arbetsorder {WorkOrderId}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>Ändra juridisk person</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>Radnummer</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>Jobb</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>Redigera arbetarens kommentar</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>Redigera intern anteckning</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>Visa</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>Visa bilagor</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>Justera</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>Arbetsorderns tillstånd</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>Obligatoriskt</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>Värde: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>Värde: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>Lägg till artikel</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>Objekt</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>Tillgångsstruktur</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>Reservdelar</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>Det går inte att uppdatera spenderade timmar</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>Instruktion</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>Dina anteckningar</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>Resultat: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>Min: {MeasurementMinimum} – Max: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>Markera som kontrollerat</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>Markera som ej kontrollerat</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>Det gick inte att hämta standardtypen för begäran</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>Servicenivåinställning saknas</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>Det gick inte att hämta standardservicenivå</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>Skicka</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>Det gick inte att skapa bilagor på grund av att konfigurationen av dokumenttyp saknas</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>Förfrågningar ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>Förfrågningar</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>Arbetsorder</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>Arbetsorder ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>Anteckningar</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>Typ av underhållsbegäran</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>Lägg till foton</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>Berätta vad som måste göras</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>Underhållsbegäran har skapats: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>Klar</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>För alla juridiska personer</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>Tryck på profilbilden för att visa dina tillgängliga juridiska personer.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>Växla mellan flera juridiska personer</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>Kom igång</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>Effektiva arbetsorder</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>Visa dokumentation och få tydlig kommunikation och underhållshistorik.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>Ha fullständig kontroll över dina tillgångar</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>Nästa</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>Snabbförfrågningar</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>Skanna QR-koden för en tillgång eller plats och ta en bild eller video av problemet.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>Gör en förfrågan på mindre än en minut</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>Läser in tillgängliga tillstånd …</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>Läser in webbplatser …</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>Läser in lagerställen …</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>Inställningar</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>Markerade</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Öka spenderade timmar</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Öka spenderade minuter</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>Minska spenderade timmar</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>Minska spenderade minuter</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Arbetsorder {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>Arbetsorder {WorkOrderId}, rad {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} markerade</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>Arbetsorder skapad: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>Skapa ny arbetsorder</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>Skapa en arbetsorder eller begär underhåll</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>Det gick inte att hämta standardtyp för arbetsorder</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>Anteckningar</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>Lägg till foton</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>Berätta vad du vill få gjort</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>Beskrivning</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>Lägg till ett foto</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>Lista med aktuella bilagor</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>Ange arbetsorderbeskrivning</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>Skriv anteckningar till arbetsorderjobb</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>Välj arbetsordertyp</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>Välj servicenivå för arbetsorder</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>Jobbtyp</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>Jobbtypsvariant</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>Välj jobbtyp för arbetsorder</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>Välj jobbtypvariant för arbetsorder</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>Schemalägg arbetsorder (på)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>Slå på för att tidsplanera arbetsorder direkt när den skapas</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>Stäng av för att undvika att tidsplanera arbetsorder när den skapas</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>Schemalägg arbetsorder (av)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>Ny arbetsorder</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>{AttachmentsCount} bilagor</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} timmar</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} timmar {WholeMinutes} minuter</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>{ConsumedItemsCount} artiklar</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>Ny arbetsorder för tillgång</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>Läser in tillgängliga platser ...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>Redigera plats</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>Plats</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>Fotot är för stort för att kunna bifogas</value>
+  </data>
+</root>

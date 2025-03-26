@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>กลับ</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>งาน</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>ใบสั่งงาน</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ คำขอ</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>ขอการบำรุงรักษา</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>สแกน</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>สินทรัพย์</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>ตำแหน่งที่ทำงาน</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>ค้นหาตามชนิดสินทรัพย์หรือรหัสสินทรัพย์</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>ค้นหาตามชื่อสถานที่หรือรหัสสถานที่</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>ข้อสังเกตของผู้ปฏิบัติงาน</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>หมายเหตุภายใน</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>สิ่งที่แนบ</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>เวลาที่ใช้ไปของฉัน</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>สินค้าที่ใช้ไป</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>สินทรัพย์</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>เริ่มต้นตามกำหนดการ</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>สิ้นสุดตามกำหนดการ</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>ใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>เปลี่ยนสถานะใบสั่งงาน</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>ไปยังใบสั่งงาน</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>งานที่เกี่ยวข้อง</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>ดูงานสำหรับสินทรัพย์นี้</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>ดูงานสำหรับสถานที่นี้</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>หมายเหตุ</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>ปรับปรุงเวลาที่ใช้ไป</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>เพิ่มสินค้าโดยคลิกที่ปุ่มด้านล่าง</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>เพิ่มสินค้า</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>ค้นหาหรือเลือกแหล่งที่มาของสินค้าอื่น</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>ชนิดใบสั่งงาน</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>ระดับการบริการ</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>การเริ่มต้นที่คาด</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>การสิ้นสุดที่คาด</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>เริ่มต้นจริง</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>สิ้นสุดจริง</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>รายการตรวจสอบ ({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>ไม่มีรายการตรวจสอบ</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>ปรับปรุงปริมาณสินค้า</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>รายการสินค้า BOM สินทรัพย์</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการของสินทรัพย์</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการของแกลเลอรีที่มีอยู่</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>ข้อสังเกตสินค้าในรายการตรวจสอบ</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>ค่าตัวนับการวัดของรายการตรวจสอบ</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>ตัวแปรของรายการตรวจสอบ</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>ปรับปรุงชั่วโมงที่ใช้ไป</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการสินค้าที่ใช้ไป</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>สินค้าที่มีการใช้</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการของตำแหน่งที่ทำงาน</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>ปรับปรุงนาทีที่ใช้ไป</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>เพิ่มรูปถ่าย</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>รายการของสิ่งที่แนบปัจจุบัน</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>ป้อนคำอธิบายเกี่ยวกับคำขอการบำรุงรักษา</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>ป้อนบันทึกย่อเกี่ยวกับคำขอการบำรุงรักษา</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>เลือกชนิดคำขอการบำรุงรักษา</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>เลือกระดับบริการของการบำรุงรักษา</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>ลบสินค้า</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>ป้อนข้อความที่จะค้นหา</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>เลือกภาษา</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการของอะไหล่สำรอง</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>กรองใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>รายการของใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>รายการของงานในใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>เรียงลำดับใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>ค้นหาใบสั่งงาน</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>หมายเลขผลิตภัณฑ์</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>ชื่อผลิตภัณฑ์</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>ที่ตั้ง</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>คลังสินค้า</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>หมายเลขชุดงาน</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>หมายเลขลำดับประจำสินค้า</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>ปรับปรุงปริมาณ</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>ลดปริมาณ</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>เพิ่มปริมาณ</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>ไม่สามารถอัปเดตการใช้สินค้า</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>ยืนยัน</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>แก้ไขที่ตั้ง</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>แก้ไขคลังสินค้า</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>ชั่วโมง</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>นาที</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>ยังไม่รองรับสิ่งที่แนบชนิด {AttachmentTypeName}</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>เกี่ยวกับ</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>รุ่น: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>ภาษา (การเปลี่ยนต้องรีสตาร์ทแอป):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>ข้อกำหนดการใช้บริการ</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>ยกเลิก</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>บันทึก</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>ผู้ใช้ของคุณอาจไม่ได้รับอนุญาตให้สร้างคำขอการบำรุงรักษาหรือรักษาใบสั่งงาน หรือการเชื่อมต่อเครือข่ายกับ Dynamics ล้มเหลว ติดต่อผู้ดูแลระบบของคุณ</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>ลองใหม่</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>รับการตั้งค่าของผู้ใช้ไม่สำเร็จ</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>รับรายละเอียดเจ้าหน้าที่บำรุงรักษาสำหรับ {UserPersonnelNumber} ไม่สำเร็จ</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>คุณไม่ได้รับมอบหมายให้เป็นผู้ปฏิบัติงานด้านการจัดการสินทรัพย์ที่ใช้งานอยู่ คุณจะไม่สามารถรักษาใบสั่งงานได้</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>ตัวกรอง</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>วันนี้</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>สัปดาห์นี้</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>เวลาทั้งหมด</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>เรียงลำดับตาม</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>รหัสใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>ระดับการบริการของใบสั่งงาน</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>วันที่เริ่มต้นตามกำหนดการ</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>ค้นหา ...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>งาน: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>ปิด</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>งาน #{JobLineNumber} สำหรับใบสั่งงาน {WorkOrderId}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>เปลี่ยนนิติบุคคล</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>หมายเลขรายการ</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>งาน</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>แก้ไขข้อสังเกตของผู้ปฏิบัติงาน</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>แก้ไขบันทึกย่อภายใน</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>ดู</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>ดูสิ่งที่แนบ</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>ปรับปรุง</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>สถานะใบสั่งงาน</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>ข้อบังคับ</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>ค่า: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>ค่า: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>เพิ่มสินค้า</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>สินค้า</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>BOM สินทรัพย์</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>อะไหล่สำรอง</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>ไม่สามารถอัปเดตชั่วโมงที่ใช้ไป</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>คำแนะนำ</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>บันทึกย่อของคุณ</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>ผลลัพธ์: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>ต่ำสุด: {MeasurementMinimum} - สูงสุด: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>ทำเครื่องหมายเป็นตรวจสอบแล้ว</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>ทำเครื่องหมายเป็นไม่ได้ตรวจสอบ</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>ไม่สามารถดึงชนิดคำขอเริ่มต้น</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>ไม่มีการตั้งค่าระดับการบริการ</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>รับระดับการบริการเริ่มต้นไม่สำเร็จ</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>ส่ง</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>ไม่สามารถสร้างสิ่งที่แนบได้เนื่องจากไม่มีการตั้งค่าคอนฟิกชนิดเอกสาร</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>คำขอ ({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>คำขอ</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>ใบสั่งงาน</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>ใบสั่งงาน ({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>บันทึกย่อ</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>ชนิดคำขอการบำรุงรักษา</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>เพิ่มรูปถ่าย</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>บอกเราว่าต้องทำอะไรบ้าง</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>คำอธิบาย</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>สร้างคำขอการบำรุงรักษาเรียบร้อยแล้ว: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>เสร็จ</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>ข้ามนิติบุคคล</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>เพียงแตะที่รูปภาพโพรไฟล์เพื่อแสดงนิติบุคคลที่คุณมีอยู่</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>สลับระหว่างหลายนิติบุคคล</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>เริ่มต้นใช้งาน</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>ใบสั่งงานที่มีประสิทธิภาพ</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>ดูเอกสารประกอบและแสดงการสื่อสารและประวัติการบำรุงรักษาที่ชัดเจน</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>มีสิทธิ์ควบคุมสินทรัพย์ของคุณเต็มที่</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>ถัดไป</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>คำขอด่วน</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>สแกนคิวอาร์โค้ดของสินทรัพย์หรือสถานที่ แล้วถ่ายภาพหรือวิดีโอของปัญหา</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>ส่งคำขอภายในเวลาไม่ถึงนาที</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>กำลังโหลดสถานะที่มีอยู่...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>กำลังโหลดที่ตั้ง...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>กำลังโหลดคลังสินค้า...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>การตั้งค่า</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>ที่เลือก</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>ชั่วโมงการเพิ่มที่ใช้ไป</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>นาทีการเพิ่มที่ใช้ไป</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>ชั่วโมงการลดที่ใช้ไป</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>นาทีการลดที่ใช้ไป</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>ใบสั่งงาน {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>ใบสั่งงาน {WorkOrderId}, รายการ {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>เลือกไว้ {OptionLabel} รายการ</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>สร้างใบสั่งงานเรียบร้อยแล้ว: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>สร้างใบสั่งงานใหม่</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>สร้างใบสั่งงานใหม่หรือส่งคำขอการบำรุงรักษา</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>ไม่สามารถเรียกชนิดใบสั่งงานเริ่มต้น</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>บันทึกย่อ</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>เพิ่มรูปถ่าย</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>บอกเราว่าต้องทำอะไรบ้าง</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>คำอธิบาย</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>เพิ่มรูปถ่าย</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>รายการของสิ่งที่แนบปัจจุบัน</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>ป้อนคำอธิบายใบสั่งงาน</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>ป้อนบันทึกงานของใบสั่งงาน</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>เลือกชนิดใบสั่งงาน</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>เลือกระดับการบริการของใบสั่งงาน</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>ชนิดงาน</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>ตัวแปรชนิดงาน</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>เลือกชนิดงานของใบสั่งงาน</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>เลือกตัวแปรชนิดงานของใบสั่งงาน</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>จัดกำหนดการใบสั่งงาน (เปิด)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>เปิดเพื่อจัดกำหนดการใบสั่งงานเมื่อสร้างทันที</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>ปิดเพื่อหลีกเลี่ยงการจัดกำหนดการใบสั่งงานเมื่อสร้าง</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>จัดกำหนดการใบสั่งงาน (ปิด)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>ใบสั่งงานใหม่</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>สิ่งที่แนบ {AttachmentsCount} รายการ</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} ชั่วโมง</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours} ชั่วโมง {WholeMinutes} นาที</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>รายการสินค้า {ConsumedItemsCount} รายการ</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>ใบสั่งงานใหม่สำหรับสินทรัพย์</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>กำลังโหลดสถานที่ที่มีอยู่...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>แก้ไขสถานที่</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>สถานที่</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>แนบรูปภาพไม่ได้เนื่องจากมีขนาดใหญ่เกินไป</value>
+  </data>
+</root>

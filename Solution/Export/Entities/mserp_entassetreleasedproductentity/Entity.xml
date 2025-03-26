@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Asset management released products (mserp)" OriginalName="Asset management released products (mserp)">mserp_entassetreleasedproductentity</Name>
+  <RibbonDiffXml />
+</Entity>
