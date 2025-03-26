@@ -109,32 +109,6 @@ Once a new label is added or l11n team has translated new labels, they should be
 
 ---
 
-## Granting Access to Users
-
-Once the app is installed, you must share it and assign security roles.
-
-### 1. Share the App with Users
-1. Open **Power Apps**.
-2. Navigate to **Apps** and find **"Asset Management V2"**.
-3. Click on the three dots **(...)** next to the app.
-4. Select **Share**.
-5. Enter the users’ email addresses and click **Share**.
-
-### 2. Assign User Roles in Dataverse
-Each user must be assigned the correct security roles.
-
-#### Steps:
-1. Open **Power Platform admin center**.
-2. Go to **Environments > Select your environment**.
-3. Click **Settings > Users + permissions > Users**.
-4. Find the user and click their name.
-5. Click **Manage roles** and assign:
-   - **"Asset Management Mobile Application User Role"**.
-   - **"Finance and Operations Basic User"**.
-6. Click **Save**.
-
----
-
 ## Additional Resources
-For more details, refer to the official Microsoft documentation:  
+For more details, including **security roles** and **FnO Asset Management setup** , refer to the official Microsoft documentation:  
 [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app).
