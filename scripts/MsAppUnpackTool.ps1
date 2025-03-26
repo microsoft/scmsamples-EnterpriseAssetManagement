@@ -17,4 +17,4 @@ if ($MsAppPath -like '*.msapp') {
 
 Expand-Archive -Path $MsAppPath -DestinationPath $sourcePath
 
-& "./Remove-SecretUrisFromAppSource.ps1"
+& "$PSScriptRoot\Remove-SecretUrisFromAppSource.ps1"

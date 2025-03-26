@@ -63,7 +63,7 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 2. **Go to Solutions in the left pane tab**
 3. **Import Solution**
 4. Optional: You might need to sign the solution file first, if your org demands solutions to be signed
-5. **Select either the managed or unmanaged zip file from /Solution/release**
+5. **Select either the managed or unmanaged zip file from /bin**
 
 ---
 
