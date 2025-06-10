@@ -28,16 +28,14 @@ Each user must have a **valid Microsoft Entra ID license** and the required **se
 - **Asset Management Mobile Application User Role** (in Dataverse)
 - **Finance and Operations Basic User** (for Supply Chain Management)
 
-To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
+To review licensing details, please see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
 ---
-# Build, install, and development processes
+# Build, install, and other development processes
 ## Prerequisites
-### Pac CLI
-- Install [Microsoft Power Apps CLI](https://aka.ms/PowerAppsCLI).
-   (For VM users) 
-- If you don't have permissions to install the Power Apps CLI Standalone SDK, you can use [Power Apps CLI via its VS Code Extension](https://docs.microsoft.com/en-us/powerapps/developer/data-platform/powerapps-cli?WT.mc_id=BA-MVP-5004107#using-power-platform-vs-code-extension)
-- [Power Platform Tool](https://dev.azure.com/dynamicscrm/_apis/resources/Containers/17976494/ArtifactsRelease?itemPath=ArtifactsRelease%2FRelease%2FCdsVSToolKit%2F2019%2FCRMDeveloperTools%2FRelease%2FPowerPlatformTools.vsix) for Visual Studio.
+### Microsoft Power Platform CLI
+- Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+
 ## Generate a new Canvas App binary
 - Run the script 
 ```powershell
@@ -47,31 +45,30 @@ To review licensing details, see the [Dynamics 365 Licensing Guide](https://go.m
 
 ---
 
-## Generate a new Solution
+## Generate a new solution
 - Run the script 
 ```powershell
 .\scripts\SolutionPackTool\SolutionPackTool.ps1
 ``` 
-- msdyn_AssetManagementMobileSolution_managed.zip and msdyn_AssetManagementMobileSolution.zip are now in /bin
+- This generates **msdyn_AssetManagementMobileSolution_managed.zip** and **msdyn_AssetManagementMobileSolution.zip** under **/bin**
 ---
 
 ## Installing the Mobile App in Dataverse
 
 Follow these steps to install the **Dynamics 365 Asset Management Mobile Application** in Dataverse:
 
-1. **Go to the PowerApps Portal**:  
-   [https://make.powerapps.com](https://make.powerapps.com)
-2. **Go to Solutions in the left pane tab**
-3. **Import Solution**
-4. Optional: You might need to sign the solution file first, if your org demands solutions to be signed
-5. **Select either the managed or unmanaged zip file from /bin**
+1. **Navigate to the PowerApps Portal**: [https://make.powerapps.com](https://make.powerapps.com)
+2. **Navigate to the Solutions tab on the left side**
+3. Select **Import Solution**
+4. Optional: You might need to sign the solution file first, if your organization demands solutions to be signed - [Sign Tool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe)
+5. **Import either the managed or unmanaged zip file from /bin**
 
 ---
 
 ## Applying changes
-- Open the Asset Management App with edit mode in PowerApps
-- Make necessary changes there
-- Download a copy of an app
+- Open the Asset Management App in edit mode from the PowerApps portal
+- Make the required changes there
+- Download a copy of the app
 - Unpack the downloaded **.msapp** into this repository by running the script
 ```powershell
 .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <msapp_file_path>
@@ -81,7 +78,6 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 ---
 
 ### Localization (translation)
-
 All translations are found in the [`/Translations`](/Translations/) directory. The baseline is [`en-US`](/Translations/Labels.en-US.resx).
 
 #### Uptaking label changes
