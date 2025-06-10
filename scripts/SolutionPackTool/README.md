@@ -8,3 +8,4 @@ This script packs both unmanaged and managed solutions into `.zip` files and pla
 ### Example
 ```powershell
 .\PackSolutions.ps1
+```

@@ -8,3 +8,4 @@ This script processes translation files in `.resx` format, converts them into a 
 ### Example
 ```powershell
 .\ProcessTranslations.ps1 -CopyToClipboard
+```

@@ -13,11 +13,10 @@ This guide explains how to set up Microsoft Dynamics 365 Supply Chain Management
 The Asset Management mobile app relies on **Dataverse**. You must ensure your environment is properly configured.
 
 #### Steps:
-1. Sign in to the **Power Platform admin center**:  
-   [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)
-2. Go to **Environments > New**.
+1. Sign in to the **Power Platform admin center**: [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)
+2. Navigate to **Environments > New**.
 3. Set up a new environment or choose an existing one.
-4. Make sure the **"Enable Dynamics 365 apps"** option is turned on.
+4. Ensure **"Enable Dynamics 365 apps"** is enabled.
 5. Ensure **Power Apps Component Framework (PCF)** is enabled.
 
 ---
@@ -25,7 +24,7 @@ The Asset Management mobile app relies on **Dataverse**. You must ensure your en
 ## Licensing Requirements
 Each user must have a **valid Microsoft Entra ID license** and the required **security roles**.
 
-### Required Roles:
+### Required Security Roles:
 - **Asset Management Mobile Application User Role** (in Dataverse)
 - **Finance and Operations Basic User** (for Supply Chain Management)
 
@@ -78,22 +77,16 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <msapp_file_path>
 ```
 - Your changes are now reflected in /CanvasAppSource
-- You can now Generate a new app binary, followed by a new solution, using the steps above.
+- You can now generate a new app binary, followed by a new solution, using the steps described above.
 ---
 
 ### Localization (translation)
 
 All translations are found in the [`/Translations`](/Translations/) directory. The baseline is [`en-US`](/Translations/Labels.en-US.resx).
 
-#### Adding a new label
-
-To add a new label, use [ResX Resource Manager](https://github.com/dotnet/ResXResourceManager) and add it to the en-US column. Add a comment if appropriate.
-
-The labels will be translated by the l11n team and they will detect when changes are made. There should be no need to reach out to anyone for translations.
-
 #### Uptaking label changes
 
-Once a new label is added or l11n team has translated new labels, they should be injected into the Canvas app. Follow these steps:
+Once a new label is added, they should be injected into the Canvas app. Follow these steps:
 
 1. Run the script:
    ```powershell
@@ -112,5 +105,5 @@ Once a new label is added or l11n team has translated new labels, they should be
 ---
 
 ## Additional Resources
-For more details, including **security roles** and **FnO Asset Management setup** , refer to the official Microsoft documentation:  
+For more details, including **security roles** and **Finance and Operations Asset Management setup** , refer to the official Microsoft documentation:  
 [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app).
