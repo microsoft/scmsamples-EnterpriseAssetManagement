@@ -5,7 +5,7 @@
     "Template": {
       "Id": "http://microsoft.com/appmagic/Component",
       "Version": "638034193883884418",
-      "LastModifiedTimestamp": "638785940364590321",
+      "LastModifiedTimestamp": "638884284351079704",
       "Name": "f31c4274513d4d79a81731e998df1fab",
       "FirstParty": true,
       "IsPremiumPcfControl": false,
@@ -16,7 +16,7 @@
         {
           "Name": "Title",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Title",
@@ -25,7 +25,7 @@
         {
           "Name": "Subtitle",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Subtitle",
@@ -34,7 +34,7 @@
         {
           "Name": "BackButtonAccessibleLabel",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Back button accessible label",
@@ -168,7 +168,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "63",
+    "ControlUniqueId": "41",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -457,7 +457,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "64",
+        "ControlUniqueId": "42",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -935,7 +935,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "65",
+            "ControlUniqueId": "44",
             "Children": []
           },
           {
@@ -1435,7 +1435,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "66",
+            "ControlUniqueId": "43",
             "Children": []
           }
         ]
@@ -1790,7 +1790,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "67",
+        "ControlUniqueId": "45",
         "Children": []
       }
     ]

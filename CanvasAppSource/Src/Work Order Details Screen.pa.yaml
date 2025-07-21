@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -52,7 +51,8 @@ Screens:
                   Filter(
                       'Asset management work order jobs V2 (mserp)',
                       'Company Code' = WorkOrder.'Company Code',
-                      'Work order' = WorkOrder.'Work order'
+                      'Work order' = WorkOrder.'Work order',
+                      'Maintenance job scheduled to' = gblAppCache.UserPersonnelNumber
                   ),
                   "mserp_linenumber"
               )
@@ -1268,20 +1268,7 @@ Screens:
             Loading: =varIsLoadingAvailableWorkOrderStates
             LoadingChoicesText: =T.WorkOrderAvailableStatesLoadingLabel
             OnCancel: =UpdateContext({varShowStateChangePrompt:false})
-            OnSelect: |+
-              =Patch(
-                  'Asset management work orders V2 (mserp)',
-                  WorkOrder,
-                  {'Next lifecycle state': SelectedChoice.label}
-              );
-
-              Set(gblWorkOrderLifecycleState, SelectedChoice.label);
-
-              UpdateContext(
-                  {
-                      varShowStateChangePrompt: false
-                  }
-              );
+            OnSelect: "=With(\r\n    {\r\n        updatedWorkOrderLifecycleState: Patch(\r\n            'Asset management work orders V2 (mserp)',\r\n            WorkOrder,\r\n            {'Next lifecycle state': SelectedChoice.label}\r\n        )\r\n    },\r\n    \r\n    IfError(\r\n        updatedWorkOrderLifecycleState,\r\n        // on error\r\n        With(\r\n            {\r\n                fnoErrorMessage: ParseJSON(FirstError.Details.HttpResponse).message\r\n            },\r\n            \r\n            If(\r\n                IsBlank(fnoErrorMessage),\r\n                Notify(FirstError.Message, NotificationType.Error),\r\n                Notify(fnoErrorMessage, NotificationType.Error)\r\n            )\r\n        ),\r\n        // else\r\n        Set(gblWorkOrderLifecycleState, SelectedChoice.label);\r\n        UpdateContext(\r\n            {\r\n                varShowStateChangePrompt: false\r\n            }\r\n        );\r\n    )\r\n);"
             ReturnFocus: ="btnChangeWorkOrderLifecycleState"
             SelectedChoiceTooltip: =T.SelectedLabel
             Title: =Blank()

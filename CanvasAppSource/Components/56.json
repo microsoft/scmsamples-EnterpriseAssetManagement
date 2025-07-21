@@ -5,7 +5,7 @@
     "Template": {
       "Id": "http://microsoft.com/appmagic/Component",
       "Version": "638036887099896867",
-      "LastModifiedTimestamp": "638785940364560430",
+      "LastModifiedTimestamp": "638884284351087533",
       "Name": "59636f2f97a14ed280f6ffcf6cedaa52",
       "FirstParty": true,
       "IsPremiumPcfControl": false,
@@ -16,7 +16,7 @@
         {
           "Name": "CurrentlySelectedChoice",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Currently selected choice",
@@ -25,7 +25,7 @@
         {
           "Name": "AvailableChoices",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
           "PropertyDataTypeKey": "Table",
           "Hidden": false,
           "DisplayName": "Available choices",
@@ -34,15 +34,15 @@
         {
           "Name": "OnSelect",
           "Category": 2,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "PropertyScopeKey": {
-            "PropertyScopeRuleNamespaceKey": "37",
+            "PropertyScopeRuleNamespaceKey": "56",
             "PropertyScopeRulesKey": [
               {
                 "Name": "OnSelect_SelectedChoice",
-                "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                 "PropertyDataTypeKey": "Record",
                 "ScopeVariableInfo": {
                   "ScopeVariableName": "SelectedChoice",
@@ -67,7 +67,7 @@
         {
           "Name": "OnCancel",
           "Category": 2,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "On cancel",
@@ -76,7 +76,7 @@
         {
           "Name": "Title",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Title",
@@ -85,7 +85,7 @@
         {
           "Name": "UseStaticOrdering",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "Use static ordering",
@@ -94,7 +94,7 @@
         {
           "Name": "FocusBorderColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "Focus border color",
@@ -103,7 +103,7 @@
         {
           "Name": "FocusBorderThickness",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "Focus border thickness",
@@ -112,7 +112,7 @@
         {
           "Name": "Loading",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "Loading",
@@ -121,7 +121,7 @@
         {
           "Name": "LoadingChoicesText",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Loading choices text",
@@ -130,7 +130,7 @@
         {
           "Name": "ChoiceAccessibleName",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "ChoiceAccessibleName",
@@ -139,7 +139,7 @@
         {
           "Name": "ReturnFocus",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "ReturnFocus",
@@ -148,7 +148,7 @@
         {
           "Name": "ComponentInstanceName",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "ComponentInstanceName",
@@ -157,7 +157,7 @@
         {
           "Name": "SelectedChoiceTooltip",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Selected Choice Tooltip",
@@ -438,7 +438,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "37",
+    "ControlUniqueId": "56",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -650,7 +650,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "38",
+        "ControlUniqueId": "57",
         "Children": []
       },
       {
@@ -816,7 +816,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "39",
+        "ControlUniqueId": "58",
         "Children": []
       },
       {
@@ -1267,7 +1267,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "40",
+        "ControlUniqueId": "59",
         "Children": []
       },
       {
@@ -1697,7 +1697,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "41",
+        "ControlUniqueId": "60",
         "Children": []
       },
       {
@@ -2127,7 +2127,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "42",
+        "ControlUniqueId": "61",
         "Children": []
       },
       {
@@ -2466,7 +2466,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "43",
+        "ControlUniqueId": "62",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -2538,7 +2538,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "44",
+            "ControlUniqueId": "63",
             "Children": []
           },
           {
@@ -2989,7 +2989,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "45",
+            "ControlUniqueId": "64",
             "Children": []
           },
           {
@@ -3328,7 +3328,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "46",
+            "ControlUniqueId": "65",
             "Children": []
           },
           {
@@ -3513,7 +3513,7 @@
               "FocusedBorderThickness"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "47",
+            "ControlUniqueId": "66",
             "Children": []
           }
         ]
@@ -3973,7 +3973,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "48",
+        "ControlUniqueId": "67",
         "Children": []
       }
     ]

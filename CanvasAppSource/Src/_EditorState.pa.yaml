@@ -1,0 +1,41 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+EditorState:
+  ScreensOrder:
+    - Loading Screen
+    - Work Orders Screen
+    - Legal Entity Selection Screen
+    - Work Order Details Screen
+    - Work Order Job Details Screen
+    - Work Order Job Attachments Screen
+    - Work Order Job Item Consumption List Screen
+    - Item Consumption Product Search Screen
+    - Work Order Job Item Consumption Edit Screen
+    - Work Order Job Hour Consumption Screen
+    - Work Order Job Checklist Item Screen
+    - Create Order Or Request Search Screen
+    - Maintenance Request Create Submit Screen
+    - Work Order Create Form Screen
+    - Maintenance Requests List Screen
+    - Creation Success Screen
+    - Maintenance Request Work Order List Screen
+    - Onboarding Screen
+    - (DEV) Test Screen
+    - (DEV) Dummy Screen
+  ComponentDefinitionsOrder:
+    - AppAboutOverlay
+    - BottomSheetChoiceSelector
+    - EditableTextWithHeader
+    - FullScreenTextInput
+    - PersonaScreenHeader
+    - SearchBar
+    - SearchBarWithInput
+    - SubScreenHeader
+    - TextInputWithLabel
+    - FullScreenBottomRightButtonList

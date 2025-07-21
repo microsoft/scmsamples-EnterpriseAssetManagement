@@ -5,7 +5,7 @@
     "Template": {
       "Id": "http://microsoft.com/appmagic/Component",
       "Version": "638212215512859994",
-      "LastModifiedTimestamp": "638785940364581108",
+      "LastModifiedTimestamp": "638884284351057355",
       "Name": "74784d9d4b2a4e61b6d10a317345d60a",
       "FirstParty": true,
       "IsPremiumPcfControl": false,
@@ -16,7 +16,7 @@
         {
           "Name": "Buttons",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"isPrimary\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"isPrimary\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
           "PropertyDataTypeKey": "Table",
           "Hidden": false,
           "DisplayName": "Buttons",
@@ -25,15 +25,15 @@
         {
           "Name": "OnButtonSelect",
           "Category": 2,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "PropertyScopeKey": {
-            "PropertyScopeRuleNamespaceKey": "52",
+            "PropertyScopeRuleNamespaceKey": "30",
             "PropertyScopeRulesKey": [
               {
                 "Name": "OnButtonSelect_SelectedButton",
-                "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                 "PropertyDataTypeKey": "Record",
                 "ScopeVariableInfo": {
                   "ScopeVariableName": "SelectedButton",
@@ -58,7 +58,7 @@
         {
           "Name": "OnCancel",
           "Category": 2,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "On cancel",
@@ -67,7 +67,7 @@
         {
           "Name": "PrimaryIconBackgroundColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "Primary icon background color",
@@ -76,7 +76,7 @@
         {
           "Name": "BottomRightAnchorXPosition",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "Bottom right anchor X position",
@@ -85,7 +85,7 @@
         {
           "Name": "BottomRightAnchorYPosition",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "Bottom right anchor Y position",
@@ -94,7 +94,7 @@
         {
           "Name": "ReturnFocus",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Return focus",
@@ -103,7 +103,7 @@
         {
           "Name": "ComponentInstanceName",
           "Category": 0,
-          "Type": "{\"Version\":\"1.345\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Component instance name",
@@ -300,7 +300,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "52",
+    "ControlUniqueId": "30",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -512,7 +512,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "53",
+        "ControlUniqueId": "31",
         "Children": []
       },
       {
@@ -678,7 +678,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "54",
+        "ControlUniqueId": "32",
         "Children": []
       },
       {
@@ -1003,7 +1003,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "55",
+        "ControlUniqueId": "33",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -1061,7 +1061,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "56",
+            "ControlUniqueId": "34",
             "Children": []
           },
           {
@@ -1288,7 +1288,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "57",
+            "ControlUniqueId": "35",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -1717,7 +1717,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "58",
+                "ControlUniqueId": "36",
                 "Children": []
               },
               {
@@ -1986,7 +1986,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "59",
+                "ControlUniqueId": "37",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -2268,7 +2268,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "60",
+                    "ControlUniqueId": "38",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -2592,7 +2592,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "61",
+                        "ControlUniqueId": "39",
                         "Children": []
                       }
                     ]
@@ -2839,7 +2839,7 @@
               "Tooltip"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "62",
+            "ControlUniqueId": "40",
             "Children": []
           }
         ]

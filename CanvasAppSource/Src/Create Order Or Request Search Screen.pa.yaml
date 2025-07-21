@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -50,7 +49,7 @@ Screens:
                   Height: =gblAppStyles.Header.Height
                   OnPersonaPictureSelect: |-
                     =UpdateContext({ varShowAboutDialog: true })
-                  PersonaAccessibleLabel: =T.SettingsLabel
+                  PersonaAccessibleLabel: =T.AboutHeaderLabel
                   ShowBackButton: =false
                   Title: =T.RequestMaintenanceLabel
                   Width: =App.Width
@@ -439,7 +438,7 @@ Screens:
                   DelayItemLoading: =false
                   Items: |-
                     =If(
-                        Self.Visible,
+                        locFilterOption = C.Creation.SearchAssets And Not IsBlank(cmpSearchBarMRCreate.SearchText),
                         Search(Assets,cmpSearchBarMRCreate.SearchText,mserp_maintenanceassettypeid,mserp_maintenanceassetid, mserp_name),
                         Blank()
                     )
@@ -454,7 +453,7 @@ Screens:
                     )
                   ShowScrollbar: =false
                   TemplateSize: =100
-                  Visible: =!false And locFilterOption = C.Creation.SearchAssets And Not IsBlank(cmpSearchBarMRCreate.SearchText)
+                  Visible: =Self.AllItemsCount > 0
                   Width: =Parent.Width
                 Children:
                   - recAssetDivider:
@@ -650,7 +649,7 @@ Screens:
                   Height: =
                   Items: |+
                     =If(
-                        Self.Visible,
+                        locFilterOption = C.Creation.SearchFunctionalLocations And Not IsBlank(cmpSearchBarMRCreate.SearchText),
                         Search('Functional Locations',cmpSearchBarMRCreate.SearchText,mserp_functionallocationid,mserp_name),
                         Blank()
                     )
@@ -658,7 +657,7 @@ Screens:
                   OnSelect: "=IfError(\r\n    //try    \r\n    UpdateContext(\r\n        {\r\n            locDefaultRequestType: \r\n            LookUp('Asset management parameters (mserp)','Company Code' = ThisItem.'Company Code', 'Maintenance request type')\r\n            \r\n        }\r\n    ),\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultRequestType, NotificationType.Error);\r\n    Trace(\"Could not retrieve default request type\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultServiceLevel: \r\n            First\r\n            (\r\n                SortByColumns( \r\n                    Filter(\r\n                            'Asset management maintenance service levels V2 (mserp)',\r\n                            'Functional location' = ThisItem.'Functional location (mserp_functionallocationid)' || IsBlankOrError('Functional location'),           \r\n                            IsBlankOrError('Asset type'),\r\n                            IsBlankOrError(Asset),\r\n                            IsBlankOrError('Manufacturer (mserp_productid)'),\r\n                            IsBlankOrError(Model),\r\n                            IsBlankOrError('Work order type'),\r\n                            'Company Code' = ThisItem.'Company Code'\r\n                    ),\r\n                    \"mserp_functionallocationid\" ,SortOrder.Descending\r\n                )\r\n            ).Name\r\n        }\r\n    );\r\n\r\n    If(\r\n        IsBlankOrError(locDefaultServiceLevel),\r\n        Notify(T.Error_MaintenanceRequestDefaultServiceLevelSetupMissing);\r\n        Trace(\"Missing service level setup\", TraceSeverity.Error, {DefaultServiceLevel:locDefaultServiceLevel});\r\n    ),\r\n\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultServiceLevel, NotificationType.Error);\r\n    Trace(\"Failed getting default service level\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nReset(cmpSearchBarMRCreate);\r\nNavigate(\r\n    'Maintenance Request Create Submit Screen',\r\n    ScreenTransition.None,\r\n    {\r\n        locLocation:ThisItem, \r\n        locCreateMode:C.Creation.CreateFromLocation,\r\n        locDefaultRequestType: locDefaultRequestType,\r\n        locDefaultServiceLevel: locDefaultServiceLevel\r\n    }\r\n);"
                   ShowScrollbar: =false
                   TemplateSize: =100
-                  Visible: =!false And locFilterOption = C.Creation.SearchFunctionalLocations And Not IsBlank(cmpSearchBarMRCreate.SearchText)
+                  Visible: =Self.AllItemsCount > 0
                   Width: =Parent.Width
                 Children:
                   - conLocationsTemplate:
@@ -813,7 +812,7 @@ Screens:
                         locFilterOption = C.Creation.SearchFunctionalLocations,
                         T.SearchByLocationLabel
                     )
-                  Visible: =!(galAssets.Visible Or galLocations.Visible)
+                  Visible: =Not (galAssets.Visible Or galLocations.Visible)
                   Width: =Parent.Width
                   Y: =
       - cmpAboutOverlayMRCSS:
