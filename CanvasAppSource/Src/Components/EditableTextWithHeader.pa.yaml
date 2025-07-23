@@ -1,0 +1,144 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  EditableTextWithHeader:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      AllowEditing:
+        PropertyKind: Input
+        DisplayName: Allow editing
+        Description: Whether or not to show the "Edit" button and allow editing.
+        DataType: Boolean
+        Default: =true
+      AutoHeightValue:
+        PropertyKind: Output
+        DisplayName: Auto height value
+        Description: Set the component's height to this value to get auto height with word wrap.
+        DataType: Number
+      EditButtonAccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Edit button accessible label
+        Description: Accessible label for the Edit button
+        DataType: Text
+        Default: ="Edit"
+      EditButtonDisabled:
+        PropertyKind: Input
+        DisplayName: Edit button disabled
+        Description: Whether or not the Edit button is disabled.
+        DataType: Boolean
+        Default: =false
+      HeaderFontSize:
+        PropertyKind: Input
+        DisplayName: Header font size
+        Description: Font size of the header
+        DataType: Number
+        Default: =9.75
+      HeaderText:
+        PropertyKind: Input
+        DisplayName: Header text
+        Description: Text of the header
+        DataType: Text
+        Default: ="<Header text>"
+      OnSelectEdit:
+        PropertyKind: Event
+        DisplayName: On select edit
+        Description: Behavior to invoke when the Edit button is selected
+        ReturnType: Boolean
+        Default: =true
+      TextFontSize:
+        PropertyKind: Input
+        DisplayName: Text font size
+        Description: Font size of the text
+        DataType: Number
+        Default: =11.25
+      TextValue:
+        PropertyKind: Input
+        DisplayName: Text value
+        Description: The text value
+        DataType: Text
+        Default: =Blank()
+    Properties:
+      AutoHeightValue: =lblEditableTextHeader.Height + lblEditableTextValue.Height + 8
+      Height: =48
+      Width: =App.Width
+    Children:
+      - imgEditButton:
+          Control: Image@2.2.3
+          Properties:
+            AccessibleLabel: =Parent.EditButtonAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisplayMode: =If(Parent.EditButtonDisabled, DisplayMode.Disabled, DisplayMode.Edit)
+            Height: =48
+            Image: =Edit
+            OnSelect: =Parent.OnSelectEdit()
+            PaddingBottom: =14
+            PaddingLeft: =28
+            PaddingTop: =14
+            TabIndex: =0
+            Transparency: =If(Self.DisplayMode = DisplayMode.Disabled, 0.5, 0)
+            Visible: =Parent.AllowEditing
+            Width: =Self.Height
+            X: =Parent.Width - Self.Width
+      - conEditableTextLabels:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: |-
+              =With(
+                  {
+                      controlHeights: [
+                          lblEditableTextHeader.Height,
+                          lblEditableTextValue.Height
+                      ]
+                  },
+                  Sum(
+                      controlHeights,
+                      Value
+                  ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+              )
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =lblEditableTextHeader.Width
+          Children:
+            - lblEditableTextValue:
+                Control: Label@2.5.1
+                Properties:
+                  AutoHeight: =true
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(57, 57, 57, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Size: =EditableTextWithHeader.TextFontSize
+                  Text: =Coalesce(EditableTextWithHeader.TextValue, "—")
+                  VerticalAlign: =VerticalAlign.Top
+                  Width: =EditableTextWithHeader.Width - Self.X - If(EditableTextWithHeader.AllowEditing, imgEditButton.Width, 0)
+                  Y: =lblEditableTextHeader.Height
+            - lblEditableTextHeader:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(92,92,92, 1)
+                  Font: =Font.'Segoe UI'
+                  Height: =28
+                  PaddingBottom: =0
+                  PaddingLeft: =0
+                  PaddingRight: =0
+                  PaddingTop: =0
+                  Role: =TextRole.Heading2
+                  Size: =EditableTextWithHeader.HeaderFontSize
+                  Text: =EditableTextWithHeader.HeaderText
+                  Width: =EditableTextWithHeader.Width - Self.X - If(EditableTextWithHeader.AllowEditing, imgEditButton.Width, 0)
+                  Wrap: =false

@@ -1,0 +1,546 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Hour Consumption Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      OnHidden: =false
+      OnVisible: |+
+        =UpdateContext({varNewTimeSpent: Blank()});
+
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+    Children:
+      - cmpHeaderWOJHCS:
+          Control: CanvasComponent
+          ComponentName: SubScreenHeader
+          Properties:
+            BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =54
+            Subtitle: =Blank()
+            Title: =T.AdjustTimeSpentLabel
+            Width: =Parent.Width
+      - conScrollableActionsWOJHCS:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Min(490, Parent.Height - cmpHeaderWOJHCS.Height)
+            LayoutDirection: =LayoutDirection.Vertical
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            Y: =Min(Parent.Height - cmpHeaderWOJHCS.Height, Parent.Height - conScrollableActionsWOJHCS.Height)
+          Children:
+            - conActionsWOJHCS:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conAdjustHoursSpent.Height,
+                                btnConfirmTimeSpent.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =16
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =14
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: =
+                  Y: =Parent.Height - Self.Height
+                Children:
+                  - conAdjustHoursSpent:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =conAdjustTimeSpentHorizontal.Height
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =1366
+                        Y: =267
+                      Children:
+                        - htmCardBackgroundAdjustHours:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Open Sans'
+                              Height: =conAdjustHoursSpent.Height
+                              HtmlText: |-
+                                ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              Width: =Parent.Width
+                        - conAdjustTimeSpentHorizontal:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: =Max(conHoursSpentColumn.Height, conMinutesSpentColumn.Height) + Self.PaddingTop + Self.PaddingBottom
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutGap: =16
+                              LayoutJustifyContent: =LayoutJustifyContent.Center
+                              PaddingBottom: =20
+                              PaddingLeft: =20
+                              PaddingRight: =20
+                              PaddingTop: =24
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                            Children:
+                              - conHoursSpentColumn:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =360
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    PaddingBottom: =2
+                                    PaddingLeft: =2
+                                    PaddingRight: =2
+                                    PaddingTop: =2
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =130
+                                  Children:
+                                    - conIncrementHours:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Center
+                                          DropShadow: =DropShadow.None
+                                          FillPortions: =0
+                                          Height: =btnIncrementHoursSpent.Height +10
+                                          LayoutMinHeight: =50
+                                          LayoutMinWidth: =50
+                                          PaddingBottom: =5
+                                          PaddingLeft: =5
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: =btnIncrementHoursSpent.Width +10
+                                        Children:
+                                          - btnIncrementHoursSpent:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =gblAppStyles.Button.BorderColor
+                                                BorderStyle: =gblAppStyles.Button.BorderStyle
+                                                BorderThickness: =gblAppStyles.Button.BorderThickness
+                                                Color: =gblAppStyles.Button.FontColor
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =gblAppStyles.Button.Fill
+                                                FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                                FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                                Font: |-
+                                                  =// don't change away from this font, it fits perfectly in the center
+                                                  // where other fonts do not (top or bottom gap)
+                                                  Font.'Open Sans'
+                                                Height: =100
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =gblAppStyles.Button.HoverColor
+                                                HoverFill: =gblAppStyles.Button.HoverFill
+                                                OnSelect: |-
+                                                  =UpdateContext({ varNewTimeSpent: Coalesce(varNewTimeSpent, CurrentTimeSpent, 0) + 1 })
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =gblAppStyles.Button.PressedColor
+                                                PressedFill: =gblAppStyles.Button.PressedFill
+                                                RadiusBottomLeft: =Self.RadiusTopLeft
+                                                RadiusBottomRight: =Self.RadiusTopLeft
+                                                RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                                                RadiusTopRight: =Self.RadiusTopLeft
+                                                Size: =gblAppStyles.FontSize_Special
+                                                Text: =""
+                                                Tooltip: =T.IncrementHoursAccessibleLabel
+                                                Width: =115
+                                                X: =5
+                                                Y: =5
+                                          - icoAddHours:
+                                              Control: Classic/Icon@2.5.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =gblAppColors.Neutral
+                                                Icon: =Icon.Add
+                                                OnSelect: =Select(btnIncrementHoursSpent)
+                                                Width: =46
+                                                X: =39
+                                                Y: =23
+                                    - txtTimeSpentHours:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          AccessibleLabel: =T.HourConsumptionAccessibleLabel
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          BorderThickness: =0
+                                          Default: =Trunc(Coalesce(varNewTimeSpent, CurrentTimeSpent, 0))
+                                          Font: =gblAppStyles.CommonFont
+                                          Format: =TextFormat.Number
+                                          Height: =80
+                                          HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                          HoverFill: =RGBA(186, 202, 226, 1)
+                                          LayoutMinWidth: =70
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Special
+                                    - lblHoursSpentLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Font: =gblAppStyles.CommonFont
+                                          FontWeight: =FontWeight.Bold
+                                          LayoutMinWidth: =100
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_XLarge
+                                          Text: =If(Abs(Value(txtTimeSpentHours.Text)) = 1, T.TimeSpentHoursSingularHeaderLabel, T.TimeSpentHoursPluralHeaderLabel)
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Width: =100
+                                    - conDecrementHours:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Center
+                                          DropShadow: =DropShadow.None
+                                          FillPortions: =0
+                                          Height: '=btnDecrementHoursSpent.Height +10 '
+                                          LayoutMinHeight: =50
+                                          LayoutMinWidth: =50
+                                          PaddingBottom: =5
+                                          PaddingLeft: =5
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: '=btnDecrementHoursSpent.Width +10 '
+                                        Children:
+                                          - btnDecrementHoursSpent:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                                                BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                                                Color: =gblAppStyles.ButtonSecondary.FontColor
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =gblAppStyles.ButtonSecondary.Fill
+                                                FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                                FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                                Font: =btnIncrementHoursSpent.Font
+                                                Height: =100
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                                                OnSelect: |-
+                                                  =UpdateContext({ varNewTimeSpent: Coalesce(varNewTimeSpent, CurrentTimeSpent, 0) - 1 })
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =Self.Fill
+                                                PressedFill: =Self.Color
+                                                RadiusBottomLeft: =Self.RadiusTopLeft
+                                                RadiusBottomRight: =Self.RadiusTopLeft
+                                                RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                                                RadiusTopRight: =Self.RadiusTopLeft
+                                                Size: =gblAppStyles.FontSize_Special
+                                                Text: =""
+                                                Tooltip: =T.DecrementHoursAccessibleLabel
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =115
+                                                X: =5
+                                                Y: =5
+                                          - icoDecrementHours:
+                                              Control: Classic/Icon@2.5.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =gblAppStyles.Button.Fill
+                                                Height: =56
+                                                Icon: =Icon.HorizontalLine
+                                                OnSelect: =Select(btnDecrementHoursSpent)
+                                                Width: =30
+                                                X: =47
+                                                Y: =27
+                              - conMinutesSpentColumn:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Center
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =conHoursSpentColumn.Height
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    PaddingBottom: =2
+                                    PaddingLeft: =2
+                                    PaddingRight: =2
+                                    PaddingTop: =2
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =conHoursSpentColumn.Width
+                                  Children:
+                                    - conIncrementMinutes:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Center
+                                          DropShadow: =DropShadow.None
+                                          FillPortions: =0
+                                          Height: =btnIncrementMinutesSpent.Height + 10
+                                          LayoutMinHeight: =50
+                                          LayoutMinWidth: =50
+                                          PaddingBottom: =5
+                                          PaddingLeft: =5
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: =btnIncrementMinutesSpent.Width + 10
+                                        Children:
+                                          - btnIncrementMinutesSpent:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =gblAppStyles.Button.BorderColor
+                                                BorderThickness: =0
+                                                Color: =RGBA(255, 255, 255, 1)
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =gblAppStyles.Button.Fill
+                                                FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                                FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                                Font: =btnIncrementHoursSpent.Font
+                                                Height: =100
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =gblAppStyles.Button.HoverColor
+                                                HoverFill: =gblAppStyles.Button.HoverFill
+                                                OnSelect: |-
+                                                  =With(
+                                                      {
+                                                          locHoursSpent: txtTimeSpentHours.Text,
+                                                          locMinutesSpent: txtTimeSpentMinutes.Text
+                                                      },
+                                                      With(
+                                                          {
+                                                              locNewMinutesSpent: locMinutesSpent - Mod(locMinutesSpent, 15) + 15
+                                                          },
+                                                          UpdateContext({varNewTimeSpent: locHoursSpent + (locNewMinutesSpent / 60)});
+                                                      )
+                                                  )
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =gblAppStyles.Button.PressedColor
+                                                PressedFill: =gblAppStyles.Button.PressedFill
+                                                RadiusBottomLeft: =Self.RadiusTopLeft
+                                                RadiusBottomRight: =Self.RadiusTopLeft
+                                                RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                                                RadiusTopRight: =Self.RadiusTopLeft
+                                                Size: =gblAppStyles.FontSize_Special
+                                                Text: =""
+                                                Tooltip: =T.IncrementMinutesAccessibleLabel
+                                                Width: =115
+                                                X: =5
+                                                Y: =5
+                                          - icoAddMinutes:
+                                              Control: Classic/Icon@2.5.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =gblAppColors.Neutral
+                                                Icon: =Icon.Add
+                                                OnSelect: =Select(btnIncrementMinutesSpent)
+                                                Width: =46
+                                                X: =39
+                                                Y: =23
+                                    - txtTimeSpentMinutes:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          AccessibleLabel: =T.MinuteConsumptionAccessibleLabel
+                                          Align: =Align.Center
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          BorderThickness: =0
+                                          Default: |-
+                                            =// Do not change this to use Mod(x, 1) as the following formula has
+                                            // a more intuitive behavior when going in the negative direction.
+                                            // In the positive direction, they act the same.
+
+                                            With({ locHoursSpent: Coalesce(varNewTimeSpent, CurrentTimeSpent, 0) },
+                                                // the outer truncation is to avoid having decimals on the minutes
+                                                Trunc((locHoursSpent - Trunc(locHoursSpent)) * 60)
+                                            )
+                                          Font: =gblAppStyles.CommonFont
+                                          Format: =TextFormat.Number
+                                          Height: =80
+                                          HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                          HoverFill: =RGBA(186, 202, 226, 1)
+                                          LayoutMinWidth: =70
+                                          PaddingBottom: =0
+                                          PaddingLeft: =0
+                                          PaddingRight: =0
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_Special
+                                          Width: =70
+                                    - lblMinutesSpentLabel:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          Align: =Align.Center
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Font: =gblAppStyles.CommonFont
+                                          FontWeight: =FontWeight.Bold
+                                          LayoutMinWidth: =100
+                                          PaddingTop: =0
+                                          Size: =gblAppStyles.FontSize_XLarge
+                                          Text: =If(Abs(Value(txtTimeSpentMinutes.Text)) = 1, T.TimeSpentMinutesSingularHeaderLabel, T.TimeSpentMinutesPluralHeaderLabel)
+                                          VerticalAlign: =VerticalAlign.Top
+                                          Width: =100
+                                    - conDecrementMinutes:
+                                        Control: GroupContainer@1.3.0
+                                        Variant: ManualLayout
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Center
+                                          DropShadow: =DropShadow.None
+                                          FillPortions: =0
+                                          Height: =btnDecrementMinutesSpent.Height + 10
+                                          LayoutMinHeight: =50
+                                          LayoutMinWidth: =50
+                                          PaddingBottom: =5
+                                          PaddingLeft: =5
+                                          PaddingRight: =5
+                                          PaddingTop: =5
+                                          RadiusBottomLeft: =0
+                                          RadiusBottomRight: =0
+                                          RadiusTopLeft: =0
+                                          RadiusTopRight: =0
+                                          Width: =btnDecrementMinutesSpent.Width + 10
+                                        Children:
+                                          - btnDecrementMinutesSpent:
+                                              Control: Classic/Button@2.2.0
+                                              Properties:
+                                                BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                                                BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                                                Color: =gblAppStyles.ButtonSecondary.FontColor
+                                                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                                Fill: =gblAppStyles.ButtonSecondary.Fill
+                                                FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                                FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                                Font: =btnIncrementHoursSpent.Font
+                                                Height: =100
+                                                HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                                HoverColor: =RGBA(255, 255, 255, 1)
+                                                HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                                                OnSelect: |-
+                                                  =With(
+                                                      {
+                                                          locHoursSpent: txtTimeSpentHours.Text,
+                                                          locMinutesSpent: txtTimeSpentMinutes.Text
+                                                      },
+                                                      With(
+                                                          {
+                                                              locNewMinutesSpent: locMinutesSpent - Mod(locMinutesSpent, 15) - 15
+                                                          },
+                                                          UpdateContext({varNewTimeSpent: locHoursSpent + (locNewMinutesSpent / 60)});
+                                                      )
+                                                  )
+                                                PressedBorderColor: =Self.Fill
+                                                PressedColor: =Self.Fill
+                                                PressedFill: =Self.Color
+                                                RadiusBottomLeft: =Self.RadiusTopLeft
+                                                RadiusBottomRight: =Self.RadiusTopLeft
+                                                RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                                                RadiusTopRight: =Self.RadiusTopLeft
+                                                Size: =gblAppStyles.FontSize_Special
+                                                Text: =""
+                                                Tooltip: =T.DecrementMinutesAccessibleLabel
+                                                VerticalAlign: =VerticalAlign.Top
+                                                Width: =115
+                                                X: =5
+                                                Y: =5
+                                          - icoDecrementMinutes:
+                                              Control: Classic/Icon@2.5.0
+                                              Properties:
+                                                BorderColor: =RGBA(0, 18, 107, 1)
+                                                Color: =gblAppStyles.Button.Fill
+                                                Height: =56
+                                                Icon: =Icon.HorizontalLine
+                                                OnSelect: =Select(btnDecrementMinutesSpent)
+                                                Width: =30
+                                                X: =47
+                                                Y: =27
+                  - btnConfirmTimeSpent:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =gblAppStyles.Button.BorderColor
+                        BorderStyle: =gblAppStyles.Button.BorderStyle
+                        BorderThickness: =gblAppStyles.Button.BorderThickness
+                        Color: =gblAppStyles.Button.FontColor
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        Fill: =gblAppStyles.Button.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Button.Font
+                        FontWeight: =gblAppStyles.Button.FontWeight
+                        HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                        OnSelect: "=With(\r\n    {locAdjustedTimeSpent: Value(txtTimeSpentHours.Text) + (Value(txtTimeSpentMinutes.Text) / 60)},\r\n    If(\r\n        CurrentTimeSpent <> locAdjustedTimeSpent,\r\n        IfError(\r\n            // try:\r\n            Patch(\r\n                // insert a new journal line for each adjustment to time spent\r\n                // which increments with a delta of the previous- and new time spent\r\n                'Asset management work order job hour consumption lines (mserp)',\r\n                Defaults('Asset management work order job hour consumption lines (mserp)'),\r\n                {\r\n                    'Company Code': gblAppCache.UserActiveWorker.'Company Code',\r\n                    'Personnel number': gblAppCache.UserActiveWorker.'Personnel number',\r\n                    'Work order': WorkOrderJob.'Work order',\r\n                    'Line number (mserp_workorderjobnumber)': WorkOrderJob.'Line number',\r\n                    Hours: locAdjustedTimeSpent - CurrentTimeSpent\r\n                }\r\n            ),\r\n            // catch:\r\n            Notify(\r\n                Coalesce(\r\n                    Match(\r\n                        FirstError.Details.HttpResponse,\r\n                        \"\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n                    ).message,\r\n                    T.Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel\r\n                ),\r\n                NotificationType.Error\r\n            ),\r\n            // on success:\r\n            Back()\r\n        )\r\n    );\r\n    \r\n)"
+                        PressedBorderColor: =Self.Fill
+                        PressedColor: =gblAppStyles.Button.PressedColor
+                        PressedFill: =gblAppStyles.Button.PressedFill
+                        RadiusBottomLeft: =Self.RadiusTopLeft
+                        RadiusBottomRight: =Self.RadiusTopLeft
+                        RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                        RadiusTopRight: =Self.RadiusTopLeft
+                        Size: =gblAppStyles.Button.FontSize
+                        Text: =T.ConfirmButtonLabel
+                        Width: =200
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =Parent.Height - Self.Height - 16

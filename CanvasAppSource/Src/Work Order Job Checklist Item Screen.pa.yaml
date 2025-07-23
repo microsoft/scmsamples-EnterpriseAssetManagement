@@ -1,0 +1,404 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Checklist Item Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      OnHidden: |+
+        =With(
+            {
+                locSelectedVariableValue: drpChecklistVariableValue.SelectedText.Value,
+                locSelectedVariableCheckStatus: drpChecklistVariableValue.SelectedText.Result,
+                locMeasurementCounterValue: Value(txtChecklistMeasurementCounterValue.Text)
+            },
+            If(
+                ChecklistItem.'Note from maintenance worker' <> lblChecklistItemRemark.Text || ChecklistItem.'Variable value' <> locSelectedVariableValue || ChecklistItem.'Counter value' <> locMeasurementCounterValue,
+                Patch(
+                    'Asset management work order job maintenance checklist (mserp)',
+                    ChecklistItem,
+                    {
+                        Checked: varIsChecklistItemChecked,
+                        'Note from maintenance worker': lblChecklistItemRemark.Text,
+                        'Variable value': locSelectedVariableValue,
+                        'Counter value': locMeasurementCounterValue,
+                        Result: Switch(
+                            ChecklistItem.Type,
+                            'Type (mserp)'.Variable,
+                            If(locSelectedVariableCheckStatus <> Blank(), locSelectedVariableCheckStatus, 'Result (mserp)'.None),
+                            'Type (mserp)'.Measurement,
+                            If(
+                            // Set Result to None if min and max threshold are 0
+                                ChecklistItem.'Counter minimum value' = 0 && ChecklistItem.'Counter maximum value' = 0,
+                                'Result (mserp)'.None,
+                                If(
+                                    ChecklistItem.'Counter minimum value' <= locMeasurementCounterValue && locMeasurementCounterValue <= ChecklistItem.'Counter maximum value',
+                                    'Result (mserp)'.Pass,
+                                    'Result (mserp)'.Fail
+                                )
+                            ),
+                            'Result (mserp)'.None
+                        )
+                    }
+                )
+            );
+        );
+      OnVisible: |-
+        =UpdateContext({ varIsChecklistItemChecked: ChecklistItem.Checked });
+        Reset(lblChecklistItemRemark);
+        Reset(txtChecklistMeasurementCounterValue);
+
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+    Children:
+      - conChecklistWrapper:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - Self.Y
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            Y: =cmpHeaderWOJCIS.Height
+          Children:
+            - conChecklistAndCardBackground:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: =htmCardBackgroundHeaderWOJCIS.Height + htmCardBackgroundHeaderWOJCIS.Y
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =1366
+                Children:
+                  - htmCardBackgroundHeaderWOJCIS:
+                      Control: HtmlViewer@2.1.0
+                      Properties:
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                        Font: =Font.'Open Sans'
+                        Height: =conChecklistDetails.Height
+                        HtmlText: |-
+                          ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                        OnSelect: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Width: =Parent.Width
+                        Y: =12
+                  - conChecklistDetails:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        DropShadow: =DropShadow.None
+                        Height: |-
+                          =lblChecklistName.Height
+                              + lblChecklistInstructionLabel.Height
+                              + lblChecklistInstruction.Height
+                              + lblChecklistItemRemark.Height
+                              + btnMarkAsChecked.Height
+                              + If(ChecklistItem.Type = 'Type (mserp)'.Variable, conChecklistVariableType.Height)
+                              + If(ChecklistItem.Type = 'Type (mserp)'.Measurement, conChecklistMeasurementType.Height)
+                              + Self.LayoutGap * (5 + If(ChecklistItem.Type <> 'Type (mserp)'.Text, 1))
+                              + Self.PaddingTop
+                              + Self.PaddingBottom
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        PaddingBottom: =20
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        PaddingTop: =24
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =Parent.Width
+                        Y: =8
+                      Children:
+                        - lblChecklistName:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Font: =Font.'Segoe UI'
+                              Size: =gblAppStyles.FontSize_Large
+                              Text: =ChecklistItem.Name
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+                        - lblChecklistInstructionLabel:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =RGBA(92, 92, 92, 1)
+                              Font: =Font.'Segoe UI'
+                              Height: =70
+                              Size: =gblAppStyles.FontSize_Small
+                              Text: =T.ChecklistInstructionHeaderLabel
+                              VerticalAlign: =VerticalAlign.Bottom
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+                        - lblChecklistInstruction:
+                            Control: Label@2.5.1
+                            Properties:
+                              AutoHeight: =true
+                              BorderColor: =RGBA(0, 18, 107, 1)
+                              Color: =RGBA(33, 33, 33, 1)
+                              Font: =Font.'Segoe UI'
+                              Height: =70
+                              Size: =gblAppStyles.FontSize_Medium
+                              Text: =Coalesce(ChecklistItem.Instructions, C.EmDash)
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =Parent.Width - Self.X - 16
+                              X: =16
+                              Y: =16
+                        - conChecklistVariableType:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =lblChecklistVariableType.Height + drpChecklistVariableValue.Height + drpChecklistVariableValue.BorderThickness * 4
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Vertical
+                              PaddingBottom: =2
+                              PaddingLeft: =2
+                              PaddingRight: =2
+                              PaddingTop: =2
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Visible: =ChecklistItem.Type = 'Type (mserp)'.Variable
+                              Width: =200
+                            Children:
+                              - lblChecklistVariableType:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(92, 92, 92, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Size: =gblAppStyles.FontSize_Small
+                                    Text: =ChecklistItem.'Asset management maintenance checklist variable'.Name
+                              - drpChecklistVariableValue:
+                                  Control: Classic/DropDown@2.3.1
+                                  Properties:
+                                    AccessibleLabel: =T.CheckListVariableAccessibleLabel
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    AllowEmptySelection: =true
+                                    BorderColor: =RGBA(31, 108, 249, 1)
+                                    BorderThickness: =1
+                                    ChevronBackground: =RGBA(0, 0, 0, 0)
+                                    ChevronFill: =RGBA(41, 40, 39, 1)
+                                    ChevronHoverBackground: =RGBA(0, 0, 0, 0)
+                                    ChevronHoverFill: =Self.ChevronFill
+                                    Color: =RGBA(41, 40, 39, 1)
+                                    Default: =$"{ChecklistItem.'Variable value'} ({ChecklistItem.Result})"
+                                    Font: =Font.'Segoe UI'
+                                    HoverFill: =RGBA(186, 202, 226, 1)
+                                    Items: |-
+                                      =AddColumns(
+                                          SortByColumns(
+                                              Filter(
+                                                  'Asset management maintenance checklist variable value (mserp)',
+                                                  'Company Code' = ChecklistItem.'Company Code' && Variable = ChecklistItem.Variable
+                                              ),
+                                              "mserp_linenumber"
+                                          ),
+                                          DropdownText,
+                                          $"{Value} ({Result})"
+                                      )
+                                    Items.Value: =DropdownText
+                                    LayoutMinWidth: =180
+                                    PressedColor: =Self.Color
+                                    PressedFill: =Self.Fill
+                                    SelectionColor: =RGBA(255, 255, 255, 1)
+                                    SelectionFill: =RGBA(56, 96, 178, 1)
+                                    Size: =gblAppStyles.FontSize_Medium
+                                    Width: =Parent.Width - Parent.PaddingLeft - Parent.PaddingRight
+                        - conChecklistMeasurementType:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              FillPortions: =0
+                              Height: =lblChecklistMeasurementCounterName.Height + conChecklistMeasurementInputAndUnit.Height + lblMeasurementMinMax.Height + lblMeasurementResult.Height
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Vertical
+                              PaddingBottom: =2
+                              PaddingLeft: =2
+                              PaddingRight: =2
+                              PaddingTop: =2
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Visible: =ChecklistItem.Type = 'Type (mserp)'.Measurement
+                              Width: =200
+                            Children:
+                              - lblChecklistMeasurementCounterName:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =RGBA(92, 92, 92, 1)
+                                    Font: =Font.'Segoe UI'
+                                    Size: =10
+                                    Text: |-
+                                      =// TODO: can we do this smarter? Seems silly to do a OData lookup just for this value
+                                      LookUp(
+                                          'Asset management asset counters (mserp)',
+                                          Counter = ChecklistItem.'Processed checklist line asset counter' && 'Company Code' = ChecklistItem.'Company Code'
+                                      ).Name
+                              - conChecklistMeasurementInputAndUnit:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =txtChecklistMeasurementCounterValue.Height + txtChecklistMeasurementCounterValue.BorderThickness
+                                    LayoutAlignItems: =LayoutAlignItems.Center
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                  Children:
+                                    - shpChecklistMeasurementInputFieldBorderFix:
+                                        Control: Rectangle@2.3.0
+                                        Properties:
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Fill: =RGBA(0, 0, 0, 0)
+                                          LayoutMinHeight: =40
+                                          Width: =1
+                                    - txtChecklistMeasurementCounterValue:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          AccessibleLabel: =T.CheckListMeasurementCounterValue
+                                          BorderColor: =RGBA(31, 108, 249, 1)
+                                          BorderThickness: =1
+                                          Color: =RGBA(41, 40, 39, 1)
+                                          Default: =ChecklistItem.'Counter value'
+                                          Font: =Font.'Open Sans'
+                                          Format: =TextFormat.Number
+                                          HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                          HoverFill: =RGBA(186, 202, 226, 1)
+                                          RadiusBottomLeft: =8
+                                          RadiusBottomRight: =8
+                                          RadiusTopLeft: =8
+                                          RadiusTopRight: =8
+                                          Width: =150
+                                    - lblChecklistMeasurementCounterUnit:
+                                        Control: Label@2.5.1
+                                        Properties:
+                                          AutoHeight: =true
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          Color: =RGBA(92, 92, 92, 1)
+                                          Font: =Font.'Segoe UI'
+                                          FontWeight: =FontWeight.Semibold
+                                          LayoutMinWidth: =75
+                                          Size: =12
+                                          Text: =ChecklistItem.Unit
+                                          Width: =75
+                              - lblMeasurementMinMax:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Size: =10.5
+                                    Text: =Substitute(Substitute(T.ChecklistMeasurementMinMaxLabel, "{MeasurementMinimum}", ChecklistItem.'Counter minimum value'), "{MeasurementMaximum}", ChecklistItem.'Counter maximum value')
+                              - lblMeasurementResult:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Size: =10.5
+                                    Text: =Substitute(T.ChecklistMeasurementResultLabel, "{MeasurementResult}", ChecklistItem.Result)
+                        - lblChecklistItemRemark:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              AccessibleLabel: =T.CheckListItemRemarkAccessibleLabel
+                              BorderColor: =RGBA(31, 108, 249, 1)
+                              BorderThickness: =1
+                              Default: =ChecklistItem.'Note from maintenance worker'
+                              Font: =Font.'Segoe UI'
+                              Height: =108
+                              HintText: =T.ChecklistYourNotesPlaceholderLabel
+                              HoverBorderColor: =RGBA(0, 18, 107, 1)
+                              HoverFill: =RGBA(186, 202, 226, 1)
+                              LayoutMinWidth: =250
+                              Mode: =TextMode.MultiLine
+                              RadiusBottomLeft: =8
+                              RadiusBottomRight: =8
+                              RadiusTopLeft: =8
+                              RadiusTopRight: =8
+                              Size: =gblAppStyles.FontSize_Large
+                        - btnMarkAsChecked:
+                            Control: Classic/Button@2.2.0
+                            Properties:
+                              BorderColor: =ColorFade(Self.Fill, -15%)
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                              Fill: =gblAppColors.Accent
+                              FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                              FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                              Font: =Font.'Open Sans'
+                              HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                              HoverColor: =RGBA(255, 255, 255, 1)
+                              HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              OnSelect: |+
+                                =UpdateContext(
+                                    {
+                                        varIsChecklistItemChecked: If(
+                                            varIsChecklistItemChecked = 'NoYes (mserp)'.Yes,
+                                            'NoYes (mserp)'.No,
+                                            'NoYes (mserp)'.Yes
+                                        )
+                                    }
+                                );
+                                Back();
+                              PressedBorderColor: =Self.Fill
+                              PressedColor: =Self.Fill
+                              PressedFill: =Self.Color
+                              Size: =gblAppStyles.Button.FontSize
+                              Text: =If(ChecklistItem.Checked = 'NoYes (mserp)'.No, T.ChecklistMarkAsCheckedButtonLabel, T.ChecklistMarkAsUnCheckedButtonLabel)
+      - cmpHeaderWOJCIS:
+          Control: CanvasComponent
+          ComponentName: SubScreenHeader
+          Properties:
+            BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =54
+            Subtitle: =Blank()
+            Title: =If(Len(ChecklistItem.Name) > 30, $"{TrimEnds(Left(ChecklistItem.Name, 30))}...", ChecklistItem.Name)
+            Width: =App.Width

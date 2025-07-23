@@ -1,0 +1,862 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Work Order Job Item Consumption Edit Screen:
+    Properties:
+      Fill: =gblAppColors.Background
+      LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
+      OnHidden: |-
+        =Reset(txtAdjustedQuantity);
+        Reset(cmpTrackingBatchNumber);
+        Reset(cmpTrackingSerialNumber);
+      OnVisible: |+
+        =UpdateContext(
+            {
+                varNewQuantity: Blank(),
+                varSelectedSiteId: ItemConsumption.Site,
+                varSelectedWarehouseId: ItemConsumption.Warehouse,
+                varSelectedLocationId: ItemConsumption.Location,
+                // TODO: once the following bug is fixed, we can fetch the NoYes directly on the relation:
+                // https://msazure.visualstudio.com/OneAgile/_workitems/edit/16878631
+                varTrackingDimension: LookUp(
+                    'Tracking dimension groups (mserp)',
+                    Name = Product.'Tracking dimension group'
+                ),
+                varShowSiteChangePrompt: false,
+                varShowWarehouseChangePrompt: false,
+                varShowLocationChangePrompt: false
+            }
+        );
+
+        // should go last
+        Set(
+            gblPreviousScreen,
+            Self
+        );
+    Children:
+      - conScrollableWOJICES:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - cmpHeaderWOJICES.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+            Y: =cmpHeaderWOJICES.Height
+          Children:
+            - conInformationWOJICES:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: |-
+                    =Max(
+                        Parent.Height - Self.Y - conActionsWOJICES.Height,
+                        With(
+                            {
+                                controlHeights: [
+                                    conItemDetails.Height,
+                                    conInventoryDimensions.Height,
+                                    conTrackingDimensions.Height
+                                ]
+                            },
+                            Sum(
+                                controlHeights,
+                                Value
+                            ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                        )
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutMinHeight: |-
+                    =With(
+                            {
+                                controlHeights: [
+                                    conItemDetails.Height,
+                                    conInventoryDimensions.Height,
+                                    conTrackingDimensions.Height
+                                ]
+                            },
+                            Sum(
+                                controlHeights,
+                                Value
+                            ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                        )
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =14
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: =
+                  Y: =49
+                Children:
+                  - conItemDetails:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =conItemDetailsHeader.Height
+                        LayoutMinHeight: =124
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =1366
+                      Children:
+                        - htmCardBackgroundHeaderWOJICES:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Open Sans'
+                              Height: =conItemDetails.Height
+                              HtmlText: |-
+                                ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              PaddingTop: =0
+                              Visible: =conInformationWOJICES.Visible
+                              Width: =Parent.Width
+                        - conItemDetailsHeader:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: |-
+                                =With(
+                                    {
+                                        controlHeights: [
+                                            cmpProductNumber.Height,
+                                            cmpProductName.Height
+                                        ]
+                                    },
+                                    Sum(
+                                        controlHeights,
+                                        Value
+                                    ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                                )
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutGap: =5
+                              PaddingBottom: =20
+                              PaddingLeft: =20
+                              PaddingRight: =20
+                              PaddingTop: =24
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                            Children:
+                              - cmpProductNumber:
+                                  Control: CanvasComponent
+                                  ComponentName: EditableTextWithHeader
+                                  Properties:
+                                    AllowEditing: =false
+                                    EditButtonAccessibleLabel: =Blank()
+                                    EditButtonDisabled: =false
+                                    HeaderFontSize: =gblAppStyles.Label.FontSize
+                                    HeaderText: =T.ProductNumberLabel
+                                    Height: =48
+                                    OnSelectEdit: =true
+                                    TextFontSize: =gblAppStyles.FontSize_Medium
+                                    TextValue: =ItemConsumption.'Item number'
+                                    Width: =1348
+                              - cmpProductName:
+                                  Control: CanvasComponent
+                                  ComponentName: EditableTextWithHeader
+                                  Properties:
+                                    AllowEditing: =false
+                                    EditButtonAccessibleLabel: =Blank()
+                                    EditButtonDisabled: =false
+                                    HeaderFontSize: =gblAppStyles.Label.FontSize
+                                    HeaderText: =T.ProductNameLabel
+                                    Height: =48
+                                    OnSelectEdit: =true
+                                    TextFontSize: =gblAppStyles.FontSize_Medium
+                                    TextValue: =Product.'Product name'
+                                    Width: =1348
+                  - conInventoryDimensions:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =conInventoryDimensionsVertical.Height
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =1366
+                      Children:
+                        - htmCardBackgroundInventDimsWOJICES:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Open Sans'
+                              Height: =conInventoryDimensions.Height
+                              HtmlText: |-
+                                ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              Visible: =conInformationWOJICES.Visible
+                              Width: =Parent.Width
+                        - conInventoryDimensionsVertical:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: |-
+                                =With(
+                                    {
+                                        controlHeights: [
+                                            cmpInventorySiteEditable.Height,
+                                            cmpInventoryWarehouseEditable.Height,
+                                            If(cmpInventoryLocationEditable.Visible, cmpInventoryLocationEditable.Height, Blank())
+                                        ]
+                                    },
+                                    Sum(
+                                        controlHeights,
+                                        Value
+                                    ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(Filter(controlHeights, Not IsBlank(ThisRecord)))
+                                )
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutGap: =8
+                              PaddingBottom: =20
+                              PaddingLeft: =20
+                              PaddingRight: =20
+                              PaddingTop: =24
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                            Children:
+                              - cmpInventorySiteEditable:
+                                  Control: CanvasComponent
+                                  ComponentName: EditableTextWithHeader
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    AllowEditing: =true
+                                    EditButtonAccessibleLabel: =T.EditItemConsumptionSiteButtonAccessibleLabel
+                                    EditButtonDisabled: =false
+                                    HeaderFontSize: =gblAppStyles.Label.FontSize
+                                    HeaderText: =T.StorageSiteLabel
+                                    Height: =48
+                                    OnSelectEdit: |+
+                                      =UpdateContext(
+                                          {
+                                              varShowSiteChangePrompt: true,
+                                              varIsLoadingAvailableSites: true,
+                                              varAvailableSites: Blank()
+                                          }
+                                      );
+                                      UpdateContext(
+                                          {
+                                              varAvailableSites: AddColumns(
+                                                  RenameColumns(
+                                                      Filter(
+                                                          'Sites V2 (mserp)',
+                                                          'Company Code' = ItemConsumption.'Company Code'
+                                                      ),
+                                                      Site,
+                                                      key
+                                                  ),
+                                                  label,
+                                                  $"{key}: {Name}"
+                                              )
+                                          }
+                                      );
+                                      UpdateContext({varIsLoadingAvailableSites: false});
+                                    TextFontSize: =gblAppStyles.FontSize_Medium
+                                    TextValue: =varSelectedSiteId
+                                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                              - cmpInventoryWarehouseEditable:
+                                  Control: CanvasComponent
+                                  ComponentName: EditableTextWithHeader
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    AllowEditing: =true
+                                    EditButtonAccessibleLabel: =T.EditItemConsumptionWarehouseButtonAccessibleLabel
+                                    EditButtonDisabled: =false
+                                    HeaderFontSize: =gblAppStyles.Label.FontSize
+                                    HeaderText: =T.StorageWarehouseLabel
+                                    Height: =48
+                                    OnSelectEdit: |+
+                                      =UpdateContext(
+                                          {
+                                              varShowWarehouseChangePrompt: true,
+                                              varIsLoadingAvailableWarehouses: true,
+                                              varAvailableWarehouses: Blank()
+                                          }
+                                      );
+                                      UpdateContext(
+                                          {
+                                              varAvailableWarehouses: AddColumns(
+                                                  RenameColumns(
+                                                      Filter(
+                                                          'Warehouses (mserp)',
+                                                          'Company Code' = ItemConsumption.'Company Code',
+                                                          Site = varSelectedSiteId
+                                                      ),
+                                                      Warehouse,
+                                                      key
+                                                  ),
+                                                  label,
+                                                  $"{key}: {Name}"
+                                              )
+                                          }
+                                      );
+                                      UpdateContext({varIsLoadingAvailableWarehouses: false});
+                                    TextFontSize: =gblAppStyles.FontSize_Medium
+                                    TextValue: =varSelectedWarehouseId
+                                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                              - cmpInventoryLocationEditable:
+                                  Control: CanvasComponent
+                                  ComponentName: EditableTextWithHeader
+                                  Properties:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    AllowEditing: =true
+                                    EditButtonAccessibleLabel: =T.StorageEditLocationAccessibleLabel
+                                    EditButtonDisabled: =false
+                                    HeaderFontSize: =gblAppStyles.Label.FontSize
+                                    HeaderText: =T.StorageLocationHeaderLabel
+                                    Height: =48
+                                    OnSelectEdit: |+
+                                      =UpdateContext(
+                                          {
+                                              varShowLocationChangePrompt: true,
+                                              varIsLoadingAvailableLocations: true,
+                                              varAvailableLocations: Blank()
+                                          }
+                                      );
+                                      UpdateContext(
+                                          {
+                                              varAvailableLocations: AddColumns(
+                                                  RenameColumns(
+                                                      Filter(
+                                                          'Warehouse locations (mserp)',
+                                                          'Company Code' = ItemConsumption.'Company Code',
+                                                          Warehouse = varSelectedWarehouseId
+                                                      ),
+                                                      Location,
+                                                      key
+                                                  ),
+                                                  label,
+                                                  key
+                                              )
+                                          }
+                                      );
+                                      UpdateContext({varIsLoadingAvailableLocations: false});
+                                    TextFontSize: =gblAppStyles.FontSize_Medium
+                                    TextValue: =varSelectedLocationId
+                                    Visible: =IsLocationDimensionEnabled
+                                    Width: =Parent.Width - Parent.PaddingLeft * 2
+                  - conTrackingDimensions:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =conTrackingDimensionsVertical.Height
+                        LayoutMinHeight: =200
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: |-
+                          =varTrackingDimension.'Is batch number active' = 'NoYes (mserp)'.Yes
+                              Or varTrackingDimension.'Is serial number active' = 'NoYes (mserp)'.Yes
+                        Width: =1366
+                      Children:
+                        - htmCardBackgroundTrackDimsWOJICES:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Open Sans'
+                              Height: =conTrackingDimensions.Height
+                              HtmlText: |-
+                                ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              Visible: =conInformationWOJICES.Visible
+                              Width: =Parent.Width
+                        - conTrackingDimensionsVertical:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: |-
+                                =With(
+                                    {
+                                        controlHeights: [
+                                            If(cmpTrackingBatchNumber.Visible, cmpTrackingBatchNumber.Height),
+                                            If(cmpTrackingSerialNumber.Visible, cmpTrackingSerialNumber.Height)
+                                        ]
+                                    },
+                                    Sum(
+                                        controlHeights,
+                                        Value
+                                    ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(Filter(controlHeights, Value <> Blank()))
+                                )
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutGap: =8
+                              PaddingBottom: =20
+                              PaddingLeft: =20
+                              PaddingRight: =20
+                              PaddingTop: =24
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                            Children:
+                              - cmpTrackingBatchNumber:
+                                  Control: CanvasComponent
+                                  ComponentName: TextInputWithLabel
+                                  Properties:
+                                    AccessibleLabel: =""
+                                    DefaultText: =ItemConsumption.'Batch number'
+                                    Fill: =Self.backgroundColor
+                                    Height: =54
+                                    HorizontalPadding: =0
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =10
+                                    MaxLength: =100
+                                    Visible: =varTrackingDimension.'Is batch number active' = 'NoYes (mserp)'.Yes
+                                    Width: =Parent.Width - Parent.PaddingLeft*2
+                                    Y: =16
+                                    backgroundColor: =gblAppColors.Neutral
+                                    dividerColor: =gblAppColors.AccentLink
+                                    labelColor: =gblAppStyles.Label.FontColor
+                                    labelFontSize: =gblAppStyles.Label.FontSize
+                                    labelText: =T.TrackingBatchNumberLabel
+                                    multiLine: =false
+                                    textColor: =gblAppColors.PrimaryText
+                                    textFont: =gblAppStyles.DefaultText.Font
+                                    textFontSize: =gblAppStyles.FontSize_Large
+                              - cmpTrackingSerialNumber:
+                                  Control: CanvasComponent
+                                  ComponentName: TextInputWithLabel
+                                  Properties:
+                                    AccessibleLabel: =""
+                                    DefaultText: =ItemConsumption.'Serial number'
+                                    Fill: =Self.backgroundColor
+                                    Height: =54
+                                    HorizontalPadding: =0
+                                    LayoutMinHeight: =50
+                                    LayoutMinWidth: =10
+                                    MaxLength: =100
+                                    Visible: =varTrackingDimension.'Is serial number active' = 'NoYes (mserp)'.Yes
+                                    Width: =Parent.Width - Parent.PaddingLeft*2
+                                    Y: =16
+                                    backgroundColor: =gblAppColors.Neutral
+                                    dividerColor: =gblAppColors.AccentLink
+                                    labelColor: =gblAppStyles.Label.FontColor
+                                    labelFontSize: =gblAppStyles.Label.FontSize
+                                    labelText: =T.TrackingSerialNumberLabel
+                                    multiLine: =false
+                                    textColor: =gblAppColors.PrimaryText
+                                    textFont: =gblAppStyles.DefaultText.Font
+                                    textFontSize: =gblAppStyles.FontSize_Large
+            - conActionsWOJICES:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.End
+                  DropShadow: =DropShadow.None
+                  FillPortions: =0
+                  Height: |-
+                    =With(
+                        {
+                            controlHeights: [
+                                conAdjustItemConsumptionQuantity.Height,
+                                btnConfirmItemConsumptionQuantity.Height
+                            ]
+                        },
+                        Sum(
+                            controlHeights,
+                            Value
+                        ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                    )
+                  LayoutAlignItems: =LayoutAlignItems.Stretch
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =16
+                  LayoutMinHeight: =324
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  PaddingLeft: |-
+                    =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
+                    9
+                  PaddingRight: =9
+                  PaddingTop: =4
+                  RadiusBottomLeft: =0
+                  RadiusBottomRight: =0
+                  RadiusTopLeft: =0
+                  RadiusTopRight: =0
+                  Width: =Parent.Width
+                  X: =
+                  Y: =420
+                Children:
+                  - conAdjustItemConsumptionQuantity:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =conAdjustItemConsumptionQuantityVertical.Height
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Width: =1366
+                        Y: =267
+                      Children:
+                        - htmCardBackgroundAdjustItemCQWOJICES:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Open Sans'
+                              Height: =conAdjustItemConsumptionQuantity.Height
+                              HtmlText: |-
+                                ="<div style=""padding: 5px 8px 10px;height:100%;position:absolute;width:100%;box-sizing:border-box;""><div style=""background-color:#fff;box-shadow:0px 2px 4px rgba(0,0,0,0.14),0px 0px 2px rgba(0,0,0, 0.12);border-radius:15px;height:100%;width:100%;""></div></div>"
+                              OnSelect: =
+                              PaddingBottom: =0
+                              PaddingLeft: =0
+                              PaddingRight: =0
+                              Visible: =conInformationWOJICES.Visible
+                              Width: =Parent.Width
+                        - conAdjustItemConsumptionQuantityVertical:
+                            Control: GroupContainer@1.3.0
+                            Variant: AutoLayout
+                            Properties:
+                              DropShadow: =DropShadow.None
+                              Height: |-
+                                =With(
+                                    {
+                                        controlHeights: [
+                                            lblAdjustItemConsumptionQuantityHeader.Height,
+                                            conQuantityAdjustmentHorizontal.Height
+                                        ]
+                                    },
+                                    Sum(
+                                        controlHeights,
+                                        Value
+                                    ) + Self.PaddingTop + Self.PaddingBottom + Self.LayoutGap * CountRows(controlHeights)
+                                )
+                              LayoutAlignItems: =LayoutAlignItems.Stretch
+                              LayoutDirection: =LayoutDirection.Vertical
+                              LayoutGap: =32
+                              PaddingBottom: =20
+                              PaddingLeft: =20
+                              PaddingRight: =20
+                              PaddingTop: =24
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                            Children:
+                              - lblAdjustItemConsumptionQuantityHeader:
+                                  Control: Label@2.5.1
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Font: =gblAppStyles.CommonFont
+                                    FontWeight: =FontWeight.Bold
+                                    Size: =gblAppStyles.FontSize_XLarge
+                                    Text: =T.AdjustQuantityLabel
+                              - conQuantityAdjustmentHorizontal:
+                                  Control: GroupContainer@1.3.0
+                                  Variant: AutoLayout
+                                  Properties:
+                                    DropShadow: =DropShadow.None
+                                    FillPortions: =0
+                                    Height: =100
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Horizontal
+                                    LayoutGap: =2
+                                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                                    PaddingBottom: =2
+                                    PaddingLeft: =2
+                                    PaddingRight: =2
+                                    PaddingTop: =2
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                  Children:
+                                    - btnDecrementQuantity:
+                                        Control: Classic/Button@2.2.0
+                                        Properties:
+                                          BorderColor: =gblAppStyles.ButtonSecondary.BorderColor
+                                          BorderStyle: =gblAppStyles.ButtonSecondary.BorderStyle
+                                          BorderThickness: =gblAppStyles.ButtonSecondary.BorderThickness
+                                          Color: =gblAppStyles.ButtonSecondary.FontColor
+                                          DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                          Fill: =gblAppStyles.ButtonSecondary.Fill
+                                          FillPortions: =1
+                                          FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                          FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                          Font: |-
+                                            =// don't change away from this font, it fits perfectly in the center
+                                            // where other fonts do not (top or bottom gap)
+                                            Font.'Open Sans'
+                                          HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                          HoverColor: =gblAppStyles.ButtonSecondary.HoverColor
+                                          HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                                          LayoutMinWidth: =50
+                                          OnSelect: |-
+                                            =UpdateContext({ varNewQuantity: Coalesce(varNewQuantity, ItemConsumption.Quantity, 1) - 1 })
+                                          PressedBorderColor: =Self.Fill
+                                          PressedColor: =gblAppStyles.ButtonSecondary.PressedColor
+                                          PressedFill: =gblAppStyles.ButtonSecondary.PressedFill
+                                          RadiusBottomLeft: =Self.RadiusTopLeft
+                                          RadiusBottomRight: =Self.RadiusTopLeft
+                                          RadiusTopLeft: =gblAppStyles.ButtonSecondary.BorderRadius
+                                          RadiusTopRight: =Self.RadiusTopLeft
+                                          Size: =gblAppStyles.FontSize_Special
+                                          Text: ="-"
+                                          Tooltip: =T.AdjustQuantityDecrementTooltipLabel
+                                          VerticalAlign: =VerticalAlign.Top
+                                    - txtAdjustedQuantity:
+                                        Control: Classic/TextInput@2.3.2
+                                        Properties:
+                                          AccessibleLabel: =T.AdjustQuantityAccessibleLabel
+                                          Align: =Align.Center
+                                          AlignInContainer: =AlignInContainer.Stretch
+                                          BorderColor: =RGBA(0, 18, 107, 1)
+                                          BorderThickness: =0
+                                          Default: =Coalesce(varNewQuantity, ItemConsumption.Quantity, 1)
+                                          FillPortions: =2
+                                          Font: =Font.'Segoe UI'
+                                          Format: =TextFormat.Number
+                                          Height: =80
+                                          HoverBorderColor: =RGBA(0, 18, 107, 1)
+                                          HoverFill: =RGBA(186, 202, 226, 1)
+                                          LayoutMinHeight: =80
+                                          LayoutMinWidth: =65
+                                          Size: =40
+                                    - btnIncrementQuantity:
+                                        Control: Classic/Button@2.2.0
+                                        Properties:
+                                          BorderColor: =gblAppStyles.Button.BorderColor
+                                          BorderStyle: =gblAppStyles.Button.BorderStyle
+                                          BorderThickness: =gblAppStyles.Button.BorderThickness
+                                          Color: =gblAppStyles.Button.FontColor
+                                          DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                          Fill: =gblAppStyles.Button.Fill
+                                          FillPortions: =1
+                                          FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                                          FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                                          Font: =btnDecrementQuantity.Font
+                                          HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                                          HoverColor: =gblAppStyles.Button.HoverColor
+                                          HoverFill: =gblAppStyles.Button.HoverFill
+                                          LayoutMinWidth: =50
+                                          OnSelect: |-
+                                            =UpdateContext({ varNewQuantity: Coalesce(varNewQuantity, ItemConsumption.Quantity, 1) + 1 })
+                                          PressedBorderColor: =Self.Fill
+                                          PressedColor: =gblAppStyles.Button.PressedColor
+                                          PressedFill: =gblAppStyles.Button.PressedFill
+                                          RadiusBottomLeft: =Self.RadiusTopLeft
+                                          RadiusBottomRight: =Self.RadiusTopLeft
+                                          RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                                          RadiusTopRight: =Self.RadiusTopLeft
+                                          Size: =gblAppStyles.FontSize_Special
+                                          Text: ="+"
+                                          Tooltip: =T.AdjustQuantityIncrementTooltipLabel
+                  - btnConfirmItemConsumptionQuantity:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =gblAppStyles.Button.BorderColor
+                        BorderStyle: =gblAppStyles.Button.BorderStyle
+                        BorderThickness: =gblAppStyles.Button.BorderThickness
+                        Color: =gblAppStyles.Button.FontColor
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =gblAppStyles.Button.DisabledColor
+                        DisabledFill: =gblAppStyles.Button.DisabledFill
+                        DisplayMode: |-
+                          =If(
+                              IsBlank(cmpInventorySiteEditable.TextValue)
+                              Or IsBlank(cmpInventoryWarehouseEditable.TextValue),
+                              DisplayMode.Disabled,
+                              DisplayMode.Edit
+                          )
+                        Fill: =gblAppStyles.Button.Fill
+                        FocusedBorderColor: =gblAppStyles.FocusBorderColor
+                        FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+                        Font: =gblAppStyles.Button.Font
+                        FontWeight: =gblAppStyles.Button.FontWeight
+                        HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+                        HoverColor: =gblAppStyles.Button.HoverColor
+                        HoverFill: =gblAppStyles.Button.HoverFill
+                        OnSelect: "=With(\r\n    {locAdjustedQuantity: Value(txtAdjustedQuantity.Text)},\r\n    If(\r\n        ItemConsumption.Quantity <> locAdjustedQuantity\r\n        Or ItemConsumption.Site <> varSelectedSiteId\r\n        Or ItemConsumption.Warehouse <> varSelectedWarehouseId\r\n        Or ItemConsumption.Location <> varSelectedLocationId\r\n        Or ItemConsumption.'Batch number' <> cmpTrackingBatchNumber.Text\r\n        Or ItemConsumption.'Serial number' <> cmpTrackingSerialNumber.Text,\r\n        IfError(\r\n            // try:\r\n            If(\r\n                IsNewConsumptionLine,\r\n                Patch(\r\n                    'Asset management work order job product consumption lines (mserp)',\r\n                    Defaults('Asset management work order job product consumption lines (mserp)'),\r\n                    ItemConsumption,\r\n                    {\r\n                        Quantity: locAdjustedQuantity,\r\n                        Site: varSelectedSiteId,\r\n                        Warehouse: varSelectedWarehouseId,\r\n                        Location: varSelectedLocationId,\r\n                        'Batch number': cmpTrackingBatchNumber.Text,\r\n                        'Serial number': cmpTrackingSerialNumber.Text\r\n                    }\r\n                ),\r\n                Patch(\r\n                    'Asset management work order job product consumption lines (mserp)',\r\n                    ItemConsumption,\r\n                    {\r\n                        Quantity: locAdjustedQuantity,\r\n                        Site: varSelectedSiteId,\r\n                        Warehouse: varSelectedWarehouseId,\r\n                        Location: varSelectedLocationId,\r\n                        'Batch number': cmpTrackingBatchNumber.Text,\r\n                        'Serial number': cmpTrackingSerialNumber.Text\r\n                    }\r\n                )\r\n            ),\r\n            // catch:\r\n            With(\r\n                {\r\n                    locFnOError: Coalesce(\r\n                        Match(\r\n                            FirstError.Details.HttpResponse,\r\n                            \"\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n                        ).message,\r\n                        T.Error_ItemConsumptionUpdateGenericFailureLabel\r\n                    )\r\n                },\r\n                Notify(locFnOError, NotificationType.Error);\r\n                Trace(locFnOError, TraceSeverity.Error, FirstError)\r\n            ),\r\n            // on success:\r\n            Back()\r\n        )\r\n    );\r\n    \r\n)"
+                        PressedBorderColor: =Self.Fill
+                        PressedColor: =gblAppStyles.Button.PressedColor
+                        PressedFill: =gblAppStyles.Button.PressedFill
+                        RadiusBottomLeft: =Self.RadiusTopLeft
+                        RadiusBottomRight: =Self.RadiusTopLeft
+                        RadiusTopLeft: =gblAppStyles.Button.BorderRadius
+                        RadiusTopRight: =Self.RadiusTopLeft
+                        Size: =gblAppStyles.Button.FontSize
+                        Text: =T.ConfirmButtonLabel
+                        Width: =Parent.Width - Parent.PaddingLeft - Parent.PaddingRight - 16
+                        X: =Parent.Width / 2 - Self.Width / 2
+                        Y: =Parent.Height - Self.Height - 16
+      - cmpHeaderWOJICES:
+          Control: CanvasComponent
+          ComponentName: SubScreenHeader
+          Properties:
+            BackButtonAccessibleLabel: =T.BackButtonAccessibleLabel
+            Fill: =RGBA(7, 66, 171, 1)
+            Height: =54
+            Subtitle: =Blank()
+            Title: =ItemConsumption.'Item number'
+            Width: =Parent.Width
+      - icoRemoveItemConsumption:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =T.RemoveItemIconAccessibleLabel
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =gblAppStyles.Button.Fill
+            FocusedBorderColor: =gblAppStyles.FocusBorderColor
+            FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
+            Height: =cmpHeaderWOJICES.Height
+            Icon: =Icon.Trash
+            OnSelect: |-
+              =Remove('Asset management work order job product consumption lines (mserp)', ItemConsumption);
+              Back()
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =24
+            PaddingTop: =16
+            TabIndex: =0
+            Width: =Self.Height + Self.PaddingRight / 2
+            X: =Parent.Width - Self.Width
+      - cmpChangeItemConsumptionLocation:
+          Control: CanvasComponent
+          ComponentName: BottomSheetChoiceSelector
+          Properties:
+            AvailableChoices: =varAvailableLocations
+            ChoiceAccessibleName: =T.AvailableChoisesAccessibleLabel
+            ComponentInstanceName: =""
+            CurrentlySelectedChoice: =varSelectedLocationId
+            Fill: =RGBA(0, 0, 0, 0.15)
+            FocusBorderColor: =gblAppStyles.FocusBorderColor
+            FocusBorderThickness: =2
+            Height: =App.Height
+            Loading: =varIsLoadingAvailableLocations
+            LoadingChoicesText: =T.StorageLoadingAvailableLocationsLabel
+            OnCancel: |-
+              =UpdateContext({ varShowLocationChangePrompt: false });
+            OnSelect: |+
+              =UpdateContext(
+                  {
+                      varSelectedLocationId: SelectedChoice.key,
+                      varShowLocationChangePrompt: false
+                  }
+              );
+            ReturnFocus: =""
+            SelectedChoiceTooltip: =""
+            Title: =Blank()
+            UseStaticOrdering: =true
+            Visible: =varShowLocationChangePrompt
+            Width: =App.Width
+      - cmpChangeItemConsumptionWarehouse:
+          Control: CanvasComponent
+          ComponentName: BottomSheetChoiceSelector
+          Properties:
+            AvailableChoices: =varAvailableWarehouses
+            ChoiceAccessibleName: =T.AvailableChoisesAccessibleLabel
+            ComponentInstanceName: =""
+            CurrentlySelectedChoice: =varSelectedWarehouseId
+            Fill: =RGBA(0, 0, 0, 0.15)
+            FocusBorderColor: =gblAppStyles.FocusBorderColor
+            FocusBorderThickness: =2
+            Height: =App.Height
+            Loading: =varIsLoadingAvailableWarehouses
+            LoadingChoicesText: =T.StorageLoadingAvailableWarehousesLabel
+            OnCancel: |-
+              =UpdateContext({ varShowWarehouseChangePrompt: false });
+            OnSelect: |+
+              =UpdateContext(
+                  {
+                      varSelectedWarehouseId: SelectedChoice.key,
+                      // deselect lower dimensions as they no longer fit
+                      varSelectedLocationId: Blank(),
+                      varShowWarehouseChangePrompt: false
+                  }
+              );
+            ReturnFocus: =""
+            SelectedChoiceTooltip: =""
+            Title: =Blank()
+            UseStaticOrdering: =true
+            Visible: =varShowWarehouseChangePrompt
+            Width: =App.Width
+      - cmpChangeItemConsumptionSite:
+          Control: CanvasComponent
+          ComponentName: BottomSheetChoiceSelector
+          Properties:
+            AvailableChoices: =varAvailableSites
+            ChoiceAccessibleName: =T.AvailableChoisesAccessibleLabel
+            ComponentInstanceName: =""
+            CurrentlySelectedChoice: =varSelectedSiteId
+            Fill: =RGBA(0, 0, 0, 0.15)
+            FocusBorderColor: =gblAppStyles.FocusBorderColor
+            FocusBorderThickness: =2
+            Height: =App.Height
+            Loading: =varIsLoadingAvailableSites
+            LoadingChoicesText: =T.StorageLoadingAvailableSitesLabel
+            OnCancel: |-
+              =UpdateContext({ varShowSiteChangePrompt: false });
+            OnSelect: |+
+              =If(
+                  varSelectedSiteId <> SelectedChoice.key,
+                  UpdateContext(
+                      {
+                          varSelectedSiteId: SelectedChoice.key,
+                          // deselect lower dimensions as they no longer fit
+                          varSelectedWarehouseId: Blank(),
+                          varSelectedLocationId: Blank()
+                      }
+                  )
+              );
+
+              UpdateContext({varShowSiteChangePrompt: false});
+            ReturnFocus: =""
+            SelectedChoiceTooltip: =
+            Title: =Blank()
+            UseStaticOrdering: =true
+            Visible: =varShowSiteChangePrompt
+            Width: =App.Width

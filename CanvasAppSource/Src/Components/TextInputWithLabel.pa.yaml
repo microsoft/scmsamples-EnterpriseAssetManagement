@@ -1,0 +1,146 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  TextInputWithLabel:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      AccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Accessible label
+        Description: Accessible label
+        DataType: Text
+        Default: =""
+      DefaultText:
+        PropertyKind: Input
+        DisplayName: Default text
+        Description: Default text to set in the input field.
+        DataType: Text
+        Default: =Blank()
+      HorizontalPadding:
+        PropertyKind: Input
+        DisplayName: Horizontal padding
+        Description: Left and Right padding for Text input and label.
+        DataType: Number
+        Default: =8
+      MaxLength:
+        PropertyKind: Input
+        DisplayName: MaxLength
+        Description: The maximum length
+        DataType: Number
+        Default: =100
+      Text:
+        PropertyKind: Output
+        DisplayName: Text
+        Description: The text of the input
+        DataType: Text
+      backgroundColor:
+        PropertyKind: Input
+        DisplayName: backgroundColor
+        Description: The color of background
+        DataType: Color
+        Default: =Color.White
+      dividerColor:
+        PropertyKind: Input
+        DisplayName: dividerColor
+        Description: The color of divider
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      labelColor:
+        PropertyKind: Input
+        DisplayName: labelColor
+        Description: The color of the label
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      labelFontSize:
+        PropertyKind: Input
+        DisplayName: labelFontSize
+        Description: The fontsize of the label
+        DataType: Number
+        Default: =9.75
+      labelText:
+        PropertyKind: Input
+        DisplayName: labelText
+        Description: The label for this input
+        DataType: Text
+        Default: ="Text"
+      multiLine:
+        PropertyKind: Input
+        DisplayName: multiLine
+        Description: Is Multi line property
+        DataType: Boolean
+        Default: =true
+      textColor:
+        PropertyKind: Input
+        DisplayName: textColor
+        Description: The color of the text
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      textFont:
+        PropertyKind: Input
+        DisplayName: textFont
+        Description: The font of the text
+        DataType: Text
+        Default: ="Text"
+      textFontSize:
+        PropertyKind: Input
+        DisplayName: textFontSize
+        Description: The font size of the label
+        DataType: Number
+        Default: =12.75
+    Properties:
+      Fill: =Self.backgroundColor
+      Height: =100
+      OnReset: =Reset(txtTextInputWithLabel);
+      Text: =txtTextInputWithLabel.Text
+      Width: =App.Width
+    Children:
+      - shpBottomBorderTIWL:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =TextInputWithLabel.dividerColor
+            Height: =2
+            Width: =Parent.Width
+            Y: =TextInputWithLabel.Height - Self.Height
+      - txtTextInputWithLabel:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            AccessibleLabel: =Parent.AccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderStyle: =BorderStyle.None
+            Color: =Color.Black
+            Default: =Parent.DefaultText
+            Fill: =TextInputWithLabel.backgroundColor
+            Font: =TextInputWithLabel.textFont
+            Height: =Parent.Height - Self.Y - shpBottomBorderTIWL.Height
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =Self.Color
+            HoverFill: =Self.Fill
+            MaxLength: =TextInputWithLabel.MaxLength
+            Mode: =If(TextInputWithLabel.multiLine,TextMode.MultiLine,TextMode.SingleLine)
+            PaddingLeft: =Parent.HorizontalPadding
+            PaddingRight: =Parent.HorizontalPadding
+            PaddingTop: =0
+            Reset: =true
+            Size: =TextInputWithLabel.textFontSize
+            Width: =Parent.Width
+            Y: =24
+      - lblTextInputLabel:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =TextInputWithLabel.labelColor
+            Fill: =TextInputWithLabel.backgroundColor
+            Font: =TextInputWithLabel.textFont
+            Height: =24
+            PaddingLeft: =Parent.HorizontalPadding
+            PaddingRight: =Parent.HorizontalPadding
+            Size: =TextInputWithLabel.labelFontSize
+            Text: =TextInputWithLabel.labelText
+            Width: =Parent.Width

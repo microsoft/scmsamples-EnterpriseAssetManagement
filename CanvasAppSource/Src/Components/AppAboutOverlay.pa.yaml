@@ -1,0 +1,230 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  AppAboutOverlay:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      AboutTitleText:
+        PropertyKind: Input
+        DisplayName: About title text
+        Description: Title text of the About overlay.
+        DataType: Text
+        Default: ="About"
+      AppVersionText:
+        PropertyKind: Input
+        DisplayName: App version text
+        Description: Application version text.
+        DataType: Text
+        Default: |-
+          ="Version: v1.0"
+      AvailableLanguages:
+        PropertyKind: Input
+        DisplayName: Available languages
+        Description: A table containing available languages.
+        DataType: Table
+        Default: |-
+          =Table({Value: "da-dk"}, {Value: "en-us"})
+      CloseButtonText:
+        PropertyKind: Input
+        DisplayName: Close button text
+        Description: Label for the Close-button
+        DataType: Text
+        Default: ="Close"
+      ComponentInstanceName:
+        PropertyKind: Input
+        DisplayName: ComponentInstanceName
+        Description: The name of the instance of this component
+        DataType: Text
+        Default: =""
+      CurrentSelectedLanguage:
+        PropertyKind: Input
+        DisplayName: Current selected language
+        Description: The current selected language
+        DataType: Text
+        Default: ="en-us"
+      FocusBorderColor:
+        PropertyKind: Input
+        DisplayName: Focus border color
+        Description: Color of focus borders.
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      FocusBorderThickness:
+        PropertyKind: Input
+        DisplayName: Focus border thickness
+        Description: Thickness of focus borders.
+        DataType: Number
+        Default: =2
+      LanguageChangeHeaderText:
+        PropertyKind: Input
+        DisplayName: Language change header text
+        Description: A custom property
+        DataType: Text
+        Default: ="Language (change requires app restart):"
+      LanguageSelectionAccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Language selection accessible label
+        Description: Accessible label for language selection dropdown
+        DataType: Text
+        Default: =""
+      OnCloseSelect:
+        PropertyKind: Event
+        DisplayName: On Close select
+        Description: Behavior to invoke when pressing the Close button.
+        ReturnType: Boolean
+        Default: =false
+      OnLanguageChange:
+        PropertyKind: Event
+        DisplayName: On language change
+        Description: Behavior to invoke when changing the language.
+        ReturnType: Boolean
+        Default: =true
+        Parameters:
+          - LanguageId:
+              Description: The chosen language ID.
+              DataType: Text
+              Default: ="Text"
+      ReturnFocus:
+        PropertyKind: Input
+        DisplayName: ReturnFocus
+        Description: The element that the focus should return
+        DataType: Text
+        Default: =""
+      TermsOfServiceHeaderText:
+        PropertyKind: Input
+        DisplayName: Terms of service header text
+        Description: Header text above the terms of service
+        DataType: Text
+        Default: ="Terms of service"
+    Properties:
+      Fill: =RGBA(243, 242, 241, 1)
+      Height: =App.Height
+      Width: =App.Width
+    Children:
+      - btnCloseAboutOverlay:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(7, 66, 171, 1)
+            FocusedBorderColor: =AppAboutOverlay.FocusBorderColor
+            FocusedBorderThickness: =AppAboutOverlay.FocusBorderThickness
+            Font: =Font.'Segoe UI'
+            HoverBorderColor: =Self.Fill
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            OnSelect: =Parent.OnCloseSelect()
+            PaddingLeft: =10
+            PaddingRight: =10
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =12
+            RadiusBottomRight: =12
+            RadiusTopLeft: =12
+            RadiusTopRight: =12
+            Size: =12.75
+            Text: =AppAboutOverlay.CloseButtonText
+            Width: =300
+            X: =Parent.Width / 2 - Self.Width / 2
+            Y: =Parent.Height - Self.Height - 16
+      - conVerticalAAO:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            DropShadow: =DropShadow.None
+            Height: =Parent.Height - (Parent.Height - btnCloseAboutOverlay.Y) - 16
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width
+          Children:
+            - lblTitleAAO:
+                Control: Label@2.5.1
+                Properties:
+                  Align: =Align.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =Color.White
+                  Fill: =RGBA(7, 66, 171, 1)
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Bold
+                  Height: =54
+                  Role: =TextRole.Heading1
+                  Size: =24 * 0.75
+                  Text: =AppAboutOverlay.AboutTitleText
+                  Width: =Parent.Width
+                  Wrap: =false
+            - lblAboutAppVersion:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Semibold
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Size: =12.75
+                  Text: =AppAboutOverlay.AppVersionText
+            - htmTermsOfService:
+                Control: HtmlViewer@2.1.0
+                Properties:
+                  DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                  Font: =Font.'Segoe UI'
+                  HtmlText: "=$\"\U0001F517 <a href=\"\"https://go.microsoft.com/fwlink/?linkid=2247012\"\" target=\"\"_blank\"\">{AppAboutOverlay.TermsOfServiceHeaderText}</a>\""
+                  LayoutMinWidth: =150
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Size: =12.75
+            - lblLanguageSelectionHeader:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =FontWeight.Semibold
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Size: =12.75
+                  Text: =AppAboutOverlay.LanguageChangeHeaderText
+            - drpLanguageSelectionAAO:
+                Control: Classic/DropDown@2.3.1
+                Properties:
+                  AccessibleLabel: =AppAboutOverlay.LanguageSelectionAccessibleLabel
+                  AlignInContainer: =AlignInContainer.Center
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  ChevronBackground: =RGBA(56, 96, 178, 1)
+                  ChevronFill: =RGBA(255, 255, 255, 1)
+                  ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                  ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                  Default: =AppAboutOverlay.CurrentSelectedLanguage
+                  FocusedBorderColor: =AppAboutOverlay.FocusBorderColor
+                  FocusedBorderThickness: =AppAboutOverlay.FocusBorderThickness
+                  Font: =Font.'Open Sans'
+                  HoverFill: =RGBA(186, 202, 226, 1)
+                  Items: =AppAboutOverlay.AvailableLanguages
+                  Items.Value: =Value
+                  LayoutMinWidth: =320
+                  OnChange: =AppAboutOverlay.OnLanguageChange(Self.Selected.Value)
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  PressedColor: =RGBA(255, 255, 255, 1)
+                  PressedFill: =RGBA(0, 18, 107, 1)
+                  SelectionColor: =RGBA(255, 255, 255, 1)
+                  SelectionFill: =RGBA(56, 96, 178, 1)
+                  Width: =Parent.Width - 8
+      - cmpAppAboutOverlayFocusTrap:
+          Control: CodeComponent
+          ComponentName: msdyn_MscrmControls.Common.A11yFocusTrap
+          Properties:
+            Activate: =AppAboutOverlay.Visible
+            ContainerName: =AppAboutOverlay.ComponentInstanceName
+            Height: =1
+            ReturnFocus: =AppAboutOverlay.ReturnFocus
+            Width: =1

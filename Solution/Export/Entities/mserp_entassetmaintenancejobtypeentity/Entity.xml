@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Asset management maintenance job types (mserp)" OriginalName="Asset management maintenance job types (mserp)">mserp_entassetmaintenancejobtypeentity</Name>
+  <RibbonDiffXml />
+</Entity>

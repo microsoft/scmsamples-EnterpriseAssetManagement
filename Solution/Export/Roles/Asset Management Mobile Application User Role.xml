@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Keep the role ID the same for every app version. This ensures that the role is overwritten
+  for the purpose of the specific app version that is being installed.
+-->
+<Role id="{91049197-0031-49db-8805-ef78af3a83ac}" name="Asset Management Mobile Application User Role" isinherited="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>0</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvAppendmserp_entassetmaintenancerequestdocumentattachmententity" level="Global" />
+    <RolePrivilege name="prvAppendmserp_entassetmaintenanceworkorderlinehourconsumptionentity" level="Global" />
+    <RolePrivilege name="prvAppendmserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvAppendTomserp_entassetmaintenancerequestdocumentattachmententity" level="Global" />
+    <RolePrivilege name="prvAppendTomserp_entassetmaintenanceworkorderlinehourconsumptionentity" level="Global" />
+    <RolePrivilege name="prvAppendTomserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenancerequestdocumentattachmententity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenancerequestv2entity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenanceworkorderlineattachmententity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenanceworkorderlinehourconsumptionentity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenanceworkorderlinev2entity" level="Global" />
+    <RolePrivilege name="prvCreatemserp_entassetmaintenanceworkordertablev2entity" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvDeletemserp_entassetmaintenanceworkorderlineattachmententity" level="Global" />
+    <RolePrivilege name="prvDeletemserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvReadAttribute" level="Global" />
+    <RolePrivilege name="prvReadcdm_company" level="Global" />
+    <RolePrivilege name="prvReaddatalakefolder" level="Global" />
+    <RolePrivilege name="prvReadEntity" level="Global" />
+    <RolePrivilege name="prvReadmserp_docutypeentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_ecorestrackingdimensiongroupentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceassetbillofmaterialv2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceassetcounterentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceassetservicelevelv2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceassettypedefaultsparepartv2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceassetv3entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancechecklistvariableentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancechecklistvariablevalueentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancefunctionallocationentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancejobtypeentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancejobtypevariantentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancemobileappusersettingsentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancemodelentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceparametersentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancerequestdocumentattachmententity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancerequesttypeentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenancerequestv2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkerentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlifecyclemodelstatenextentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlineattachmententity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlinechecklistentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlinehourconsumptionentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderlinev2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderservicelevelentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkordertablev2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkordertypeentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetmaintenanceworkorderuserreferenceentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetreleasedproductentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_entassetreleasedproductstoragedimensiondefaultsentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_inventitembatchentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_inventitemserialnumberentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_inventoperationalsitev2entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_inventproductspecificordersettingsv3entity" level="Global" />
+    <RolePrivilege name="prvReadmserp_inventwarehouseentity" level="Global" />
+    <RolePrivilege name="prvReadmserp_wmswarehouselocationentity" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenancerequestdocumentattachmententity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkorderlineattachmententity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkorderlinechecklistentity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkorderlinehourconsumptionentity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkorderlineproductconsumptionentity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkorderlinev2entity" level="Global" />
+    <RolePrivilege name="prvWritemserp_entassetmaintenanceworkordertablev2entity" level="Global" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+  </RolePrivileges>
+</Role>

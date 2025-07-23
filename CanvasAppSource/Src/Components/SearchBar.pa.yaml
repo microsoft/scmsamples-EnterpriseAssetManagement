@@ -1,0 +1,81 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  SearchBar:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      AccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Accessible label
+        Description: Accessible label for the search input field
+        DataType: Text
+        Default: =""
+      DefaultSearchText:
+        PropertyKind: Input
+        DisplayName: Default search text
+        Description: Default search text.
+        DataType: Text
+        Default: =Blank()
+      SearchHintText:
+        PropertyKind: Input
+        DisplayName: Search hint text
+        Description: For translation.
+        DataType: Text
+        Default: ="Search ..."
+      SearchText:
+        PropertyKind: Output
+        DisplayName: Search text
+        Description: Search text input from the user.
+        DataType: Text
+    Properties:
+      Fill: =RGBA(7, 66, 171, 1)
+      Height: =62
+      OnReset: =Reset(txtSearchInput)
+      SearchText: =txtSearchInput.Text
+      Width: =App.Width
+    Children:
+      - txtSearchInput:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            AccessibleLabel: =Parent.AccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
+            BorderThickness: =0
+            Clear: =true
+            Color: =RGBA(255, 255, 255, 1)
+            Default: =Parent.DefaultSearchText
+            DelayOutput: =true
+            Fill: =RGBA(0, 0, 0, 0.4)
+            Font: =Font.'Segoe UI'
+            Height: =36
+            HintText: =SearchBar.SearchHintText
+            HoverBorderColor: =RGBA(0, 18, 107, 1)
+            HoverColor: =Self.Color
+            HoverFill: =Self.Fill
+            PaddingBottom: =0
+            PaddingLeft: =34
+            PaddingRight: =15
+            PaddingTop: =0
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =12.75
+            Width: =Parent.Width - (16 * 2)
+            X: =16
+            Y: =(Parent.Height / 2) - (Self.Height / 2)
+      - icoSearchMagnifying:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =Self.Width
+            Icon: =Icon.Search
+            Width: =16
+            X: =txtSearchInput.X + 9
+            Y: =txtSearchInput.Y + (txtSearchInput.Height / 2) - (Self.Height / 2)

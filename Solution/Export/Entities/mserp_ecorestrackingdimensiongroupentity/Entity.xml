@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name LocalizedName="Tracking dimension groups (mserp)" OriginalName="Tracking dimension groups (mserp)">mserp_ecorestrackingdimensiongroupentity</Name>
+  <RibbonDiffXml />
+</Entity>

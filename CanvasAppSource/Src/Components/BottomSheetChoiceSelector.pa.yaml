@@ -1,0 +1,305 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  BottomSheetChoiceSelector:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      AvailableChoices:
+        PropertyKind: Input
+        DisplayName: Available choices
+        Description: A table containing available choices to pick from.
+        DataType: Table
+        Default: |-
+          =Table(
+              {
+                  key: "x",
+                  label: "Option 1 (x)"
+              },
+              {
+                  key: "z",
+                  label: "Some selected choice (z) (can be Blank())"
+              },
+              {
+                  key: "y",
+                  label: "Another option (y)"
+              }
+          )
+      ChoiceAccessibleName:
+        PropertyKind: Input
+        DisplayName: ChoiceAccessibleName
+        Description: An accessible label for each choice
+        DataType: Text
+        Default: ="{OptionLabel} Selected"
+      ComponentInstanceName:
+        PropertyKind: Input
+        DisplayName: ComponentInstanceName
+        Description: The name of the instance of this component
+        DataType: Text
+        Default: =""
+      CurrentlySelectedChoice:
+        PropertyKind: Input
+        DisplayName: Currently selected choice
+        Description: The currently selected choice text
+        DataType: Text
+        Default: ="Some selected choice (z) (can be Blank())"
+      FocusBorderColor:
+        PropertyKind: Input
+        DisplayName: Focus border color
+        Description: Color of the focus border.
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      FocusBorderThickness:
+        PropertyKind: Input
+        DisplayName: Focus border thickness
+        Description: Thickness of focus border.
+        DataType: Number
+        Default: =2
+      Loading:
+        PropertyKind: Input
+        DisplayName: Loading
+        Description: Data is loading
+        DataType: Boolean
+        Default: =false
+      LoadingChoicesText:
+        PropertyKind: Input
+        DisplayName: Loading choices text
+        Description: Text to show when `Loading` is true
+        DataType: Text
+        Default: ="Loading choices"
+      OnCancel:
+        PropertyKind: Event
+        DisplayName: On cancel
+        Description: Behavior to trigger when the cancel button is pressed.
+        ReturnType: Boolean
+        Default: =true
+      OnSelect:
+        PropertyKind: Event
+        DisplayName: On select
+        Description: Behavior to trigger when a lifecycle state is selected.
+        ReturnType: Boolean
+        Default: =true
+        Parameters:
+          - SelectedChoice:
+              Description: Selected choice record { key, label }
+              DataType: Record
+              Default: |-
+                ={key: "x", label: "Sample label"}
+      ReturnFocus:
+        PropertyKind: Input
+        DisplayName: ReturnFocus
+        Description: Where the focus should be after closing
+        DataType: Text
+        Default: =""
+      SelectedChoiceTooltip:
+        PropertyKind: Input
+        DisplayName: Selected Choice Tooltip
+        Description: A tooltip for selected choice
+        DataType: Text
+        Default: =""
+      Title:
+        PropertyKind: Input
+        DisplayName: Title
+        Description: Title of the bottom sheet, or Blank(), when Blank() a notch is shown instead.
+        DataType: Text
+        Default: =Blank()
+      UseStaticOrdering:
+        PropertyKind: Input
+        DisplayName: Use static ordering
+        Description: Make the selected choice (if any) a part of the list and do not fiddle with ordering.
+        DataType: Boolean
+        Default: =false
+    Properties:
+      Fill: =RGBA(0, 0, 0, 0.15)
+      Height: =App.Height
+      Width: =App.Width
+    Children:
+      - btnCancelBackgroundBSCS:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(7, 66, 171, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            OnSelect: =Parent.OnCancel()
+            Width: =App.Width
+      - lblLoadingChoicesBSCS:
+          Control: Label@2.5.1
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            Height: =galAvailableChoicesBSCS.TemplateHeight
+            Italic: =true
+            PaddingLeft: =16
+            PaddingRight: =16
+            Size: =11.25
+            Text: =Parent.LoadingChoicesText
+            Visible: =Parent.Loading
+            Width: =Parent.Width
+            Y: =Parent.Height - Self.Height
+      - galAvailableChoicesBSCS:
+          Control: Gallery@2.15.0
+          Variant: Vertical
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DelayItemLoading: =false
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Min(CountRows(Self.AllItems) * Self.TemplateHeight, Parent.Height - Parent.Height*0.2)
+            ItemAccessibleLabel: "=If(\r\n    BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label],\r\n\r\n    Substitute(\r\n            BottomSheetChoiceSelector.ChoiceAccessibleName,\r\n            \"{OptionLabel}\",\r\n            ThisItem.label\r\n    ),\r\n    \r\n    ThisItem.label\r\n)"
+            Items: "=Table(\r\n    \r\n    Filter(\r\n        Parent.AvailableChoices,\r\n        key <> Parent.CurrentlySelectedChoice\r\n        And label <> Parent.CurrentlySelectedChoice\r\n    ),\r\n    {key: Parent.CurrentlySelectedChoice, label: Parent.CurrentlySelectedChoice}\r\n)"
+            LoadingSpinner: =LoadingSpinner.Controls
+            OnSelect: |-
+              =If(
+                  BottomSheetChoiceSelector.CurrentlySelectedChoice in [
+                      ThisItem.key,
+                      ThisItem.label
+                  ],
+                  BottomSheetChoiceSelector.OnCancel(),
+                  BottomSheetChoiceSelector.OnSelect(ThisItem)
+              )
+            Selectable: =false
+            TemplatePadding: =0
+            TemplateSize: =73
+            Width: =Parent.Width
+            Y: =Parent.Height - Self.Height
+          Children:
+            - icoChoiceCurrentlySelectedBSCS:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Color: =RGBA(7, 66, 171, 1)
+                  Height: =lblChoiceTextBSCS.Height
+                  Icon: =Icon.CheckBadge
+                  OnSelect: =Select(lblChoiceTextBSCS)
+                  PaddingBottom: =24
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  PaddingTop: =24
+                  Visible: =BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label]
+                  Width: =Self.Height
+                  X: =Parent.Width - Self.Width
+            - lblChoiceTextBSCS:
+                Control: Label@2.5.1
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  FocusedBorderColor: =BottomSheetChoiceSelector.FocusBorderColor
+                  FocusedBorderThickness: =BottomSheetChoiceSelector.FocusBorderThickness
+                  Font: =Font.'Segoe UI'
+                  FontWeight: =If(BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label], FontWeight.Normal, FontWeight.Semibold)
+                  Height: =Parent.TemplateHeight
+                  OnSelect: =Select(Parent)
+                  PaddingLeft: =16
+                  PaddingRight: =16
+                  Size: =11.25
+                  TabIndex: =0
+                  Text: =ThisItem.label
+                  Tooltip: "=If(\r\n    BottomSheetChoiceSelector.CurrentlySelectedChoice in [ThisItem.key, ThisItem.label],\r\n\r\n    Substitute(\r\n            BottomSheetChoiceSelector.ChoiceAccessibleName,\r\n            \"{OptionLabel}\",\r\n            ThisItem.label\r\n    ),\r\n    \r\n    \"\"\r\n)"
+                  Width: =Parent.TemplateWidth
+            - shpBottomLineBSCS:
+                Control: Rectangle@2.3.0
+                Properties:
+                  BorderColor: =RGBA(0, 18, 107, 1)
+                  Fill: =RGBA(209, 209, 209, 1)
+                  Height: =1
+                  OnSelect: =Select(Parent)
+                  Width: =Parent.TemplateWidth
+                  Y: =Parent.TemplateHeight - 1
+      - btnTopBorderWithNotchBSCS:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =Color.White
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =Color.White
+            Font: =Font.'Open Sans'
+            Height: =14
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =Color.White
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Color.White
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =14
+            RadiusTopRight: =14
+            Text: =""
+            Visible: =IsBlank(Parent.Title)
+            Width: =Parent.Width
+            X: =galAvailableChoicesBSCS.X
+            Y: =If(lblLoadingChoicesBSCS.Visible, lblLoadingChoicesBSCS.Y, galAvailableChoicesBSCS.Y) - Self.Height + 1
+      - btnTopBorderWithTitleBSCS:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(0, 0, 0, 1)
+            DisabledFill: =Color.White
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =Color.White
+            Font: =Font.'Segoe UI'
+            Height: =42
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =Color.White
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Color.White
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =14
+            RadiusTopRight: =14
+            Size: =12.75
+            Text: =Parent.Title
+            Visible: =Not IsBlank(Parent.Title)
+            Width: =Parent.Width
+            X: =galAvailableChoicesBSCS.X
+            Y: =If(lblLoadingChoicesBSCS.Visible, lblLoadingChoicesBSCS.Y, galAvailableChoicesBSCS.Y) - Self.Height + 1
+      - shpBottomSheetTopPinBSCS:
+          Control: Classic/Button@2.2.0
+          Properties:
+            AutoDisableOnSelect: =false
+            BorderColor: =ColorFade(Self.Fill, -15%)
+            BorderThickness: =0
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(145, 145, 145, 1)
+            DisplayMode: =DisplayMode.Disabled
+            Fill: =RGBA(145, 145, 145, 1)
+            Font: =Font.'Open Sans'
+            Height: =5
+            HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+            PressedBorderColor: =Self.Fill
+            PressedColor: =Self.Fill
+            PressedFill: =Self.Color
+            RadiusBottomLeft: =3
+            RadiusBottomRight: =3
+            RadiusTopLeft: =3
+            RadiusTopRight: =3
+            Text: =""
+            Visible: =btnTopBorderWithNotchBSCS.Visible
+            Width: =37
+            X: =Parent.Width / 2 - Self.Width / 2
+            Y: =btnTopBorderWithNotchBSCS.Y + btnTopBorderWithNotchBSCS.Height / 2 - Self.Height / 2
+      - cmpFocusTrapBSCS:
+          Control: CodeComponent
+          ComponentName: msdyn_MscrmControls.Common.A11yFocusTrap
+          Properties:
+            Activate: =BottomSheetChoiceSelector.Visible
+            ActivationDelay: =1000
+            ContainerName: =BottomSheetChoiceSelector.ComponentInstanceName
+            Height: =1
+            ReturnFocus: =BottomSheetChoiceSelector.ReturnFocus
+            Width: =1

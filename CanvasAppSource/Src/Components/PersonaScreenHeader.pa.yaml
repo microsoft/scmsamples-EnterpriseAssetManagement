@@ -1,0 +1,131 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+ComponentDefinitions:
+  PersonaScreenHeader:
+    DefinitionType: CanvasComponent
+    CustomProperties:
+      BackButtonAccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Back button accessible label
+        Description: Aria label for the back button.
+        DataType: Text
+        Default: ="Go back"
+      FocusBorderColor:
+        PropertyKind: Input
+        DisplayName: Focus border color
+        Description: Color of the focus border.
+        DataType: Color
+        Default: =RGBA(0, 0, 0, 1)
+      FocusBorderThickness:
+        PropertyKind: Input
+        DisplayName: Focus border thickness
+        Description: Thickness of the focus border.
+        DataType: Number
+        Default: =2
+      OnPersonaPictureSelect:
+        PropertyKind: Event
+        DisplayName: On persona picture select
+        Description: Behavior to invoke when pressing the persona picture.
+        ReturnType: Boolean
+        Default: =true
+      PersonaAccessibleLabel:
+        PropertyKind: Input
+        DisplayName: Persona accessible label
+        Description: Accessible label for the persona icon
+        DataType: Text
+        Default: =""
+      ShowBackButton:
+        PropertyKind: Input
+        DisplayName: Show back button
+        Description: Show back button instead of user portrait.
+        DataType: Boolean
+        Default: =false
+      Title:
+        PropertyKind: Input
+        DisplayName: Title
+        Description: Title of the header
+        DataType: Text
+        Default: ="Text"
+      fillColor:
+        PropertyKind: Input
+        DisplayName: fillColor
+        Description: The color of the Header
+        DataType: Color
+        Default: =RGBA(7, 66, 171, 1)
+      fontSize:
+        PropertyKind: Input
+        DisplayName: fontSize
+        Description: Size of the font
+        DataType: Number
+        Default: =17.2
+    Properties:
+      Fill: =Self.fillColor
+      Height: =64
+      Width: =App.Width
+    Children:
+      - lblTitlePSH:
+          Control: Label@2.5.1
+          Properties:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Bold
+            Height: =Parent.Height
+            Size: =PersonaScreenHeader.fontSize
+            Text: =PersonaScreenHeader.Title
+            Width: =Parent.Width - Self.X*2
+            X: =imgPersonaPSH.X + imgPersonaPSH.Width + 16
+      - shpPersonaClickableBackdropPSH:
+          Control: Rectangle@2.3.0
+          Properties:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =0
+            Height: =Parent.Height
+            OnSelect: =Select(imgPersonaPSH)
+            Visible: =Not Parent.ShowBackButton
+            Width: =imgPersonaPSH.Width + 16 * 2
+      - imgPersonaPSH:
+          Control: Image@2.2.3
+          Properties:
+            AccessibleLabel: =Parent.PersonaAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
+            FocusedBorderColor: =PersonaScreenHeader.FocusBorderColor
+            FocusedBorderThickness: =PersonaScreenHeader.FocusBorderThickness
+            Height: =32
+            Image: =User().Image
+            OnSelect: =Parent.OnPersonaPictureSelect()
+            RadiusBottomLeft: =10000
+            RadiusBottomRight: =10000
+            RadiusTopLeft: =10000
+            RadiusTopRight: =10000
+            TabIndex: =0
+            Visible: =Not Parent.ShowBackButton
+            Width: =32
+            X: =16
+            Y: =(Parent.Height / 2) - (Self.Height / 2)
+      - icoBackButtonPSH:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            AccessibleLabel: =Parent.BackButtonAccessibleLabel
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            FocusedBorderColor: =PersonaScreenHeader.FocusBorderColor
+            FocusedBorderThickness: =PersonaScreenHeader.FocusBorderThickness
+            Height: =Parent.Height
+            Icon: =Icon.ChevronLeft
+            OnSelect: =Back(ScreenTransition.None)
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            TabIndex: =0
+            Visible: =Parent.ShowBackButton
+            Width: =imgPersonaPSH.Width + 16 * 2

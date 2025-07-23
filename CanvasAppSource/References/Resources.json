@@ -1,0 +1,160 @@
+{
+  "Resources": [
+    {
+      "Name": "SampleImage",
+      "Schema": "i",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/image/images/SampleImage.svg",
+      "Path": "/ctrllib/image/images/SampleImage.svg",
+      "Content": "Image",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/image/images/SampleImage.svg"
+    },
+    {
+      "Name": "SamplePdf",
+      "Schema": "o",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/pdfViewer/data/SamplePdf.pdf",
+      "Path": "/ctrllib/pdfViewer/data/SamplePdf.pdf",
+      "Content": "Pdf",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/pdfViewer/data/SamplePdf.pdf"
+    },
+    {
+      "Name": "SampleVideo",
+      "Schema": "m",
+      "IsSampleData": true,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "/ctrllib/videoPlayback/media/SampleVideo.mp4",
+      "Path": "/ctrllib/videoPlayback/media/SampleVideo.mp4",
+      "Content": "Video",
+      "ResourceKind": "Uri",
+      "RootPath": "ms-appx:///ctrllib/videoPlayback/media/SampleVideo.mp4"
+    },
+    {
+      "Name": "CreateMRSuccess",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0004.png",
+      "Path": "Assets\\Images\\0004.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAwNA.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A33Z&ske=2025-07-19T09%3A55%3A33Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "Edit",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0005.svg",
+      "Path": "Assets\\Images\\0005.svg",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAwNQ.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A33Z&ske=2025-07-19T09%3A55%3A33Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "MSLogo",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0007.png",
+      "Path": "Assets\\Images\\0007.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAwNw.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "onboardingLE",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0008.png",
+      "Path": "Assets\\Images\\0008.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAwOA.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "onboardingMR",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0009.png",
+      "Path": "Assets\\Images\\0009.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAwOQ.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "onboardingWO",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0010.png",
+      "Path": "Assets\\Images\\0010.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAxMA.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "qr",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0011.svg",
+      "Path": "Assets\\Images\\0011.svg",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAxMQ.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "removeImage",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0012.png",
+      "Path": "Assets\\Images\\0012.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAxMg.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "search",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "0014.svg",
+      "Path": "Assets\\Images\\0014.svg",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/MDAxNA.svg?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    },
+    {
+      "Name": "eam-icon-192px",
+      "Schema": "i",
+      "IsSampleData": false,
+      "IsWritable": false,
+      "Type": "ResourceInfo",
+      "FileName": "994329a5-7732-47f7-9ec6-298a2489147d.png",
+      "Path": "Assets\\Images\\994329a5-7732-47f7-9ec6-298a2489147d.png",
+      "Content": "Image",
+      "ResourceKind": "LocalFile",
+      "RootPath": "https://dststil201wus.blob.core.windows.net/0dbd24be-aa20-43cb-b776-32645651c34c-1/resource/OTk0MzI5YTUtNzczMi00N2Y3LTllYzYtMjk4YTI0ODkxNDdk.png?skoid=af5c105d-2fa5-4232-a94e-1d2a04756da0&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2025-07-18T09%3A40%3A34Z&ske=2025-07-19T09%3A55%3A34Z&sks=b&skv=2023-01-03"
+    }
+  ]
+}

@@ -1,0 +1,744 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BackButtonAccessibleLabel" xml:space="preserve">
+    <value>돌아가기</value>
+  </data>
+  <data name="JobsLabel" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="WorkOrdersLabel" xml:space="preserve">
+    <value>작업 주문</value>
+  </data>
+  <data name="NewRequestButtonLabel" xml:space="preserve">
+    <value>+ 요청</value>
+    <comment>Button to start creating a new maintenance request</comment>
+  </data>
+  <data name="RequestMaintenanceLabel" xml:space="preserve">
+    <value>유지 관리 요청</value>
+  </data>
+  <data name="SearchLabel" xml:space="preserve">
+    <value>검색</value>
+  </data>
+  <data name="ScanLabel" xml:space="preserve">
+    <value>스캔</value>
+  </data>
+  <data name="AssetsLabel" xml:space="preserve">
+    <value>자산</value>
+  </data>
+  <data name="FunctionalLocationsLabel" xml:space="preserve">
+    <value>기능 위치</value>
+  </data>
+  <data name="SearchByAssetLabel" xml:space="preserve">
+    <value>자산 유형 또는 자산 ID로 검색</value>
+  </data>
+  <data name="SearchByLocationLabel" xml:space="preserve">
+    <value>위치 이름 또는 위치 ID로 검색</value>
+  </data>
+  <data name="WorkersRemarkLabel" xml:space="preserve">
+    <value>작업자 설명</value>
+  </data>
+  <data name="InternalNoteLabel" xml:space="preserve">
+    <value>내부 메모</value>
+  </data>
+  <data name="AttachmentsLabel" xml:space="preserve">
+    <value>첨부 파일</value>
+  </data>
+  <data name="MyTimeSpentLabel" xml:space="preserve">
+    <value>내 소요 시간</value>
+  </data>
+  <data name="ItemsConsumedLabel" xml:space="preserve">
+    <value>항목 소비됨</value>
+  </data>
+  <data name="AssetLabel" xml:space="preserve">
+    <value>자산</value>
+  </data>
+  <data name="ScheduledStartLabel" xml:space="preserve">
+    <value>예약된 시작</value>
+  </data>
+  <data name="ScheduledEndLabel" xml:space="preserve">
+    <value>예약된 종료</value>
+  </data>
+  <data name="WorkOrderLabel" xml:space="preserve">
+    <value>작업 주문</value>
+  </data>
+  <data name="WorkOrderStateChangeLabel" xml:space="preserve">
+    <value>작업 주문 상태 변경</value>
+  </data>
+  <data name="GoToWorkOrderLabel" xml:space="preserve">
+    <value>작업 주문으로 이동</value>
+  </data>
+  <data name="RelatedJobsLabel" xml:space="preserve">
+    <value>관련 작업</value>
+  </data>
+  <data name="ViewAssetJobsLabel" xml:space="preserve">
+    <value>이 자산에 대한 작업 보기</value>
+  </data>
+  <data name="ViewLocationJobsLabel" xml:space="preserve">
+    <value>이 위치에 대한 작업 보기</value>
+  </data>
+  <data name="RemarksLabel" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="AdjustTimeSpentLabel" xml:space="preserve">
+    <value>소요 시간 조정</value>
+    <comment>Header for adjusting worker time spent on a work order job</comment>
+  </data>
+  <data name="AddItemsByClickingLabel" xml:space="preserve">
+    <value>아래 버튼을 클릭하여 항목 추가</value>
+    <comment>Header instructing the user that they can add items for consumption</comment>
+  </data>
+  <data name="AddItemsLabel" xml:space="preserve">
+    <value>항목 추가</value>
+    <comment>Button to add items for consumption on a work order journal</comment>
+  </data>
+  <data name="SelectAnotherItemLabel" xml:space="preserve">
+    <value>다른 항목 원본 검색 또는 선택</value>
+  </data>
+  <data name="WorkOrderTypeLabel" xml:space="preserve">
+    <value>작업 주문 유형</value>
+  </data>
+  <data name="ServiceLevelLabel" xml:space="preserve">
+    <value>서비스 수준</value>
+  </data>
+  <data name="ExpectedStartLabel" xml:space="preserve">
+    <value>예상 시작</value>
+  </data>
+  <data name="ExpectedEndLabel" xml:space="preserve">
+    <value>예상 종료</value>
+  </data>
+  <data name="ActualStartLabel" xml:space="preserve">
+    <value>실제 시작</value>
+    <comment>Header indicating when an activity actually started</comment>
+  </data>
+  <data name="ActualEndLabel" xml:space="preserve">
+    <value>실제 종료</value>
+    <comment>Header indicating when an activity actually ended</comment>
+  </data>
+  <data name="ChecklistLabel" xml:space="preserve">
+    <value>체크리스트({CheckedItemsCount}/{TotalItemsCount})</value>
+  </data>
+  <data name="NoChecklistLabel" xml:space="preserve">
+    <value>체크리스트 없음</value>
+  </data>
+  <data name="AdjustQuantityAccessibleLabel" xml:space="preserve">
+    <value>항목 수량 조정</value>
+    <comment>Aria-label for input field containing quantity of a specific item consumed on a work order</comment>
+  </data>
+  <data name="AssetBomItemsAccessibleLabel" xml:space="preserve">
+    <value>자산 BOM 항목 목록</value>
+  </data>
+  <data name="AssetsGalleryAccessibleLabel" xml:space="preserve">
+    <value>자산 목록</value>
+  </data>
+  <data name="AvailableEntitiesGalleryAccessibleLabel" xml:space="preserve">
+    <value>사용 가능한 갤러리 목록</value>
+  </data>
+  <data name="CheckListItemRemarkAccessibleLabel" xml:space="preserve">
+    <value>체크리스트 항목 설명</value>
+  </data>
+  <data name="CheckListMeasurementCounterValue" xml:space="preserve">
+    <value>체크리스트 측정 카운터 값</value>
+  </data>
+  <data name="CheckListVariableAccessibleLabel" xml:space="preserve">
+    <value>체크리스트 변수</value>
+  </data>
+  <data name="HourConsumptionAccessibleLabel" xml:space="preserve">
+    <value>소요 시간 조정</value>
+    <comment>Aria-label for input field containing amount of hours spent on a work order job</comment>
+  </data>
+  <data name="ItemsConsumedGalleryAccessibleLabel" xml:space="preserve">
+    <value>소비된 항목 목록</value>
+  </data>
+  <data name="ItemsForConsumptionAccessibleLabel" xml:space="preserve">
+    <value>소비 항목</value>
+  </data>
+  <data name="LocationsGalleryAccessibleLabel" xml:space="preserve">
+    <value>기능 위치 라인</value>
+  </data>
+  <data name="MinuteConsumptionAccessibleLabel" xml:space="preserve">
+    <value>소요 시간(분) 조정</value>
+    <comment>Aria-label for input field containing the number of minutes (0-60) spent on a work order job</comment>
+  </data>
+  <data name="MRAddImageAccessibleLabel" xml:space="preserve">
+    <value>사진 추가</value>
+    <comment>Button to start adding a new image to a maintenance request</comment>
+  </data>
+  <data name="MRAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>현재 첨부 파일 목록</value>
+  </data>
+  <data name="MRDescriptionAccessibleLabel" xml:space="preserve">
+    <value>유지 관리 요청 설명 입력</value>
+  </data>
+  <data name="MRNotesAccessibleLabel" xml:space="preserve">
+    <value>유지 관리 요청 메모 입력</value>
+  </data>
+  <data name="MRRequestTypeAccessibleLabel" xml:space="preserve">
+    <value>유지 관리 요청 유형 선택</value>
+  </data>
+  <data name="MRServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>유지 관리 서비스 수준 선택</value>
+  </data>
+  <data name="RemoveItemIconAccessibleLabel" xml:space="preserve">
+    <value>항목 제거</value>
+  </data>
+  <data name="SearchAccessibleLabel" xml:space="preserve">
+    <value>검색할 텍스트 입력</value>
+  </data>
+  <data name="SelectLanguageAccessibleLabel" xml:space="preserve">
+    <value>언어 선택</value>
+  </data>
+  <data name="SpareItemsGalleryAccessibleLabel" xml:space="preserve">
+    <value>예비 항목 목록</value>
+  </data>
+  <data name="WorkOrderFilterIconAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 필터링</value>
+  </data>
+  <data name="WorkOrderGalleryAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 목록</value>
+  </data>
+  <data name="WorkOrderJobsAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 작업 목록</value>
+  </data>
+  <data name="WorkOrderSortingAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 정렬</value>
+  </data>
+  <data name="WorkOrdersSearchIconAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 검색</value>
+  </data>
+  <data name="ProductNumberLabel" xml:space="preserve">
+    <value>제품 번호</value>
+  </data>
+  <data name="ProductNameLabel" xml:space="preserve">
+    <value>제품 이름</value>
+  </data>
+  <data name="StorageSiteLabel" xml:space="preserve">
+    <value>사이트</value>
+  </data>
+  <data name="StorageWarehouseLabel" xml:space="preserve">
+    <value>창고</value>
+  </data>
+  <data name="TrackingBatchNumberLabel" xml:space="preserve">
+    <value>배치 번호</value>
+  </data>
+  <data name="TrackingSerialNumberLabel" xml:space="preserve">
+    <value>일련 번호</value>
+  </data>
+  <data name="AdjustQuantityLabel" xml:space="preserve">
+    <value>수량 조정</value>
+    <comment>Header for adjusting quantity of an item consumption</comment>
+  </data>
+  <data name="AdjustQuantityDecrementTooltipLabel" xml:space="preserve">
+    <value>감소 수량</value>
+  </data>
+  <data name="AdjustQuantityIncrementTooltipLabel" xml:space="preserve">
+    <value>증분 수량</value>
+  </data>
+  <data name="Error_ItemConsumptionUpdateGenericFailureLabel" xml:space="preserve">
+    <value>항목 소비를 업데이트할 수 없음</value>
+  </data>
+  <data name="ConfirmButtonLabel" xml:space="preserve">
+    <value>확인</value>
+  </data>
+  <data name="EditItemConsumptionSiteButtonAccessibleLabel" xml:space="preserve">
+    <value>사이트 편집</value>
+  </data>
+  <data name="EditItemConsumptionWarehouseButtonAccessibleLabel" xml:space="preserve">
+    <value>창고 편집</value>
+  </data>
+  <data name="TimeSpentHoursPluralHeaderLabel" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="TimeSpentHoursSingularHeaderLabel" xml:space="preserve">
+    <value>시간</value>
+  </data>
+  <data name="TimeSpentMinutesPluralHeaderLabel" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="TimeSpentMinutesSingularHeaderLabel" xml:space="preserve">
+    <value>분</value>
+  </data>
+  <data name="AttachmentTypeNotSupportedForViewingLabel" xml:space="preserve">
+    <value>{AttachmentTypeName} 유형의 첨부 파일은 아직 지원하지 않음</value>
+    <comment>Notification shown to the user when attempting to view an attachment type that is not yet supported</comment>
+  </data>
+  <data name="AttachmentDetailLabel" xml:space="preserve">
+    <value>{AttachmentTypeName}: {Details}</value>
+  </data>
+  <data name="AboutHeaderLabel" xml:space="preserve">
+    <value>정보</value>
+    <comment>Header of the About page</comment>
+  </data>
+  <data name="AboutVersionLabel" xml:space="preserve">
+    <value>버전: {VersionNumber}</value>
+    <comment>Label for the version number of the app</comment>
+  </data>
+  <data name="AboutLanguageChangeHeaderLabel" xml:space="preserve">
+    <value>언어(변경하려면 앱을 다시 시작해야 함):</value>
+  </data>
+  <data name="AboutTermsOfServiceHeaderLabel" xml:space="preserve">
+    <value>서비스 약관</value>
+  </data>
+  <data name="CancelButtonLabel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="SaveButtonLabel" xml:space="preserve">
+    <value>저장</value>
+  </data>
+  <data name="Error_AppInitializationFailed" xml:space="preserve">
+    <value>사용자가 유지 관리 요청을 생성하거나 작업 주문을 유지할 수 있는 권한이 없거나 Dynamics에 대한 네트워크 연결이 실패했을 수 있습니다. 시스템 관리자에게 문의하세요.</value>
+  </data>
+  <data name="RetryButtonLabel" xml:space="preserve">
+    <value>다시 시도</value>
+  </data>
+  <data name="Error_FailedRetrievingUserSettings" xml:space="preserve">
+    <value>사용자 설정을 가져오지 못함</value>
+  </data>
+  <data name="Error_FailedRetrievingMaintenanceWorkerDetails" xml:space="preserve">
+    <value>{UserPersonnelNumber}에 대한 유지 관리 작업자 세부 정보를 가져오지 못함</value>
+  </data>
+  <data name="Error_NotAssignedToAnyActiveWorkers" xml:space="preserve">
+    <value>활성 자산 관리 작업자에게 할당되지 않았습니다. 작업 주문을 유지할 수 없습니다.</value>
+  </data>
+  <data name="WorkOrderFilterHeaderLabel" xml:space="preserve">
+    <value>필터</value>
+  </data>
+  <data name="WorkOrderFilterTodayLabel" xml:space="preserve">
+    <value>오늘</value>
+  </data>
+  <data name="WorkOrderFilterThisWeekLabel" xml:space="preserve">
+    <value>이번 주</value>
+  </data>
+  <data name="WorkOrderFilterAllTimeLabel" xml:space="preserve">
+    <value>전체 시간</value>
+  </data>
+  <data name="WorkOrderSortingHeaderLabel" xml:space="preserve">
+    <value>정렬 기준</value>
+  </data>
+  <data name="WorkOrderSortingByIDLabel" xml:space="preserve">
+    <value>작업 주문 ID</value>
+  </data>
+  <data name="WorkOrderSortingByServiceLevelLabel" xml:space="preserve">
+    <value>작업 주문 서비스 수준</value>
+  </data>
+  <data name="WorkOrderSortingByStartDateLabel" xml:space="preserve">
+    <value>예약된 시작 날짜</value>
+  </data>
+  <data name="SearchHintLabel" xml:space="preserve">
+    <value>검색...</value>
+  </data>
+  <data name="JobsCountLabel" xml:space="preserve">
+    <value>작업: {JobsCount}</value>
+  </data>
+  <data name="CloseButtonLabel" xml:space="preserve">
+    <value>마감</value>
+  </data>
+  <data name="WorkOrderJobListHeaderLabel" xml:space="preserve">
+    <value>작업 주문 {WorkOrderId}에 대한 작업 #{JobLineNumber}</value>
+  </data>
+  <data name="ChangeLegalEntityHeaderLabel" xml:space="preserve">
+    <value>법인 변경</value>
+  </data>
+  <data name="LineNumberAccessibleLabel" xml:space="preserve">
+    <value>라인 번호</value>
+  </data>
+  <data name="JobLabel" xml:space="preserve">
+    <value>작업</value>
+  </data>
+  <data name="EditWorkersRemarkButtonAccessibleLabel" xml:space="preserve">
+    <value>작업자 설명 편집</value>
+  </data>
+  <data name="EditInternalNoteButtonAccessibleLabel" xml:space="preserve">
+    <value>내부 메모 편집</value>
+  </data>
+  <data name="ViewButtonLabel" xml:space="preserve">
+    <value>보기</value>
+  </data>
+  <data name="ViewAttachmentsButtonAccessibleLabel" xml:space="preserve">
+    <value>첨부 파일 보기</value>
+  </data>
+  <data name="AdjustButtonLabel" xml:space="preserve">
+    <value>조정</value>
+  </data>
+  <data name="WorkOrderStateHeaderLabel" xml:space="preserve">
+    <value>작업 주문 상태</value>
+  </data>
+  <data name="ChecklistItemMandatoryLabel" xml:space="preserve">
+    <value>필수</value>
+  </data>
+  <data name="ChecklistItemVariableValueLabel" xml:space="preserve">
+    <value>값: {VariableValue}</value>
+  </data>
+  <data name="ChecklistItemMeasurementValueLabel" xml:space="preserve">
+    <value>값: {MeasureValue} {MeasureUnitId}</value>
+  </data>
+  <data name="AddItemLabel" xml:space="preserve">
+    <value>항목 추가</value>
+  </data>
+  <data name="ItemConsumptionTypeReleasedProductsLabel" xml:space="preserve">
+    <value>항목</value>
+  </data>
+  <data name="ItemConsumptionTypeAssetBOMLabel" xml:space="preserve">
+    <value>자산 BOM</value>
+  </data>
+  <data name="ItemConsumptionTypeSparePartsLabel" xml:space="preserve">
+    <value>예비 부품</value>
+  </data>
+  <data name="Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel" xml:space="preserve">
+    <value>소요 시간을 업데이트할 수 없음</value>
+  </data>
+  <data name="ChecklistInstructionHeaderLabel" xml:space="preserve">
+    <value>지침</value>
+  </data>
+  <data name="ChecklistYourNotesPlaceholderLabel" xml:space="preserve">
+    <value>메모</value>
+  </data>
+  <data name="ChecklistMeasurementResultLabel" xml:space="preserve">
+    <value>결과: {MeasurementResult}</value>
+  </data>
+  <data name="ChecklistMeasurementMinMaxLabel" xml:space="preserve">
+    <value>최소: {MeasurementMinimum} - 최대: {MeasurementMaximum}</value>
+  </data>
+  <data name="ChecklistMarkAsCheckedButtonLabel" xml:space="preserve">
+    <value>확인됨으로 표시</value>
+  </data>
+  <data name="ChecklistMarkAsUnCheckedButtonLabel" xml:space="preserve">
+    <value>확인 안 됨으로 표시</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultRequestType" xml:space="preserve">
+    <value>기본 요청 유형을 검색할 수 없음</value>
+  </data>
+  <data name="Error_MaintenanceRequestDefaultServiceLevelSetupMissing" xml:space="preserve">
+    <value>서비스 수준 설정 누락</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultServiceLevel" xml:space="preserve">
+    <value>기본 서비스 수준을 가져오지 못함</value>
+  </data>
+  <data name="SubmitButtonLabel" xml:space="preserve">
+    <value>제출</value>
+  </data>
+  <data name="Error_AttachmentCreationFailureFromMissingDocumentTypeConfiguration" xml:space="preserve">
+    <value>누락된 문서 유형 구성으로 인해 첨부 파일을 생성할 수 없음</value>
+  </data>
+  <data name="MaintenanceRequestsExistingCountLabel" xml:space="preserve">
+    <value>요청({ExistingRequestsCount})</value>
+  </data>
+  <data name="MaintenanceRequestsExistingLabel" xml:space="preserve">
+    <value>요청</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingLabel" xml:space="preserve">
+    <value>작업 주문</value>
+  </data>
+  <data name="MaintenanceWorkOrdersExistingCountLabel" xml:space="preserve">
+    <value>작업 주문({ExistingWorkOrdersCount})</value>
+  </data>
+  <data name="MRNotesHeaderLabel" xml:space="preserve">
+    <value>참고</value>
+  </data>
+  <data name="MRRequestTypeHeaderLabel" xml:space="preserve">
+    <value>유지 관리 요청 유형</value>
+  </data>
+  <data name="MRAddImageButtonLabel" xml:space="preserve">
+    <value>사진 추가</value>
+  </data>
+  <data name="MRCreationInstructionLabel" xml:space="preserve">
+    <value>해야 할 일을 알려주세요</value>
+  </data>
+  <data name="MRDescriptionHeaderLabel" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="MRCreateSuccessLabel" xml:space="preserve">
+    <value>다음 유지 관리 요청이 성공적으로 생성됨: {NewRequestID}</value>
+  </data>
+  <data name="DoneButtonLabel" xml:space="preserve">
+    <value>완료</value>
+  </data>
+  <data name="OnboardingLegalEntityTitleLabel" xml:space="preserve">
+    <value>법인 간</value>
+  </data>
+  <data name="OnboardingLegalEntityDescriptionLabel" xml:space="preserve">
+    <value>프로필 사진을 탭하면 사용 가능한 법인이 표시됩니다.</value>
+  </data>
+  <data name="OnboardingLegalEntitySubTitleLabel" xml:space="preserve">
+    <value>여러 법인 간 전환</value>
+  </data>
+  <data name="OnboardingGetStartedButtonLabel" xml:space="preserve">
+    <value>시작</value>
+  </data>
+  <data name="OnboardingWorkOrdersTitleLabel" xml:space="preserve">
+    <value>효율적인 작업 주문</value>
+  </data>
+  <data name="OnboardingWorkOrdersDescriptionLabel" xml:space="preserve">
+    <value>문서를 보고 명확한 커뮤니케이션과 유지 관리 내역을 확인합니다.</value>
+  </data>
+  <data name="OnboardingWorkOrdersSubTitleLabel" xml:space="preserve">
+    <value>자산을 완벽하게 통제하세요</value>
+  </data>
+  <data name="OnboardingNextButtonLabel" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="OnboardingRequestTitleLabel" xml:space="preserve">
+    <value>빠른 요청</value>
+  </data>
+  <data name="OnboardingRequestDescriptionLabel" xml:space="preserve">
+    <value>자산 또는 위치의 QR 코드를 스캔하고 문제의 사진 또는 비디오를 찍습니다.</value>
+  </data>
+  <data name="OnboardingRequestSubTitleLabel" xml:space="preserve">
+    <value>1분 이내에 요청하기</value>
+  </data>
+  <data name="WorkOrderAvailableStatesLoadingLabel" xml:space="preserve">
+    <value>사용 가능한 상태 로드 중...</value>
+  </data>
+  <data name="StorageLoadingAvailableSitesLabel" xml:space="preserve">
+    <value>사이트 로드 중...</value>
+  </data>
+  <data name="StorageLoadingAvailableWarehousesLabel" xml:space="preserve">
+    <value>창고 로드 중...</value>
+  </data>
+  <data name="SettingsLabel" xml:space="preserve">
+    <value>설정</value>
+  </data>
+  <data name="SelectedLabel" xml:space="preserve">
+    <value>선택됨</value>
+  </data>
+  <data name="IncrementHoursAccessibleLabel" xml:space="preserve">
+    <value>소요 시간(시간) 증가</value>
+  </data>
+  <data name="IncrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>소요 시간(분) 증가</value>
+  </data>
+  <data name="DecrementHoursAccessibleLabel" xml:space="preserve">
+    <value>소요 시간(시간) 감소</value>
+  </data>
+  <data name="DecrementMinutesAccessibleLabel" xml:space="preserve">
+    <value>소요 시간(분) 감소</value>
+  </data>
+  <data name="WorkOrderGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 {WorkOrderId}</value>
+  </data>
+  <data name="JobsGalleryItemAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 {WorkOrderId}, 라인 {JobLineNumber}</value>
+  </data>
+  <data name="AvailableChoisesAccessibleLabel" xml:space="preserve">
+    <value>{OptionLabel} 선택됨</value>
+  </data>
+  <data name="NewButtonLabel" xml:space="preserve">
+    <value>+</value>
+    <comment>Button to start flow of creating a new maintenance request or work order</comment>
+  </data>
+  <data name="WOCreateSuccessLabel" xml:space="preserve">
+    <value>작업 주문이 성공적으로 생성됨: {NewWorkOrderID}</value>
+  </data>
+  <data name="CreateNewWorkOrderAccessibleLabel" xml:space="preserve">
+    <value>새 작업 주문 만들기</value>
+  </data>
+  <data name="CreateNewWorkOrderOrMaintenanceRequestAccessibleLabel" xml:space="preserve">
+    <value>새 작업 주문 만들기 또는 유지 관리 요청</value>
+  </data>
+  <data name="Error_FailedRetrievingDefaultWorkOrderType" xml:space="preserve">
+    <value>기본 작업 주문 유형을 가져오지 못함</value>
+  </data>
+  <data name="WONotesHeaderLabel" xml:space="preserve">
+    <value>메모</value>
+  </data>
+  <data name="WOAddImageButtonLabel" xml:space="preserve">
+    <value>사진 추가</value>
+  </data>
+  <data name="WOCreationInstructionLabel" xml:space="preserve">
+    <value>해야 할 일을 알려주세요</value>
+  </data>
+  <data name="WODescriptionHeaderLabel" xml:space="preserve">
+    <value>설명</value>
+  </data>
+  <data name="WOAddImageAccessibleLabel" xml:space="preserve">
+    <value>사진 추가</value>
+    <comment>Button to start adding a new image to a work order</comment>
+  </data>
+  <data name="WOAttachmentsAccessibleLabel" xml:space="preserve">
+    <value>현재 첨부 파일 목록</value>
+  </data>
+  <data name="WODescriptionAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 설명을 입력하세요</value>
+  </data>
+  <data name="WONotesAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 작업 메모를 입력하세요</value>
+  </data>
+  <data name="WOTypeAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 유형을 선택하세요</value>
+  </data>
+  <data name="WOServiceLevelAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 서비스 수준을 선택하세요</value>
+  </data>
+  <data name="WOJobType" xml:space="preserve">
+    <value>작업 유형</value>
+  </data>
+  <data name="WOJobTypeVariant" xml:space="preserve">
+    <value>작업 유형 변형</value>
+  </data>
+  <data name="WOJobTypeAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 작업 유형을 선택하세요</value>
+  </data>
+  <data name="WOJobTypeVariantAccessibleLabel" xml:space="preserve">
+    <value>작업 주문 작업 유형 변형을 선택하세요</value>
+  </data>
+  <data name="WOAutoScheduleOn" xml:space="preserve">
+    <value>작업 주문 예약(설정)</value>
+  </data>
+  <data name="WOAutoScheduleOnAccessibleLabel" xml:space="preserve">
+    <value>생성 시 작업 주문을 즉시 예약하려면 설정하세요</value>
+  </data>
+  <data name="WOAutoScheduleOffAccessibleLabel" xml:space="preserve">
+    <value>생성 시 작업 주문을 예약하지 않으려면 해제하세요</value>
+  </data>
+  <data name="WOAutoScheduleOff" xml:space="preserve">
+    <value>작업 주문 예약(해제)</value>
+  </data>
+  <data name="NewWorkOrderButtonLabel" xml:space="preserve">
+    <value>새 작업 주문</value>
+    <comment>Button to start creating a new work order</comment>
+  </data>
+  <data name="NumberOfAttachmentsLabel" xml:space="preserve">
+    <value>첨부 파일 {AttachmentsCount}개</value>
+  </data>
+  <data name="TimeConsumedWithoutMinutesLabel" xml:space="preserve">
+    <value>{WholeHours}시간</value>
+  </data>
+  <data name="TimeConsumedWithMinutesLabel" xml:space="preserve">
+    <value>{WholeHours}시간 {WholeMinutes}분</value>
+  </data>
+  <data name="ItemsConsumedCountV2Label" xml:space="preserve">
+    <value>항목 {ConsumedItemsCount}개</value>
+    <comment>Count of items consumed on a job</comment>
+  </data>
+  <data name="NewWorkOrderForAssetButtonLabel" xml:space="preserve">
+    <value>자산에 대한 새 작업 주문</value>
+  </data>
+  <data name="StorageLoadingAvailableLocationsLabel" xml:space="preserve">
+    <value>사용 가능한 위치 로드 중...</value>
+  </data>
+  <data name="StorageEditLocationAccessibleLabel" xml:space="preserve">
+    <value>위치 편집</value>
+  </data>
+  <data name="StorageLocationHeaderLabel" xml:space="preserve">
+    <value>위치</value>
+  </data>
+  <data name="Error_PhotoTooLargeToAttach" xml:space="preserve">
+    <value>사진이 너무 커서 첨부할 수 없습니다</value>
+  </data>
+</root>
