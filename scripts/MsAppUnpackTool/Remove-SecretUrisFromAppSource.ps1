@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 $ErrorActionPreference = "Stop"
 
 Write-Host "Removing PCF bundle shared access signature from ReviewSource and CanvasAppSource"
