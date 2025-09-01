@@ -103,3 +103,24 @@ Once a new label is added, they should be injected into the Canvas app. Follow t
 ## Additional Resources
 For more details, including **security roles** and **Finance and Operations Asset Management setup** , refer to the official Microsoft documentation:  
 [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app).
+
+---
+
+## Third-party code and tools
+
+This repository does not vendor third-party source code. It relies on Microsoft tooling including Microsoft Power Platform CLI (PAC) and Power Apps packaging utilities as described above. Any third-party assets referenced at build or runtime are subject to their own licenses and are not included in this repository.
+
+## Telemetry and diagnostics
+
+This app may surface limited diagnostics and error tracing provided by the Power Apps platform.
+
+- How to disable: set `appinsightserrortracing` to `false` in `CanvasAppSource/Properties.json`, then rebuild/pack the app. Disabling diagnostics may reduce troubleshooting capability.
+- No personal data should be intentionally collected by this repository's code. Review your environment’s policies and telemetry configuration before deployment.
+
+## Trademarks
+
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft’s Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
+
+## Support
+
+See [SUPPORT.md](./SUPPORT.md) for how to get help and our support policy.

@@ -1,3 +1,6 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
 function Load-SolutionXml {
     param (
         [string]$xmlPath
