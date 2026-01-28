@@ -51,7 +51,7 @@ Screens:
                   Width: =Parent.TemplateWidth
                   Y: =Parent.TemplateHeight - 1
             - conJobAttachmentsHorizontal:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -66,7 +66,7 @@ Screens:
                   Width: =Parent.TemplateWidth
                 Children:
                   - conJobAttachmentDetails:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -75,6 +75,8 @@ Screens:
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         LayoutMinHeight: =50
                         LayoutMinWidth: =200
                         RadiusBottomLeft: =0
@@ -91,6 +93,8 @@ Screens:
                               Font: =gblAppStyles.CommonFont
                               FontWeight: =FontWeight.Semibold
                               Height: =50
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: =Select(galJobAttachments)
                               PaddingLeft: =16
                               PaddingRight: =16
@@ -106,6 +110,8 @@ Screens:
                               Font: =gblAppStyles.CommonFont
                               FontWeight: =FontWeight.Semibold
                               Height: =50
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: =Select(galJobAttachments)
                               PaddingLeft: =16
                               PaddingRight: =16
