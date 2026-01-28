@@ -11,7 +11,7 @@ Screens:
     Properties:
       Fill: =gblAppColors.Background
       LoadingSpinnerColor: =RGBA(56, 96, 178, 1)
-      OnHidden: |+
+      OnHidden: |-
         =With(
             {
                 locSelectedVariableValue: drpChecklistVariableValue.SelectedText.Value,
@@ -20,32 +20,62 @@ Screens:
             },
             If(
                 ChecklistItem.'Note from maintenance worker' <> lblChecklistItemRemark.Text || ChecklistItem.'Variable value' <> locSelectedVariableValue || ChecklistItem.'Counter value' <> locMeasurementCounterValue,
-                Patch(
-                    'Asset management work order job maintenance checklist (mserp)',
-                    ChecklistItem,
-                    {
-                        Checked: varIsChecklistItemChecked,
-                        'Note from maintenance worker': lblChecklistItemRemark.Text,
-                        'Variable value': locSelectedVariableValue,
-                        'Counter value': locMeasurementCounterValue,
-                        Result: Switch(
-                            ChecklistItem.Type,
-                            'Type (mserp)'.Variable,
-                            If(locSelectedVariableCheckStatus <> Blank(), locSelectedVariableCheckStatus, 'Result (mserp)'.None),
-                            'Type (mserp)'.Measurement,
-                            If(
-                            // Set Result to None if min and max threshold are 0
-                                ChecklistItem.'Counter minimum value' = 0 && ChecklistItem.'Counter maximum value' = 0,
-                                'Result (mserp)'.None,
+                IfError(
+                    Patch(
+                        'Asset management work order job maintenance checklist (mserp)',
+                        ChecklistItem,
+                        {
+                            Checked: varIsChecklistItemChecked,
+                            'Checked by worker personnel number':gblAppCache.UserPersonnelNumber,
+                            'Note from maintenance worker': lblChecklistItemRemark.Text,
+                            'Variable value': locSelectedVariableValue,
+                            'Counter value': locMeasurementCounterValue,
+                            Result: Switch(
+                                ChecklistItem.Type,
+                                'Type (mserp)'.Variable,
+                                If(locSelectedVariableCheckStatus <> Blank(), locSelectedVariableCheckStatus, 'Result (mserp)'.None),
+                                'Type (mserp)'.Measurement,
                                 If(
-                                    ChecklistItem.'Counter minimum value' <= locMeasurementCounterValue && locMeasurementCounterValue <= ChecklistItem.'Counter maximum value',
-                                    'Result (mserp)'.Pass,
-                                    'Result (mserp)'.Fail
-                                )
-                            ),
-                            'Result (mserp)'.None
-                        )
-                    }
+                                // Set Result to None if min and max threshold are 0
+                                    ChecklistItem.'Counter minimum value' = 0 && ChecklistItem.'Counter maximum value' = 0,
+                                    'Result (mserp)'.None,
+                                    If(
+                                        ChecklistItem.'Counter minimum value' <= locMeasurementCounterValue && locMeasurementCounterValue <= ChecklistItem.'Counter maximum value',
+                                        'Result (mserp)'.Pass,
+                                        'Result (mserp)'.Fail
+                                    )
+                                ),
+                                'Result (mserp)'.None
+                            )
+                        }
+                    ),
+                    Patch(
+                        'Asset management work order job maintenance checklist (mserp)',
+                        ChecklistItem,
+                        {
+                            Checked: varIsChecklistItemChecked,
+                            'Note from maintenance worker': lblChecklistItemRemark.Text,
+                            'Variable value': locSelectedVariableValue,
+                            'Counter value': locMeasurementCounterValue,
+                            Result: Switch(
+                                ChecklistItem.Type,
+                                'Type (mserp)'.Variable,
+                                If(locSelectedVariableCheckStatus <> Blank(), locSelectedVariableCheckStatus, 'Result (mserp)'.None),
+                                'Type (mserp)'.Measurement,
+                                If(
+                                // Set Result to None if min and max threshold are 0
+                                    ChecklistItem.'Counter minimum value' = 0 && ChecklistItem.'Counter maximum value' = 0,
+                                    'Result (mserp)'.None,
+                                    If(
+                                        ChecklistItem.'Counter minimum value' <= locMeasurementCounterValue && locMeasurementCounterValue <= ChecklistItem.'Counter maximum value',
+                                        'Result (mserp)'.Pass,
+                                        'Result (mserp)'.Fail
+                                    )
+                                ),
+                                'Result (mserp)'.None
+                            )
+                        }
+                    )
                 )
             );
         );
@@ -61,7 +91,7 @@ Screens:
         );
     Children:
       - conChecklistWrapper:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.4.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -77,12 +107,14 @@ Screens:
             Y: =cmpHeaderWOJCIS.Height
           Children:
             - conChecklistAndCardBackground:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =htmCardBackgroundHeaderWOJCIS.Height + htmCardBackgroundHeaderWOJCIS.Y
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
                   RadiusTopLeft: =0
@@ -105,7 +137,7 @@ Screens:
                         Width: =Parent.Width
                         Y: =12
                   - conChecklistDetails:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -141,6 +173,8 @@ Screens:
                               AutoHeight: =true
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Font: =Font.'Segoe UI'
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               Size: =gblAppStyles.FontSize_Large
                               Text: =ChecklistItem.Name
                               Width: =Parent.Width - Self.X - 16
@@ -154,6 +188,8 @@ Screens:
                               Color: =RGBA(92, 92, 92, 1)
                               Font: =Font.'Segoe UI'
                               Height: =70
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               Size: =gblAppStyles.FontSize_Small
                               Text: =T.ChecklistInstructionHeaderLabel
                               VerticalAlign: =VerticalAlign.Bottom
@@ -168,6 +204,8 @@ Screens:
                               Color: =RGBA(33, 33, 33, 1)
                               Font: =Font.'Segoe UI'
                               Height: =70
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               Size: =gblAppStyles.FontSize_Medium
                               Text: =Coalesce(ChecklistItem.Instructions, C.EmDash)
                               VerticalAlign: =VerticalAlign.Top
@@ -175,7 +213,7 @@ Screens:
                               X: =16
                               Y: =16
                         - conChecklistVariableType:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -183,6 +221,8 @@ Screens:
                               Height: =lblChecklistVariableType.Height + drpChecklistVariableValue.Height + drpChecklistVariableValue.BorderThickness * 4
                               LayoutAlignItems: =LayoutAlignItems.Stretch
                               LayoutDirection: =LayoutDirection.Vertical
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingBottom: =2
                               PaddingLeft: =2
                               PaddingRight: =2
@@ -201,6 +241,8 @@ Screens:
                                     BorderColor: =RGBA(0, 18, 107, 1)
                                     Color: =RGBA(92, 92, 92, 1)
                                     Font: =Font.'Segoe UI'
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     Size: =gblAppStyles.FontSize_Small
                                     Text: =ChecklistItem.'Asset management maintenance checklist variable'.Name
                               - drpChecklistVariableValue:
@@ -232,6 +274,8 @@ Screens:
                                           $"{Value} ({Result})"
                                       )
                                     Items.Value: =DropdownText
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =180
                                     PressedColor: =Self.Color
                                     PressedFill: =Self.Fill
@@ -240,7 +284,7 @@ Screens:
                                     Size: =gblAppStyles.FontSize_Medium
                                     Width: =Parent.Width - Parent.PaddingLeft - Parent.PaddingRight
                         - conChecklistMeasurementType:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -248,6 +292,8 @@ Screens:
                               Height: =lblChecklistMeasurementCounterName.Height + conChecklistMeasurementInputAndUnit.Height + lblMeasurementMinMax.Height + lblMeasurementResult.Height
                               LayoutAlignItems: =LayoutAlignItems.Stretch
                               LayoutDirection: =LayoutDirection.Vertical
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingBottom: =2
                               PaddingLeft: =2
                               PaddingRight: =2
@@ -266,6 +312,8 @@ Screens:
                                     BorderColor: =RGBA(0, 18, 107, 1)
                                     Color: =RGBA(92, 92, 92, 1)
                                     Font: =Font.'Segoe UI'
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     Size: =10
                                     Text: |-
                                       =// TODO: can we do this smarter? Seems silly to do a OData lookup just for this value
@@ -274,7 +322,7 @@ Screens:
                                           Counter = ChecklistItem.'Processed checklist line asset counter' && 'Company Code' = ChecklistItem.'Company Code'
                                       ).Name
                               - conChecklistMeasurementInputAndUnit:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: AutoLayout
                                   Properties:
                                     DropShadow: =DropShadow.None
@@ -282,6 +330,8 @@ Screens:
                                     Height: =txtChecklistMeasurementCounterValue.Height + txtChecklistMeasurementCounterValue.BorderThickness
                                     LayoutAlignItems: =LayoutAlignItems.Center
                                     LayoutDirection: =LayoutDirection.Horizontal
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     RadiusBottomLeft: =0
                                     RadiusBottomRight: =0
                                     RadiusTopLeft: =0
@@ -293,6 +343,8 @@ Screens:
                                           AlignInContainer: =AlignInContainer.Stretch
                                           BorderColor: =RGBA(0, 18, 107, 1)
                                           Fill: =RGBA(0, 0, 0, 0)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =40
                                           Width: =1
                                     - txtChecklistMeasurementCounterValue:
@@ -307,6 +359,8 @@ Screens:
                                           Format: =TextFormat.Number
                                           HoverBorderColor: =RGBA(0, 18, 107, 1)
                                           HoverFill: =RGBA(186, 202, 226, 1)
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           RadiusBottomLeft: =8
                                           RadiusBottomRight: =8
                                           RadiusTopLeft: =8
@@ -320,6 +374,8 @@ Screens:
                                           Color: =RGBA(92, 92, 92, 1)
                                           Font: =Font.'Segoe UI'
                                           FontWeight: =FontWeight.Semibold
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           LayoutMinWidth: =75
                                           Size: =12
                                           Text: =ChecklistItem.Unit
@@ -332,6 +388,8 @@ Screens:
                                     BorderColor: =RGBA(0, 18, 107, 1)
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     Size: =10.5
                                     Text: =Substitute(Substitute(T.ChecklistMeasurementMinMaxLabel, "{MeasurementMinimum}", ChecklistItem.'Counter minimum value'), "{MeasurementMaximum}", ChecklistItem.'Counter maximum value')
                               - lblMeasurementResult:
@@ -342,6 +400,8 @@ Screens:
                                     BorderColor: =RGBA(0, 18, 107, 1)
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     Size: =10.5
                                     Text: =Substitute(T.ChecklistMeasurementResultLabel, "{MeasurementResult}", ChecklistItem.Result)
                         - lblChecklistItemRemark:
@@ -356,6 +416,8 @@ Screens:
                               HintText: =T.ChecklistYourNotesPlaceholderLabel
                               HoverBorderColor: =RGBA(0, 18, 107, 1)
                               HoverFill: =RGBA(186, 202, 226, 1)
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =250
                               Mode: =TextMode.MultiLine
                               RadiusBottomLeft: =8
@@ -376,6 +438,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |+
                                 =UpdateContext(
                                     {

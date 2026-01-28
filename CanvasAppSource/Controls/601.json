@@ -124,7 +124,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "262",
+    "ControlUniqueId": "601",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -133,7 +133,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638034193883884418",
-          "LastModifiedTimestamp": "638884284351079704",
+          "LastModifiedTimestamp": "639051981761396238",
           "Name": "f31c4274513d4d79a81731e998df1fab",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -144,7 +144,7 @@
             {
               "Name": "Title",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Title",
@@ -153,7 +153,7 @@
             {
               "Name": "Subtitle",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Subtitle",
@@ -162,7 +162,7 @@
             {
               "Name": "BackButtonAccessibleLabel",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Back button accessible label",
@@ -172,7 +172,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "SubScreenHeader",
-            "LastModifiedTimestamp": "638884284351079704",
+            "LastModifiedTimestamp": "639051981761396238",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -203,7 +203,7 @@
                 "Property": "Height",
                 "Category": "Design",
                 "InvariantScript": "54",
-                "RuleProviderType": "Unknown"
+                "RuleProviderType": "System"
               },
               {
                 "Property": "Width",
@@ -290,7 +290,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -482,6 +482,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -568,10 +580,12 @@
                   "RadiusBottomRight",
                   "DropShadow",
                   "PaddingTop",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "42",
+                "ControlUniqueId": "64",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -631,6 +645,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -1049,7 +1083,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "44",
+                    "ControlUniqueId": "65",
                     "Children": []
                   },
                   {
@@ -1110,6 +1144,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -1549,7 +1603,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "43",
+                    "ControlUniqueId": "66",
                     "Children": []
                   }
                 ]
@@ -1904,7 +1958,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "45",
+                "ControlUniqueId": "67",
                 "Children": []
               }
             ]
@@ -1954,7 +2008,7 @@
             "Property": "Height",
             "Category": "Design",
             "InvariantScript": "54",
-            "RuleProviderType": "Unknown"
+            "RuleProviderType": "System"
           },
           {
             "Property": "Width",
@@ -2021,7 +2075,7 @@
           "Subtitle"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "263",
+        "ControlUniqueId": "602",
         "Metadata": {
           "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
           "AllowCustomization": true,
@@ -2036,7 +2090,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638034660990900877",
-          "LastModifiedTimestamp": "638884284351081612",
+          "LastModifiedTimestamp": "639051981761398327",
           "Name": "3c47dd31a18f42e4babb2eafc3dbca80",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -2047,7 +2101,7 @@
             {
               "Name": "SearchText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": true,
               "DisplayName": "Search text",
@@ -2056,7 +2110,7 @@
             {
               "Name": "SearchHintText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Search hint text",
@@ -2065,7 +2119,7 @@
             {
               "Name": "DefaultSearchText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Default search text",
@@ -2074,7 +2128,7 @@
             {
               "Name": "AccessibleLabel",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Accessible label",
@@ -2084,7 +2138,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "SearchBar",
-            "LastModifiedTimestamp": "638884284351081612",
+            "LastModifiedTimestamp": "639051981761398327",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -2749,7 +2803,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "47",
+                "ControlUniqueId": "5",
                 "Children": []
               },
               {
@@ -3011,7 +3065,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "48",
+                "ControlUniqueId": "6",
                 "Children": []
               }
             ]
@@ -3184,7 +3238,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "264",
+        "ControlUniqueId": "603",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -3198,7 +3252,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.3.0",
+          "Version": "1.4.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -3384,6 +3438,18 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridColumns",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridRows",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -3490,10 +3556,12 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow"
+          "DropShadow",
+          "LayoutGridRows",
+          "LayoutGridColumns"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "265",
+        "ControlUniqueId": "604",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -3553,6 +3621,26 @@
                   "IsLockable": false,
                   "AFDDataSourceName": ""
                 }
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
@@ -3985,7 +4073,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "266",
+            "ControlUniqueId": "605",
             "Children": []
           },
           {
@@ -4046,6 +4134,26 @@
                   "IsLockable": false,
                   "AFDDataSourceName": ""
                 }
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
@@ -4464,7 +4572,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "267",
+            "ControlUniqueId": "606",
             "Children": []
           },
           {
@@ -4525,6 +4633,26 @@
                   "IsLockable": false,
                   "AFDDataSourceName": ""
                 }
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
@@ -4943,7 +5071,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "268",
+            "ControlUniqueId": "607",
             "Children": []
           }
         ]
@@ -5291,7 +5419,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "269",
+        "ControlUniqueId": "608",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -5349,7 +5477,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "270",
+            "ControlUniqueId": "609",
             "Children": []
           },
           {
@@ -5779,7 +5907,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "271",
+            "ControlUniqueId": "610",
             "Children": []
           },
           {
@@ -5964,7 +6092,7 @@
               "FocusedBorderThickness"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "272",
+            "ControlUniqueId": "611",
             "Children": []
           }
         ]
@@ -6312,7 +6440,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "273",
+        "ControlUniqueId": "612",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -6370,7 +6498,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "274",
+            "ControlUniqueId": "613",
             "Children": []
           },
           {
@@ -6800,7 +6928,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "275",
+            "ControlUniqueId": "614",
             "Children": []
           },
           {
@@ -6985,7 +7113,7 @@
               "FocusedBorderThickness"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "276",
+            "ControlUniqueId": "615",
             "Children": []
           }
         ]
@@ -7382,7 +7510,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "277",
+        "ControlUniqueId": "616",
         "Children": []
       },
       {
@@ -7728,7 +7856,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "278",
+        "ControlUniqueId": "617",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -7786,7 +7914,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "279",
+            "ControlUniqueId": "618",
             "Children": []
           },
           {
@@ -8216,7 +8344,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "280",
+            "ControlUniqueId": "619",
             "Children": []
           },
           {
@@ -8401,7 +8529,7 @@
               "FocusedBorderThickness"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "281",
+            "ControlUniqueId": "620",
             "Children": []
           }
         ]
@@ -8777,7 +8905,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "282",
+        "ControlUniqueId": "621",
         "Children": []
       }
     ]

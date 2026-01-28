@@ -34,7 +34,7 @@ Screens:
             BorderColor: =RGBA(0, 18, 107, 1)
             DelayItemLoading: =false
             Height: =Parent.Height - Self.Y
-            ItemAccessibleLabel: "=Substitute(\r\n    T.CheckListItemRemarkAccessibleLabel,\r\n    \"remarks\",\r\n    ThisItem.Name\r\n) "
+            ItemAccessibleLabel: =
             Items: |-
               =SortByColumns(
                   Filter(
@@ -76,7 +76,7 @@ Screens:
                   Visible: =ThisItem.Type <> 'Type (mserp)'.Header
                   Width: =Parent.TemplateWidth
             - conChecklistLineDetails:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -115,6 +115,8 @@ Screens:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =RGBA(209, 52, 56, 1)
                         Font: =Font.'Segoe UI'
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         Size: =gblAppStyles.FontSize_Small
                         Text: =T.ChecklistItemMandatoryLabel
                         Visible: =ThisItem.Mandatory = 'NoYes (mserp)'.Yes
@@ -127,6 +129,8 @@ Screens:
                         Color: =If(ThisItem.Checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(0, 0, 0, 1))
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         Size: =gblAppStyles.FontSize_Large
                         Text: =ThisItem.Name
                   - lblChecklistItemType:
@@ -136,6 +140,8 @@ Screens:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Color: =If(ThisItem.Checked = 'NoYes (mserp)'.Yes, RGBA(92, 92, 92, 1), RGBA(57, 57, 57, 1))
                         Font: =Font.'Segoe UI'
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         Size: =gblAppStyles.FontSize_Medium
                         Text: =ThisItem.Type
                   - lblChecklistItemValue:
@@ -146,6 +152,8 @@ Screens:
                         Color: =gblAppColors.AccentInfo
                         Font: =gblAppStyles.CommonFont
                         Height: =31
+                        LayoutMaxHeight: =
+                        LayoutMaxWidth: =
                         Size: =gblAppStyles.FontSize_Medium
                         Text: |-
                           =Switch(
@@ -172,16 +180,17 @@ Screens:
                   BorderColor: =RGBA(0, 18, 107, 1)
                   Color: =If(ThisItem.Checked = 'NoYes (mserp)'.Yes, RGBA(42, 172, 148, 1), RGBA(92, 92, 92, 1))
                   Font: =Font.'Segoe UI'
-                  Height: =18
+                  Height: =50
                   OnSelect: =Select(Parent)
+                  PaddingTop: =20
                   Size: =gblAppStyles.FontSize_Small
                   Text: |-
                     =//pal-disable PAL004
                     $"{{{ThisItem.'Work order job checklist line number'}}}"
                   Visible: =ThisItem.Type <> 'Type (mserp)'.Header
-                  Width: =60
+                  Width: =50
                   X: =conChecklistLineDetails.Width - (Self.Width - 30)
-                  Y: =25
+                  Y: =conChecklistLineDetails.Y - 1
             - shpChecklistLineClickSurfaceWOJDS:
                 Control: Rectangle@2.3.0
                 Properties:
@@ -194,7 +203,6 @@ Screens:
                     =// Containers do not support OnSelect override
                     // and catches user clicks, we need this surface to negate that problem.
                     Select(Parent)
-                  TabIndex: =0
                   Visible: =ThisItem.Type <> 'Type (mserp)'.Header
                   Width: =Parent.TemplateWidth
             - lblHeaderText:
@@ -211,7 +219,7 @@ Screens:
                   Visible: =ThisItem.Type = 'Type (mserp)'.Header
                   Width: =Parent.TemplateWidth
       - conInformationWOJDS:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.4.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -233,13 +241,15 @@ Screens:
             Y: =conWorkOrderLineNavigation.Y + conWorkOrderLineNavigation.Height
           Children:
             - conWorkOrderJobDetails:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =conWorkOrderJobHeader.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   LayoutMinHeight: =124
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
@@ -263,7 +273,7 @@ Screens:
                         Visible: =conInformationWOJDS.Visible
                         Width: =Parent.Width
                   - conWorkOrderJobHeader:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -300,6 +310,8 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Font: =Font.'Segoe UI'
                               Height: =30
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingLeft: =0
                               PaddingRight: =0
                               Size: =gblAppStyles.FontSize_Large
@@ -318,6 +330,8 @@ Screens:
                               HeaderFontSize: =gblAppStyles.FontSize_Small
                               HeaderText: =T.WorkersRemarkLabel
                               Height: =Self.AutoHeightValue + 2*gblAppStyles.FocusBorderThickness
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelectEdit: |-
                                 =UpdateContext({varRemarksPromptOpen: true})
                               TextFontSize: =gblAppStyles.FontSize_Medium
@@ -333,18 +347,22 @@ Screens:
                               HeaderFontSize: =gblAppStyles.FontSize_Small
                               HeaderText: =T.InternalNoteLabel
                               Height: =Self.AutoHeightValue + 2*gblAppStyles.FocusBorderThickness
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelectEdit: =UpdateContext({varInternalNotePromptOpen:true})
                               TextFontSize: =gblAppStyles.FontSize_Medium
                               TextValue: =Coalesce(varUpdatedInternalNote, Job.'Internal note')
                               Width: =Parent.Width - Parent.PaddingLeft * 2
             - conWorkOrderJobAdjustables:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =conWorkOrderJobAdjustablesVertical.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
                   RadiusTopLeft: =0
@@ -366,7 +384,7 @@ Screens:
                         Visible: =conInformationWOJDS.Visible
                         Width: =Parent.Width
                   - conWorkOrderJobAdjustablesVertical:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -401,7 +419,7 @@ Screens:
                         Width: =Parent.Width
                       Children:
                         - conJobAttachmentsWrapper:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -410,6 +428,8 @@ Screens:
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
                               LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingRight: =gblAppStyles.FocusBorderThickness
                               PaddingTop: =gblAppStyles.FocusBorderThickness
                               RadiusBottomLeft: =0
@@ -418,12 +438,14 @@ Screens:
                               RadiusTopRight: =0
                             Children:
                               - conJobAttachments:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: ManualLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.Center
                                     DropShadow: =DropShadow.None
                                     Height: =cmpJobAttachments.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinHeight: =49
                                     LayoutMinWidth: =150
                                     RadiusBottomLeft: =0
@@ -475,6 +497,8 @@ Screens:
                                     HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                                     HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
                                     HoverFill: =Self.Fill
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     OnSelect: |-
                                       =Navigate('Work Order Job Attachments Screen', ScreenTransition.Cover, { Job: Job })
                                     PressedBorderColor: =Self.Fill
@@ -491,11 +515,13 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =RGBA(209, 209, 209, 1)
                               Height: =1
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =5
                               Width: =Parent.Width
                               Y: =Parent.Height - 1
                         - conJobHoursConsumedWrapper:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -504,6 +530,8 @@ Screens:
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
                               LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingRight: =gblAppStyles.FocusBorderThickness
                               PaddingTop: =gblAppStyles.FocusBorderThickness
                               RadiusBottomLeft: =0
@@ -512,12 +540,14 @@ Screens:
                               RadiusTopRight: =0
                             Children:
                               - conJobHoursConsumed:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: ManualLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     Height: =cmpJobHoursConsumed.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinHeight: =48
                                     LayoutMinWidth: =150
                                     PaddingRight: =2
@@ -591,6 +621,8 @@ Screens:
                                     HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                                     HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
                                     HoverFill: =Self.Fill
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     OnSelect: |-
                                       =With(
                                           {
@@ -638,11 +670,13 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =RGBA(209, 209, 209, 1)
                               Height: =1
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =5
                               Width: =Parent.Width
                               Y: =Parent.Height - 1
                         - conJobItemsConsumedWrapper:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -651,6 +685,8 @@ Screens:
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
                               LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingBottom: =gblAppStyles.FocusBorderThickness
                               PaddingRight: =gblAppStyles.FocusBorderThickness
                               PaddingTop: =gblAppStyles.FocusBorderThickness
@@ -660,11 +696,13 @@ Screens:
                               RadiusTopRight: =0
                             Children:
                               - conJobItemsConsumed:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: ManualLayout
                                   Properties:
                                     DropShadow: =DropShadow.None
                                     Height: =conJobAttachments.Height
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinHeight: =cmpJobItemsConsumed.Height
                                     LayoutMinWidth: =150
                                     RadiusBottomLeft: =0
@@ -724,6 +762,8 @@ Screens:
                                     HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                                     HoverColor: =ColorFade(gblAppStyles.ButtonLink.FontColor, -15%)
                                     HoverFill: =Self.Fill
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     OnSelect: |-
                                       =Navigate(
                                           'Work Order Job Item Consumption List Screen',
@@ -744,17 +784,21 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Fill: =RGBA(209, 209, 209, 1)
                               Height: =1
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =5
                               Width: =Parent.Width
                               Y: =Parent.Height - 1
                         - conJobAsset:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: ManualLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
                               DropShadow: =DropShadow.None
                               FillPortions: =0
                               Height: =cmpJobAsset.Height
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               RadiusBottomLeft: =0
                               RadiusBottomRight: =0
                               RadiusTopLeft: =0
@@ -789,13 +833,15 @@ Screens:
                                     Width: =Parent.Width - Self.X
                                     X: =icoJobHoursConsumed.X + icoJobHoursConsumed.Width + 10
             - conWorkOrderJobScheduling:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =conWorkOrderJobSchedulingVertical.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   LayoutMinHeight: =200
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
@@ -818,7 +864,7 @@ Screens:
                         Visible: =conInformationWOJDS.Visible
                         Width: =Parent.Width
                   - conWorkOrderJobSchedulingVertical:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -846,7 +892,7 @@ Screens:
                         Width: =Parent.Width
                       Children:
                         - conJobSchedulingScheduled:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
@@ -855,19 +901,23 @@ Screens:
                               Height: =Max(conJobSchedulingScheduledStart.Height, conJobSchedulingScheduledEnd.Height)
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               RadiusBottomLeft: =0
                               RadiusBottomRight: =0
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
                             Children:
                               - conJobSchedulingScheduledStart:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     Height: =40
                                     LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =110
                                     RadiusBottomLeft: =0
                                     RadiusBottomRight: =0
@@ -884,6 +934,8 @@ Screens:
                                           Color: =RGBA(42,172,148, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -900,6 +952,8 @@ Screens:
                                           Color: =RGBA(41, 40, 39, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -918,13 +972,15 @@ Screens:
                                           Width: =Parent.Width
                                           Y: =20
                               - conJobSchedulingScheduledEnd:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     Height: =40
                                     LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =110
                                     RadiusBottomLeft: =0
                                     RadiusBottomRight: =0
@@ -941,6 +997,8 @@ Screens:
                                           Color: =RGBA(209, 52, 56, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -957,6 +1015,8 @@ Screens:
                                           Color: =RGBA(41, 40, 39, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -975,7 +1035,7 @@ Screens:
                                           Width: =Parent.Width
                                           Y: =20
                         - conJobSchedulingActual:
-                            Control: GroupContainer@1.3.0
+                            Control: GroupContainer@1.4.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
@@ -984,19 +1044,23 @@ Screens:
                               Height: =Max(conJobSchedulingActualStart.Height, conJobSchedulingActualEnd.Height)
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               RadiusBottomLeft: =0
                               RadiusBottomRight: =0
                               RadiusTopLeft: =0
                               RadiusTopRight: =0
                             Children:
                               - conJobSchedulingActualStart:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     Height: =40
                                     LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =110
                                     RadiusBottomLeft: =0
                                     RadiusBottomRight: =0
@@ -1013,6 +1077,8 @@ Screens:
                                           Color: =RGBA(42,172,148, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -1029,6 +1095,8 @@ Screens:
                                           Color: =RGBA(41, 40, 39, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -1047,13 +1115,15 @@ Screens:
                                           Width: =Parent.Width
                                           Y: =20
                               - conJobSchedulingActualEnd:
-                                  Control: GroupContainer@1.3.0
+                                  Control: GroupContainer@1.4.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.SetByContainer
                                     DropShadow: =DropShadow.None
                                     Height: =40
                                     LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMaxHeight: =
+                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =110
                                     RadiusBottomLeft: =0
                                     RadiusBottomRight: =0
@@ -1070,6 +1140,8 @@ Screens:
                                           Color: =RGBA(209, 52, 56, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -1086,6 +1158,8 @@ Screens:
                                           Color: =RGBA(41, 40, 39, 1)
                                           Font: =Font.'Segoe UI'
                                           Height: =18
+                                          LayoutMaxHeight: =
+                                          LayoutMaxWidth: =
                                           PaddingBottom: =0
                                           PaddingLeft: =0
                                           PaddingRight: =0
@@ -1104,13 +1178,15 @@ Screens:
                                           Width: =Parent.Width
                                           Y: =20
             - conJobWorkOrderDetails:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =conJobWorkOrderDetailsVertical.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   LayoutMinHeight: =200
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
@@ -1133,7 +1209,7 @@ Screens:
                         Visible: =conInformationWOJDS.Visible
                         Width: =Parent.Width
                   - conJobWorkOrderDetailsVertical:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -1174,6 +1250,8 @@ Screens:
                               HeaderFontSize: =gblAppStyles.FontSize_Small
                               HeaderText: =T.WorkOrderLabel
                               Height: =Self.AutoHeightValue
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =300
                               OnSelectEdit: =true
                               TextFontSize: =gblAppStyles.FontSize_Medium
@@ -1189,6 +1267,8 @@ Screens:
                               HeaderFontSize: =gblAppStyles.FontSize_Small
                               HeaderText: =T.WorkOrderStateHeaderLabel
                               Height: =Self.AutoHeightValue
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =300
                               OnSelectEdit: =true
                               TextFontSize: =gblAppStyles.FontSize_Medium
@@ -1204,19 +1284,23 @@ Screens:
                               HeaderFontSize: =gblAppStyles.FontSize_Small
                               HeaderText: =T.WODescriptionHeaderLabel
                               Height: =Self.AutoHeightValue
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               LayoutMinWidth: =300
                               OnSelectEdit: =true
                               TextFontSize: =gblAppStyles.FontSize_Medium
                               TextValue: =Job.'Asset management work orders V2'.Description
                               Width: =Parent.Width - Parent.PaddingLeft * 2
             - conWorkOrderActionsWrapper:
-                Control: GroupContainer@1.3.0
+                Control: GroupContainer@1.4.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =conWorkOrderActions.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   LayoutMinHeight: =200
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
@@ -1225,7 +1309,7 @@ Screens:
                   Width: =1366
                 Children:
                   - conWorkOrderActions:
-                      Control: GroupContainer@1.3.0
+                      Control: GroupContainer@1.4.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -1266,6 +1350,8 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Font: =gblAppStyles.CommonFont
                               Height: =16
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingBottom: =0
                               PaddingLeft: =0
                               PaddingRight: =0
@@ -1289,6 +1375,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |
                                 =UpdateContext(
                                     {
@@ -1348,6 +1436,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |-
                                 =Navigate(
                                     'Work Order Create Form Screen',
@@ -1396,6 +1486,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |-
                                 =Navigate(
                                     'Work Order Details Screen',
@@ -1430,6 +1522,8 @@ Screens:
                               BorderColor: =RGBA(0, 18, 107, 1)
                               Font: =gblAppStyles.CommonFont
                               Height: =16
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               PaddingBottom: =0
                               PaddingLeft: =0
                               PaddingRight: =0
@@ -1453,6 +1547,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |-
                                 =Set(gblShowWorkOrdersSearch, true);
 
@@ -1496,6 +1592,8 @@ Screens:
                               HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                               HoverColor: =RGBA(255, 255, 255, 1)
                               HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
+                              LayoutMaxHeight: =
+                              LayoutMaxWidth: =
                               OnSelect: |-
                                 =Set(gblShowWorkOrdersSearch, true);
 
@@ -1523,7 +1621,7 @@ Screens:
                               X: =40
                               Y: =40
       - conWorkOrderLineNavigation:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.4.0
           Variant: ManualLayout
           Properties:
             DropShadow: =DropShadow.None
