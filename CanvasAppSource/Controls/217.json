@@ -117,7 +117,7 @@
       "OnHidden"
     ],
     "IsLocked": false,
-    "ControlUniqueId": "498",
+    "ControlUniqueId": "217",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -126,7 +126,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638034193883884418",
-          "LastModifiedTimestamp": "638884284351079704",
+          "LastModifiedTimestamp": "639051981761396238",
           "Name": "f31c4274513d4d79a81731e998df1fab",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -137,7 +137,7 @@
             {
               "Name": "Title",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Title",
@@ -146,7 +146,7 @@
             {
               "Name": "Subtitle",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Subtitle",
@@ -155,7 +155,7 @@
             {
               "Name": "BackButtonAccessibleLabel",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Back button accessible label",
@@ -165,7 +165,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "SubScreenHeader",
-            "LastModifiedTimestamp": "638884284351079704",
+            "LastModifiedTimestamp": "639051981761396238",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -196,7 +196,7 @@
                 "Property": "Height",
                 "Category": "Design",
                 "InvariantScript": "54",
-                "RuleProviderType": "Unknown"
+                "RuleProviderType": "System"
               },
               {
                 "Property": "Width",
@@ -283,7 +283,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -475,6 +475,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -561,10 +573,12 @@
                   "RadiusBottomRight",
                   "DropShadow",
                   "PaddingTop",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "42",
+                "ControlUniqueId": "64",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -624,6 +638,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -1042,7 +1076,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "44",
+                    "ControlUniqueId": "65",
                     "Children": []
                   },
                   {
@@ -1103,6 +1137,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -1542,7 +1596,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "43",
+                    "ControlUniqueId": "66",
                     "Children": []
                   }
                 ]
@@ -1897,7 +1951,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "45",
+                "ControlUniqueId": "67",
                 "Children": []
               }
             ]
@@ -1947,7 +2001,7 @@
             "Property": "Height",
             "Category": "Design",
             "InvariantScript": "54",
-            "RuleProviderType": "Unknown"
+            "RuleProviderType": "System"
           },
           {
             "Property": "Width",
@@ -2014,7 +2068,7 @@
           "Subtitle"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "499",
+        "ControlUniqueId": "218",
         "Metadata": {
           "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
           "AllowCustomization": true,
@@ -2029,7 +2083,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638036887099896867",
-          "LastModifiedTimestamp": "638884284351087533",
+          "LastModifiedTimestamp": "639051981761457967",
           "Name": "59636f2f97a14ed280f6ffcf6cedaa52",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -2040,7 +2094,7 @@
             {
               "Name": "CurrentlySelectedChoice",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Currently selected choice",
@@ -2049,7 +2103,7 @@
             {
               "Name": "AvailableChoices",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
               "PropertyDataTypeKey": "Table",
               "Hidden": false,
               "DisplayName": "Available choices",
@@ -2058,15 +2112,15 @@
             {
               "Name": "OnSelect",
               "Category": 2,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "PropertyScopeKey": {
-                "PropertyScopeRuleNamespaceKey": "56",
+                "PropertyScopeRuleNamespaceKey": "23",
                 "PropertyScopeRulesKey": [
                   {
                     "Name": "OnSelect_SelectedChoice",
-                    "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                    "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                     "PropertyDataTypeKey": "Record",
                     "ScopeVariableInfo": {
                       "ScopeVariableName": "SelectedChoice",
@@ -2091,7 +2145,7 @@
             {
               "Name": "OnCancel",
               "Category": 2,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "On cancel",
@@ -2100,7 +2154,7 @@
             {
               "Name": "Title",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Title",
@@ -2109,7 +2163,7 @@
             {
               "Name": "UseStaticOrdering",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Use static ordering",
@@ -2118,7 +2172,7 @@
             {
               "Name": "FocusBorderColor",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Color",
               "Hidden": false,
               "DisplayName": "Focus border color",
@@ -2127,7 +2181,7 @@
             {
               "Name": "FocusBorderThickness",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Focus border thickness",
@@ -2136,7 +2190,7 @@
             {
               "Name": "Loading",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Loading",
@@ -2145,7 +2199,7 @@
             {
               "Name": "LoadingChoicesText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Loading choices text",
@@ -2154,7 +2208,7 @@
             {
               "Name": "ChoiceAccessibleName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ChoiceAccessibleName",
@@ -2163,7 +2217,7 @@
             {
               "Name": "ReturnFocus",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ReturnFocus",
@@ -2172,7 +2226,7 @@
             {
               "Name": "ComponentInstanceName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ComponentInstanceName",
@@ -2181,7 +2235,7 @@
             {
               "Name": "SelectedChoiceTooltip",
               "Category": 0,
-              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Selected Choice Tooltip",
@@ -2191,7 +2245,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "BottomSheetChoiceSelector",
-            "LastModifiedTimestamp": "638884284351087533",
+            "LastModifiedTimestamp": "639051981761457967",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -2660,7 +2714,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "57",
+                "ControlUniqueId": "24",
                 "Children": []
               },
               {
@@ -2826,7 +2880,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "58",
+                "ControlUniqueId": "25",
                 "Children": []
               },
               {
@@ -3277,7 +3331,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "59",
+                "ControlUniqueId": "26",
                 "Children": []
               },
               {
@@ -3707,7 +3761,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "60",
+                "ControlUniqueId": "27",
                 "Children": []
               },
               {
@@ -4137,7 +4191,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "61",
+                "ControlUniqueId": "28",
                 "Children": []
               },
               {
@@ -4476,7 +4530,7 @@
                   "#CopilotOverlayVisible"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "62",
+                "ControlUniqueId": "29",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -4548,7 +4602,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "63",
+                    "ControlUniqueId": "30",
                     "Children": []
                   },
                   {
@@ -4999,7 +5053,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "64",
+                    "ControlUniqueId": "31",
                     "Children": []
                   },
                   {
@@ -5338,7 +5392,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "65",
+                    "ControlUniqueId": "32",
                     "Children": []
                   },
                   {
@@ -5523,7 +5577,7 @@
                       "FocusedBorderThickness"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "66",
+                    "ControlUniqueId": "33",
                     "Children": []
                   }
                 ]
@@ -5983,7 +6037,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "67",
+                "ControlUniqueId": "34",
                 "Children": []
               }
             ]
@@ -6261,7 +6315,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "500",
+        "ControlUniqueId": "219",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -6738,7 +6792,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "569",
+        "ControlUniqueId": "220",
         "Children": []
       },
       {
@@ -6747,7 +6801,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.3.0",
+          "Version": "1.4.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -6915,6 +6969,18 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridColumns",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridRows",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -6990,10 +7056,12 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow"
+          "DropShadow",
+          "LayoutGridRows",
+          "LayoutGridColumns"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "501",
+        "ControlUniqueId": "221",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -7429,7 +7497,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "502",
+            "ControlUniqueId": "222",
             "Children": []
           },
           {
@@ -7607,7 +7675,7 @@
               "FocusedBorderThickness"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "503",
+            "ControlUniqueId": "223",
             "Children": []
           },
           {
@@ -8044,7 +8112,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "504",
+            "ControlUniqueId": "224",
             "Children": []
           }
         ]
@@ -8350,7 +8418,7 @@
           "TemplatePadding"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "505",
+        "ControlUniqueId": "225",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -8408,7 +8476,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "506",
+            "ControlUniqueId": "226",
             "Children": []
           },
           {
@@ -8677,7 +8745,7 @@
               "Size"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "507",
+            "ControlUniqueId": "227",
             "Children": []
           },
           {
@@ -8686,7 +8754,7 @@
             "HasDynamicProperties": false,
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.3.0",
+              "Version": "1.4.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -8872,6 +8940,18 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridColumns",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridRows",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -8978,10 +9058,12 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow"
+              "DropShadow",
+              "LayoutGridRows",
+              "LayoutGridColumns"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "508",
+            "ControlUniqueId": "228",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -9055,6 +9137,26 @@
                       "IsLockable": false,
                       "AFDDataSourceName": ""
                     }
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
@@ -9515,7 +9617,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "515",
+                "ControlUniqueId": "229",
                 "Children": []
               },
               {
@@ -9590,6 +9692,26 @@
                       "IsLockable": false,
                       "AFDDataSourceName": ""
                     }
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
@@ -10043,7 +10165,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "516",
+                "ControlUniqueId": "230",
                 "Children": []
               },
               {
@@ -10104,11 +10226,31 @@
                       "RuleProviderType": "Unknown"
                     },
                     "ControlPropertyState": "LayoutMinHeight"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -10294,6 +10436,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -10344,10 +10498,12 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "517",
+                "ControlUniqueId": "231",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -10393,6 +10549,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -10678,7 +10854,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "519",
+                    "ControlUniqueId": "232",
                     "Children": []
                   },
                   {
@@ -10725,6 +10901,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -11115,7 +11311,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "518",
+                    "ControlUniqueId": "233",
                     "Children": []
                   }
                 ]
@@ -11178,11 +11374,31 @@
                       "RuleProviderType": "Unknown"
                     },
                     "ControlPropertyState": "LayoutMinHeight"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -11368,6 +11584,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -11418,10 +11646,12 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "520",
+                "ControlUniqueId": "234",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -11467,6 +11697,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -11752,7 +12002,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "522",
+                    "ControlUniqueId": "235",
                     "Children": []
                   },
                   {
@@ -11799,6 +12049,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -12189,7 +12459,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "521",
+                    "ControlUniqueId": "236",
                     "Children": []
                   }
                 ]
@@ -12252,11 +12522,31 @@
                       "RuleProviderType": "Unknown"
                     },
                     "ControlPropertyState": "LayoutMinHeight"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -12448,6 +12738,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -12506,10 +12808,12 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "509",
+                "ControlUniqueId": "237",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -12555,6 +12859,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -12840,7 +13164,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "510",
+                    "ControlUniqueId": "238",
                     "Children": []
                   },
                   {
@@ -12887,6 +13211,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -13277,7 +13621,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "511",
+                    "ControlUniqueId": "239",
                     "Children": []
                   }
                 ]
@@ -13340,11 +13684,31 @@
                       "RuleProviderType": "Unknown"
                     },
                     "ControlPropertyState": "LayoutMinHeight"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxWidth",
+                    "Rule": {
+                      "Property": "LayoutMaxWidth",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxWidth"
+                  },
+                  {
+                    "PropertyName": "LayoutMaxHeight",
+                    "Rule": {
+                      "Property": "LayoutMaxHeight",
+                      "Category": "Design",
+                      "InvariantScript": "",
+                      "RuleProviderType": "Unknown"
+                    },
+                    "ControlPropertyState": "LayoutMaxHeight"
                   }
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -13536,6 +13900,18 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -13594,10 +13970,12 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom"
+                  "PaddingBottom",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "512",
+                "ControlUniqueId": "240",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -13643,6 +14021,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -13935,7 +14333,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "513",
+                    "ControlUniqueId": "241",
                     "Children": []
                   },
                   {
@@ -13982,6 +14380,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -14372,7 +14790,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "514",
+                    "ControlUniqueId": "242",
                     "Children": []
                   }
                 ]
@@ -14596,7 +15014,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "523",
+            "ControlUniqueId": "243",
             "Children": []
           },
           {
@@ -15026,7 +15444,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "524",
+            "ControlUniqueId": "244",
             "Children": []
           }
         ]
@@ -15037,7 +15455,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.3.0",
+          "Version": "1.4.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -15229,6 +15647,18 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridColumns",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Property": "LayoutGridRows",
+            "Category": "Design",
+            "InvariantScript": "6",
+            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -15336,10 +15766,12 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow"
+          "DropShadow",
+          "LayoutGridRows",
+          "LayoutGridColumns"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "525",
+        "ControlUniqueId": "245",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -15399,11 +15831,31 @@
                   "IsLockable": false,
                   "AFDDataSourceName": ""
                 }
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.3.0",
+              "Version": "1.4.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -15571,6 +16023,18 @@
                 "Category": "Design",
                 "InvariantScript": "0",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridColumns",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridRows",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -15618,10 +16082,12 @@
               "RadiusBottomRight",
               "DropShadow",
               "PaddingRight",
-              "PaddingLeft"
+              "PaddingLeft",
+              "LayoutGridRows",
+              "LayoutGridColumns"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "526",
+            "ControlUniqueId": "246",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -15910,7 +16376,7 @@
                   "Size"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "527",
+                "ControlUniqueId": "247",
                 "Children": []
               },
               {
@@ -15919,7 +16385,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -16105,6 +16571,18 @@
                     "Category": "Design",
                     "InvariantScript": "DropShadow.None",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -16190,10 +16668,12 @@
                   "RadiusTopRight",
                   "RadiusBottomLeft",
                   "RadiusBottomRight",
-                  "DropShadow"
+                  "DropShadow",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "528",
+                "ControlUniqueId": "248",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -16239,6 +16719,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -16615,7 +17115,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "529",
+                    "ControlUniqueId": "249",
                     "Children": []
                   },
                   {
@@ -16662,6 +17162,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -17031,7 +17551,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "530",
+                    "ControlUniqueId": "250",
                     "Children": []
                   },
                   {
@@ -17085,6 +17605,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -17454,7 +17994,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "531",
+                    "ControlUniqueId": "251",
                     "Children": []
                   }
                 ]
@@ -17512,11 +18052,31 @@
                   "RuleProviderType": "Unknown"
                 },
                 "ControlPropertyState": "LayoutMinHeight"
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.3.0",
+              "Version": "1.4.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -17684,6 +18244,18 @@
                 "Category": "Design",
                 "InvariantScript": "0",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridColumns",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridRows",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -17731,10 +18303,12 @@
               "RadiusBottomRight",
               "DropShadow",
               "PaddingRight",
-              "PaddingLeft"
+              "PaddingLeft",
+              "LayoutGridRows",
+              "LayoutGridColumns"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "532",
+            "ControlUniqueId": "252",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -18023,7 +18597,7 @@
                   "Size"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "533",
+                "ControlUniqueId": "253",
                 "Children": []
               },
               {
@@ -18032,7 +18606,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -18218,6 +18792,18 @@
                     "Category": "Design",
                     "InvariantScript": "DropShadow.None",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -18310,10 +18896,12 @@
                   "RadiusTopRight",
                   "RadiusBottomLeft",
                   "RadiusBottomRight",
-                  "DropShadow"
+                  "DropShadow",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "534",
+                "ControlUniqueId": "254",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -18366,11 +18954,31 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.3.0",
+                      "Version": "1.4.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -18538,6 +19146,18 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridColumns",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridRows",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -18578,10 +19198,12 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom"
+                      "PaddingBottom",
+                      "LayoutGridRows",
+                      "LayoutGridColumns"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "535",
+                    "ControlUniqueId": "255",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -18961,7 +19583,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "536",
+                        "ControlUniqueId": "256",
                         "Children": []
                       },
                       {
@@ -19251,7 +19873,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "537",
+                        "ControlUniqueId": "257",
                         "Children": []
                       },
                       {
@@ -19646,7 +20268,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "538",
+                        "ControlUniqueId": "258",
                         "Children": []
                       }
                     ]
@@ -19702,11 +20324,31 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.3.0",
+                      "Version": "1.4.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -19874,6 +20516,18 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridColumns",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridRows",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -19914,10 +20568,12 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom"
+                      "PaddingBottom",
+                      "LayoutGridRows",
+                      "LayoutGridColumns"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "539",
+                    "ControlUniqueId": "259",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -20304,7 +20960,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "540",
+                        "ControlUniqueId": "260",
                         "Children": []
                       },
                       {
@@ -20580,7 +21236,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "541",
+                        "ControlUniqueId": "261",
                         "Children": []
                       },
                       {
@@ -20975,7 +21631,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "542",
+                        "ControlUniqueId": "262",
                         "Children": []
                       }
                     ]
@@ -21042,11 +21698,31 @@
                   "IsLockable": false,
                   "AFDDataSourceName": ""
                 }
+              },
+              {
+                "PropertyName": "LayoutMaxWidth",
+                "Rule": {
+                  "Property": "LayoutMaxWidth",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxWidth"
+              },
+              {
+                "PropertyName": "LayoutMaxHeight",
+                "Rule": {
+                  "Property": "LayoutMaxHeight",
+                  "Category": "Design",
+                  "InvariantScript": "",
+                  "RuleProviderType": "Unknown"
+                },
+                "ControlPropertyState": "LayoutMaxHeight"
               }
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.3.0",
+              "Version": "1.4.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -21214,6 +21890,18 @@
                 "Category": "Design",
                 "InvariantScript": "0",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridColumns",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
+              },
+              {
+                "Property": "LayoutGridRows",
+                "Category": "Design",
+                "InvariantScript": "6",
+                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -21261,10 +21949,12 @@
               "RadiusBottomRight",
               "DropShadow",
               "PaddingRight",
-              "PaddingLeft"
+              "PaddingLeft",
+              "LayoutGridRows",
+              "LayoutGridColumns"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "543",
+            "ControlUniqueId": "263",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -21553,7 +22243,7 @@
                   "Size"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "544",
+                "ControlUniqueId": "264",
                 "Children": []
               },
               {
@@ -21562,7 +22252,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.3.0",
+                  "Version": "1.4.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -21748,6 +22438,18 @@
                     "Category": "Design",
                     "InvariantScript": "DropShadow.None",
                     "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridColumns",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
+                  },
+                  {
+                    "Property": "LayoutGridRows",
+                    "Category": "Design",
+                    "InvariantScript": "6",
+                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -21854,10 +22556,12 @@
                   "RadiusTopRight",
                   "RadiusBottomLeft",
                   "RadiusBottomRight",
-                  "DropShadow"
+                  "DropShadow",
+                  "LayoutGridRows",
+                  "LayoutGridColumns"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "545",
+                "ControlUniqueId": "265",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -21917,11 +22621,31 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.3.0",
+                      "Version": "1.4.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -22107,6 +22831,18 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridColumns",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridRows",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -22157,10 +22893,12 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom"
+                      "PaddingBottom",
+                      "LayoutGridRows",
+                      "LayoutGridColumns"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "546",
+                    "ControlUniqueId": "266",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -22234,11 +22972,31 @@
                               "IsLockable": false,
                               "AFDDataSourceName": ""
                             }
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -22424,6 +23182,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -22488,10 +23258,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "547",
+                        "ControlUniqueId": "267",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -22537,6 +23309,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -22927,7 +23719,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "548",
+                            "ControlUniqueId": "268",
                             "Children": []
                           },
                           {
@@ -22981,6 +23773,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -23385,7 +24197,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "549",
+                            "ControlUniqueId": "269",
                             "Children": []
                           }
                         ]
@@ -23462,11 +24274,31 @@
                               "IsLockable": false,
                               "AFDDataSourceName": ""
                             }
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -23652,6 +24484,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -23709,10 +24553,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "550",
+                        "ControlUniqueId": "270",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -23758,6 +24604,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -24148,7 +25014,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "551",
+                            "ControlUniqueId": "271",
                             "Children": []
                           },
                           {
@@ -24202,6 +25068,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -24606,7 +25492,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "552",
+                            "ControlUniqueId": "272",
                             "Children": []
                           }
                         ]
@@ -24657,6 +25543,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -24809,7 +25715,7 @@
                       "FocusedBorderThickness"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "553",
+                    "ControlUniqueId": "273",
                     "Children": []
                   },
                   {
@@ -24870,11 +25776,31 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.3.0",
+                      "Version": "1.4.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -25060,6 +25986,18 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridColumns",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridRows",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -25110,10 +26048,12 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom"
+                      "PaddingBottom",
+                      "LayoutGridRows",
+                      "LayoutGridColumns"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "554",
+                    "ControlUniqueId": "274",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -25166,11 +26106,31 @@
                               "RuleProviderType": "Unknown"
                             },
                             "ControlPropertyState": "LayoutMinHeight"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -25356,6 +26316,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -25406,10 +26378,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "555",
+                        "ControlUniqueId": "275",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -25455,6 +26429,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -25845,7 +26839,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "556",
+                            "ControlUniqueId": "276",
                             "Children": []
                           },
                           {
@@ -25899,6 +26893,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -26303,7 +27317,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "557",
+                            "ControlUniqueId": "277",
                             "Children": []
                           }
                         ]
@@ -26366,11 +27380,31 @@
                               "RuleProviderType": "Unknown"
                             },
                             "ControlPropertyState": "LayoutMinHeight"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -26556,6 +27590,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -26606,10 +27652,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "558",
+                        "ControlUniqueId": "278",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -26655,6 +27703,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -27045,7 +28113,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "559",
+                            "ControlUniqueId": "279",
                             "Children": []
                           },
                           {
@@ -27099,6 +28167,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -27503,7 +28591,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "560",
+                            "ControlUniqueId": "280",
                             "Children": []
                           }
                         ]
@@ -27554,6 +28642,26 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
@@ -27706,7 +28814,7 @@
                       "FocusedBorderThickness"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "561",
+                    "ControlUniqueId": "281",
                     "Children": []
                   },
                   {
@@ -27767,11 +28875,31 @@
                           "RuleProviderType": "Unknown"
                         },
                         "ControlPropertyState": "LayoutMinHeight"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxWidth",
+                        "Rule": {
+                          "Property": "LayoutMaxWidth",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxWidth"
+                      },
+                      {
+                        "PropertyName": "LayoutMaxHeight",
+                        "Rule": {
+                          "Property": "LayoutMaxHeight",
+                          "Category": "Design",
+                          "InvariantScript": "",
+                          "RuleProviderType": "Unknown"
+                        },
+                        "ControlPropertyState": "LayoutMaxHeight"
                       }
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.3.0",
+                      "Version": "1.4.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -27957,6 +29085,18 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridColumns",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
+                      },
+                      {
+                        "Property": "LayoutGridRows",
+                        "Category": "Design",
+                        "InvariantScript": "6",
+                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -28007,10 +29147,12 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom"
+                      "PaddingBottom",
+                      "LayoutGridRows",
+                      "LayoutGridColumns"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "562",
+                    "ControlUniqueId": "282",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -28063,11 +29205,31 @@
                               "RuleProviderType": "Unknown"
                             },
                             "ControlPropertyState": "LayoutMinHeight"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -28253,6 +29415,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -28303,10 +29477,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "563",
+                        "ControlUniqueId": "283",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -28352,6 +29528,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -28742,7 +29938,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "564",
+                            "ControlUniqueId": "284",
                             "Children": []
                           },
                           {
@@ -28796,6 +29992,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -29200,7 +30416,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "565",
+                            "ControlUniqueId": "285",
                             "Children": []
                           }
                         ]
@@ -29263,11 +30479,31 @@
                               "RuleProviderType": "Unknown"
                             },
                             "ControlPropertyState": "LayoutMinHeight"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxWidth",
+                            "Rule": {
+                              "Property": "LayoutMaxWidth",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxWidth"
+                          },
+                          {
+                            "PropertyName": "LayoutMaxHeight",
+                            "Rule": {
+                              "Property": "LayoutMaxHeight",
+                              "Category": "Design",
+                              "InvariantScript": "",
+                              "RuleProviderType": "Unknown"
+                            },
+                            "ControlPropertyState": "LayoutMaxHeight"
                           }
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.3.0",
+                          "Version": "1.4.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -29453,6 +30689,18 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridColumns",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
+                          },
+                          {
+                            "Property": "LayoutGridRows",
+                            "Category": "Design",
+                            "InvariantScript": "6",
+                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -29503,10 +30751,12 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom"
+                          "PaddingBottom",
+                          "LayoutGridRows",
+                          "LayoutGridColumns"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "566",
+                        "ControlUniqueId": "286",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -29552,6 +30802,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -29942,7 +31212,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "567",
+                            "ControlUniqueId": "287",
                             "Children": []
                           },
                           {
@@ -29996,6 +31266,26 @@
                                   "RuleProviderType": "Unknown"
                                 },
                                 "ControlPropertyState": "LayoutMinHeight"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxWidth",
+                                "Rule": {
+                                  "Property": "LayoutMaxWidth",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxWidth"
+                              },
+                              {
+                                "PropertyName": "LayoutMaxHeight",
+                                "Rule": {
+                                  "Property": "LayoutMaxHeight",
+                                  "Category": "Design",
+                                  "InvariantScript": "",
+                                  "RuleProviderType": "Unknown"
+                                },
+                                "ControlPropertyState": "LayoutMaxHeight"
                               }
                             ],
                             "Template": {
@@ -30400,7 +31690,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "568",
+                            "ControlUniqueId": "288",
                             "Children": []
                           }
                         ]

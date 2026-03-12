@@ -35,7 +35,7 @@ ComponentDefinitions:
       Width: =App.Width
     Children:
       - conTitlesSSH:
-          Control: GroupContainer@1.3.0
+          Control: GroupContainer@1.4.0
           Variant: AutoLayout
           Properties:
             ContentLanguage: =Parent.Width
@@ -63,6 +63,8 @@ ComponentDefinitions:
                   Font: =Font.'Segoe UI'
                   FontWeight: =FontWeight.Bold
                   Height: =Parent.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   Role: =TextRole.Heading1
                   Size: =24 * 0.75
                   Text: =SubScreenHeader.Title
@@ -79,6 +81,8 @@ ComponentDefinitions:
                   Font: =Font.'Segoe UI'
                   FontWeight: =FontWeight.Bold
                   Height: =Parent.Height
+                  LayoutMaxHeight: =
+                  LayoutMaxWidth: =
                   Role: =TextRole.Heading2
                   Size: =24 * 0.75
                   Text: =SubScreenHeader.Subtitle
