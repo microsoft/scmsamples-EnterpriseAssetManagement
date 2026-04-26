@@ -1,19 +1,15 @@
 # Support
 
-This project is community-supported. We welcome issues and pull requests from the community and will make a best effort to review and respond.
+This repository is **sample code** provided as-is. There is no formal or community support channel for this repository:
 
-## Getting help
+- Pull requests are not accepted (see [CONTRIBUTING.md](./CONTRIBUTING.md)).
+- Issues filed against this repository will not be triaged.
+- There is no SLA, no paid support, and no best-effort response commitment.
 
-- File bugs, feature requests, and questions in GitHub Issues for this repository. Please include clear reproduction steps, logs, screenshots, and environment details.
-- Check the README for build, packaging, and usage guidance.
-- See Microsoft product documentation for setup and onboarding guidance related to Dynamics 365 Supply Chain Management and Dataverse.
+## What to do instead
 
-## Security issues
+- **For build and setup guidance**, see the [README](./README.md).
+- **For Microsoft Dynamics 365 product support**, use your existing Microsoft support agreements and channels, those cover the deployed product, not this sample repository.
+- **For security vulnerabilities**, follow the process in [SECURITY.md](./SECURITY.md). Do not file public issues.
 
-Do not report security vulnerabilities through GitHub Issues. Please follow the guidance in SECURITY.md to report security issues to the Microsoft Security Response Center (MSRC).
-
-## Support policy
-
-- This project is provided “as is” without a formal SLA or paid support channel.
-- Responses are handled on a best-effort basis by maintainers and contributors.
-- For enterprise support needs for Microsoft products (for example Dynamics 365), please use your existing Microsoft support agreements/channels.
+You are welcome to fork this repository and modify it for your own use under the terms of the [LICENSE](./LICENSE).
