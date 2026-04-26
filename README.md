@@ -51,6 +51,9 @@ To review licensing details, please see the [Dynamics 365 Licensing Guide](https
 .\scripts\SolutionPackTool\SolutionPackTool.ps1
 ``` 
 - This generates **msdyn_AssetManagementMobileSolution_managed.zip** and **msdyn_AssetManagementMobileSolution.zip** under **/bin**
+
+> **Publisher and customization prefix.** This solution is configured with Microsoft (`microsoftdynamics`, prefix `msdyn`) as the publisher in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml). Builds produced from this source as-is will be Microsoft-published — fine for in-tenant use and testing, but not appropriate for redistribution under another brand. To redistribute or republish under your own brand, change the `<Publisher>` block and update the customization prefix throughout the source before building.
+
 ---
 
 ## Installing the Mobile App in Dataverse
