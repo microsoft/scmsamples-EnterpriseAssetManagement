@@ -8,15 +8,15 @@ $SolutionName = "msdyn_AssetManagementMobileSolution"
 $ManagedSolutionName = "$SolutionName" + "_managed.zip"
 $SolutionExportPath = "$PSScriptRoot/../../Solution/Export"
 $binPath = "$PSScriptRoot/../../bin"
-$UnamanagedSolutionPath = "$binPath/$SolutionName.zip"
+$UnmanagedSolutionPath = "$binPath/$SolutionName.zip"
 $ManagedSolutionPath = "$binPath/$ManagedSolutionName"
 
 Remove-Directory -directoryPath $binPath
 
-Pack-Solution -solutionPath $UnamanagedSolutionPath -exportPath $SolutionExportPath -solutionType Unmanaged
+Pack-Solution -solutionPath $UnmanagedSolutionPath -exportPath $SolutionExportPath -solutionType Unmanaged
 Pack-Solution -solutionPath $ManagedSolutionPath -exportPath $SolutionExportPath -solutionType Managed
 
-$unmanagedSolutionExists = Test-Path $UnamanagedSolutionPath
+$unmanagedSolutionExists = Test-Path $UnmanagedSolutionPath
 $managedSolutionExists = Test-Path $ManagedSolutionPath
 
 if ($unmanagedSolutionExists -And $managedSolutionExists) {
@@ -24,7 +24,7 @@ if ($unmanagedSolutionExists -And $managedSolutionExists) {
 } else {
     Write-Error "Failed to package solutions"
     if (-not $unmanagedSolutionExists) {
-        Write-Output "Unmanaged solution not found at $UnamanagedSolutionPath"
+        Write-Output "Unmanaged solution not found at $UnmanagedSolutionPath"
     }
     if (-not $managedSolutionExists) {
         Write-Output "Managed solution not found at $ManagedSolutionPath"

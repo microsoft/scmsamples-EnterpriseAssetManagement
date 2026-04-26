@@ -57,7 +57,7 @@ To review licensing details, please see the [Dynamics 365 Licensing Guide](https
 
 Follow these steps to install the **Dynamics 365 Asset Management Mobile Application** in Dataverse:
 
-1. **Navigate to the PowerApps Portal**: [https://make.powerapps.com](https://make.powerapps.com)
+1. **Navigate to the Power Apps portal**: [https://make.powerapps.com](https://make.powerapps.com)
 2. **Navigate to the Solutions tab on the left side**
 3. Select **Import Solution**
 4. Optional: You might need to sign the solution file first, if your organization demands solutions to be signed - [Sign Tool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe)
@@ -66,7 +66,7 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 ---
 
 ## Applying changes
-- Open the Asset Management App in edit mode from the PowerApps portal
+- Open the Asset Management App in edit mode from the Power Apps portal
 - Make the required changes there
 - Download a copy of the app
 - Unpack the downloaded **.msapp** into this repository by running the script
@@ -80,7 +80,7 @@ Follow these steps to install the **Dynamics 365 Asset Management Mobile Applica
 ### Localization (translation)
 All translations are found in the [`/Translations`](/Translations/) directory. The baseline is [`en-US`](/Translations/Labels.en-US.resx).
 
-#### Uptaking label changes
+#### Adopting label changes
 
 Once a new label is added, they should be injected into the Canvas app. Follow these steps:
 
@@ -91,7 +91,7 @@ Once a new label is added, they should be injected into the Canvas app. Follow t
    * You will now have the translations in your clipboard.
 2. Edit the Canvas app in Power Apps studio.
 3. Modify `App -> OnStart` and replace everything between the lines:
-   ```csharp
+   ```text
    //localizer:gen-start
    ...
    //localizer:gen-end
@@ -101,7 +101,7 @@ Once a new label is added, they should be injected into the Canvas app. Follow t
 ---
 
 ## Additional Resources
-For more details, including **security roles** and **Finance and Operations Asset Management setup** , refer to the official Microsoft documentation:  
+For more details, including **security roles** and **Finance and Operations Asset Management setup**, refer to the official Microsoft documentation:  
 [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app).
 
 ---
@@ -115,11 +115,11 @@ This repository does not vendor third-party source code. It relies on Microsoft 
 This app may surface limited diagnostics and error tracing provided by the Power Apps platform.
 
 - How to disable: set `appinsightserrortracing` to `false` in `CanvasAppSource/Properties.json`, then rebuild/pack the app. Disabling diagnostics may reduce troubleshooting capability.
-- No personal data should be intentionally collected by this repository's code. Review your environment’s policies and telemetry configuration before deployment.
+- No personal data should be intentionally collected by this repository's code. Review your environment's policies and telemetry configuration before deployment.
 
 ## Trademarks
 
-This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft’s Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party’s policies.
+This project may contain trademarks or logos for projects, products, or services. Authorized use of Microsoft trademarks or logos is subject to and must follow Microsoft's Trademark & Brand Guidelines. Use of Microsoft trademarks or logos in modified versions of this project must not cause confusion or imply Microsoft sponsorship. Any use of third-party trademarks or logos are subject to those third-party's policies.
 
 ## Support
 

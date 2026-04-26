@@ -8,4 +8,5 @@ This script prepares the Canvas App source directory by removing existing conten
 - Run the script to prepare the Canvas App source.
 ### Example
 ```powershell
-.\PrepareCanvasAppSource.ps1 -MsAppPath "C:\Path\To\YourApp.msapp"
+.\MsAppUnpackTool.ps1 -MsAppPath "C:\Path\To\YourApp.msapp"
+```
