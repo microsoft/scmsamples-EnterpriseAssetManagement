@@ -2,8 +2,6 @@
 
 The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders.
 
-See the [Asset Management mobile app overview](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/asset-management-mobile-app-overview) on Microsoft Learn for the full feature description.
-
 Licensed under MIT. See [LICENSE](./LICENSE).
 
 ## Prerequisites
@@ -15,7 +13,7 @@ Licensed under MIT. See [LICENSE](./LICENSE).
   - Dynamics 365 apps enabled
   - Power Apps Component Framework (PCF) enabled
 
-  To configure, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com), then navigate to **Environments → New** and create or update an environment with both options enabled.
+  To configure, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com), then navigate to **Environments** and either create a new environment or edit an existing one, ensuring both options are enabled.
 
 ### Licensing and security roles
 
@@ -57,7 +55,7 @@ This produces both managed and unmanaged solution archives under [/bin](./bin/):
 
 Once you have a solution `.zip` from the previous step:
 
-1. Sign in to [Power Apps Studio](https://make.powerapps.com).
+1. Sign in to [Power Apps](https://make.powerapps.com).
 2. Open the **Solutions** tab.
 3. Select **Import solution** and choose either the **managed** or **unmanaged** zip from [/bin](./bin/):
    - **Managed** locks the components against direct modification. Appropriate for end-user installs that you don't intend to deeply customize.
@@ -75,7 +73,7 @@ If you edit the canvas app in the maker portal and want those changes reflected 
 1. Download a copy of the app from Power Apps Studio (this produces an `.msapp` file).
 2. Run:
    ```powershell
-   .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <path-to-msapp>
+   .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 -MsAppPath <path-to-msapp>
    ```
    This unpacks the `.msapp` into [CanvasAppSource/](./CanvasAppSource/), overwriting the existing source.
 3. Rebuild the app binary and solution using the steps in [Building the app](#building-the-app).
@@ -84,7 +82,7 @@ If you edit the canvas app in the maker portal and want those changes reflected 
 
 For changes outside the canvas app (for example, adding fields to an entity, or modifying the Asset Management Mobile Application User Role), edit the solution in the maker portal and unpack the exported solution back into [Solution/Export/](./Solution/Export/):
 
-1. In [Power Apps Studio](https://make.powerapps.com), open the **Solutions** tab and make your changes.
+1. In [Power Apps](https://make.powerapps.com), open the **Solutions** tab and make your changes.
 2. Select the solution and choose **Export**, then choose **Unmanaged**. Save the resulting `.zip` locally.
 3. Unpack the `.zip` into the repository:
    ```powershell
@@ -114,18 +112,16 @@ Once a new label is added, inject it into the canvas app's runtime translation t
 
 ## Additional resources
 
-For more on the deployed product (including security roles, licensing, and Finance & Operations Asset Management setup), see [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app) on Microsoft Learn.
+- [Asset Management mobile app overview](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/asset-management-mobile-app-overview) covers the full feature description.
+- [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app) covers security roles, licensing, and Finance & Operations Asset Management setup.
 
 ## Third-party code and tools
 
-This repository does not vendor third-party source code. It relies on Microsoft tooling including Microsoft Power Platform CLI (PAC) and Power Apps packaging utilities as described above. Any third-party assets referenced at build or runtime are subject to their own licenses and are not included in this repository.
+This repository does not directly vendor third-party source code authored by this project. Some Microsoft-provided components (such as the `MscrmControls.Common.A11yFocusTrap` PCF control) bundle MIT-licensed third-party code internally, with attribution alongside the bundle in `bundle.js.LICENSE.txt`. The repository otherwise relies on Microsoft tooling, including the Power Platform CLI (PAC) and Power Apps packaging utilities described above. Any third-party assets referenced at build or runtime are subject to their own licenses.
 
 ## Telemetry and diagnostics
 
-This app may surface limited diagnostics and error tracing provided by the Power Apps platform.
-
-- To disable, set `appinsightserrortracing` to `false` in [CanvasAppSource/Properties.json](./CanvasAppSource/Properties.json), then rebuild and pack the app. Disabling diagnostics may reduce troubleshooting capability.
-- No personal data should be intentionally collected by this repository's code. Review your environment's policies and telemetry configuration before deployment.
+Application Insights for canvas apps is opt-in via a connection string in the app's settings (see [Microsoft Learn](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/application-insights)). The `ConnectionString` field in [CanvasAppSource/Properties.json](./CanvasAppSource/Properties.json) is empty, so this app sends no telemetry as shipped. If you fork and configure one, telemetry flows to that resource. No personal data is intentionally collected by this repository's code.
 
 ## Trademarks
 
