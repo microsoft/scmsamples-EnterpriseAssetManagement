@@ -43,3 +43,16 @@ function Pack-Solution {
         exit 1
     }
 }
+
+function Unpack-Solution {
+    param (
+        [string]$solutionZipPath,
+        [string]$exportPath
+    )
+    try {
+        pac solution unpack -z $solutionZipPath -f $exportPath -p Both -ad Yes -loc
+    } catch {
+        Write-Error "Failed to unpack solution at $solutionZipPath"
+        exit 1
+    }
+}
