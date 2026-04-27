@@ -9,7 +9,7 @@ This repository is **sample code** provided as-is. There is no formal or communi
 ## What to do instead
 
 - **For build and setup guidance**, see the [README](./README.md).
-- **For Microsoft Dynamics 365 product support**, use your existing Microsoft support agreements and channels, those cover the deployed product, not this sample repository.
+- **For Microsoft Dynamics 365 product support**, use your existing Microsoft support agreements and channels; those cover the deployed product, not this sample repository.
 - **For security vulnerabilities**, follow the process in [SECURITY.md](./SECURITY.md). Do not file public issues.
 
 You are welcome to fork this repository and modify it for your own use under the terms of the [LICENSE](./LICENSE).

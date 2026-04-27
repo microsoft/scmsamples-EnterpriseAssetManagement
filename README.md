@@ -1,113 +1,120 @@
-# Asset Management Mobile App Onboarding Guide
+# Dynamics 365 Asset Management Mobile App
 
-This guide explains how to set up Microsoft Dynamics 365 Supply Chain Management and Dataverse for the Asset Management mobile app, install the app, and configure users for access.
+The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders.
 
----
+See the [Asset Management mobile app overview](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/asset-management-mobile-app-overview) on Microsoft Learn for the full feature description.
+
+Licensed under MIT. See [LICENSE](./LICENSE).
 
 ## Prerequisites
 
-### 1. System Requirements
-- You must be using **Microsoft Dynamics 365 Supply Chain Management version 10.0.36 or later**.
+### Environment
 
-### 2. Set Up a Dataverse Environment
-The Asset Management mobile app relies on **Dataverse**. You must ensure your environment is properly configured.
+- **Microsoft Dynamics 365 Supply Chain Management** version 10.0.36 or later.
+- A **Dataverse environment** with:
+  - Dynamics 365 apps enabled
+  - Power Apps Component Framework (PCF) enabled
 
-#### Steps:
-1. Sign in to the **Power Platform admin center**: [https://admin.powerplatform.microsoft.com](https://admin.powerplatform.microsoft.com)
-2. Navigate to **Environments > New**.
-3. Set up a new environment or choose an existing one.
-4. Ensure **"Enable Dynamics 365 apps"** is enabled.
-5. Ensure **Power Apps Component Framework (PCF)** is enabled.
+  To configure, sign in to the [Power Platform admin center](https://admin.powerplatform.microsoft.com), then navigate to **Environments → New** and create or update an environment with both options enabled.
 
----
+### Licensing and security roles
 
-## Licensing Requirements
-Each user must have a **valid Microsoft Entra ID license** and the required **security roles**.
+Each user requires a valid **Microsoft Entra ID** license, plus the following security roles:
 
-### Required Security Roles:
 - **Asset Management Mobile Application User Role** (in Dataverse)
 - **Finance and Operations Basic User** (for Supply Chain Management)
 
-To review licensing details, please see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
+For full licensing details, see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
----
-# Build, install, and other development processes
-## Prerequisites
-### Microsoft Power Platform CLI
-- Install [Microsoft Power Platform CLI](https://aka.ms/PowerAppsCLI).
+### Build tooling
 
-## Generate a new Canvas App binary
-- Run the script 
+To build the app from source, install [Microsoft Power Platform CLI (PAC)](https://aka.ms/PowerAppsCLI).
+
+## Building the app
+
+### Generate the canvas app binary
+
 ```powershell
 .\scripts\MsAppPackTool\MsAppPackTool.ps1
 ```
-- This generates **msdyn_assetmanagementv2_bbd03_DocumentUri.msapp** under **/Solution/Export/CanvasApps**, which is compiled based on the source code at /CanvasAppSource
 
----
+This compiles [CanvasAppSource/](./CanvasAppSource/) into `msdyn_assetmanagementv2_bbd03_DocumentUri.msapp` under [Solution/Export/CanvasApps/](./Solution/Export/CanvasApps/).
 
-## Generate a new solution
-- Run the script 
+### Generate the solution
+
 ```powershell
 .\scripts\SolutionPackTool\SolutionPackTool.ps1
-``` 
-- This generates **msdyn_AssetManagementMobileSolution_managed.zip** and **msdyn_AssetManagementMobileSolution.zip** under **/bin**
-
-> **Publisher and customization prefix.** This solution is configured with Microsoft (`microsoftdynamics`, prefix `msdyn`) as the publisher in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml). Builds produced from this source as-is will be Microsoft-published — fine for in-tenant use and testing, but not appropriate for redistribution under another brand. To redistribute or republish under your own brand, change the `<Publisher>` block and update the customization prefix throughout the source before building.
-
----
-
-## Installing the Mobile App in Dataverse
-
-Follow these steps to install the **Dynamics 365 Asset Management Mobile Application** in Dataverse:
-
-1. **Navigate to the Power Apps portal**: [https://make.powerapps.com](https://make.powerapps.com)
-2. **Navigate to the Solutions tab on the left side**
-3. Select **Import Solution**
-4. Optional: You might need to sign the solution file first, if your organization demands solutions to be signed - [Sign Tool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe)
-5. **Import either the managed or unmanaged zip file from /bin**
-
----
-
-## Applying changes
-- Open the Asset Management App in edit mode from the Power Apps portal
-- Make the required changes there
-- Download a copy of the app
-- Unpack the downloaded **.msapp** into this repository by running the script
-```powershell
-.\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <msapp_file_path>
 ```
-- Your changes are now reflected in /CanvasAppSource
-- You can now generate a new app binary, followed by a new solution, using the steps described above.
----
 
-### Localization (translation)
-All translations are found in the [`/Translations`](/Translations/) directory. The baseline is [`en-US`](/Translations/Labels.en-US.resx).
+This produces both managed and unmanaged solution archives under [/bin](./bin/):
 
-#### Adopting label changes
+- `msdyn_AssetManagementMobileSolution.zip` (unmanaged)
+- `msdyn_AssetManagementMobileSolution_managed.zip` (managed)
 
-Once a new label is added, they should be injected into the Canvas app. Follow these steps:
+> **Publisher and customization prefix.** This solution is configured with Microsoft (`microsoftdynamics`, prefix `msdyn`) as the publisher in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml). Builds produced from this source as-is will be Microsoft-published, which is fine for in-tenant use and testing but not appropriate for redistribution under another brand. To redistribute or republish under your own brand, change the `<Publisher>` block and update the customization prefix throughout the source before building.
 
-1. Run the script:
+## Installing the app
+
+Once you have a solution `.zip` from the previous step:
+
+1. Sign in to [Power Apps Studio](https://make.powerapps.com).
+2. Open the **Solutions** tab.
+3. Select **Import solution** and choose either the **managed** or **unmanaged** zip from [/bin](./bin/):
+   - **Managed** locks the components against direct modification. Appropriate for end-user installs that you don't intend to deeply customize.
+   - **Unmanaged** leaves components open for editing in the maker portal. Appropriate if you intend to study or modify the app's internals.
+4. *(Optional)* If your organization requires signed solutions, sign the `.zip` with [SignTool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) before importing.
+
+## Customizing the app
+
+### Applying canvas app changes back to source
+
+This is the standard PAC CLI round-trip pattern for Power Apps canvas apps. See [ALM for Power Platform](https://learn.microsoft.com/en-us/power-platform/alm/) on Microsoft Learn for broader CI/CD options.
+
+If you edit the canvas app in the maker portal and want those changes reflected in this repository:
+
+1. Download a copy of the app from Power Apps Studio (this produces an `.msapp` file).
+2. Run:
+   ```powershell
+   .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 <path-to-msapp>
+   ```
+   This unpacks the `.msapp` into [CanvasAppSource/](./CanvasAppSource/), overwriting the existing source.
+3. Rebuild the app binary and solution using the steps in [Building the app](#building-the-app).
+
+### Applying solution changes back to source
+
+For changes outside the canvas app (for example, adding fields to an entity, or modifying the Asset Management Mobile Application User Role), edit the solution in the maker portal and unpack the exported solution back into [Solution/Export/](./Solution/Export/):
+
+1. In [Power Apps Studio](https://make.powerapps.com), open the **Solutions** tab and make your changes.
+2. Select the solution and choose **Export**, then choose **Unmanaged**. Save the resulting `.zip` locally.
+3. Unpack the `.zip` into the repository:
+   ```powershell
+   .\scripts\SolutionUnpackTool\SolutionUnpackTool.ps1 -SolutionZipPath <path-to-exported-zip>
+   ```
+4. Review the diff to confirm only your intended changes are present, then rebuild using the steps in [Building the app](#building-the-app).
+
+### Localization
+
+All translations live in [Translations/](./Translations/). The baseline is [Labels.en-US.resx](./Translations/Labels.en-US.resx).
+
+Once a new label is added, inject it into the canvas app's runtime translation table:
+
+1. Generate the table from the `.resx` files:
    ```powershell
    .\scripts\LocalizerTool\LocalizerTool.ps1 -CopyToClipboard
    ```
-   * You will now have the translations in your clipboard.
-2. Edit the Canvas app in Power Apps studio.
-3. Modify `App -> OnStart` and replace everything between the lines:
+   The translations are now in your clipboard.
+2. In Power Apps Studio, open the canvas app and go to `App → OnStart`.
+3. Replace the section between these markers:
    ```text
    //localizer:gen-start
    ...
    //localizer:gen-end
    ```
-   > To select the existing generated code, put your cursor right before the `With({`, then while holding `Shift`, press `End` twice and finally `Ctrl+V` to paste in the newly generated translation data.
+   with the clipboard contents.
 
----
+## Additional resources
 
-## Additional Resources
-For more details, including **security roles** and **Finance and Operations Asset Management setup**, refer to the official Microsoft documentation:  
-[Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app).
-
----
+For more on the deployed product (including security roles, licensing, and Finance & Operations Asset Management setup), see [Onboarding the Asset Management Mobile App](https://learn.microsoft.com/en-us/dynamics365/supply-chain/asset-management/asset-management-mobile-app/onboard-app) on Microsoft Learn.
 
 ## Third-party code and tools
 
@@ -117,7 +124,7 @@ This repository does not vendor third-party source code. It relies on Microsoft 
 
 This app may surface limited diagnostics and error tracing provided by the Power Apps platform.
 
-- How to disable: set `appinsightserrortracing` to `false` in `CanvasAppSource/Properties.json`, then rebuild/pack the app. Disabling diagnostics may reduce troubleshooting capability.
+- To disable, set `appinsightserrortracing` to `false` in [CanvasAppSource/Properties.json](./CanvasAppSource/Properties.json), then rebuild and pack the app. Disabling diagnostics may reduce troubleshooting capability.
 - No personal data should be intentionally collected by this repository's code. Review your environment's policies and telemetry configuration before deployment.
 
 ## Trademarks
@@ -126,4 +133,4 @@ This project may contain trademarks or logos for projects, products, or services
 
 ## Support
 
-See [SUPPORT.md](./SUPPORT.md) for how to get help and our support policy.
+See [SUPPORT.md](./SUPPORT.md) for the support policy.
