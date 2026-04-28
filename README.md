@@ -24,11 +24,25 @@ Each user requires a valid **Microsoft Entra ID** license, plus the following se
 
 For full licensing details, see the [Dynamics 365 Licensing Guide](https://go.microsoft.com/fwlink/?LinkId=866544).
 
+## Quick install
+
+The simplest way to install the app is to download the prebuilt managed solution from this repository's [latest Release](https://github.com/microsoft/scmsamples-EnterpriseAssetManagement/releases/latest) and import it in [Power Apps](https://make.powerapps.com).
+
+1. From the [latest Release](https://github.com/microsoft/scmsamples-EnterpriseAssetManagement/releases/latest), download `msdyn_AssetManagementMobileSolution_managed.zip`.
+2. Sign in to [Power Apps](https://make.powerapps.com).
+3. Open the **Solutions** tab.
+4. Select **Import solution** and choose the downloaded `.zip`.
+5. *(Optional)* If your organization requires signed solutions, sign the `.zip` with [SignTool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) before importing.
+
+If you need the unmanaged solution to modify the app's components directly, build from source (see [Building from source](#building-from-source)).
+
+## Building from source
+
+Build from source if you want to fork the app, customize the canvas app at the source level, or rebuild under your own publisher for redistribution.
+
 ### Build tooling
 
 To build the app from source, install [Microsoft Power Platform CLI (PAC)](https://aka.ms/PowerAppsCLI).
-
-## Building the app
 
 ### Generate the canvas app binary
 
@@ -51,16 +65,9 @@ This produces both managed and unmanaged solution archives under [/bin](./bin/):
 
 > **Publisher and customization prefix.** This solution is configured with Microsoft (`microsoftdynamics`, prefix `msdyn`) as the publisher in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml). Builds produced from this source as-is will be Microsoft-published, which is fine for in-tenant use and testing but not appropriate for redistribution under another brand. To redistribute or republish under your own brand, change the `<Publisher>` block and update the customization prefix throughout the source before building.
 
-## Installing the app
+### Install your build
 
-Once you have a solution `.zip` from the previous step:
-
-1. Sign in to [Power Apps](https://make.powerapps.com).
-2. Open the **Solutions** tab.
-3. Select **Import solution** and choose either the **managed** or **unmanaged** zip from [/bin](./bin/):
-   - **Managed** locks the components against direct modification. Appropriate for end-user installs that you don't intend to deeply customize.
-   - **Unmanaged** leaves components open for editing in the maker portal. Appropriate if you intend to study or modify the app's internals.
-4. *(Optional)* If your organization requires signed solutions, sign the `.zip` with [SignTool](https://learn.microsoft.com/en-us/dotnet/framework/tools/signtool-exe) before importing.
+To install a solution `.zip` produced from [/bin](./bin/), follow the same steps as [Quick install](#quick-install), substituting your `.zip` from `/bin/` for the Releases download. Choose the managed or unmanaged version depending on whether you want to lock components against modification (managed) or leave them open for editing in the maker portal (unmanaged).
 
 ## Customizing the app
 
@@ -76,7 +83,7 @@ If you edit the canvas app in the maker portal and want those changes reflected 
    .\scripts\MsAppUnpackTool\MsAppUnpackTool.ps1 -MsAppPath <path-to-msapp>
    ```
    This unpacks the `.msapp` into [CanvasAppSource/](./CanvasAppSource/), overwriting the existing source.
-3. Rebuild the app binary and solution using the steps in [Building the app](#building-the-app).
+3. Rebuild the app binary and solution using the steps in [Building from source](#building-from-source).
 
 ### Applying solution changes back to source
 
@@ -88,7 +95,7 @@ For changes outside the canvas app (for example, adding fields to an entity, or 
    ```powershell
    .\scripts\SolutionUnpackTool\SolutionUnpackTool.ps1 -SolutionZipPath <path-to-exported-zip>
    ```
-4. Review the diff to confirm only your intended changes are present, then rebuild using the steps in [Building the app](#building-the-app).
+4. Review the diff to confirm only your intended changes are present, then rebuild using the steps in [Building from source](#building-from-source).
 
 ### Localization
 
