@@ -7,5 +7,5 @@ This script processes translation files in `.resx` format, converts them into a 
 - Run the script with the optional `-CopyToClipboard` switch to copy the output to the clipboard.
 ### Example
 ```powershell
-.\ProcessTranslations.ps1 -CopyToClipboard
+.\LocalizerTool.ps1 -CopyToClipboard
 ```

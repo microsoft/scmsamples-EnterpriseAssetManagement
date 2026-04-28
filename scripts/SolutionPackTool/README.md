@@ -7,5 +7,5 @@ This script packs both unmanaged and managed solutions into `.zip` files and pla
 - Run the script to pack the solutions.
 ### Example
 ```powershell
-.\PackSolutions.ps1
+.\SolutionPackTool.ps1
 ```

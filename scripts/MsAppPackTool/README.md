@@ -7,4 +7,5 @@ This script packs a Canvas App into a `.msapp` file and places it in the specifi
 - Run the script to pack the Canvas App.
 ### Example
 ```powershell
-.\PackCanvasApp.ps1
+.\MsAppPackTool.ps1
+```

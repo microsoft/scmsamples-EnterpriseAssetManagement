@@ -29,6 +29,7 @@ Thumbs.db
 # Build output
 bin/*
 *.msapp
+*.sarif
 
 # Dependency directories
 bower_components/
