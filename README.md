@@ -28,7 +28,7 @@ For full licensing details, see the [Dynamics 365 Licensing Guide](https://go.mi
 
 The simplest way to install the app is to download the prebuilt managed solution from this repository's [latest Release](https://github.com/microsoft/scmsamples-EnterpriseAssetManagement/releases/latest) and import it in [Power Apps](https://make.powerapps.com).
 
-1. From the [latest Release](https://github.com/microsoft/scmsamples-EnterpriseAssetManagement/releases/latest), download `msdyn_AssetManagementMobileSolution_managed.zip`.
+1. From the [latest Release](https://github.com/microsoft/scmsamples-EnterpriseAssetManagement/releases/latest), download `AssetManagementMobileSample_managed.zip`.
 2. Sign in to [Power Apps](https://make.powerapps.com).
 3. Open the **Solutions** tab.
 4. Select **Import solution** and choose the downloaded `.zip`.
@@ -50,7 +50,7 @@ To build the app from source, install [Microsoft Power Platform CLI (PAC)](https
 .\scripts\MsAppPackTool\MsAppPackTool.ps1
 ```
 
-This compiles [CanvasAppSource/](./CanvasAppSource/) into `msdyn_assetmanagementv2_bbd03_DocumentUri.msapp` under [Solution/Export/CanvasApps/](./Solution/Export/CanvasApps/).
+This produces `eammob_assetmanagementv2_bbd03_DocumentUri.msapp` in [Solution/Export/CanvasApps/](./Solution/Export/CanvasApps/) from the source in [CanvasAppSource/](./CanvasAppSource/).
 
 ### Generate the solution
 
@@ -60,10 +60,10 @@ This compiles [CanvasAppSource/](./CanvasAppSource/) into `msdyn_assetmanagement
 
 This produces both managed and unmanaged solution archives under [/bin](./bin/):
 
-- `msdyn_AssetManagementMobileSolution.zip` (unmanaged)
-- `msdyn_AssetManagementMobileSolution_managed.zip` (managed)
+- `AssetManagementMobileSample.zip` (unmanaged)
+- `AssetManagementMobileSample_managed.zip` (managed)
 
-> **Publisher and customization prefix.** This solution is configured with Microsoft (`microsoftdynamics`, prefix `msdyn`) as the publisher in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml). Builds produced from this source as-is will be Microsoft-published, which is fine for in-tenant use and testing but not appropriate for redistribution under another brand. To redistribute or republish under your own brand, change the `<Publisher>` block and update the customization prefix throughout the source before building.
+> **Publisher, solution, and customization prefix.** Configured in [Solution/Export/Other/Solution.xml](./Solution/Export/Other/Solution.xml) with publisher and solution unique name `AssetManagementMobileSample`, customization prefix `eammob`, and Microsoft-branded display names ("Microsoft Asset Management Mobile Sample" for the publisher, "Asset Management Mobile App Sample" for the solution). This identifies the solution as a Microsoft-distributed sample, which is appropriate for in-tenant use as-is. To redistribute under your own brand, update the `<Publisher>`, solution `<LocalizedNames>`/`<Descriptions>`, and `<CustomizationPrefix>` blocks in `Solution.xml`, mirror those localized strings in the `resources.en-US.resx` files under [Solution/](./Solution/), and update prefixed component references throughout the source before building.
 
 ### Install your build
 

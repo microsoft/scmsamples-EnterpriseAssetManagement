@@ -208,7 +208,7 @@ ComponentDefinitions:
                   Text: =FullScreenTextInput.SaveButtonText
       - cmpFocusTrapFSTI:
           Control: CodeComponent
-          ComponentName: msdyn_MscrmControls.Common.A11yFocusTrap
+          ComponentName: eammob_MscrmControls.Common.A11yFocusTrap
           Properties:
             Activate: =FullScreenTextInput.Visible
             ContainerName: =FullScreenTextInput.ComponentInstanceName
