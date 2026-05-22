@@ -1,6 +1,6 @@
 # Dynamics 365 Asset Management Mobile App
 
-The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders. For product documentation and transition guidance from the existing Microsoft-distributed managed solution, see [Additional resources](#additional-resources).
+The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders. For product documentation and transition guidance from the existing Microsoft-distributed managed solution, see [Additional resources](#additional-resources). Microsoft is not actively maintaining this repository; the source is provided as a one-time open-source release so you can fork and customize it.
 
 Licensed under MIT. See [LICENSE](./LICENSE.txt).
 
@@ -126,7 +126,7 @@ After adding or changing labels in the `.resx` files, regenerate the canvas app'
 
 ## Third-party code and tools
 
-This repository doesn't directly vendor third-party source code. Some Microsoft-provided components (such as the `MscrmControls.Common.A11yFocusTrap` PCF control) bundle MIT-licensed third-party code internally, with attribution alongside the bundle in `bundle.js.LICENSE.txt`. The repository otherwise relies on Microsoft tooling, primarily the Power Platform CLI (PAC). Any third-party assets referenced at build or runtime are subject to their own licenses.
+This repository doesn't directly vendor third-party source code. Some PCF controls (such as `eammob.Common.A11yFocusTrap`) bundle MIT-licensed third-party code internally, with attribution alongside the bundle in `bundle.js.LICENSE.txt`. The repository otherwise relies on Microsoft tooling, primarily the Power Platform CLI (PAC). Any third-party assets referenced at build or runtime are subject to their own licenses.
 
 ## Telemetry and diagnostics
 

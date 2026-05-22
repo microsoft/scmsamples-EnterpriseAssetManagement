@@ -295,7 +295,7 @@ ComponentDefinitions:
             Y: =btnTopBorderWithNotchBSCS.Y + btnTopBorderWithNotchBSCS.Height / 2 - Self.Height / 2
       - cmpFocusTrapBSCS:
           Control: CodeComponent
-          ComponentName: eammob_MscrmControls.Common.A11yFocusTrap
+          ComponentName: eammob_eammob.Common.A11yFocusTrap
           Properties:
             Activate: =BottomSheetChoiceSelector.Visible
             ActivationDelay: =1000

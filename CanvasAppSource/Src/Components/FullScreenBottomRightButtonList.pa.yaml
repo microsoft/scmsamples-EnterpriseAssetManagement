@@ -203,7 +203,7 @@ ComponentDefinitions:
                   Y: =1
       - cmpFocusTrapFSBRBL:
           Control: CodeComponent
-          ComponentName: eammob_MscrmControls.Common.A11yFocusTrap
+          ComponentName: eammob_eammob.Common.A11yFocusTrap
           Properties:
             Activate: =Parent.Visible
             ActivationDelay: =1000

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.2.23062.176" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>AssetManagementMobileSample</UniqueName>
@@ -61,7 +61,7 @@
       <RootComponent type="1" schemaName="mserp_inventwarehouseentity" behavior="0" />
       <RootComponent type="1" schemaName="mserp_wmswarehouselocationentity" behavior="2" />
       <RootComponent type="20" id="{91049197-0031-49db-8805-ef78af3a83ac}" behavior="0" />
-      <RootComponent type="66" schemaName="eammob_MscrmControls.Common.A11yFocusTrap" behavior="0" />
+      <RootComponent type="66" schemaName="eammob_eammob.Common.A11yFocusTrap" behavior="0" />
       <RootComponent type="300" schemaName="eammob_assetmanagementv2_bbd03" behavior="0" />
     </RootComponents>
     <MissingDependencies>

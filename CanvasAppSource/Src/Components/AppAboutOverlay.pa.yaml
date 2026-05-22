@@ -232,7 +232,7 @@ ComponentDefinitions:
                   Width: =Parent.Width - 8
       - cmpAppAboutOverlayFocusTrap:
           Control: CodeComponent
-          ComponentName: eammob_MscrmControls.Common.A11yFocusTrap
+          ComponentName: eammob_eammob.Common.A11yFocusTrap
           Properties:
             Activate: =AppAboutOverlay.Visible
             ContainerName: =AppAboutOverlay.ComponentInstanceName
