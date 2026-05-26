@@ -5,7 +5,7 @@
     "Template": {
       "Id": "http://microsoft.com/appmagic/Component",
       "Version": "638034660990900877",
-      "LastModifiedTimestamp": "639051981761482313",
+      "LastModifiedTimestamp": "638986436844433684",
       "Name": "eb57bda0689e410e8f642f14d439936d",
       "FirstParty": true,
       "IsPremiumPcfControl": false,
@@ -16,7 +16,7 @@
         {
           "Name": "SearchText",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": true,
           "DisplayName": "Search text",
@@ -25,7 +25,7 @@
         {
           "Name": "SearchHintText",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Search hint text",
@@ -34,7 +34,7 @@
         {
           "Name": "TextInput",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "IsResettable": true,
@@ -44,7 +44,7 @@
         {
           "Name": "textFont",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "textFont",
@@ -53,7 +53,7 @@
         {
           "Name": "textSize",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "textSize",
@@ -62,7 +62,7 @@
         {
           "Name": "searchFillColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "searchFillColor",
@@ -71,7 +71,7 @@
         {
           "Name": "backgroundColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "backgroundColor",
@@ -80,7 +80,7 @@
         {
           "Name": "AccessibleLabel",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "AccessibleLabel",
@@ -291,7 +291,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "49",
+    "ControlUniqueId": "54",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -769,7 +769,7 @@
           "ZIndex"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "50",
+        "ControlUniqueId": "55",
         "Children": []
       },
       {
@@ -1087,7 +1087,7 @@
           "ZIndex"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "51",
+        "ControlUniqueId": "56",
         "Children": []
       }
     ]

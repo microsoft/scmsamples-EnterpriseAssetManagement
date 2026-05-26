@@ -108,7 +108,7 @@ ComponentDefinitions:
             Y: =Parent.BottomRightAnchorYPosition - Self.Height
           Children:
             - conButtonFSBRBL:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -132,20 +132,16 @@ ComponentDefinitions:
                         DisplayMode: =DisplayMode.View
                         FillPortions: =1
                         Font: =Font.'Segoe UI'
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         Size: =15
                         Text: =ThisItem.label
                   - conButtonIconWrapperFSBRBL:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.Center
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =64
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =Self.Width
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -154,7 +150,7 @@ ComponentDefinitions:
                         Width: =64
                       Children:
                         - conButtonIconFSBRBL:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: ManualLayout
                             Properties:
                               DropShadow: =DropShadow.None

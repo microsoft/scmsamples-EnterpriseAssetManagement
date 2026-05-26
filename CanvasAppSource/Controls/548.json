@@ -124,7 +124,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "488",
+    "ControlUniqueId": "548",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -132,7 +132,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -312,18 +312,6 @@
             "Category": "Design",
             "InvariantScript": "0",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -443,12 +431,10 @@
             "NameMapSourceSchema": "?",
             "IsLockable": false,
             "AFDDataSourceName": ""
-          },
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "489",
+        "ControlUniqueId": "648",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -1017,7 +1003,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "490",
+            "ControlUniqueId": "649",
             "Children": []
           },
           {
@@ -1447,7 +1433,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "491",
+            "ControlUniqueId": "650",
             "Children": []
           }
         ]
@@ -1458,7 +1444,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -1644,18 +1630,6 @@
             "Category": "Design",
             "InvariantScript": "0",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -1720,12 +1694,10 @@
           "PaddingTop",
           "PaddingRight",
           "PaddingLeft",
-          "PaddingBottom",
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "492",
+        "ControlUniqueId": "549",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -1802,7 +1774,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -1988,18 +1960,6 @@
                 "Category": "Design",
                 "InvariantScript": "0",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -2085,12 +2045,10 @@
                 "IsLockable": false,
                 "AFDDataSourceName": ""
               },
-              "PaddingLeft",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "PaddingLeft"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "493",
+            "ControlUniqueId": "550",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -2175,7 +2133,7 @@
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/Component",
                   "Version": "638034202711389679",
-                  "LastModifiedTimestamp": "639051981761455239",
+                  "LastModifiedTimestamp": "638986436843911256",
                   "Name": "737c5f2d157a40fb94dac275d7168e76",
                   "FirstParty": true,
                   "IsPremiumPcfControl": false,
@@ -2186,7 +2144,7 @@
                     {
                       "Name": "Title",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "String",
                       "Hidden": false,
                       "DisplayName": "Title",
@@ -2195,7 +2153,7 @@
                     {
                       "Name": "fontSize",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Number",
                       "Hidden": false,
                       "DisplayName": "fontSize",
@@ -2204,7 +2162,7 @@
                     {
                       "Name": "fillColor",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Color",
                       "Hidden": false,
                       "DisplayName": "fillColor",
@@ -2213,7 +2171,7 @@
                     {
                       "Name": "ShowBackButton",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Boolean",
                       "Hidden": false,
                       "DisplayName": "Show back button",
@@ -2222,7 +2180,7 @@
                     {
                       "Name": "BackButtonAccessibleLabel",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "String",
                       "Hidden": false,
                       "DisplayName": "Back button accessible label",
@@ -2231,7 +2189,7 @@
                     {
                       "Name": "OnPersonaPictureSelect",
                       "Category": 2,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Boolean",
                       "Hidden": false,
                       "DisplayName": "On persona picture select",
@@ -2240,7 +2198,7 @@
                     {
                       "Name": "FocusBorderThickness",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Number",
                       "Hidden": false,
                       "DisplayName": "Focus border thickness",
@@ -2249,7 +2207,7 @@
                     {
                       "Name": "FocusBorderColor",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "Color",
                       "Hidden": false,
                       "DisplayName": "Focus border color",
@@ -2258,7 +2216,7 @@
                     {
                       "Name": "PersonaAccessibleLabel",
                       "Category": 0,
-                      "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                      "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                       "PropertyDataTypeKey": "String",
                       "Hidden": false,
                       "DisplayName": "Persona accessible label",
@@ -2268,7 +2226,7 @@
                   "ComponentType": "CanvasComponent",
                   "ComponentDefinitionInfo": {
                     "Name": "PersonaScreenHeader",
-                    "LastModifiedTimestamp": "639051981761455239",
+                    "LastModifiedTimestamp": "638986436843911256",
                     "AllowAccessToGlobals": false,
                     "Rules": [
                       {
@@ -2646,7 +2604,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "19",
+                        "ControlUniqueId": "29",
                         "Children": []
                       },
                       {
@@ -3020,7 +2978,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "20",
+                        "ControlUniqueId": "30",
                         "Children": []
                       },
                       {
@@ -3401,7 +3359,7 @@
                           "PaddingLeft"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "21",
+                        "ControlUniqueId": "31",
                         "Children": []
                       },
                       {
@@ -3803,7 +3761,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "22",
+                        "ControlUniqueId": "32",
                         "Children": []
                       }
                     ]
@@ -3990,7 +3948,7 @@
                   "fontSize"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "494",
+                "ControlUniqueId": "551",
                 "Metadata": {
                   "Description": "",
                   "AllowCustomization": true,
@@ -4501,7 +4459,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "495",
+                "ControlUniqueId": "552",
                 "Children": []
               },
               {
@@ -4741,7 +4699,7 @@
                   "FocusedBorderThickness"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "496",
+                "ControlUniqueId": "553",
                 "Children": []
               },
               {
@@ -5142,7 +5100,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "497",
+                "ControlUniqueId": "554",
                 "Children": []
               },
               {
@@ -5550,7 +5508,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "498",
+                "ControlUniqueId": "555",
                 "Children": []
               },
               {
@@ -5965,7 +5923,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "499",
+                "ControlUniqueId": "556",
                 "Children": []
               },
               {
@@ -6205,7 +6163,7 @@
                   "FocusedBorderThickness"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "500",
+                "ControlUniqueId": "557",
                 "Children": []
               }
             ]
@@ -6285,7 +6243,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -6471,18 +6429,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -6596,12 +6542,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "501",
+            "ControlUniqueId": "559",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -7113,7 +7057,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "502",
+                "ControlUniqueId": "560",
                 "Children": []
               },
               {
@@ -7612,7 +7556,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "503",
+                "ControlUniqueId": "561",
                 "Children": []
               }
             ]
@@ -7686,7 +7630,7 @@
             "Template": {
               "Id": "http://microsoft.com/appmagic/Component",
               "Version": "638034660990900877",
-              "LastModifiedTimestamp": "639051981761398327",
+              "LastModifiedTimestamp": "638986436844414560",
               "Name": "3c47dd31a18f42e4babb2eafc3dbca80",
               "FirstParty": true,
               "IsPremiumPcfControl": false,
@@ -7697,7 +7641,7 @@
                 {
                   "Name": "SearchText",
                   "Category": 0,
-                  "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                  "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                   "PropertyDataTypeKey": "String",
                   "Hidden": true,
                   "DisplayName": "Search text",
@@ -7706,7 +7650,7 @@
                 {
                   "Name": "SearchHintText",
                   "Category": 0,
-                  "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                  "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                   "PropertyDataTypeKey": "String",
                   "Hidden": false,
                   "DisplayName": "Search hint text",
@@ -7715,7 +7659,7 @@
                 {
                   "Name": "DefaultSearchText",
                   "Category": 0,
-                  "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                  "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                   "PropertyDataTypeKey": "String",
                   "Hidden": false,
                   "DisplayName": "Default search text",
@@ -7724,7 +7668,7 @@
                 {
                   "Name": "AccessibleLabel",
                   "Category": 0,
-                  "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                  "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                   "PropertyDataTypeKey": "String",
                   "Hidden": false,
                   "DisplayName": "Accessible label",
@@ -7734,7 +7678,7 @@
               "ComponentType": "CanvasComponent",
               "ComponentDefinitionInfo": {
                 "Name": "SearchBar",
-                "LastModifiedTimestamp": "639051981761398327",
+                "LastModifiedTimestamp": "638986436844414560",
                 "AllowAccessToGlobals": false,
                 "Rules": [
                   {
@@ -8399,7 +8343,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "5",
+                    "ControlUniqueId": "15",
                     "Children": []
                   },
                   {
@@ -8661,7 +8605,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "6",
+                    "ControlUniqueId": "16",
                     "Children": []
                   }
                 ]
@@ -8834,7 +8778,7 @@
               "AccessibleLabel"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "504",
+            "ControlUniqueId": "558",
             "Metadata": {
               "Description": "",
               "AllowCustomization": true,
@@ -8851,7 +8795,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638212215512859994",
-          "LastModifiedTimestamp": "639051981761484779",
+          "LastModifiedTimestamp": "638986436851416027",
           "Name": "74784d9d4b2a4e61b6d10a317345d60a",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -8862,7 +8806,7 @@
             {
               "Name": "Buttons",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"isPrimary\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"isPrimary\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
               "PropertyDataTypeKey": "Table",
               "Hidden": false,
               "DisplayName": "Buttons",
@@ -8871,15 +8815,15 @@
             {
               "Name": "OnButtonSelect",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "PropertyScopeKey": {
-                "PropertyScopeRuleNamespaceKey": "52",
+                "PropertyScopeRuleNamespaceKey": "57",
                 "PropertyScopeRulesKey": [
                   {
                     "Name": "OnButtonSelect_SelectedButton",
-                    "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                    "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"icon\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                     "PropertyDataTypeKey": "Record",
                     "ScopeVariableInfo": {
                       "ScopeVariableName": "SelectedButton",
@@ -8904,7 +8848,7 @@
             {
               "Name": "OnCancel",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "On cancel",
@@ -8913,7 +8857,7 @@
             {
               "Name": "PrimaryIconBackgroundColor",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Color",
               "Hidden": false,
               "DisplayName": "Primary icon background color",
@@ -8922,7 +8866,7 @@
             {
               "Name": "BottomRightAnchorXPosition",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Bottom right anchor X position",
@@ -8931,7 +8875,7 @@
             {
               "Name": "BottomRightAnchorYPosition",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Bottom right anchor Y position",
@@ -8940,7 +8884,7 @@
             {
               "Name": "ReturnFocus",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Return focus",
@@ -8949,7 +8893,7 @@
             {
               "Name": "ComponentInstanceName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Component instance name",
@@ -8959,7 +8903,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "FullScreenBottomRightButtonList",
-            "LastModifiedTimestamp": "639051981761484779",
+            "LastModifiedTimestamp": "638986436851416027",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -9344,7 +9288,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "53",
+                "ControlUniqueId": "58",
                 "Children": []
               },
               {
@@ -9510,7 +9454,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "54",
+                "ControlUniqueId": "59",
                 "Children": []
               },
               {
@@ -9835,7 +9779,7 @@
                   "#CopilotOverlayVisible"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "55",
+                "ControlUniqueId": "60",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -9893,7 +9837,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "56",
+                    "ControlUniqueId": "61",
                     "Children": []
                   },
                   {
@@ -9902,7 +9846,7 @@
                     "HasDynamicProperties": false,
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -10064,18 +10008,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -10129,12 +10061,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "57",
+                    "ControlUniqueId": "62",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -10583,7 +10513,7 @@
                           "PaddingLeft"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "58",
+                        "ControlUniqueId": "63",
                         "Children": []
                       },
                       {
@@ -10675,7 +10605,7 @@
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.4.0",
+                          "Version": "1.3.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -10831,18 +10761,6 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridColumns",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridRows",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -10881,12 +10799,10 @@
                           "PaddingTop",
                           "PaddingRight",
                           "PaddingLeft",
-                          "PaddingBottom",
-                          "LayoutGridRows",
-                          "LayoutGridColumns"
+                          "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "59",
+                        "ControlUniqueId": "64",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -10894,7 +10810,7 @@
                             "HasDynamicProperties": false,
                             "Template": {
                               "Id": "http://microsoft.com/appmagic/groupContainer",
-                              "Version": "1.4.0",
+                              "Version": "1.3.0",
                               "LastModifiedTimestamp": "0",
                               "Name": "groupContainer",
                               "FirstParty": true,
@@ -11074,18 +10990,6 @@
                                 "Category": "Design",
                                 "InvariantScript": "0",
                                 "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Property": "LayoutGridColumns",
-                                "Category": "Design",
-                                "InvariantScript": "6",
-                                "RuleProviderType": "Unknown"
-                              },
-                              {
-                                "Property": "LayoutGridRows",
-                                "Category": "Design",
-                                "InvariantScript": "6",
-                                "RuleProviderType": "Unknown"
                               }
                             ],
                             "ControlPropertyState": [
@@ -11177,12 +11081,10 @@
                               "PaddingTop",
                               "PaddingRight",
                               "PaddingLeft",
-                              "PaddingBottom",
-                              "LayoutGridRows",
-                              "LayoutGridColumns"
+                              "PaddingBottom"
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "60",
+                            "ControlUniqueId": "65",
                             "Children": [
                               {
                                 "Type": "ControlInfo",
@@ -11506,7 +11408,7 @@
                                   }
                                 ],
                                 "IsLocked": false,
-                                "ControlUniqueId": "61",
+                                "ControlUniqueId": "66",
                                 "Children": []
                               }
                             ]
@@ -11753,7 +11655,7 @@
                       "Tooltip"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "62",
+                    "ControlUniqueId": "67",
                     "Children": []
                   }
                 ]
@@ -11977,7 +11879,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "505",
+        "ControlUniqueId": "562",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -11991,7 +11893,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -12177,18 +12079,6 @@
             "Category": "Design",
             "InvariantScript": "0",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -12260,12 +12150,10 @@
           "PaddingTop",
           "PaddingRight",
           "PaddingLeft",
-          "PaddingBottom",
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "506",
+        "ControlUniqueId": "563",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -12736,7 +12624,7 @@
               "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "507",
+            "ControlUniqueId": "564",
             "Children": []
           },
           {
@@ -12745,7 +12633,7 @@
             "HasDynamicProperties": false,
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -12931,18 +12819,6 @@
                 "Category": "Design",
                 "InvariantScript": "2",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -13056,12 +12932,10 @@
                 "NameMapSourceSchema": "?",
                 "IsLockable": false,
                 "AFDDataSourceName": ""
-              },
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "508",
+            "ControlUniqueId": "565",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -13517,7 +13391,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "509",
+                "ControlUniqueId": "566",
                 "Children": []
               },
               {
@@ -14065,7 +13939,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "510",
+                "ControlUniqueId": "567",
                 "Children": []
               },
               {
@@ -14150,7 +14024,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -14330,18 +14204,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -14384,12 +14246,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "511",
+                "ControlUniqueId": "568",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -14944,7 +14804,7 @@
                       "AssumeGS1"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "512",
+                    "ControlUniqueId": "569",
                     "Children": []
                   },
                   {
@@ -15262,7 +15122,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "513",
+                    "ControlUniqueId": "570",
                     "Children": []
                   }
                 ]
@@ -15465,7 +15325,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "514",
+            "ControlUniqueId": "571",
             "Children": []
           }
         ]
@@ -15477,7 +15337,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638036887099896867",
-          "LastModifiedTimestamp": "639051981761457967",
+          "LastModifiedTimestamp": "638986436851007646",
           "Name": "59636f2f97a14ed280f6ffcf6cedaa52",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -15488,7 +15348,7 @@
             {
               "Name": "CurrentlySelectedChoice",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Currently selected choice",
@@ -15497,7 +15357,7 @@
             {
               "Name": "AvailableChoices",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
               "PropertyDataTypeKey": "Table",
               "Hidden": false,
               "DisplayName": "Available choices",
@@ -15506,15 +15366,15 @@
             {
               "Name": "OnSelect",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "PropertyScopeKey": {
-                "PropertyScopeRuleNamespaceKey": "23",
+                "PropertyScopeRuleNamespaceKey": "33",
                 "PropertyScopeRulesKey": [
                   {
                     "Name": "OnSelect_SelectedChoice",
-                    "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                    "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                     "PropertyDataTypeKey": "Record",
                     "ScopeVariableInfo": {
                       "ScopeVariableName": "SelectedChoice",
@@ -15539,7 +15399,7 @@
             {
               "Name": "OnCancel",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "On cancel",
@@ -15548,7 +15408,7 @@
             {
               "Name": "Title",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Title",
@@ -15557,7 +15417,7 @@
             {
               "Name": "UseStaticOrdering",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Use static ordering",
@@ -15566,7 +15426,7 @@
             {
               "Name": "FocusBorderColor",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Color",
               "Hidden": false,
               "DisplayName": "Focus border color",
@@ -15575,7 +15435,7 @@
             {
               "Name": "FocusBorderThickness",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Focus border thickness",
@@ -15584,7 +15444,7 @@
             {
               "Name": "Loading",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Loading",
@@ -15593,7 +15453,7 @@
             {
               "Name": "LoadingChoicesText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Loading choices text",
@@ -15602,7 +15462,7 @@
             {
               "Name": "ChoiceAccessibleName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ChoiceAccessibleName",
@@ -15611,7 +15471,7 @@
             {
               "Name": "ReturnFocus",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ReturnFocus",
@@ -15620,7 +15480,7 @@
             {
               "Name": "ComponentInstanceName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ComponentInstanceName",
@@ -15629,7 +15489,7 @@
             {
               "Name": "SelectedChoiceTooltip",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Selected Choice Tooltip",
@@ -15639,7 +15499,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "BottomSheetChoiceSelector",
-            "LastModifiedTimestamp": "639051981761457967",
+            "LastModifiedTimestamp": "638986436851007646",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -16108,7 +15968,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "24",
+                "ControlUniqueId": "34",
                 "Children": []
               },
               {
@@ -16274,7 +16134,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "25",
+                "ControlUniqueId": "35",
                 "Children": []
               },
               {
@@ -16725,7 +16585,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "26",
+                "ControlUniqueId": "36",
                 "Children": []
               },
               {
@@ -17155,7 +17015,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "27",
+                "ControlUniqueId": "37",
                 "Children": []
               },
               {
@@ -17585,7 +17445,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "28",
+                "ControlUniqueId": "38",
                 "Children": []
               },
               {
@@ -17924,7 +17784,7 @@
                   "#CopilotOverlayVisible"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "29",
+                "ControlUniqueId": "40",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -17996,7 +17856,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "30",
+                    "ControlUniqueId": "41",
                     "Children": []
                   },
                   {
@@ -18447,7 +18307,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "31",
+                    "ControlUniqueId": "42",
                     "Children": []
                   },
                   {
@@ -18786,7 +18646,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "32",
+                    "ControlUniqueId": "43",
                     "Children": []
                   },
                   {
@@ -18971,7 +18831,7 @@
                       "FocusedBorderThickness"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "33",
+                    "ControlUniqueId": "44",
                     "Children": []
                   }
                 ]
@@ -19431,7 +19291,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "34",
+                "ControlUniqueId": "39",
                 "Children": []
               }
             ]
@@ -19709,7 +19569,7 @@
           "SelectedChoiceTooltip"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "515",
+        "ControlUniqueId": "572",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -19724,7 +19584,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638036887099896867",
-          "LastModifiedTimestamp": "639051981761457967",
+          "LastModifiedTimestamp": "638986436851007646",
           "Name": "59636f2f97a14ed280f6ffcf6cedaa52",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -19735,7 +19595,7 @@
             {
               "Name": "CurrentlySelectedChoice",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Currently selected choice",
@@ -19744,7 +19604,7 @@
             {
               "Name": "AvailableChoices",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
               "PropertyDataTypeKey": "Table",
               "Hidden": false,
               "DisplayName": "Available choices",
@@ -19753,15 +19613,15 @@
             {
               "Name": "OnSelect",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "PropertyScopeKey": {
-                "PropertyScopeRuleNamespaceKey": "23",
+                "PropertyScopeRuleNamespaceKey": "33",
                 "PropertyScopeRulesKey": [
                   {
                     "Name": "OnSelect_SelectedChoice",
-                    "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+                    "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"key\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"label\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
                     "PropertyDataTypeKey": "Record",
                     "ScopeVariableInfo": {
                       "ScopeVariableName": "SelectedChoice",
@@ -19786,7 +19646,7 @@
             {
               "Name": "OnCancel",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "On cancel",
@@ -19795,7 +19655,7 @@
             {
               "Name": "Title",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Title",
@@ -19804,7 +19664,7 @@
             {
               "Name": "UseStaticOrdering",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Use static ordering",
@@ -19813,7 +19673,7 @@
             {
               "Name": "FocusBorderColor",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Color",
               "Hidden": false,
               "DisplayName": "Focus border color",
@@ -19822,7 +19682,7 @@
             {
               "Name": "FocusBorderThickness",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Focus border thickness",
@@ -19831,7 +19691,7 @@
             {
               "Name": "Loading",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "Loading",
@@ -19840,7 +19700,7 @@
             {
               "Name": "LoadingChoicesText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Loading choices text",
@@ -19849,7 +19709,7 @@
             {
               "Name": "ChoiceAccessibleName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ChoiceAccessibleName",
@@ -19858,7 +19718,7 @@
             {
               "Name": "ReturnFocus",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ReturnFocus",
@@ -19867,7 +19727,7 @@
             {
               "Name": "ComponentInstanceName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ComponentInstanceName",
@@ -19876,7 +19736,7 @@
             {
               "Name": "SelectedChoiceTooltip",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Selected Choice Tooltip",
@@ -19886,7 +19746,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "BottomSheetChoiceSelector",
-            "LastModifiedTimestamp": "639051981761457967",
+            "LastModifiedTimestamp": "638986436851007646",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -20355,7 +20215,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "24",
+                "ControlUniqueId": "34",
                 "Children": []
               },
               {
@@ -20521,7 +20381,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "25",
+                "ControlUniqueId": "35",
                 "Children": []
               },
               {
@@ -20972,7 +20832,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "26",
+                "ControlUniqueId": "36",
                 "Children": []
               },
               {
@@ -21402,7 +21262,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "27",
+                "ControlUniqueId": "37",
                 "Children": []
               },
               {
@@ -21832,7 +21692,7 @@
                   "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "28",
+                "ControlUniqueId": "38",
                 "Children": []
               },
               {
@@ -22171,7 +22031,7 @@
                   "#CopilotOverlayVisible"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "29",
+                "ControlUniqueId": "40",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -22243,7 +22103,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "30",
+                    "ControlUniqueId": "41",
                     "Children": []
                   },
                   {
@@ -22694,7 +22554,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "31",
+                    "ControlUniqueId": "42",
                     "Children": []
                   },
                   {
@@ -23033,7 +22893,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "32",
+                    "ControlUniqueId": "43",
                     "Children": []
                   },
                   {
@@ -23218,7 +23078,7 @@
                       "FocusedBorderThickness"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "33",
+                    "ControlUniqueId": "44",
                     "Children": []
                   }
                 ]
@@ -23678,7 +23538,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "34",
+                "ControlUniqueId": "39",
                 "Children": []
               }
             ]
@@ -23956,7 +23816,7 @@
           "SelectedChoiceTooltip"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "516",
+        "ControlUniqueId": "573",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -23971,7 +23831,7 @@
         "Template": {
           "Id": "http://microsoft.com/appmagic/Component",
           "Version": "638122289154403633",
-          "LastModifiedTimestamp": "639051981761478069",
+          "LastModifiedTimestamp": "638986436851100564",
           "Name": "f4ae1227410745e3a675ab966b35c449",
           "FirstParty": true,
           "IsPremiumPcfControl": false,
@@ -23982,7 +23842,7 @@
             {
               "Name": "AppVersionText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "App version text",
@@ -23991,7 +23851,7 @@
             {
               "Name": "AvailableLanguages",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}",
               "PropertyDataTypeKey": "Table",
               "Hidden": false,
               "DisplayName": "Available languages",
@@ -24000,7 +23860,7 @@
             {
               "Name": "CurrentSelectedLanguage",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Current selected language",
@@ -24009,15 +23869,15 @@
             {
               "Name": "OnLanguageChange",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "PropertyScopeKey": {
-                "PropertyScopeRuleNamespaceKey": "40",
+                "PropertyScopeRuleNamespaceKey": "45",
                 "PropertyScopeRulesKey": [
                   {
                     "Name": "OnLanguageChange_LanguageId",
-                    "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+                    "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
                     "PropertyDataTypeKey": "String",
                     "ScopeVariableInfo": {
                       "ScopeVariableName": "LanguageId",
@@ -24042,7 +23902,7 @@
             {
               "Name": "OnCloseSelect",
               "Category": 2,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Boolean",
               "Hidden": false,
               "DisplayName": "On Close select",
@@ -24051,7 +23911,7 @@
             {
               "Name": "FocusBorderThickness",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Number",
               "Hidden": false,
               "DisplayName": "Focus border thickness",
@@ -24060,7 +23920,7 @@
             {
               "Name": "FocusBorderColor",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "Color",
               "Hidden": false,
               "DisplayName": "Focus border color",
@@ -24069,7 +23929,7 @@
             {
               "Name": "LanguageSelectionAccessibleLabel",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Language selection accessible label",
@@ -24078,7 +23938,7 @@
             {
               "Name": "AboutTitleText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "About title text",
@@ -24087,7 +23947,7 @@
             {
               "Name": "TermsOfServiceHeaderText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Terms of service header text",
@@ -24096,7 +23956,7 @@
             {
               "Name": "LanguageChangeHeaderText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Language change header text",
@@ -24105,7 +23965,7 @@
             {
               "Name": "CloseButtonText",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "Close button text",
@@ -24114,7 +23974,7 @@
             {
               "Name": "ReturnFocus",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ReturnFocus",
@@ -24123,7 +23983,7 @@
             {
               "Name": "ComponentInstanceName",
               "Category": 0,
-              "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+              "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
               "PropertyDataTypeKey": "String",
               "Hidden": false,
               "DisplayName": "ComponentInstanceName",
@@ -24133,7 +23993,7 @@
           "ComponentType": "CanvasComponent",
           "ComponentDefinitionInfo": {
             "Name": "AppAboutOverlay",
-            "LastModifiedTimestamp": "639051981761478069",
+            "LastModifiedTimestamp": "638986436851100564",
             "AllowAccessToGlobals": false,
             "Rules": [
               {
@@ -24391,7 +24251,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -24577,18 +24437,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -24667,12 +24515,10 @@
                   "RadiusBottomRight",
                   "DropShadow",
                   "PaddingTop",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "41",
+                "ControlUniqueId": "46",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -25184,7 +25030,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "42",
+                    "ControlUniqueId": "47",
                     "Children": []
                   },
                   {
@@ -25599,7 +25445,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "43",
+                    "ControlUniqueId": "48",
                     "Children": []
                   },
                   {
@@ -25888,7 +25734,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "44",
+                    "ControlUniqueId": "49",
                     "Children": []
                   },
                   {
@@ -26303,7 +26149,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "45",
+                    "ControlUniqueId": "50",
                     "Children": []
                   },
                   {
@@ -26789,7 +26635,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "46",
+                    "ControlUniqueId": "51",
                     "Children": []
                   }
                 ]
@@ -26943,7 +26789,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "47",
+                "ControlUniqueId": "52",
                 "Children": []
               },
               {
@@ -27408,7 +27254,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "48",
+                "ControlUniqueId": "53",
                 "Children": []
               }
             ]
@@ -27707,7 +27553,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "517",
+        "ControlUniqueId": "574",
         "Metadata": {
           "Description": "",
           "AllowCustomization": true,
@@ -28086,7 +27932,7 @@
           "PaddingBottom"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "518",
+        "ControlUniqueId": "575",
         "Children": []
       },
       {
@@ -28446,7 +28292,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "519",
+        "ControlUniqueId": "576",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -28518,7 +28364,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "520",
+            "ControlUniqueId": "577",
             "Children": []
           },
           {
@@ -28759,7 +28605,7 @@
               "Tooltip"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "521",
+            "ControlUniqueId": "578",
             "Children": []
           },
           {
@@ -28768,7 +28614,7 @@
             "HasDynamicProperties": false,
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -28948,18 +28794,6 @@
                 "Category": "Design",
                 "InvariantScript": "0",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -29065,12 +28899,10 @@
               },
               "PaddingRight",
               "PaddingLeft",
-              "PaddingBottom",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "PaddingBottom"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "522",
+            "ControlUniqueId": "579",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -29078,7 +28910,7 @@
                 "HasDynamicProperties": false,
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -29264,18 +29096,6 @@
                     "Category": "Design",
                     "InvariantScript": "DropShadow.None",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -29417,12 +29237,10 @@
                     "NameMapSourceSchema": "?",
                     "IsLockable": false,
                     "AFDDataSourceName": ""
-                  },
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "523",
+                "ControlUniqueId": "580",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -29892,7 +29710,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "524",
+                    "ControlUniqueId": "594",
                     "Children": []
                   },
                   {
@@ -30447,7 +30265,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "525",
+                    "ControlUniqueId": "595",
                     "Children": []
                   },
                   {
@@ -30988,7 +30806,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "526",
+                    "ControlUniqueId": "596",
                     "Children": []
                   },
                   {
@@ -31080,7 +30898,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -31266,18 +31084,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -31328,12 +31134,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "527",
+                    "ControlUniqueId": "597",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -31684,7 +31488,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "528",
+                        "ControlUniqueId": "599",
                         "Children": []
                       },
                       {
@@ -32155,7 +31959,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "529",
+                        "ControlUniqueId": "598",
                         "Children": []
                       }
                     ]
@@ -32249,7 +32053,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -32435,18 +32239,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -32497,12 +32289,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "530",
+                    "ControlUniqueId": "600",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -32853,7 +32643,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "531",
+                        "ControlUniqueId": "602",
                         "Children": []
                       },
                       {
@@ -33324,7 +33114,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "532",
+                        "ControlUniqueId": "601",
                         "Children": []
                       }
                     ]
@@ -33418,7 +33208,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -33604,18 +33394,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -33666,12 +33444,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "533",
+                    "ControlUniqueId": "603",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -34022,7 +33798,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "534",
+                        "ControlUniqueId": "605",
                         "Children": []
                       },
                       {
@@ -34479,7 +34255,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "535",
+                        "ControlUniqueId": "604",
                         "Children": []
                       }
                     ]
@@ -34573,7 +34349,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -34759,18 +34535,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -34821,12 +34585,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "536",
+                    "ControlUniqueId": "606",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -35177,7 +34939,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "537",
+                        "ControlUniqueId": "608",
                         "Children": []
                       },
                       {
@@ -35634,7 +35396,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "538",
+                        "ControlUniqueId": "607",
                         "Children": []
                       }
                     ]
@@ -35728,7 +35490,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -35920,18 +35682,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -35990,12 +35740,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "539",
+                    "ControlUniqueId": "581",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -36346,7 +36094,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "540",
+                        "ControlUniqueId": "582",
                         "Children": []
                       },
                       {
@@ -36803,7 +36551,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "541",
+                        "ControlUniqueId": "583",
                         "Children": []
                       }
                     ]
@@ -36897,7 +36645,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -37089,18 +36837,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -37159,12 +36895,10 @@
                       "PaddingTop",
                       "PaddingRight",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "542",
+                    "ControlUniqueId": "584",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -37522,7 +37256,7 @@
                           "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "543",
+                        "ControlUniqueId": "585",
                         "Children": []
                       },
                       {
@@ -37979,7 +37713,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "544",
+                        "ControlUniqueId": "586",
                         "Children": []
                       }
                     ]
@@ -38066,7 +37800,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -38252,18 +37986,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -38321,12 +38043,10 @@
                       },
                       "PaddingTop",
                       "PaddingRight",
-                      "PaddingLeft",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingLeft"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "545",
+                    "ControlUniqueId": "609",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -38410,7 +38130,7 @@
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.4.0",
+                          "Version": "1.3.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -38596,18 +38316,6 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridColumns",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridRows",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -38651,12 +38359,10 @@
                           "DropShadow",
                           "PaddingTop",
                           "PaddingLeft",
-                          "PaddingBottom",
-                          "LayoutGridRows",
-                          "LayoutGridColumns"
+                          "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "546",
+                        "ControlUniqueId": "610",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -39126,7 +38832,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "547",
+                            "ControlUniqueId": "611",
                             "Children": []
                           },
                           {
@@ -39597,7 +39303,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "548",
+                            "ControlUniqueId": "612",
                             "Children": []
                           }
                         ]
@@ -39684,7 +39390,7 @@
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.4.0",
+                          "Version": "1.3.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -39870,18 +39576,6 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridColumns",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridRows",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -39925,12 +39619,10 @@
                           "DropShadow",
                           "PaddingTop",
                           "PaddingRight",
-                          "PaddingBottom",
-                          "LayoutGridRows",
-                          "LayoutGridColumns"
+                          "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "549",
+                        "ControlUniqueId": "613",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -40400,7 +40092,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "550",
+                            "ControlUniqueId": "614",
                             "Children": []
                           },
                           {
@@ -40871,7 +40563,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "551",
+                            "ControlUniqueId": "615",
                             "Children": []
                           }
                         ]
@@ -40960,7 +40652,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -41152,18 +40844,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -41229,12 +40909,10 @@
                       },
                       "PaddingTop",
                       "PaddingRight",
-                      "PaddingLeft",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingLeft"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "552",
+                    "ControlUniqueId": "587",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -41318,7 +40996,7 @@
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.4.0",
+                          "Version": "1.3.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -41504,18 +41182,6 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridColumns",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridRows",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -41559,12 +41225,10 @@
                           "DropShadow",
                           "PaddingTop",
                           "PaddingLeft",
-                          "PaddingBottom",
-                          "LayoutGridRows",
-                          "LayoutGridColumns"
+                          "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "553",
+                        "ControlUniqueId": "588",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -42034,7 +41698,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "554",
+                            "ControlUniqueId": "589",
                             "Children": []
                           },
                           {
@@ -42505,7 +42169,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "555",
+                            "ControlUniqueId": "590",
                             "Children": []
                           }
                         ]
@@ -42592,7 +42256,7 @@
                         ],
                         "Template": {
                           "Id": "http://microsoft.com/appmagic/groupContainer",
-                          "Version": "1.4.0",
+                          "Version": "1.3.0",
                           "LastModifiedTimestamp": "0",
                           "Name": "groupContainer",
                           "FirstParty": true,
@@ -42778,18 +42442,6 @@
                             "Category": "Design",
                             "InvariantScript": "0",
                             "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridColumns",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
-                          },
-                          {
-                            "Property": "LayoutGridRows",
-                            "Category": "Design",
-                            "InvariantScript": "6",
-                            "RuleProviderType": "Unknown"
                           }
                         ],
                         "ControlPropertyState": [
@@ -42833,12 +42485,10 @@
                           "DropShadow",
                           "PaddingTop",
                           "PaddingRight",
-                          "PaddingBottom",
-                          "LayoutGridRows",
-                          "LayoutGridColumns"
+                          "PaddingBottom"
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "556",
+                        "ControlUniqueId": "591",
                         "Children": [
                           {
                             "Type": "ControlInfo",
@@ -43308,7 +42958,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "557",
+                            "ControlUniqueId": "592",
                             "Children": []
                           },
                           {
@@ -43779,7 +43429,7 @@
                               }
                             ],
                             "IsLocked": false,
-                            "ControlUniqueId": "558",
+                            "ControlUniqueId": "593",
                             "Children": []
                           }
                         ]
@@ -44140,7 +43790,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "559",
+            "ControlUniqueId": "616",
             "Children": []
           }
         ]
@@ -44481,7 +44131,7 @@
           "#CopilotOverlayVisible"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "560",
+        "ControlUniqueId": "617",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -44553,7 +44203,7 @@
               }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "561",
+            "ControlUniqueId": "618",
             "Children": []
           },
           {
@@ -44822,7 +44472,7 @@
               "Size"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "562",
+            "ControlUniqueId": "619",
             "Children": []
           },
           {
@@ -44831,7 +44481,7 @@
             "HasDynamicProperties": false,
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -45017,18 +44667,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -45135,12 +44773,10 @@
                 "NameMapSourceSchema": "?",
                 "IsLockable": false,
                 "AFDDataSourceName": ""
-              },
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              }
             ],
             "IsLocked": false,
-            "ControlUniqueId": "563",
+            "ControlUniqueId": "620",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -45603,7 +45239,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "564",
+                "ControlUniqueId": "621",
                 "Children": []
               },
               {
@@ -46137,7 +45773,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "565",
+                "ControlUniqueId": "622",
                 "Children": []
               },
               {
@@ -46608,7 +46244,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "566",
+                "ControlUniqueId": "623",
                 "Children": []
               },
               {
@@ -46693,7 +46329,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -46861,18 +46497,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -46913,12 +46537,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "567",
+                "ControlUniqueId": "624",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -47312,7 +46934,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "568",
+                    "ControlUniqueId": "625",
                     "Children": []
                   },
                   {
@@ -47602,7 +47224,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "569",
+                    "ControlUniqueId": "626",
                     "Children": []
                   }
                 ]
@@ -47689,7 +47311,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -47857,18 +47479,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -47909,12 +47519,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "570",
+                "ControlUniqueId": "627",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -48308,7 +47916,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "571",
+                    "ControlUniqueId": "628",
                     "Children": []
                   },
                   {
@@ -48598,7 +48206,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "572",
+                    "ControlUniqueId": "629",
                     "Children": []
                   }
                 ]
@@ -48685,7 +48293,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -48853,18 +48461,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -48905,12 +48501,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "573",
+                "ControlUniqueId": "630",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -49304,7 +48898,7 @@
                       }
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "574",
+                    "ControlUniqueId": "631",
                     "Children": []
                   },
                   {
@@ -49580,7 +49174,7 @@
                       "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "575",
+                    "ControlUniqueId": "632",
                     "Children": []
                   }
                 ]
@@ -49667,7 +49261,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -49853,18 +49447,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -49915,12 +49497,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "576",
+                "ControlUniqueId": "633",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -50004,7 +49584,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -50190,18 +49770,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -50245,12 +49813,10 @@
                       "DropShadow",
                       "PaddingTop",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "577",
+                    "ControlUniqueId": "634",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -50720,7 +50286,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "578",
+                        "ControlUniqueId": "635",
                         "Children": []
                       },
                       {
@@ -51191,7 +50757,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "579",
+                        "ControlUniqueId": "636",
                         "Children": []
                       }
                     ]
@@ -51278,7 +50844,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -51464,18 +51030,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -51519,12 +51073,10 @@
                       "DropShadow",
                       "PaddingTop",
                       "PaddingRight",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "580",
+                    "ControlUniqueId": "637",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -51994,7 +51546,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "581",
+                        "ControlUniqueId": "638",
                         "Children": []
                       },
                       {
@@ -52465,7 +52017,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "582",
+                        "ControlUniqueId": "639",
                         "Children": []
                       }
                     ]
@@ -52554,7 +52106,7 @@
                 ],
                 "Template": {
                   "Id": "http://microsoft.com/appmagic/groupContainer",
-                  "Version": "1.4.0",
+                  "Version": "1.3.0",
                   "LastModifiedTimestamp": "0",
                   "Name": "groupContainer",
                   "FirstParty": true,
@@ -52746,18 +52298,6 @@
                     "Category": "Design",
                     "InvariantScript": "0",
                     "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridColumns",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
-                  },
-                  {
-                    "Property": "LayoutGridRows",
-                    "Category": "Design",
-                    "InvariantScript": "6",
-                    "RuleProviderType": "Unknown"
                   }
                 ],
                 "ControlPropertyState": [
@@ -52816,12 +52356,10 @@
                   "PaddingTop",
                   "PaddingRight",
                   "PaddingLeft",
-                  "PaddingBottom",
-                  "LayoutGridRows",
-                  "LayoutGridColumns"
+                  "PaddingBottom"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "583",
+                "ControlUniqueId": "640",
                 "Children": [
                   {
                     "Type": "ControlInfo",
@@ -52905,7 +52443,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -53091,18 +52629,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -53146,12 +52672,10 @@
                       "DropShadow",
                       "PaddingTop",
                       "PaddingLeft",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "584",
+                    "ControlUniqueId": "641",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -53621,7 +53145,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "585",
+                        "ControlUniqueId": "642",
                         "Children": []
                       },
                       {
@@ -54092,7 +53616,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "586",
+                        "ControlUniqueId": "643",
                         "Children": []
                       }
                     ]
@@ -54179,7 +53703,7 @@
                     ],
                     "Template": {
                       "Id": "http://microsoft.com/appmagic/groupContainer",
-                      "Version": "1.4.0",
+                      "Version": "1.3.0",
                       "LastModifiedTimestamp": "0",
                       "Name": "groupContainer",
                       "FirstParty": true,
@@ -54365,18 +53889,6 @@
                         "Category": "Design",
                         "InvariantScript": "0",
                         "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridColumns",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
-                      },
-                      {
-                        "Property": "LayoutGridRows",
-                        "Category": "Design",
-                        "InvariantScript": "6",
-                        "RuleProviderType": "Unknown"
                       }
                     ],
                     "ControlPropertyState": [
@@ -54420,12 +53932,10 @@
                       "DropShadow",
                       "PaddingTop",
                       "PaddingRight",
-                      "PaddingBottom",
-                      "LayoutGridRows",
-                      "LayoutGridColumns"
+                      "PaddingBottom"
                     ],
                     "IsLocked": false,
-                    "ControlUniqueId": "587",
+                    "ControlUniqueId": "644",
                     "Children": [
                       {
                         "Type": "ControlInfo",
@@ -54895,7 +54405,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "588",
+                        "ControlUniqueId": "645",
                         "Children": []
                       },
                       {
@@ -55366,7 +54876,7 @@
                           }
                         ],
                         "IsLocked": false,
-                        "ControlUniqueId": "589",
+                        "ControlUniqueId": "646",
                         "Children": []
                       }
                     ]
@@ -55613,7 +55123,7 @@
               "Tooltip"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "590",
+            "ControlUniqueId": "647",
             "Children": []
           }
         ]

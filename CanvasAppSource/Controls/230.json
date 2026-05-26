@@ -103,7 +103,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "170",
+    "ControlUniqueId": "230",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -111,7 +111,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -345,18 +345,6 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -394,12 +382,10 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow",
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          "DropShadow"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "171",
+        "ControlUniqueId": "231",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -680,7 +666,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "172",
+            "ControlUniqueId": "232",
             "Children": []
           },
           {
@@ -1144,7 +1130,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "173",
+            "ControlUniqueId": "233",
             "Children": []
           },
           {
@@ -1559,7 +1545,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "174",
+            "ControlUniqueId": "234",
             "Children": []
           },
           {
@@ -1630,7 +1616,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -1864,18 +1850,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -1913,12 +1887,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "175",
+            "ControlUniqueId": "235",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -2277,7 +2249,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "176",
+                "ControlUniqueId": "236",
                 "Children": []
               },
               {
@@ -2651,7 +2623,7 @@
                   "PaddingLeft"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "177",
+                "ControlUniqueId": "237",
                 "Children": []
               }
             ]
@@ -3117,7 +3089,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "178",
+            "ControlUniqueId": "238",
             "Children": []
           }
         ]
@@ -3128,7 +3100,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -3362,18 +3334,6 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -3411,12 +3371,10 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow",
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          "DropShadow"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "179",
+        "ControlUniqueId": "239",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -3486,7 +3444,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -3720,18 +3678,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -3769,12 +3715,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "180",
+            "ControlUniqueId": "240",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -4126,7 +4070,7 @@
                   "ZIndex"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "181",
+                "ControlUniqueId": "241",
                 "Children": []
               }
             ]
@@ -4592,7 +4536,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "182",
+            "ControlUniqueId": "242",
             "Children": []
           },
           {
@@ -5007,7 +4951,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "183",
+            "ControlUniqueId": "243",
             "Children": []
           },
           {
@@ -5078,7 +5022,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -5312,18 +5256,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -5361,12 +5293,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "184",
+            "ControlUniqueId": "244",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -5732,7 +5662,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "185",
+                "ControlUniqueId": "245",
                 "Children": []
               },
               {
@@ -6113,7 +6043,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "186",
+                "ControlUniqueId": "246",
                 "Children": []
               }
             ]
@@ -6579,7 +6509,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "187",
+            "ControlUniqueId": "247",
             "Children": []
           }
         ]
@@ -6590,7 +6520,7 @@
         "HasDynamicProperties": false,
         "Template": {
           "Id": "http://microsoft.com/appmagic/groupContainer",
-          "Version": "1.4.0",
+          "Version": "1.3.0",
           "LastModifiedTimestamp": "0",
           "Name": "groupContainer",
           "FirstParty": true,
@@ -6824,18 +6754,6 @@
             "Category": "Design",
             "InvariantScript": "DropShadow.None",
             "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridColumns",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Property": "LayoutGridRows",
-            "Category": "Design",
-            "InvariantScript": "6",
-            "RuleProviderType": "Unknown"
           }
         ],
         "ControlPropertyState": [
@@ -6873,12 +6791,10 @@
           "RadiusTopRight",
           "RadiusBottomLeft",
           "RadiusBottomRight",
-          "DropShadow",
-          "LayoutGridRows",
-          "LayoutGridColumns"
+          "DropShadow"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "188",
+        "ControlUniqueId": "248",
         "Children": [
           {
             "Type": "ControlInfo",
@@ -6948,7 +6864,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -7182,18 +7098,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -7231,12 +7135,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "189",
+            "ControlUniqueId": "249",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -7588,7 +7490,7 @@
                   "ZIndex"
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "190",
+                "ControlUniqueId": "250",
                 "Children": []
               }
             ]
@@ -8054,7 +7956,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "191",
+            "ControlUniqueId": "251",
             "Children": []
           },
           {
@@ -8469,7 +8371,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "192",
+            "ControlUniqueId": "252",
             "Children": []
           },
           {
@@ -8540,7 +8442,7 @@
             ],
             "Template": {
               "Id": "http://microsoft.com/appmagic/groupContainer",
-              "Version": "1.4.0",
+              "Version": "1.3.0",
               "LastModifiedTimestamp": "0",
               "Name": "groupContainer",
               "FirstParty": true,
@@ -8774,18 +8676,6 @@
                 "Category": "Design",
                 "InvariantScript": "DropShadow.None",
                 "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridColumns",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
-              },
-              {
-                "Property": "LayoutGridRows",
-                "Category": "Design",
-                "InvariantScript": "6",
-                "RuleProviderType": "Unknown"
               }
             ],
             "ControlPropertyState": [
@@ -8823,12 +8713,10 @@
               "RadiusTopRight",
               "RadiusBottomLeft",
               "RadiusBottomRight",
-              "DropShadow",
-              "LayoutGridRows",
-              "LayoutGridColumns"
+              "DropShadow"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "193",
+            "ControlUniqueId": "253",
             "Children": [
               {
                 "Type": "ControlInfo",
@@ -9194,7 +9082,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "194",
+                "ControlUniqueId": "254",
                 "Children": []
               },
               {
@@ -9575,7 +9463,7 @@
                   }
                 ],
                 "IsLocked": false,
-                "ControlUniqueId": "195",
+                "ControlUniqueId": "255",
                 "Children": []
               }
             ]
@@ -10048,7 +9936,7 @@
               "ZIndex"
             ],
             "IsLocked": false,
-            "ControlUniqueId": "196",
+            "ControlUniqueId": "256",
             "Children": []
           }
         ]

@@ -86,7 +86,7 @@ ComponentDefinitions:
             Width: =Self.Height
             X: =Parent.Width - Self.Width
       - conEditableTextLabels:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: ManualLayout
           Properties:
             DropShadow: =DropShadow.None

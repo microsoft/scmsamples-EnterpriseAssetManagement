@@ -5,7 +5,7 @@
     "Template": {
       "Id": "http://microsoft.com/appmagic/Component",
       "Version": "638034202711389679",
-      "LastModifiedTimestamp": "639051981761455239",
+      "LastModifiedTimestamp": "638986436843911256",
       "Name": "737c5f2d157a40fb94dac275d7168e76",
       "FirstParty": true,
       "IsPremiumPcfControl": false,
@@ -16,7 +16,7 @@
         {
           "Name": "Title",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Title",
@@ -25,7 +25,7 @@
         {
           "Name": "fontSize",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "fontSize",
@@ -34,7 +34,7 @@
         {
           "Name": "fillColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "fillColor",
@@ -43,7 +43,7 @@
         {
           "Name": "ShowBackButton",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "Show back button",
@@ -52,7 +52,7 @@
         {
           "Name": "BackButtonAccessibleLabel",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Back button accessible label",
@@ -61,7 +61,7 @@
         {
           "Name": "OnPersonaPictureSelect",
           "Category": 2,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Boolean",
           "Hidden": false,
           "DisplayName": "On persona picture select",
@@ -70,7 +70,7 @@
         {
           "Name": "FocusBorderThickness",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Number",
           "Hidden": false,
           "DisplayName": "Focus border thickness",
@@ -79,7 +79,7 @@
         {
           "Name": "FocusBorderColor",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "Color",
           "Hidden": false,
           "DisplayName": "Focus border color",
@@ -88,7 +88,7 @@
         {
           "Name": "PersonaAccessibleLabel",
           "Category": 0,
-          "Type": "{\"Version\":\"1.348\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
+          "Type": "{\"Version\":\"1.346\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}",
           "PropertyDataTypeKey": "String",
           "Hidden": false,
           "DisplayName": "Persona accessible label",
@@ -285,7 +285,7 @@
       }
     ],
     "IsLocked": false,
-    "ControlUniqueId": "18",
+    "ControlUniqueId": "28",
     "Children": [
       {
         "Type": "ControlInfo",
@@ -490,7 +490,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "19",
+        "ControlUniqueId": "29",
         "Children": []
       },
       {
@@ -864,7 +864,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "20",
+        "ControlUniqueId": "30",
         "Children": []
       },
       {
@@ -1245,7 +1245,7 @@
           "PaddingLeft"
         ],
         "IsLocked": false,
-        "ControlUniqueId": "21",
+        "ControlUniqueId": "31",
         "Children": []
       },
       {
@@ -1647,7 +1647,7 @@
           }
         ],
         "IsLocked": false,
-        "ControlUniqueId": "22",
+        "ControlUniqueId": "32",
         "Children": []
       }
     ]

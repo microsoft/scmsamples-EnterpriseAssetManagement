@@ -24,7 +24,7 @@ Screens:
         Set(gblPreviousScreen, Self)
     Children:
       - conVerticalCreateMR:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -47,8 +47,6 @@ Screens:
                   FocusBorderColor: =gblAppStyles.FocusBorderColor
                   FocusBorderThickness: =gblAppStyles.FocusBorderThickness
                   Height: =gblAppStyles.Header.Height
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   OnPersonaPictureSelect: |-
                     =UpdateContext({ varShowAboutDialog: true })
                   PersonaAccessibleLabel: =T.AboutHeaderLabel
@@ -58,14 +56,12 @@ Screens:
                   fillColor: =gblAppStyles.Header.Fill
                   fontSize: =gblAppStyles.Header.FontSize
             - conVerticalImage:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
                   LayoutAlignItems: =LayoutAlignItems.Center
                   LayoutDirection: =LayoutDirection.Vertical
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LayoutMinWidth: =200
                   PaddingTop: =Min(64,conVerticalImage.Height - imgCreateRequest.Height -10)
                   RadiusBottomLeft: =0
@@ -80,13 +76,11 @@ Screens:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Height: =120
                         Image: ='eam-icon-192px'
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         Width: =120
                         X: =633
                         Y: =240
             - conVerticalButton:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -95,8 +89,6 @@ Screens:
                   LayoutDirection: =If((conVerticalButton.Height > conVerticalButton.LayoutMinHeight), LayoutDirection.Vertical, LayoutDirection.Horizontal )
                   LayoutGap: =20
                   LayoutJustifyContent: =LayoutJustifyContent.End
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LayoutMinHeight: =140
                   LayoutMinWidth: =200
                   LayoutOverflowY: =LayoutOverflow.Scroll
@@ -108,7 +100,7 @@ Screens:
                   Width: =Parent.Width
                 Children:
                   - SearchContainer:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -116,8 +108,6 @@ Screens:
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =btnSearch.Height +10
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =0
                         LayoutMinWidth: =0
                         PaddingBottom: =2
@@ -182,7 +172,7 @@ Screens:
                               X: =110
                               Y: =29
                   - ScanContainer:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -190,8 +180,6 @@ Screens:
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =btnSearch.Height +10
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =0
                         LayoutMinWidth: =0
                         PaddingBottom: =2
@@ -242,7 +230,7 @@ Screens:
                               X: =110
                               Y: =30
       - ConVerticalSearchMR:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -256,15 +244,13 @@ Screens:
             Width: =Parent.Width
           Children:
             - conHeaderSearchMR:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: ManualLayout
                 Properties:
                   DropShadow: =DropShadow.None
                   Fill: =gblAppStyles.Header.Fill
                   FillPortions: =0
                   Height: =gblAppStyles.Header.Height
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
                   RadiusTopLeft: =0
@@ -364,8 +350,6 @@ Screens:
                   AccessibleLabel: =T.SearchAccessibleLabel
                   Fill: =Self.backgroundColor
                   Height: =62
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   SearchHintText: =T.SearchHintLabel
                   TextInput: =locSearchBarInputText
                   Width: =Parent.Width
@@ -374,7 +358,7 @@ Screens:
                   textFont: =gblAppStyles.CommonFont
                   textSize: =gblAppStyles.FontSize_Large
             - conSearchMRPills:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -384,8 +368,6 @@ Screens:
                   LayoutAlignItems: =LayoutAlignItems.Center
                   LayoutDirection: =LayoutDirection.Horizontal
                   LayoutGap: =10
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   PaddingLeft: =16
                   PaddingRight: =16
                   RadiusBottomLeft: =0
@@ -410,8 +392,6 @@ Screens:
                         HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         OnSelect: =UpdateContext({locFilterOption:C.Creation.SearchAssets})
                         PressedBorderColor: =Self.Fill
                         PressedFill: =Self.Fill
@@ -438,8 +418,6 @@ Screens:
                         HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         OnSelect: =UpdateContext({locFilterOption:C.Creation.SearchFunctionalLocations})
                         PressedBorderColor: =
                         PressedFill: =Self.Fill
@@ -472,8 +450,6 @@ Screens:
                             mserp_name),
                         Blank()
                     )
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LoadingSpinner: =LoadingSpinner.None
                   OnSelect: |-
                     =Switch(
@@ -498,7 +474,7 @@ Screens:
                         Width: =1356
                         Y: =Parent.TemplateHeight - Self.Height
                   - conAssetTemplate:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -515,15 +491,13 @@ Screens:
                         Width: =Parent.TemplateWidth
                       Children:
                         - conAssetDetails:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
                               DropShadow: =DropShadow.None
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               LayoutMinHeight: =30
                               PaddingLeft: =16
                               PaddingRight: =10
@@ -540,8 +514,6 @@ Screens:
                                     Fill: =gblAppColors.Background
                                     Height: =gblAppStyles.Icons.Height
                                     Icon: =Icon.Manufacture
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     Width: =gblAppStyles.Icons.Width
                               - lblAssetDetails:
                                   Control: Label@2.5.1
@@ -551,8 +523,6 @@ Screens:
                                     FillPortions: =1
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =50
                                     Size: =gblAppStyles.Label.FontSize
                                     Text: =ThisItem.mserp_maintenanceassettypeid
@@ -566,15 +536,13 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =Parent.Height
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =70
                                     Size: =gblAppStyles.Label.FontSize
                                     Text: =Upper(ThisItem.mserp_dataareaid)
                                     Width: =80
                                     Wrap: =false
                         - conAssetTypeDetails:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
@@ -583,8 +551,6 @@ Screens:
                               Height: =60
                               LayoutDirection: =LayoutDirection.Vertical
                               LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               LayoutMinHeight: =30
                               LayoutMinWidth: =200
                               PaddingBottom: =10
@@ -604,8 +570,6 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =30
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =100
                                     PaddingLeft: =0
                                     Size: =gblAppStyles.FontSize_Large
@@ -620,8 +584,6 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =30
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =100
                                     PaddingLeft: =0
                                     Size: =gblAppStyles.FontSize_Large
@@ -705,8 +667,6 @@ Screens:
                             mserp_name),
                         Blank()
                     )
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LoadingSpinner: =LoadingSpinner.None
                   OnSelect: "=IfError(\r\n    //try    \r\n    UpdateContext(\r\n        {\r\n            locDefaultRequestType: \r\n            LookUp('Asset management parameters (mserp)','Company Code' = ThisItem.'Company Code', 'Maintenance request type')\r\n            \r\n        }\r\n    ),\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultRequestType, NotificationType.Error);\r\n    Trace(\"Could not retrieve default request type\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locDefaultServiceLevel: \r\n            First\r\n            (\r\n                SortByColumns( \r\n                    Filter(\r\n                            'Asset management maintenance service levels V2 (mserp)',\r\n                            'Functional location' = ThisItem.'Functional location (mserp_functionallocationid)' || IsBlankOrError('Functional location'),           \r\n                            IsBlankOrError('Asset type'),\r\n                            IsBlankOrError(Asset),\r\n                            IsBlankOrError('Manufacturer (mserp_productid)'),\r\n                            IsBlankOrError(Model),\r\n                            IsBlankOrError('Work order type'),\r\n                            'Company Code' = ThisItem.'Company Code'\r\n                    ),\r\n                    \"mserp_functionallocationid\" ,SortOrder.Descending\r\n                )\r\n            ).Name\r\n        }\r\n    );\r\n\r\n    If(\r\n        IsBlankOrError(locDefaultServiceLevel),\r\n        Notify(T.Error_MaintenanceRequestDefaultServiceLevelSetupMissing);\r\n        Trace(\"Missing service level setup\", TraceSeverity.Error, {DefaultServiceLevel:locDefaultServiceLevel});\r\n    ),\r\n\r\n    //catch\r\n    Notify(T.Error_FailedRetrievingDefaultServiceLevel, NotificationType.Error);\r\n    Trace(\"Failed getting default service level\", TraceSeverity.Error, FirstError);\r\n);\r\n\r\nReset(cmpSearchBarMRCreate);\r\nNavigate(\r\n    'Maintenance Request Create Submit Screen',\r\n    ScreenTransition.None,\r\n    {\r\n        locLocation:ThisItem, \r\n        locCreateMode:C.Creation.CreateFromLocation,\r\n        locDefaultRequestType: locDefaultRequestType,\r\n        locDefaultServiceLevel: locDefaultServiceLevel\r\n    }\r\n);"
                   ShowScrollbar: =false
@@ -715,7 +675,7 @@ Screens:
                   Width: =Parent.Width
                 Children:
                   - conLocationsTemplate:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
                         DropShadow: =DropShadow.None
@@ -736,19 +696,15 @@ Screens:
                               BorderStyle: =BorderStyle.None
                               Fill: =gblAppColors.Divider
                               Height: =1
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               Width: =Parent.Width
                         - conLocationsDetails:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
                               DropShadow: =DropShadow.None
                               LayoutAlignItems: =LayoutAlignItems.Center
                               LayoutDirection: =LayoutDirection.Horizontal
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               LayoutMinHeight: =30
                               PaddingLeft: =16
                               PaddingRight: =10
@@ -765,8 +721,6 @@ Screens:
                                     Color: =RGBA(162, 126, 111, 1)
                                     Height: =gblAppStyles.Icons.Height
                                     Icon: =Icon.Waypoint
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     Width: =gblAppStyles.Icons.Width
                               - lblLocationsDetails:
                                   Control: Label@2.5.1
@@ -776,8 +730,6 @@ Screens:
                                     FillPortions: =1
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     Size: =gblAppStyles.Label.FontSize
                                     Text: =ThisItem.mserp_functionallocationtypeid
                                     Width: =180
@@ -791,15 +743,13 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =Parent.Height
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =50
                                     Size: =gblAppStyles.Label.FontSize
                                     Text: =Upper(ThisItem.mserp_dataareaid)
                                     Width: =80
                                     Wrap: =false
                         - conLocationsTypeDetails:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
                               AlignInContainer: =AlignInContainer.SetByContainer
@@ -808,8 +758,6 @@ Screens:
                               Height: =60
                               LayoutDirection: =LayoutDirection.Vertical
                               LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               LayoutMinHeight: =30
                               PaddingBottom: =10
                               PaddingLeft: =16
@@ -828,8 +776,6 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =30
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =100
                                     LineHeight: =22
                                     Size: =gblAppStyles.FontSize_Large
@@ -844,8 +790,6 @@ Screens:
                                     Font: =gblAppStyles.Label.Font
                                     FontWeight: =gblAppStyles.Label.FontWeight
                                     Height: =30
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     LayoutMinWidth: =50
                                     LineHeight: =22
                                     Size: =gblAppStyles.FontSize_Large
@@ -873,8 +817,6 @@ Screens:
                   FillPortions: =1
                   Font: =gblAppStyles.CommonFont
                   FontWeight: =FontWeight.Semibold
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   PaddingBottom: =100
                   Size: =gblAppStyles.FontSize_Medium
                   Text: |-

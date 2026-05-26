@@ -80,7 +80,7 @@ Screens:
                   Width: =Parent.TemplateWidth
                   Y: =Parent.TemplateHeight - 1
             - conConsumedItemsHorizontal:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -95,7 +95,7 @@ Screens:
                   Width: =Parent.TemplateWidth
                 Children:
                   - conConsumedItemDetails:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: AutoLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
@@ -103,8 +103,6 @@ Screens:
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutJustifyContent: =LayoutJustifyContent.Center
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =50
                         LayoutMinWidth: =200
                         RadiusBottomLeft: =0
@@ -122,8 +120,6 @@ Screens:
                               Font: =gblAppStyles.CommonFont
                               FontWeight: =FontWeight.Semibold
                               Height: =50
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               OnSelect: =Select(galItemsConsumedOnJob)
                               PaddingLeft: =16
                               PaddingRight: =16
@@ -139,8 +135,6 @@ Screens:
                               Font: =gblAppStyles.CommonFont
                               FontWeight: =FontWeight.Semibold
                               Height: =50
-                              LayoutMaxHeight: =
-                              LayoutMaxWidth: =
                               OnSelect: =Select(galItemsConsumedOnJob)
                               PaddingLeft: =16
                               PaddingRight: =16
@@ -160,8 +154,6 @@ Screens:
                         Font: =gblAppStyles.CommonFont
                         FontWeight: =FontWeight.Semibold
                         Height: =50
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         OnSelect: =Select(galItemsConsumedOnJob)
                         PaddingLeft: =16
                         PaddingRight: =16
@@ -242,7 +234,7 @@ Screens:
             Title: =T.ItemsConsumedLabel
             Width: =Parent.Width
       - conNewItemConsumptionOverlay:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: ManualLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -283,7 +275,7 @@ Screens:
                   Width: =Parent.Width
                   Y: =App.Height - Self.Height
             - conNewItemConsumptionButtons:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -319,8 +311,6 @@ Screens:
                         HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =gblAppStyles.ButtonSecondary.HoverFill
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         OnSelect: |+
                           =Navigate(
                               'Item Consumption Product Search Screen',
@@ -345,15 +335,13 @@ Screens:
                         X: =40
                         Y: =40
                   - conNewItemConsumptionFromScan:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.Center
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =gblAppStyles.Button.Height +  2*gblAppStyles.FocusBorderThickness
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0

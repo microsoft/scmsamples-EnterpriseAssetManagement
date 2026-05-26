@@ -59,7 +59,7 @@ Screens:
                   PaddingRight: =0
                   Width: =Parent.Width
             - conVerticalRequestsListCard:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -84,8 +84,6 @@ Screens:
                         Font: =gblAppStyles.Label.Font
                         FontWeight: =gblAppStyles.Label.FontWeight
                         Height: =16
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =22
                         OnSelect: =Select(galRequestsList)
                         PaddingBottom: =0
@@ -104,8 +102,6 @@ Screens:
                         Font: =gblAppStyles.CommonFont
                         FontWeight: =FontWeight.Semibold
                         Height: =22
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         PaddingLeft: =0
                         PaddingRight: =0
                         Size: =gblAppStyles.HeadLine.FontSize
@@ -121,8 +117,6 @@ Screens:
                         Font: |+
                           =gblAppStyles.DefaultText.Font
                         Height: =17
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LineHeight: =22
                         PaddingLeft: =0
                         PaddingRight: =0
@@ -133,15 +127,13 @@ Screens:
                         Width: =Parent.Width - Parent.PaddingLeft - Parent.PaddingRight
                         Wrap: =false
                   - conRequestsListAssetOrLocation:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =20
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -174,15 +166,13 @@ Screens:
                               Width: =gblAppStyles.Icons.Width
                               Y: =Parent.Height / 2 - Self.Height / 2
                   - conRequestsListRequestType:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =20
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -215,15 +205,13 @@ Screens:
                               Width: =gblAppStyles.Icons.Width
                               Y: =Parent.Height / 2 - Self.Height / 2
                   - conRequestsListServiceLevel:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =20
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -256,7 +244,7 @@ Screens:
                               Width: =gblAppStyles.Icons.Width
                               Y: =Parent.Height / 2 - Self.Height / 2
       - conCreateMRListHeader:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: ManualLayout
           Properties:
             DropShadow: =DropShadow.None

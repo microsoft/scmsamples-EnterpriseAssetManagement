@@ -14,7 +14,7 @@ Screens:
       OnVisible: "=Clear(locMRAttachmentCollection);\r\nIfError(\r\n    //try\r\n    UpdateContext(\r\n        {\r\n            locWOCount: CountRows(\r\n                GroupBy(\r\n                    //Filter with Asset or Functional location\r\n                    If(\r\n                        locCreateMode = C.Creation.CreateFromLocation,\r\n                        Filter(\r\n                            'Asset management work order jobs V2 (mserp)',\r\n                            'Company Code' = locAsset.'Company Code',\r\n                            'Functional location' = locAsset.'Functional location',\r\n                            'Asset management work orders V2'.Active = 'NoYes (mserp)'.Yes\r\n                        ),\r\n                        locCreateMode = C.Creation.CreateFromAsset,\r\n                        Filter(\r\n                            'Asset management work order jobs V2 (mserp)',\r\n                            'Company Code' = locAsset.'Company Code',\r\n                            Asset = locAsset.'Asset (mserp_maintenanceassetid)',\r\n                            'Asset management work orders V2'.Active = 'NoYes (mserp)'.Yes\r\n                        )\r\n                    ),\r\n                    'Work order',\r\n                    WorkOrderJobs\r\n                )\r\n            )\r\n        }\r\n    ),\r\n    //catch\r\n    UpdateContext({locWOCount: Blank()});\r\n    Notify(\r\n        Match(\r\n            FirstError.Details.HttpResponse,\r\n            \"\\\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n        ).message,\r\n        NotificationType.Error\r\n    );\r\n    \r\n);\r\nIfError(\r\n    UpdateContext(\r\n        {\r\n            locMRCount: CountRows(\r\n                If(\r\n                    locCreateMode = C.Creation.CreateFromLocation,\r\n                    Filter(\r\n                        'Maintenance Requests',\r\n                        'Functional location' = locLocation.'Functional location (mserp_functionallocationid)',\r\n                        'Company Code' = locLocation.'Company Code',\r\n                        Active = 'NoYes (mserp)'.Yes\r\n                    ),\r\n                    locCreateMode = C.Creation.CreateFromAsset,\r\n                    Filter(\r\n                        'Maintenance Requests',\r\n                        Asset = locAsset.'Asset (mserp_maintenanceassetid)',\r\n                        'Company Code' = locAsset.'Company Code',\r\n                        Active = 'NoYes (mserp)'.Yes\r\n                    )\r\n                )\r\n            )\r\n        }\r\n    ),\r\n    //catch\r\n    UpdateContext({locMRCount: Blank()});\r\n    Notify(\r\n        Match(\r\n            FirstError.Details.HttpResponse,\r\n            \"\\\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n        ).message,\r\n        NotificationType.Error\r\n    );\r\n    \r\n);\r\n\r\nSet(gblPreviousScreen, Self)"
     Children:
       - conVerticalCreateRequest:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -29,15 +29,13 @@ Screens:
             Width: =Parent.Width
           Children:
             - conCreateMRHeader:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: ManualLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
                   DropShadow: =DropShadow.None
                   FillPortions: =0
                   Height: =52
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   RadiusBottomLeft: =0
                   RadiusBottomRight: =0
                   RadiusTopLeft: =0
@@ -91,7 +89,7 @@ Screens:
                         X: =2
                         Y: =2
             - conCreateMRSubHeader:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   AlignInContainer: =AlignInContainer.SetByContainer
@@ -102,8 +100,6 @@ Screens:
                   LayoutAlignItems: =LayoutAlignItems.Center
                   LayoutDirection: =If(Self.Width <= conCreateMRSubHeader.LayoutMinWidth ,LayoutDirection.Vertical,LayoutDirection.Horizontal)
                   LayoutGap: =10
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LayoutMinWidth: =340
                   PaddingLeft: =16
                   PaddingRight: =16
@@ -114,15 +110,13 @@ Screens:
                   Width: =Parent.Width
                 Children:
                   - conCreateMRWorkOrders:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =42
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinWidth: =100
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -211,15 +205,13 @@ Screens:
                               X: =7
                               Y: =11
                   - conCreateMRRequests:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =42
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinWidth: =100
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -309,7 +301,7 @@ Screens:
                               X: =7
                               Y: =11
             - conCreateMRForm:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -317,8 +309,6 @@ Screens:
                   LayoutDirection: =LayoutDirection.Vertical
                   LayoutGap: =16
                   LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LayoutOverflowY: =LayoutOverflow.Scroll
                   PaddingBottom: =16
                   PaddingLeft: =gblAppStyles.Padding.Left
@@ -337,8 +327,6 @@ Screens:
                         Color: =gblAppColors.PrimaryText
                         Font: =gblAppStyles.CommonFont
                         Height: =25
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         PaddingBottom: =0
                         PaddingTop: =0
                         Size: =gblAppStyles.FontSize_Large
@@ -353,8 +341,6 @@ Screens:
                         Fill: =Self.backgroundColor
                         Height: =54
                         HorizontalPadding: =8
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =40
                         LayoutMinWidth: =11
                         MaxLength: =60
@@ -378,8 +364,6 @@ Screens:
                         Fill: =Self.backgroundColor
                         Height: =108
                         HorizontalPadding: =8
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =50
                         LayoutMinWidth: =10
                         MaxLength: =Blank()
@@ -395,7 +379,7 @@ Screens:
                         textFont: =gblAppStyles.DefaultText.Font
                         textFontSize: =gblAppStyles.FontSize_Large
                   - conCreateMRServiceLevel:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.Center
@@ -403,8 +387,6 @@ Screens:
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =60
                         PaddingBottom: =(conCreateMRServiceLevel.Height - lblCreateMRServiceLevel.Height - drpCreateMRServiceLevel.Height)/2
                         PaddingTop: =(conCreateMRServiceLevel.Height - lblCreateMRServiceLevel.Height - drpCreateMRServiceLevel.Height)/2
@@ -468,7 +450,7 @@ Screens:
                               Text: =T.ServiceLevelLabel
                               Width: =225
                   - conCreateMRRequestType:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.Center
@@ -476,8 +458,6 @@ Screens:
                         Fill: =gblAppColors.Neutral
                         FillPortions: =0
                         Height: =72
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =60
                         PaddingLeft: =8
                         PaddingRight: =10
@@ -554,8 +534,6 @@ Screens:
                         BorderColor: =RGBA(0, 18, 107, 1)
                         Height: =Self.Width
                         Image: =If(!IsBlank(btnCreateMRAddImage.Media), btnCreateMRAddImage.Media)
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =50
                         Visible: =false
                         Width: =Min(300,Parent.Width -16*2)
@@ -570,8 +548,6 @@ Screens:
                         DelayItemLoading: =false
                         Height: =260
                         Items: =locMRAttachmentCollection
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =260
                         LayoutMinWidth: =300
                         LoadingSpinner: =LoadingSpinner.None
@@ -614,8 +590,6 @@ Screens:
                         FocusedBorderThickness: =gblAppStyles.FocusBorderThickness
                         Font: =gblAppStyles.CommonFont
                         Height: =gblAppStyles.Button.Height
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         LayoutMinHeight: =50
                         LayoutMinWidth: =100
                         OnSelect: |+
