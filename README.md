@@ -1,6 +1,6 @@
 # Dynamics 365 Asset Management Mobile App
 
-The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders. For product documentation and transition guidance from the existing Microsoft-distributed managed solution, see [Additional resources](#additional-resources). Microsoft is not actively maintaining this repository; the source is provided as a one-time open-source release so you can fork and customize it.
+The Asset Management mobile app is a [Power Apps canvas app](https://learn.microsoft.com/en-us/power-apps/maker/canvas-apps/getting-started) that provides Asset Management execution capabilities for **Microsoft Dynamics 365 Supply Chain Management**. Maintenance workers can use it to manage assigned work orders, create maintenance requests, and create new work orders. For product documentation and transition guidance from the existing Microsoft-distributed managed solution, see [Additional resources](#additional-resources). Microsoft is not actively maintaining this repository; the source is provided as a one-time open-source release so you can fork and customize it.
 
 Licensed under MIT. See [LICENSE](./LICENSE.txt).
 
