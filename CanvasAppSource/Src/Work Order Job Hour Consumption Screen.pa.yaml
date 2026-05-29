@@ -32,7 +32,7 @@ Screens:
             Title: =T.AdjustTimeSpentLabel
             Width: =Parent.Width
       - conScrollableActionsWOJHCS:
-          Control: GroupContainer@1.4.0
+          Control: GroupContainer@1.3.0
           Variant: AutoLayout
           Properties:
             DropShadow: =DropShadow.None
@@ -46,7 +46,7 @@ Screens:
             Y: =Min(Parent.Height - cmpHeaderWOJHCS.Height, Parent.Height - conScrollableActionsWOJHCS.Height)
           Children:
             - conActionsWOJHCS:
-                Control: GroupContainer@1.4.0
+                Control: GroupContainer@1.3.0
                 Variant: AutoLayout
                 Properties:
                   DropShadow: =DropShadow.None
@@ -66,8 +66,6 @@ Screens:
                   LayoutAlignItems: =LayoutAlignItems.Stretch
                   LayoutDirection: =LayoutDirection.Vertical
                   LayoutGap: =16
-                  LayoutMaxHeight: =
-                  LayoutMaxWidth: =
                   LayoutOverflowY: =LayoutOverflow.Scroll
                   PaddingLeft: |-
                     =// Yes, specifically 9- to simulate a padding of 16px when the card shadow is taken into account
@@ -83,15 +81,13 @@ Screens:
                   Y: =Parent.Height - Self.Height
                 Children:
                   - conAdjustHoursSpent:
-                      Control: GroupContainer@1.4.0
+                      Control: GroupContainer@1.3.0
                       Variant: ManualLayout
                       Properties:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.None
                         FillPortions: =0
                         Height: =conAdjustTimeSpentHorizontal.Height
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
                         RadiusTopLeft: =0
@@ -113,7 +109,7 @@ Screens:
                               PaddingRight: =0
                               Width: =Parent.Width
                         - conAdjustTimeSpentHorizontal:
-                            Control: GroupContainer@1.4.0
+                            Control: GroupContainer@1.3.0
                             Variant: AutoLayout
                             Properties:
                               DropShadow: =DropShadow.None
@@ -133,7 +129,7 @@ Screens:
                               Width: =Parent.Width
                             Children:
                               - conHoursSpentColumn:
-                                  Control: GroupContainer@1.4.0
+                                  Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.Center
@@ -143,8 +139,6 @@ Screens:
                                     LayoutAlignItems: =LayoutAlignItems.Stretch
                                     LayoutDirection: =LayoutDirection.Vertical
                                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     PaddingBottom: =2
                                     PaddingLeft: =2
                                     PaddingRight: =2
@@ -156,15 +150,13 @@ Screens:
                                     Width: =130
                                   Children:
                                     - conIncrementHours:
-                                        Control: GroupContainer@1.4.0
+                                        Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Center
                                           DropShadow: =DropShadow.None
                                           FillPortions: =0
                                           Height: =btnIncrementHoursSpent.Height +10
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =50
                                           PaddingBottom: =5
@@ -234,8 +226,6 @@ Screens:
                                           Height: =80
                                           HoverBorderColor: =RGBA(0, 18, 107, 1)
                                           HoverFill: =RGBA(186, 202, 226, 1)
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinWidth: =70
                                           PaddingBottom: =0
                                           PaddingLeft: =0
@@ -250,8 +240,6 @@ Screens:
                                           BorderColor: =RGBA(0, 18, 107, 1)
                                           Font: =gblAppStyles.CommonFont
                                           FontWeight: =FontWeight.Bold
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinWidth: =100
                                           PaddingTop: =0
                                           Size: =gblAppStyles.FontSize_XLarge
@@ -259,15 +247,13 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Top
                                           Width: =100
                                     - conDecrementHours:
-                                        Control: GroupContainer@1.4.0
+                                        Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Center
                                           DropShadow: =DropShadow.None
                                           FillPortions: =0
                                           Height: '=btnDecrementHoursSpent.Height +10 '
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =50
                                           PaddingBottom: =5
@@ -323,7 +309,7 @@ Screens:
                                                 X: =47
                                                 Y: =27
                               - conMinutesSpentColumn:
-                                  Control: GroupContainer@1.4.0
+                                  Control: GroupContainer@1.3.0
                                   Variant: AutoLayout
                                   Properties:
                                     AlignInContainer: =AlignInContainer.Center
@@ -333,8 +319,6 @@ Screens:
                                     LayoutAlignItems: =LayoutAlignItems.Stretch
                                     LayoutDirection: =LayoutDirection.Vertical
                                     LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-                                    LayoutMaxHeight: =
-                                    LayoutMaxWidth: =
                                     PaddingBottom: =2
                                     PaddingLeft: =2
                                     PaddingRight: =2
@@ -346,15 +330,13 @@ Screens:
                                     Width: =conHoursSpentColumn.Width
                                   Children:
                                     - conIncrementMinutes:
-                                        Control: GroupContainer@1.4.0
+                                        Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Center
                                           DropShadow: =DropShadow.None
                                           FillPortions: =0
                                           Height: =btnIncrementMinutesSpent.Height + 10
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =50
                                           PaddingBottom: =5
@@ -439,8 +421,6 @@ Screens:
                                           Height: =80
                                           HoverBorderColor: =RGBA(0, 18, 107, 1)
                                           HoverFill: =RGBA(186, 202, 226, 1)
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinWidth: =70
                                           PaddingBottom: =0
                                           PaddingLeft: =0
@@ -456,8 +436,6 @@ Screens:
                                           BorderColor: =RGBA(0, 18, 107, 1)
                                           Font: =gblAppStyles.CommonFont
                                           FontWeight: =FontWeight.Bold
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinWidth: =100
                                           PaddingTop: =0
                                           Size: =gblAppStyles.FontSize_XLarge
@@ -465,15 +443,13 @@ Screens:
                                           VerticalAlign: =VerticalAlign.Top
                                           Width: =100
                                     - conDecrementMinutes:
-                                        Control: GroupContainer@1.4.0
+                                        Control: GroupContainer@1.3.0
                                         Variant: ManualLayout
                                         Properties:
                                           AlignInContainer: =AlignInContainer.Center
                                           DropShadow: =DropShadow.None
                                           FillPortions: =0
                                           Height: =btnDecrementMinutesSpent.Height + 10
-                                          LayoutMaxHeight: =
-                                          LayoutMaxWidth: =
                                           LayoutMinHeight: =50
                                           LayoutMinWidth: =50
                                           PaddingBottom: =5
@@ -555,8 +531,6 @@ Screens:
                         HoverBorderColor: =ColorFade(Self.BorderColor, 20%)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
-                        LayoutMaxHeight: =
-                        LayoutMaxWidth: =
                         OnSelect: "=With(\r\n    {locAdjustedTimeSpent: Value(txtTimeSpentHours.Text) + (Value(txtTimeSpentMinutes.Text) / 60)},\r\n    If(\r\n        CurrentTimeSpent <> locAdjustedTimeSpent,\r\n        IfError(\r\n            // try:\r\n            Patch(\r\n                // insert a new journal line for each adjustment to time spent\r\n                // which increments with a delta of the previous- and new time spent\r\n                'Asset management work order job hour consumption lines (mserp)',\r\n                Defaults('Asset management work order job hour consumption lines (mserp)'),\r\n                {\r\n                    'Company Code': gblAppCache.UserActiveWorker.'Company Code',\r\n                    'Personnel number': gblAppCache.UserActiveWorker.'Personnel number',\r\n                    'Work order': WorkOrderJob.'Work order',\r\n                    'Line number (mserp_workorderjobnumber)': WorkOrderJob.'Line number',\r\n                    Hours: locAdjustedTimeSpent - CurrentTimeSpent\r\n                }\r\n            ),\r\n            // catch:\r\n            Notify(\r\n                Coalesce(\r\n                    Match(\r\n                        FirstError.Details.HttpResponse,\r\n                        \"\"\"code\"\":\"\"(?<code>[^\"\"]*)\"\",\"\"message\"\":\"\"(?<message>[^\"\"]*)\"\r\n                    ).message,\r\n                    T.Error_TimeConsumptionAdjustmentUpdateGenericFailureLabel\r\n                ),\r\n                NotificationType.Error\r\n            ),\r\n            // on success:\r\n            Back()\r\n        )\r\n    );\r\n    \r\n)"
                         PressedBorderColor: =Self.Fill
                         PressedColor: =gblAppStyles.Button.PressedColor

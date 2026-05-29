@@ -1,6 +1,20 @@
 {
   "Components": [
     {
+      "Name": "EditableTextWithHeader",
+      "TemplateName": "ba2c7f10e5ed46d38e29466a9e149585",
+      "Description": "",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
+      "Name": "SubScreenHeader",
+      "TemplateName": "f31c4274513d4d79a81731e998df1fab",
+      "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
+      "AllowCustomization": true,
+      "AllowAccessToGlobals": false
+    },
+    {
       "Name": "SearchBar",
       "TemplateName": "3c47dd31a18f42e4babb2eafc3dbca80",
       "Description": "",
@@ -36,13 +50,6 @@
       "AllowAccessToGlobals": false
     },
     {
-      "Name": "EditableTextWithHeader",
-      "TemplateName": "ba2c7f10e5ed46d38e29466a9e149585",
-      "Description": "",
-      "AllowCustomization": true,
-      "AllowAccessToGlobals": false
-    },
-    {
       "Name": "AppAboutOverlay",
       "TemplateName": "f4ae1227410745e3a675ab966b35c449",
       "Description": "",
@@ -60,13 +67,6 @@
       "Name": "FullScreenBottomRightButtonList",
       "TemplateName": "74784d9d4b2a4e61b6d10a317345d60a",
       "Description": "",
-      "AllowCustomization": true,
-      "AllowAccessToGlobals": false
-    },
-    {
-      "Name": "SubScreenHeader",
-      "TemplateName": "f31c4274513d4d79a81731e998df1fab",
-      "Description": "Header of sub-screens that need a back-button instead of the user portrait.",
       "AllowCustomization": true,
       "AllowAccessToGlobals": false
     }

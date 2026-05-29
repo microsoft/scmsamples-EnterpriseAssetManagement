@@ -1,26 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ImportExportXml version="9.2.23062.176" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>msdyn_EnterpriseAssetManagementMobileV2</UniqueName>
+    <UniqueName>AssetManagementMobileSample</UniqueName>
     <LocalizedNames>
-      <LocalizedName description="Enterprise Asset Management Mobile Solution (V2)" languagecode="1033" />
+      <LocalizedName description="Asset Management Mobile App Sample" languagecode="1033" />
     </LocalizedNames>
     <Descriptions>
-      <Description description="Enterprise Asset Management Mobile Application for Dynamics 365 Solutions" languagecode="1033" />
+      <Description description="Open-source sample of the Asset Management mobile app for Dynamics 365 Supply Chain Management." languagecode="1033" />
     </Descriptions>
-    <Version>2.0.0.0</Version>
+    <Version>1.0.0.0</Version>
     <Managed>2</Managed>
     <Publisher>
-      <UniqueName>microsoftdynamics</UniqueName>
+      <UniqueName>AssetManagementMobileSample</UniqueName>
       <LocalizedNames>
-        <LocalizedName description="Microsoft" languagecode="1033" />
+        <LocalizedName description="Microsoft Asset Management Mobile Sample" languagecode="1033" />
       </LocalizedNames>
       <Descriptions>
-        <Description description="Microsoft" languagecode="1033" />
+        <Description description="Open-source sample of the Asset Management mobile app for Dynamics 365 Supply Chain Management. Distributed by Microsoft under the MIT license." languagecode="1033" />
       </Descriptions>
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
-      <CustomizationPrefix>msdyn</CustomizationPrefix>
+      <CustomizationPrefix>eammob</CustomizationPrefix>
       <CustomizationOptionValuePrefix>20000</CustomizationOptionValuePrefix>
       <Addresses />
     </Publisher>
@@ -61,8 +61,8 @@
       <RootComponent type="1" schemaName="mserp_inventwarehouseentity" behavior="0" />
       <RootComponent type="1" schemaName="mserp_wmswarehouselocationentity" behavior="2" />
       <RootComponent type="20" id="{91049197-0031-49db-8805-ef78af3a83ac}" behavior="0" />
-      <RootComponent type="66" schemaName="msdyn_MscrmControls.Common.A11yFocusTrap" behavior="0" />
-      <RootComponent type="300" schemaName="msdyn_assetmanagementv2_bbd03" behavior="0" />
+      <RootComponent type="66" schemaName="eammob_eammob.Common.A11yFocusTrap" behavior="0" />
+      <RootComponent type="300" schemaName="eammob_assetmanagementv2_bbd03" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -225,7 +225,7 @@
         <Required type="1" schemaName="cdm_company" displayName="Company" solution="Dynamics365Company (2.0.777.353)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_docutypeentity" displayName="Document types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -249,7 +249,7 @@
         <Required type="1" schemaName="mserp_docutypeentity" displayName="Document types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_docutypeentity" displayName="Document types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -309,7 +309,7 @@
         <Required type="1" schemaName="mserp_ecorestrackingdimensiongroupentity" displayName="Tracking dimension groups (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_ecorestrackingdimensiongroupentity" displayName="Tracking dimension groups (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -381,7 +381,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceassetbillofmaterialv2entity" displayName="Asset management asset Bill of materials V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceassetbillofmaterialv2entity" displayName="Asset management asset Bill of materials V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -411,7 +411,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceassetcounterentity" displayName="Asset management asset counters (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceassetcounterentity" displayName="Asset management asset counters (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -465,7 +465,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceassetservicelevelv2entity" displayName="Asset management maintenance service levels V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceassetservicelevelv2entity" displayName="Asset management maintenance service levels V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -495,7 +495,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceassettypedefaultsparepartv2entity" displayName="Asset management spare part items V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceassettypedefaultsparepartv2entity" displayName="Asset management spare part items V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -555,7 +555,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceassetv3entity" displayName="Assets entity view V3 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceassetv3entity" displayName="Assets entity view V3 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -585,7 +585,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancechecklistvariableentity" displayName="Asset management maintenance checklist variable (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancechecklistvariableentity" displayName="Asset management maintenance checklist variable (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -609,7 +609,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancechecklistvariablevalueentity" displayName="Asset management maintenance checklist variable value (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancechecklistvariablevalueentity" displayName="Asset management maintenance checklist variable value (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -663,7 +663,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancefunctionallocationentity" displayName="Asset management functional locations (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancefunctionallocationentity" displayName="Asset management functional locations (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -687,7 +687,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancejobtypeentity" displayName="Asset management maintenance job types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancejobtypevariantentity" displayName="Asset management maintenance job type variants (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -699,7 +699,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancejobtypevariantentity" displayName="Asset management maintenance job type variants (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancemobileappusersettingsentity" displayName="Asset management mobile application user settings entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -711,7 +711,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancemobileappusersettingsentity" displayName="Asset management mobile application user settings entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancemobileappusersettingsentity" displayName="Asset management mobile application user settings entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -747,7 +747,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceparametersentity" displayName="Asset management parameters (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceparametersentity" displayName="Asset management parameters (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -783,7 +783,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancerequestdocumentattachmententity" displayName="Asset management maintenance request document attachments entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancerequestdocumentattachmententity" displayName="Asset management maintenance request document attachments entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -843,7 +843,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancerequesttypeentity" displayName="Asset management maintenance request types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenancerequesttypeentity" displayName="Asset management maintenance request types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -867,7 +867,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenancerequestv2entity" displayName="Asset management maintenance requests V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkerentity" displayName="Asset management maintenance workers (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -903,7 +903,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkerentity" displayName="Asset management maintenance workers (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkerentity" displayName="Asset management maintenance workers (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -927,7 +927,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlifecyclemodelstatenextentity" displayName="Asset management work order lifecycle model sequence next (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlifecyclemodelstatenextentity" displayName="Asset management work order lifecycle model sequence next (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -945,7 +945,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlineattachmententity" displayName="Asset maintenance work order line attachment entity (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinechecklistentity" displayName="Asset management work order job maintenance checklist (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -981,7 +981,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinechecklistentity" displayName="Asset management work order job maintenance checklist (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinechecklistentity" displayName="Asset management work order job maintenance checklist (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1005,7 +1005,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinehourconsumptionentity" displayName="Asset management work order job hour consumption lines (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinehourconsumptionentity" displayName="Asset management work order job hour consumption lines (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1053,7 +1053,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlineproductconsumptionentity" displayName="Asset management work order job product consumption lines (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlineproductconsumptionentity" displayName="Asset management work order job product consumption lines (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1119,7 +1119,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinev2entity" displayName="Asset management work order jobs V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderlinev2entity" displayName="Asset management work order jobs V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1149,7 +1149,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderservicelevelentity" displayName="Asset management work order service levels (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderservicelevelentity" displayName="Asset management work order service levels (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1203,7 +1203,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkordertablev2entity" displayName="Asset management work orders V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkordertablev2entity" displayName="Asset management work orders V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1239,7 +1239,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkordertypeentity" displayName="Asset management work order types (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderuserreferenceentity" displayName="Asset management worker work orders and jobs (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1281,7 +1281,7 @@
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderuserreferenceentity" displayName="Asset management worker work orders and jobs (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetmaintenanceworkorderuserreferenceentity" displayName="Asset management worker work orders and jobs (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1323,7 +1323,7 @@
         <Required type="1" schemaName="mserp_entassetreleasedproductentity" displayName="Asset management released products (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_entassetreleasedproductentity" displayName="Asset management released products (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1341,7 +1341,7 @@
         <Required type="1" schemaName="mserp_entassetreleasedproductstoragedimensiondefaultsentity" displayName="Asset management released products storage dimension defaults (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_inventitembatchentity" displayName="Item batches (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1371,7 +1371,7 @@
         <Required type="1" schemaName="mserp_inventitembatchentity" displayName="Item batches (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_inventitembatchentity" displayName="Item batches (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1401,7 +1401,7 @@
         <Required type="1" schemaName="mserp_inventitemserialnumberentity" displayName="Item serial numbers (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_inventitemserialnumberentity" displayName="Item serial numbers (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1437,7 +1437,7 @@
         <Required type="1" schemaName="mserp_inventoperationalsitev2entity" displayName="Sites V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_inventoperationalsitev2entity" displayName="Sites V2 (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1485,7 +1485,7 @@
         <Required type="1" schemaName="mserp_inventwarehouseentity" displayName="Warehouses (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="1" schemaName="mserp_inventwarehouseentity" displayName="Warehouses (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
@@ -1515,7 +1515,7 @@
         <Required type="1" schemaName="mserp_wmswarehouselocationentity" displayName="Warehouse locations (mserp)" solution="MicrosoftOperationsERPVE (1.0.0.0)">
           <package>MicrosoftOperationsVEAnchor (2.8.6.209)</package>
         </Required>
-        <Dependent type="300" schemaName="msdyn_assetmanagementv2_bbd03" displayName="Asset Management V2" />
+        <Dependent type="300" schemaName="eammob_assetmanagementv2_bbd03" displayName="Asset Management V2" />
       </MissingDependency>
       <MissingDependency>
         <Required type="10" schemaName="mserp_DocuTypeEntity_dataAreaId_rel" displayName="mserp_DocuTypeEntity_dataAreaId_rel" parentSchemaName="cdm_company" parentDisplayName="Company" solution="MicrosoftOperationsERPVE (1.0.0.0)">

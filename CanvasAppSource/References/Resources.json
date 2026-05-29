@@ -46,7 +46,7 @@
       "Path": "Assets\\Images\\0004.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAwNA.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0004.png"
     },
     {
       "Name": "Edit",
@@ -58,7 +58,7 @@
       "Path": "Assets\\Images\\0005.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAwNQ.svg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0005.svg"
     },
     {
       "Name": "MSLogo",
@@ -70,7 +70,7 @@
       "Path": "Assets\\Images\\0007.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAwNw.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0007.png"
     },
     {
       "Name": "onboardingLE",
@@ -82,7 +82,7 @@
       "Path": "Assets\\Images\\0008.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAwOA.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0008.png"
     },
     {
       "Name": "onboardingMR",
@@ -94,7 +94,7 @@
       "Path": "Assets\\Images\\0009.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAwOQ.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0009.png"
     },
     {
       "Name": "onboardingWO",
@@ -106,7 +106,7 @@
       "Path": "Assets\\Images\\0010.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAxMA.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0010.png"
     },
     {
       "Name": "qr",
@@ -118,7 +118,7 @@
       "Path": "Assets\\Images\\0011.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAxMQ.svg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0011.svg"
     },
     {
       "Name": "removeImage",
@@ -130,7 +130,7 @@
       "Path": "Assets\\Images\\0012.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAxMg.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0012.png"
     },
     {
       "Name": "search",
@@ -142,7 +142,7 @@
       "Path": "Assets\\Images\\0014.svg",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/MDAxNA.svg?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/0014.svg"
     },
     {
       "Name": "eam-icon-192px",
@@ -154,7 +154,7 @@
       "Path": "Assets\\Images\\994329a5-7732-47f7-9ec6-298a2489147d.png",
       "Content": "Image",
       "ResourceKind": "LocalFile",
-      "RootPath": "https://dsprdil301eau.blob.core.windows.net/abc43580-186e-4e15-9eb0-cc8eeb76f04c-1/resource/OTk0MzI5YTUtNzczMi00N2Y3LTllYzYtMjk4YTI0ODkxNDdk.png?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2026-01-28T11%3A56%3A15Z&ske=2026-01-29T12%3A11%3A15Z&sks=b&skv=2023-01-03"
+      "RootPath": "ms-appx:///Assets/Images/994329a5-7732-47f7-9ec6-298a2489147d.png"
     }
   ]
 }

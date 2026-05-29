@@ -4,7 +4,7 @@
 . "$PSScriptRoot/../utils/FileUtils.ps1"
 . "$PSScriptRoot/../utils/PowerAppsUtils.ps1"
 
-$SolutionName = "msdyn_AssetManagementMobileSolution"
+$SolutionName = "AssetManagementMobileSample"
 $ManagedSolutionName = "$SolutionName" + "_managed.zip"
 $SolutionExportPath = "$PSScriptRoot/../../Solution/Export"
 $binPath = "$PSScriptRoot/../../bin"

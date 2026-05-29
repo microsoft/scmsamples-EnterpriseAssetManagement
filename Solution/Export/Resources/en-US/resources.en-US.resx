@@ -62,7 +62,7 @@
     <value>1033</value>
   </metadata>
   <metadata name="Source file" xml:space="preserve">
-    <value>EnterpriseAssetManagementMobileV2_managed.cab</value>
+    <value>AssetManagementMobileSample_managed.zip</value>
   </metadata>
   <metadata name="Source package type" xml:space="preserve">
     <value>Both</value>
@@ -73,16 +73,16 @@
   <metadata name="SolutionPackager Version String" xml:space="preserve">
     <value>9.0.0.0</value>
   </metadata>
-  <data name="15062:Description,microsoftdynamics20000" xml:space="preserve">
-    <value>Microsoft</value>
-    <comment> 'microsoftdynamics' : Description for Solution Publisher</comment>
+  <data name="15062:Description,AssetManagementMobileSampleeammob20000" xml:space="preserve">
+    <value>Open-source sample of the Asset Management mobile app for Dynamics 365 Supply Chain Management. Distributed by Microsoft under the MIT license.</value>
+    <comment> 'AssetManagementMobileSample' : Description for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,microsoftdynamics20000" xml:space="preserve">
-    <value>Microsoft</value>
-    <comment> 'microsoftdynamics' : LocalizedName for Solution Publisher</comment>
+  <data name="15062:LocalizedName,AssetManagementMobileSampleeammob20000" xml:space="preserve">
+    <value>Microsoft Asset Management Mobile Sample</value>
+    <comment> 'AssetManagementMobileSample' : LocalizedName for Solution Publisher</comment>
   </data>
-  <data name="15062:LocalizedName,msdyn_EnterpriseAssetManagementMobileV2" xml:space="preserve">
-    <value>Enterprise Asset Management Mobile Solution (V2)</value>
-    <comment> 'msdyn_EnterpriseAssetManagementMobileV2' : LocalizedName for Solution</comment>
+  <data name="15062:LocalizedName,AssetManagementMobileSample" xml:space="preserve">
+    <value>Asset Management Mobile App Sample</value>
+    <comment> 'AssetManagementMobileSample' : LocalizedName for Solution</comment>
   </data>
 </root>
