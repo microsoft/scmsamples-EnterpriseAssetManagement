@@ -13,7 +13,6 @@ param (
 $RepoRoot = "$PSScriptRoot/../.."
 $sourcePath = "$RepoRoot/CanvasAppSource"
 
-Remove-Directory -directoryPath $sourcePath
 $MsAppPath = Prepare-MsAppPath -msAppPath $MsAppPath
 Expand-MsAppArchive -msAppPath $MsAppPath -destinationPath $sourcePath
 
