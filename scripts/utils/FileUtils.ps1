@@ -69,9 +69,11 @@ function Expand-MsAppArchive {
         $destinationPrefix = $destinationRoot.TrimEnd($directorySeparators) + [System.IO.Path]::DirectorySeparatorChar
         $invalidFileNameChars = [System.IO.Path]::GetInvalidFileNameChars()
         $destinationPaths = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
+        $filePaths = New-Object 'System.Collections.Generic.HashSet[string]' ([System.StringComparer]::OrdinalIgnoreCase)
         $validatedEntries = @()
 
-        $archive = [System.IO.Compression.ZipFile]::OpenRead($msAppPath)
+        $archivePath = (Resolve-Path -LiteralPath $msAppPath -ErrorAction Stop).ProviderPath
+        $archive = [System.IO.Compression.ZipFile]::OpenRead($archivePath)
 
         foreach ($entry in $archive.Entries) {
             $entryName = $entry.FullName
@@ -91,6 +93,7 @@ function Expand-MsAppArchive {
                     $pathSegment -eq '..' -or
                     $pathSegment.EndsWith('.') -or
                     $pathSegment.EndsWith(' ') -or
+                    $pathSegment -match '^(?i:CON|PRN|AUX|NUL|COM[1-9]|LPT[1-9])(\..*)?$' -or
                     $pathSegment.IndexOfAny($invalidFileNameChars) -ge 0) {
                     throw "Unsafe archive entry path: $entryName"
                 }
@@ -106,10 +109,28 @@ function Expand-MsAppArchive {
                 throw "Archive entry escapes or duplicates the destination: $entryName"
             }
 
+            $isDirectory = [string]::IsNullOrEmpty($entry.Name)
+            if (-not $isDirectory) {
+                $filePaths.Add($targetPath) | Out-Null
+            }
+
             $validatedEntries += [pscustomobject]@{
                 Entry = $entry
                 TargetPath = $targetPath
-                IsDirectory = [string]::IsNullOrEmpty($entry.Name)
+                IsDirectory = $isDirectory
+            }
+        }
+
+        foreach ($validatedEntry in $validatedEntries) {
+            $parentPath = [System.IO.Path]::GetDirectoryName($validatedEntry.TargetPath)
+            while ($parentPath.StartsWith(
+                    $destinationPrefix,
+                    [System.StringComparison]::OrdinalIgnoreCase)) {
+                if ($filePaths.Contains($parentPath)) {
+                    throw "Archive entry conflicts with a file path: $($validatedEntry.Entry.FullName)"
+                }
+
+                $parentPath = [System.IO.Path]::GetDirectoryName($parentPath)
             }
         }
 
